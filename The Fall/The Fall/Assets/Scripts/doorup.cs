@@ -9,6 +9,8 @@ public class doorup : MonoBehaviour
     private bool able;
     public float speed = 5.0f;
     private bool movable = false;
+    public float upmos = 13;
+    public float downmos = -1;
     //public float speedz;
     // Use this for initialization
     void Start()
@@ -19,7 +21,7 @@ public class doorup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (door.transform.position.y < 5)
+        if (door.transform.position.y < upmos)
         {
         if (movable == true)
         {
@@ -30,11 +32,11 @@ public class doorup : MonoBehaviour
         }
         }
 
-        if (trangle.transform.position.y > -1)
+        if (trangle.transform.position.y > downmos)
         {
             if (movable == true)
             {
-                trangle.transform.Translate(Vector3.down * Time.deltaTime * speed, Space.Self);
+                trangle.transform.Translate(Vector3.down * Time.deltaTime * speed, Space.World);
             }
             
         }

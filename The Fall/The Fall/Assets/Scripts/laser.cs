@@ -4,6 +4,12 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class laser : MonoBehaviour
 {
+    //number of times the ball has made contact (mike)
+    public int collisionCount;
+
+    //audio script reference (mike)
+    [SerializeField]
+    AudioManager am;
 
     // public float fireSpeed = 2f;
     public Rigidbody Ball;
@@ -28,8 +34,20 @@ public class laser : MonoBehaviour
     // when a collision happens
     void OnCollisionEnter(Collision collision)
     {
-        // get the point of contact
+        // get the point of contact (mike)
         ContactPoint contact = collision.contacts[0];
+
+        am.PlayNote();
+
+        // add 1 to collision count every time ball hits surface (mike)
+        collisionCount += 1;
+
+        // if collision count reachs 9, reset it (mike)
+        if (collisionCount > 9)
+        {
+            collisionCount = 0;
+        }
+
 
         // reflect our old velocity off the contact point's normal vector
         Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);

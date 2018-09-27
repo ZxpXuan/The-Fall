@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346936473}
   - component: {fileID: 346936472}
+  - component: {fileID: 346936474}
   m_Layer: 0
   m_Name: gamemanager
   m_TagString: Untagged
@@ -155,6 +156,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &346936474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346936471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212eb021df6e1774aaa4bb7acbe5ccc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPath: {fileID: 511824243}
+  endSting: {fileID: 0}
+  melNotes:
+  - {fileID: 8300000, guid: 214e09cd232badf45bbaabc737084c4d, type: 3}
+  - {fileID: 8300000, guid: 88722c592c18e7e4badee43d4466d599, type: 3}
+  - {fileID: 8300000, guid: 7dea7fb508d05404d9a15acbadd04e51, type: 3}
+  - {fileID: 8300000, guid: 547c97075660c7c41a7e90d74eb758c8, type: 3}
+  - {fileID: 8300000, guid: baaaddc898578a44ebb1d7ec4766b3ef, type: 3}
+  - {fileID: 8300000, guid: d437f52fcff9e2c49847b4f61ba9b2ec, type: 3}
+  - {fileID: 8300000, guid: a6e2fd4f0bdcd394da055659803fee22, type: 3}
+  - {fileID: 8300000, guid: aa8b9796508e35348afb43af0aef67f0, type: 3}
+  - {fileID: 8300000, guid: a25c5c5cb12b47c448de76eced9a1db3, type: 3}
+  - {fileID: 8300000, guid: 637f095d2f7c70943b5286c57840b61c, type: 3}
+  - {fileID: 8300000, guid: 7cac166c3df0f504483e3857ecda99a1, type: 3}
+  - {fileID: 8300000, guid: d554bdf560534f0498cb235c551adb59, type: 3}
+  chords:
+  - {fileID: 8300000, guid: 50729fc6d46f0274c84c13db9401556b, type: 3}
+  - {fileID: 8300000, guid: 903d4e25b56199d45a34118d304d0c7f, type: 3}
+  - {fileID: 8300000, guid: aa295e1134076e040884a54970b06078, type: 3}
+  finish: {fileID: 8300000, guid: 612939144c30c5f4dbacc4343c67c30e, type: 3}
+  melOutput: {fileID: 243667022286960578, guid: f8eb068fb7776744e87240f5f8c3b49c,
+    type: 2}
+  chordOutput: {fileID: 243146386083509102, guid: f8eb068fb7776744e87240f5f8c3b49c,
+    type: 2}
+  changeTime: 7
 --- !u!1 &511824242
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a6cbdc0c72cf043a5b64240c1954db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionCount: 0
+  am: {fileID: 346936474}
   Ball: {fileID: 511824244}
 --- !u!54 &511824244
 Rigidbody:

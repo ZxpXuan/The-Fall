@@ -7,7 +7,7 @@ public class rotacube : MonoBehaviour {
 
     public Transform cube;
     public float speed = 4.0f;
-    private bool _mouseDown = false;
+//    private bool _mouseDown = false;
 
     // Use this for initialization
     void Start () {

@@ -46,6 +46,7 @@ public class laser : MonoBehaviour
         if (collisionCount > 9)
         {
             collisionCount = 0;
+           
         }
 
 

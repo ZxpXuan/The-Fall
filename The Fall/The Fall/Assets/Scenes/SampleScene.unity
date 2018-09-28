@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 978471852}
   - component: {fileID: 978471851}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OutsideWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 992646747}
   - component: {fileID: 992646746}
   - component: {fileID: 992646751}
+  - component: {fileID: 992646752}
   m_Layer: 0
   m_Name: Ding
   m_TagString: ball
@@ -556,6 +557,18 @@ MonoBehaviour:
   collisionCount: 0
   am: {fileID: 0}
   Ball: {fileID: 992646746}
+--- !u!114 &992646752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 992646745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3acebb8f49ce461f8d52d60dfb6cdb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limit: 5
 --- !u!1 &1324814055
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1869396565}
   - component: {fileID: 1869396567}
-  - component: {fileID: 1869396566}
   m_Layer: 0
   m_Name: emputy
   m_TagString: Untagged
@@ -750,27 +762,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869396564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1869396566
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869396564}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &1869396567
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -823,4 +820,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4b01e7435904409bffe9679eecfde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
+  limit: 5

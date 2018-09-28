@@ -59,9 +59,9 @@ public class tragball : MonoBehaviour
                     //Vector3 location = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     // location.z = 0;
                     //dis = (ball.transform.position - go.transform.position).sqrMagnitude;
-                    if (Vector3.Distance(currentPosition, ball.transform.position) > 2)
+                    if (Vector3.Distance(currentPosition, ball.transform.position) > 3)
                     {
-                        var maxPosition = (currentPosition - ball.transform.position).normalized * 2.0f + ball.transform.position;
+                        var maxPosition = (currentPosition - ball.transform.position).normalized * 3.0f + ball.transform.position;
                         go.transform.position = maxPosition;
                     }
                     else
@@ -85,7 +85,7 @@ public class tragball : MonoBehaviour
             {
                 Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                Vector3 dir = go.transform.position - ball.transform.position;
+                Vector3 dir = new Vector3(go.transform.position.x - ball.transform.position.x, go.transform.position.y - ball.transform.position.y , 0);
                 ding.AddForce(dir, ForceMode.Impulse);
                 abale = false; 
             }

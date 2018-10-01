@@ -11,6 +11,8 @@ public class doorup : MonoBehaviour
     private bool movable = false;
     public float upmos = 13;
     public float downmos = -1;
+
+    public AudioSource triggerSFX;
     //public float speedz;
     // Use this for initialization
     void Start()
@@ -48,7 +50,8 @@ public class doorup : MonoBehaviour
         if (collision.collider.gameObject.tag == "ball" && able == true)
         {
             //speedz = speed * Time.deltaTime;
-            
+
+            triggerSFX.Play();
             able = false;
             movable = true;
 

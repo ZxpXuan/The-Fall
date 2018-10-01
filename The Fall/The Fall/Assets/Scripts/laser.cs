@@ -7,6 +7,9 @@ public class laser : MonoBehaviour
     //number of times the ball has made contact (mike)
     public int collisionCount;
 
+    //impact SFX source
+    public AudioSource impactSFX;
+    
     //audio script reference (mike)
     [SerializeField]
     AudioManager am;
@@ -37,13 +40,17 @@ public class laser : MonoBehaviour
         // get the point of contact (mike)
         ContactPoint contact = collision.contacts[0];
 
+        // play a melody note
         am.PlayNote();
 
+        impactSFX.Play();
+
+        
         // add 1 to collision count every time ball hits surface (mike)
         collisionCount += 1;
 
         // if collision count reachs 9, reset it (mike)
-        if (collisionCount > 9)
+        if (collisionCount > 2)
         {
             collisionCount = 0;
            
@@ -59,5 +66,6 @@ public class laser : MonoBehaviour
         Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         transform.rotation = rotation * transform.rotation;
     }
+
 
 }

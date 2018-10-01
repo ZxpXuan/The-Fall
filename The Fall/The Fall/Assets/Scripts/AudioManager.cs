@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     PlayEndSting endSting;
 
+    public int randomChord;
+    public int newCollisionCount;
+
     //Input
     public AudioClip[] melNotes;
     public AudioClip[] chords;
@@ -33,6 +36,9 @@ public class AudioManager : MonoBehaviour
             timer = 0f;
             PlayChord();
         }
+        
+        NoteGrouping();
+
     }
 
     private void Awake()
@@ -46,21 +52,22 @@ public class AudioManager : MonoBehaviour
         AudioSource source = gameObject.AddComponent<AudioSource>();
 
         //Load Clip into Audio Source
-        source.clip = melNotes[ballPath.collisionCount];
+        source.clip = melNotes[newCollisionCount];
 
         //Set the output for audio source
         source.outputAudioMixerGroup = melOutput;
 
         //Play the clip
         source.Play();
+        Debug.Log("melNote" + newCollisionCount);
         //Destroy the audio source when played
 
-        Destroy(source, melNotes[ballPath.collisionCount].length);
+        Destroy(source, melNotes[newCollisionCount].length);
     }
     public void PlayChord()
     {
         //Randomize
-        int randomChord = Random.Range(0, chords.Length);
+        randomChord = Random.Range(0, chords.Length);
 
         // create the audio source
         AudioSource source = gameObject.AddComponent<AudioSource>();
@@ -73,17 +80,28 @@ public class AudioManager : MonoBehaviour
 
         //Play the clip
         source.Play();
+        Debug.Log("chord" + randomChord);
         //Destroy the audio source when played
 
         Destroy(source, chords[randomChord].length);
 
     }
 
-    void PlayFinish()
+    void NoteGrouping()
     {
-        if (endSting.endGame == true)
+        newCollisionCount = ballPath.collisionCount;
+
+        if (randomChord == 1)
         {
-            print("endgame");
+            newCollisionCount += 3;
+        }
+        else if (randomChord == 2)
+        {
+            newCollisionCount += 6;
+        }
+        else
+        {
+            newCollisionCount = +0;
         }
     }
 

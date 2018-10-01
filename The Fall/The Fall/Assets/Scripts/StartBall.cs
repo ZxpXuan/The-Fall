@@ -13,6 +13,8 @@ public class StartBall: MonoBehaviour {
     public float foce = 10f;
     public Rigidbody Ball;
 
+    public AudioSource shootBall;
+
 	// Use this for initialization
 	void Start () {
         abale = true;
@@ -28,6 +30,7 @@ public class StartBall: MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && abale == true)
         {
+            shootBall.Play();
             screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             mousePositionOnScreen = Input.mousePosition;
             mousePositionOnScreen.z = screenPosition.z;

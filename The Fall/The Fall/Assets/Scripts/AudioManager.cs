@@ -99,9 +99,9 @@ public class AudioManager : MonoBehaviour
         {
             newCollisionCount += 6;
         }
-        else
+        else 
         {
-            newCollisionCount = +0;
+            newCollisionCount += 0;
         }
     }
 

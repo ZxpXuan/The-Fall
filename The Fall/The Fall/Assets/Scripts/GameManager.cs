@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 //    private bool paused = false;
-    private int i = 0;
-    public int limit = 5;
+
 	// Use this for initialization
 	void Start () {
         Cursor.visible = false;
@@ -38,15 +37,6 @@ public class GameManager : MonoBehaviour {
             Application.LoadLevel(Application.loadedLevelName);
         }
     }
-    void OnCollisionEnter(Collision collision)
-    {
 
-        i = i + 1;
-        Debug.Log(i);
-        if (i > limit)
-        {
-            Time.timeScale = 0;
-        }
-    }
 
 }

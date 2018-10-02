@@ -5,7 +5,7 @@ using System.Collections;
 public class laser : MonoBehaviour
 {
     //number of times the ball has made contact (mike)
-    public int collisionCount;
+    public  int collisionCount;
 
     //impact SFX source
     public AudioSource impactSFX;
@@ -28,6 +28,8 @@ public class laser : MonoBehaviour
     // we want to store the laser's velocity every frame
     // so we can use this data during collisions to reflect
     private Vector3 oldVelocity;
+    [SerializeField]
+    private float minVelocity = 10f;
     void FixedUpdate()
     {
         // because we want the velocity after physics, we put this in fixed update
@@ -55,16 +57,18 @@ public class laser : MonoBehaviour
             collisionCount = 0;
            
         }
+        float speed = oldVelocity.magnitude;
+
 
 
         // reflect our old velocity off the contact point's normal vector
         Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
 
         // assign the reflected velocity back to the rigidbody
-        Ball.velocity = reflectedVelocity;
+        Ball.velocity = reflectedVelocity.normalized * Mathf.Max(speed,minVelocity);
         // rotate the object by the same ammount we changed its velocity
-        Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
-        transform.rotation = rotation * transform.rotation;
+        //Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
+        //transform.rotation = rotation * transform.rotation;
     }
 
 

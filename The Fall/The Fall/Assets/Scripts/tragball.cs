@@ -11,8 +11,10 @@ public class tragball : MonoBehaviour
     private bool isDrage = false;
     private float dis;
    
-    public GameObject ball;
+   // public GameObject ball;
     public Rigidbody ding;
+    public Rigidbody ding2;
+    private int abale2 = 1;
     private bool abale = true ; 
     void Start()
     {
@@ -25,6 +27,9 @@ public class tragball : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         //从摄像机发出到点击坐标的射线
         RaycastHit hitInfo;
+        //
+
+        //ball1 control
         if(abale == true)
         {
 
@@ -59,9 +64,9 @@ public class tragball : MonoBehaviour
                     //Vector3 location = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     // location.z = 0;
                     //dis = (ball.transform.position - go.transform.position).sqrMagnitude;
-                    if (Vector3.Distance(currentPosition, ball.transform.position) > 3)
+                    if (Vector3.Distance(currentPosition, ding.transform.position) > 3)
                     {
-                        var maxPosition = (currentPosition - ball.transform.position).normalized * 3.0f + ball.transform.position;
+                        var maxPosition = (currentPosition - ding.transform.position).normalized * 3.0f + ding.transform.position;
                         go.transform.position = maxPosition;
                     }
                     else
@@ -85,16 +90,82 @@ public class tragball : MonoBehaviour
             {
                 Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                Vector3 dir = new Vector3(go.transform.position.x - ball.transform.position.x, go.transform.position.y - ball.transform.position.y , 0);
+                Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y , 0);
                 ding.AddForce(dir, ForceMode.Impulse);
-                abale = false; 
+                abale = false;
+                abale2 = abale2 + 1;
             }
 
         }
 
 
 
+        // ball2 control
+        if (abale2 == 2)
+        {
+
+            if (isDrage == false)
+            {
+                if (Physics.Raycast(ray, out hitInfo))
+                {
+                    //划出射线，只有在scene视图中才能看到
+                    Debug.DrawLine(ray.origin, hitInfo.point);
+                    go = hitInfo.collider.gameObject;
+                    //
+                    screenSpace = cam.WorldToScreenPoint(go.transform.position);
+                    offset = go.transform.position - cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
+                    //物体的名字  
+                    btnName = go.name;
+                    //组件的名字
+
+                }
+                else
+                {
+                    btnName = null;
+                }
+            }
+            if (Input.GetMouseButton(0))
+            {
+                Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+
+                if (btnName != null && btnName == "emputy2")
+                {
+                    //Vector3 location = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    // location.z = 0;
+                    //dis = (ball.transform.position - go.transform.position).sqrMagnitude;
+                    if (Vector3.Distance(currentPosition, ding2.transform.position) > 3)
+                    {
+                        var maxPosition = (currentPosition - ding2.transform.position).normalized * 3.0f + ding2.transform.position;
+                        go.transform.position = maxPosition;
+                    }
+                    else
+                    {
+                        go.transform.position = currentPosition;
+                    }
+
+                }
+                //            float distance = Vector3.Distance(ball.transform.position, go.transform.position);
+                // DisplayTrajectoryLineRenderer2();
+
+                isDrage = true;
+            }
+            else
+            {
+                isDrage = false;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+                Vector3 dir = new Vector3(go.transform.position.x - ding2.transform.position.x, go.transform.position.y - ding2.transform.position.y, 0);
+                ding2.AddForce(dir, ForceMode.Impulse);
+               
+                //abale2 = false;
+            }
+        }
+
         }
 
 
-}
+    }

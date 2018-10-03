@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 //    private bool paused = false;
@@ -31,8 +32,22 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 1;
          
         }
-      
-       
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+
+            SceneManager.LoadScene(0);
+        }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+
+            SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+
+            SceneManager.LoadScene(2);
+        }
+
     }
 
 

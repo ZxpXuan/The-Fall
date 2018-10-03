@@ -32,10 +32,7 @@ public class GameManager : MonoBehaviour {
          
         }
       
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Application.LoadLevel(Application.loadedLevelName);
-        }
+       
     }
 
 

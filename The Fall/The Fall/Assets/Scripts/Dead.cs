@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class limitation : MonoBehaviour {
-    private int i = 0;
-    public int limit = 5;
+public class Dead : MonoBehaviour {
     private int buildIndex;
-
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 		
 	}
 	
@@ -16,19 +13,16 @@ public class limitation : MonoBehaviour {
 	void Update () {
         getscene();
 	}
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "ball")
+        {
+            SceneManager.LoadScene(buildIndex);
+        } 
+    }
     void getscene()
     {
         //sceneName = SceneManager.GetActiveScene().name;
         buildIndex = SceneManager.GetActiveScene().buildIndex;
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-
-        i = i + 1;
-        Debug.Log(i);
-        if (i > limit)
-        {
-            SceneManager.LoadScene(buildIndex);
-        }
     }
 }

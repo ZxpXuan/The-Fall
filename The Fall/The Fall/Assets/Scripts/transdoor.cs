@@ -21,7 +21,7 @@ public class transdoor : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "ball")
+        if(other.tag == "ball" && otherportal.tag == "no")
         {
 
 
@@ -40,15 +40,49 @@ public class transdoor : MonoBehaviour {
             //}
             //if (otherportal.transform.rotation.z != 0)
             //{
-                other.transform.position = otherportal.transform.position;
-            ball.velocity = nevelocity;
+                other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
+                ball.velocity = nevelocity;
 
           //  }
 
 
 
         }
+        if (other.tag == "ball" && otherportal.tag == "noandhori")
+        {
 
+
+            var x = orivelocity.x;
+            var y = orivelocity.y;
+            //var z = orivelocity.z;
+            var sin = Mathf.Sin(Mathf.PI * angle / 180);
+            var cos = Mathf.Cos(Mathf.PI * angle / 180);
+            var newX = x * cos + y * sin;
+            var newY = x * -sin + y * cos;
+            nevelocity = new Vector3(newX, newY, 0);
+
+            //if(otherportal.transform.rotation.z == 0)
+            //{
+            //    other.transform.position = otherportal.transform.position;
+            //}
+            //if (otherportal.transform.rotation.z != 0)
+            //{
+            other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
+            ball.velocity = nevelocity;
+
+            //  }
+
+
+
+        }
+        if (other.tag == "ball")
+        {
+            other.transform.position = new Vector3 (otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
+        }
+        if (other.tag == "ball" && otherportal.tag == "hori")
+        {
+            other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
+        }
 
     }
 

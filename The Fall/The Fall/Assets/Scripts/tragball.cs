@@ -14,8 +14,8 @@ public class tragball : MonoBehaviour
    // public GameObject ball;
     public Rigidbody ding;
     public Rigidbody ding2;
-    private int abale2 = 1;
-    private bool abale = true ; 
+    private int abale = 1;
+    //private bool abale = true ; 
     void Start()
     {
         cam = Camera.main;
@@ -30,7 +30,7 @@ public class tragball : MonoBehaviour
         //
 
         //ball1 control
-        if(abale == true)
+        if(abale == 1)
         {
 
             if (isDrage == false)
@@ -54,7 +54,7 @@ public class tragball : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && btnName == "emputy")
             {
                 Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
@@ -86,14 +86,14 @@ public class tragball : MonoBehaviour
             }
            // print(btnName);
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && btnName == "emputy")
             {
-                Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
-                Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+                //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y , 0);
                 ding.AddForce(dir, ForceMode.Impulse);
-                abale = false;
-                abale2 = abale2 + 1;
+                //abale = false;
+                abale = abale + 1;
             }
 
         }
@@ -101,10 +101,10 @@ public class tragball : MonoBehaviour
 
 
         // ball2 control
-        if (abale2 == 2)
+        if (abale == 2)
         {
 
-            if (isDrage == false)
+            if (isDrage == false )
             {
                 if (Physics.Raycast(ray, out hitInfo))
                 {
@@ -124,7 +124,7 @@ public class tragball : MonoBehaviour
                     btnName = null;
                 }
             }
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && btnName == "emputy2")
             {
                 Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
@@ -154,13 +154,13 @@ public class tragball : MonoBehaviour
             {
                 isDrage = false;
             }
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && btnName == "emputy2")
             {
-                Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
-                Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                Vector3 dir = new Vector3(go.transform.position.x - ding2.transform.position.x, go.transform.position.y - ding2.transform.position.y, 0);
-                ding2.AddForce(dir, ForceMode.Impulse);
-               
+                //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+                Vector3 dir2 = new Vector3(go.transform.position.x - ding2.transform.position.x, go.transform.position.y - ding2.transform.position.y, 0);
+                ding2.AddForce(dir2, ForceMode.Impulse);
+                abale = abale + 1;
                 //abale2 = false;
             }
         }

@@ -6,6 +6,8 @@ public class cyclicmoving : MonoBehaviour
 {
     public float movingblockspeed = 0.02f;
     private float movingblocktime = 0.1f;
+    //public float mixtime = 20f;
+    public float midtime = 10f;
     public GameObject cycblock;
     // Use this for initialization
     void Start()
@@ -18,14 +20,14 @@ public class cyclicmoving : MonoBehaviour
     {
 
         movingblocktime += 0.1f;
-        if (movingblocktime < 10f)
+        if (movingblocktime < midtime)
         {
             cycblock.transform.Translate(Vector3.left * movingblockspeed);
         }
-        if (movingblocktime > 10f)
+        if (movingblocktime > midtime)
         {
             cycblock.transform.Translate(Vector3.right * movingblockspeed);
-            if (movingblocktime > 20f)
+            if (movingblocktime > midtime * 2)
             {
                 movingblocktime = 0.1f;
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class doorup : MonoBehaviour
 {
     public GameObject door;
-    public GameObject trangle;
+  
     private bool able;
     public float speed = 5.0f;
     private bool movable = false;
@@ -28,20 +28,13 @@ public class doorup : MonoBehaviour
         if (movable == true)
         {
 
-            door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+            door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
             
 
         }
         }
 
-        if (trangle.transform.position.y > downmos)
-        {
-            if (movable == true)
-            {
-                trangle.transform.Translate(Vector3.down * Time.deltaTime * speed, Space.World);
-            }
-            
-        }
+        
     }
 
     void OnCollisionEnter(Collision collision)

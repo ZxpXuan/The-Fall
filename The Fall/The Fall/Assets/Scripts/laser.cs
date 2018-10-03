@@ -43,7 +43,7 @@ public class laser : MonoBehaviour
         ContactPoint contact = collision.contacts[0];
 
         // play a melody note
-        am.PlayNote();
+       // am.PlayNote();
 
         impactSFX.Play();
 

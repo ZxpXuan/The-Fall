@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class levelmanager : MonoBehaviour {
     private string sceneName;
     private int buildIndex;
+
+    
 	// Use this for initialization
-	void Start () {
+
+    void Start () {
 		
 	}
 	
@@ -23,7 +26,8 @@ public class levelmanager : MonoBehaviour {
     {
         if(collision.collider.gameObject.tag == "ball")
         {
-            SceneManager.LoadScene(buildIndex + 1);
+           SceneManager.LoadScene(buildIndex + 1);
+       
         }
 
     }

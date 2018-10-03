@@ -75,13 +75,21 @@ public class transdoor : MonoBehaviour {
 
 
         }
-        if (other.tag == "ball")
+        if (other.tag == "ball" && otherportal.tag == "leftportal")
         {
-            other.transform.position = new Vector3 (otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
+            other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
-        if (other.tag == "ball" && otherportal.tag == "hori")
+        if (otherportal.tag == "rightportal" && other.tag == "ball")
+        {
+            other.transform.position = new Vector3(otherportal.transform.position.x - 1, otherportal.transform.position.y, otherportal.transform.position.z);
+        }
+        if (other.tag == "ball" && otherportal.tag == "horidown")
         {
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
+        }
+        if (other.tag == "ball" && otherportal.tag == "horiup")
+        {
+            other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y - 1, otherportal.transform.position.z);
         }
 
     }

@@ -10,7 +10,7 @@ public class doorup : MonoBehaviour
     public float speed = 5.0f;
     private bool movable = false;
     public float upmos = 13;
-    public float downmos = -1;
+    public float rightmos = 5;
 
     public AudioSource triggerSFX;
     //public float speedz;
@@ -23,24 +23,31 @@ public class doorup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (door.transform.position.y < upmos)
-        {
-        if (movable == true)
-        {
 
-            door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
-            
-
-        }
-        }
-
-        if (trangle.transform.position.y > downmos)
+        if (door != null)
         {
-            if (movable == true)
+            if (door.transform.position.y < upmos)
             {
-                trangle.transform.Translate(Vector3.down * Time.deltaTime * speed, Space.World);
+                if (movable == true)
+                {
+
+                    door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
+
+
+                }
             }
-            
+        }
+
+        if (trangle != null)
+        {
+            if (trangle.transform.position.x < rightmos)
+            {
+                if (movable == true)
+                {
+                    trangle.transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
+                }
+
+            }
         }
     }
 

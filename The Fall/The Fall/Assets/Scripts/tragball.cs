@@ -10,6 +10,9 @@ public class tragball : MonoBehaviour
     private Vector3 offset;
     private bool isDrage = false;
     private float dis;
+    private LineRenderer line;  
+    //private GameObject clone;
+    public GameObject emputy;
    
    // public GameObject ball;
     public Rigidbody ding;
@@ -74,11 +77,24 @@ public class tragball : MonoBehaviour
                         go.transform.position = currentPosition;
                    }
 
+
                 }
                 //            float distance = Vector3.Distance(ball.transform.position, go.transform.position);
                 // DisplayTrajectoryLineRenderer2();
 
                 isDrage = true;
+
+
+                //clone = (GameObject)Instantiate(emputy, emputy.transform.position, Quaternion.identity);
+                line = emputy.GetComponent<LineRenderer>();
+                Color c1 = new Color(1,0.92f,0.016f,1);
+                line.startColor = c1;
+                line.endColor = c1;
+                line.startWidth = 0.1f;
+                line.endWidth = 0.2f;
+
+                line.SetPosition(0, emputy.transform.position * 1.5f);
+
             }
             else
             {
@@ -94,6 +110,7 @@ public class tragball : MonoBehaviour
                 ding.AddForce(dir, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
+                line.enabled = false;
             }
 
         }

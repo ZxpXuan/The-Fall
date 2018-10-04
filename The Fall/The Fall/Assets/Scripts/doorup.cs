@@ -28,7 +28,7 @@ public class doorup : MonoBehaviour
         if (movable == true)
         {
 
-            door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.Self);
+            door.transform.Translate(Vector3.up * Time.deltaTime * speed, Space.World);
             
 
         }

@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup melOutput;
     public AudioMixerGroup chordOutput;
 
-    public float changeTime = 1f;
+    public float changeTime = 7f;
 
     float timer;
 

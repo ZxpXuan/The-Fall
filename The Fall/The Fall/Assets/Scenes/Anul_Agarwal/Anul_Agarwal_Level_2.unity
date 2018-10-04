@@ -479,6 +479,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114047302219695010, guid: f28b30fd7b64d4ea7b8861227df0102a,
+        type: 2}
+      propertyPath: uIManager
+      value: 
+      objectReference: {fileID: 1617707345}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f28b30fd7b64d4ea7b8861227df0102a, type: 2}
   m_IsPrefabParent: 0
@@ -559,6 +564,11 @@ Prefab:
       propertyPath: ballPath
       value: 
       objectReference: {fileID: 276232241}
+    - target: {fileID: 224449521420138864, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
@@ -716,6 +726,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62c0c62b624754a688788027315d80ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1617707345 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114941506760668086, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 917322222}
+  m_Script: {fileID: 11500000, guid: 6cc9c918ecb5c46e696fe4260620a3ec, type: 3}
 --- !u!1001 &1675490929
 Prefab:
   m_ObjectHideFlags: 0

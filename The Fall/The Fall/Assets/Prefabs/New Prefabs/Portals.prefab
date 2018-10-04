@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114882006157295156}
   m_Layer: 0
   m_Name: Portal IN
-  m_TagString: Untagged
+  m_TagString: rightportal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114342533369670806}
   m_Layer: 0
   m_Name: Portal OUT
-  m_TagString: Untagged
+  m_TagString: leftportal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,8 +71,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311959298745838}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.7924705, y: 3.2820325, z: 0}
-  m_LocalScale: {x: 3, y: 0.30000013, z: 1}
+  m_LocalPosition: {x: 3.12, y: 2.76, z: 0}
+  m_LocalScale: {x: 2, y: 0.30000013, z: 1}
   m_Children: []
   m_Father: {fileID: 4485564749632584}
   m_RootOrder: 0
@@ -84,8 +84,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553413601847200}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.4575295, y: -7.087968, z: 0}
-  m_LocalScale: {x: 3, y: 0.30000013, z: 1}
+  m_LocalPosition: {x: -2.24, y: -1.78, z: 0}
+  m_LocalScale: {x: 2, y: 0.30000013, z: 1}
   m_Children: []
   m_Father: {fileID: 4485564749632584}
   m_RootOrder: 1
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758622831157500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.6175294, y: 7.437968, z: 1.2092953}
+  m_LocalPosition: {x: 7.6175294, y: 7.437968, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4207735947860622}
@@ -120,7 +120,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b472ebdd708392047b4abe5c82b0117f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b472ebdd708392047b4abe5c82b0117f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -196,7 +196,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311959298745838}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -208,7 +208,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553413601847200}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337e2db66e594484883b1a0edf06af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherportal: {fileID: 0}
+  otherportal: {fileID: 1311959298745838}
   ball: {fileID: 0}
 --- !u!114 &114882006157295156
 MonoBehaviour:
@@ -237,5 +237,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1337e2db66e594484883b1a0edf06af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherportal: {fileID: 0}
+  otherportal: {fileID: 1553413601847200}
   ball: {fileID: 0}

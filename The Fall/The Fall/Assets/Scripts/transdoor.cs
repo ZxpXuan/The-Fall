@@ -9,6 +9,9 @@ public class transdoor : MonoBehaviour {
     public Rigidbody ball;
     private float angle = 90;
 
+    public AudioSource portalSFX;
+    
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +24,13 @@ public class transdoor : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+
+        /*if (other.tag == "ball")
+        {
+            portalSFX.Play();
+            print("sound");
+        }*/
+        
         if(other.tag == "ball" && otherportal.tag == "no")
         {
 
@@ -77,18 +87,22 @@ public class transdoor : MonoBehaviour {
         }
         if (other.tag == "ball" && otherportal.tag == "leftportal")
         {
+            portalSFX.Play();
             other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
-        if (otherportal.tag == "rightportal" && other.tag == "ball")
+        if (other.tag == "ball" && otherportal.tag == "rightportal" )
         {
+            portalSFX.Play();
             other.transform.position = new Vector3(otherportal.transform.position.x - 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horidown")
         {
+            portalSFX.Play();
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horiup")
         {
+            portalSFX.Play();
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y - 1, otherportal.transform.position.z);
         }
 

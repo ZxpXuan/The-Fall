@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class levelmanager : MonoBehaviour {
-    private string sceneName;
-    private int buildIndex;
-
+    [SerializeField]
+    public UIManager uIManager;
     
 	// Use this for initialization
 
@@ -16,23 +15,16 @@ public class levelmanager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        getscene();
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(buildIndex);
-        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.gameObject.tag == "ball")
         {
-           SceneManager.LoadScene(buildIndex + 1);
+            uIManager.displayWin();
        
         }
 
     }
-    void getscene(){
-        sceneName = SceneManager.GetActiveScene().name;
-        buildIndex = SceneManager.GetActiveScene().buildIndex;
-    }
+  
 }

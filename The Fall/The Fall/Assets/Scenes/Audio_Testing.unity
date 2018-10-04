@@ -155,6 +155,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0438e2a3ef7d4a32a0acbaa90563954, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1189689956 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4722372500712198, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963385653}
 --- !u!1 &1363087434
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,8 +263,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1189689956}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1626712673
 Prefab:
@@ -508,6 +513,21 @@ Prefab:
         type: 2}
       propertyPath: changeTime
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 20851242500392946, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.076539695
+      objectReference: {fileID: 0}
+    - target: {fileID: 20851242500392946, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.23128936
+      objectReference: {fileID: 0}
+    - target: {fileID: 20851242500392946, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.3773585
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}

@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 //    private bool paused = false;
+    private int buildIndex;
+    private string sceneName;
 
+    public UIManager uIManager;
 	// Use this for initialization
 	void Start () {
         Cursor.visible = false;
@@ -47,8 +50,25 @@ public class GameManager : MonoBehaviour {
 
             SceneManager.LoadScene(2);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            getScene();
 
+            SceneManager.LoadScene(buildIndex);
+        }
     }
 
+	
+	public void nextScene(){
+        getScene();
 
+        SceneManager.LoadScene(buildIndex + 1);
+
+
+    }
+    void getScene()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
+    }
 }

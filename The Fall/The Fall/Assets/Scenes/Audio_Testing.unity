@@ -220,6 +220,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1562567547 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1554736218861642, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963385653}
+--- !u!95 &1562567548
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562567547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4f041846980f2b45af98345d6c340cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1611504172
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +453,29 @@ Prefab:
       propertyPath: am
       value: 
       objectReference: {fileID: 1829391717}
+    - target: {fileID: 4722372500712198, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722372500712198, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473373561995136, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1562567548}
+    - target: {fileID: 114745304769278256, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745304769278256, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+        type: 2}
+      propertyPath: limit
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
   m_IsPrefabParent: 0
@@ -508,6 +554,11 @@ Prefab:
         type: 2}
       propertyPath: changeTime
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224449521420138864, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}

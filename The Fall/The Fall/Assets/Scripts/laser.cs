@@ -9,6 +9,8 @@ public class laser : MonoBehaviour
 
     //impact SFX source
     public AudioSource impactSFX;
+
+    public Animator anim;
     
     //audio script reference (mike)
     [SerializeField]
@@ -46,6 +48,7 @@ public class laser : MonoBehaviour
        // am.PlayNote();
 
         impactSFX.Play();
+        //anim.Play("BallImpact");
 
         
         // add 1 to collision count every time ball hits surface (mike)

@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     public int randomChord;
     public int newCollisionCount;
 
+    tragball tragBall;
+
     //Input
     public AudioClip[] melNotes;
     public AudioClip[] chords;

@@ -66,6 +66,12 @@ public class GameManager : MonoBehaviour {
 
 
     }
+
+    public void loadScene(string name){
+
+        SceneManager.LoadScene(name);
+
+    }
     void getScene()
     {
         sceneName = SceneManager.GetActiveScene().name;

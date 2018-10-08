@@ -19,6 +19,8 @@ public class transdoor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(ball!=null )
         orivelocity = ball.velocity;
     }
 

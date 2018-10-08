@@ -16,9 +16,13 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     public GameObject pauseMenu;
+
+    [SerializeField]
+    public GameManager gm;
 	// Use this for initialization
 	void Start () {
-		
+        gm = GetComponent<GameManager>();
+        updateBouncesLeft(gm.collisionLeft);
 	}
 	
 	// Update is called once per frame

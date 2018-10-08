@@ -11,10 +11,15 @@ public class GameManager : MonoBehaviour {
     public UIManager uIManager;
 
     public bool isPaused;
+
+    public int collisionLeft;
+
+    public limitation lim;
 	// Use this for initialization
 	void Start () {
         Cursor.visible = false;
         isPaused = false;
+        collisionLeft = lim.limit;
     }
 	
 	// Update is called once per frame
@@ -95,6 +100,14 @@ public class GameManager : MonoBehaviour {
     public void loadScene(string name){
 
         SceneManager.LoadScene(name);
+
+    }
+
+    public void updateBounces(int number)
+    {
+        collisionLeft = number;
+
+        uIManager.updateBouncesLeft(number);
 
     }
     void getScene()

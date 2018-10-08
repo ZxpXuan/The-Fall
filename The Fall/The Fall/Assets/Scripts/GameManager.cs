@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour {
     private string sceneName;
 
     public UIManager uIManager;
+
+    public bool isPaused;
 	// Use this for initialization
 	void Start () {
         Cursor.visible = false;
+        isPaused = false;
     }
 	
 	// Update is called once per frame
@@ -56,9 +59,31 @@ public class GameManager : MonoBehaviour {
 
             SceneManager.LoadScene(buildIndex);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            if(isPaused){
+                isPaused = false;
+                unPauseGame();
+            }
+            else{
+
+                isPaused = true;
+                PauseGame();
+            }
+        }
     }
 
-	
+    public void PauseGame(){
+        Time.timeScale = 0f;
+        uIManager.displayPauseMenu();
+
+    }
+
+    public void unPauseGame(){
+        Time.timeScale = 1f;
+        uIManager.removePauseMenu();
+
+    }
 	public void nextScene(){
         getScene();
 

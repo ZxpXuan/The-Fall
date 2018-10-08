@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     public Text bouncesLeft;
+
+    [SerializeField]
+    public GameObject pauseMenu;
 	// Use this for initialization
 	void Start () {
 		
@@ -28,7 +31,16 @@ public class UIManager : MonoBehaviour {
         bouncesLeft.text = "Bounces Left:" + number;
 
     }
+    public void displayPauseMenu(){
 
+
+        pauseMenu.SetActive(true);
+    }
+    public void removePauseMenu(){
+
+        pauseMenu.SetActive(false);
+
+    }
     public void displayWin(){
 
         winScreen.SetActive(true);

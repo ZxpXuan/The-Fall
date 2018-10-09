@@ -15,8 +15,13 @@ public class GameManager : MonoBehaviour {
     public int collisionLeft;
 
     public limitation lim;
+
+    public float restartDelay;
+    private float restartStartTime;
+    private bool isRestartInitiated;
 	// Use this for initialization
 	void Start () {
+        isRestartInitiated = false;
         Cursor.visible = false;
         isPaused = false;
         collisionLeft = lim.limit;
@@ -76,6 +81,20 @@ public class GameManager : MonoBehaviour {
                 PauseGame();
             }
         }
+        
+        if(isRestartInitiated&& restartStartTime + restartDelay <Time.time){
+            Application.LoadLevel(Application.loadedLevel);
+
+
+        }
+    }
+
+    public void restartLevel()
+    {
+        isRestartInitiated = true;
+        restartStartTime = Time.time;
+
+
     }
 
     public void PauseGame(){

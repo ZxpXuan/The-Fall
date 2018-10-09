@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1927023647293918}
+  m_IsPrefabParent: 1
+--- !u!1 &1927023647293918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4073489293967670}
+  - component: {fileID: 114542297804554668}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4073489293967670
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927023647293918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.18243, y: -4.3814034, z: 11.353582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114542297804554668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927023647293918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+  - audMixGroup: {fileID: 243720911087716830, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Portal
+    clip: {fileID: 8300000, guid: fca4c007f076d1a4daef59d26f0e50ca, type: 3}
+    volume: 0.868
+    pitch: 0.736
+    loop: 0
+    playOnAwake: 0
+  - audMixGroup: {fileID: 243421689678377822, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Impact
+    clip: {fileID: 8300000, guid: 2396eaeaae5d7d145ba5024363b141ba, type: 3}
+    volume: 0.472
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - audMixGroup: {fileID: 243998145995239742, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Shoot
+    clip: {fileID: 8300000, guid: 47338866c4f34bf449a982c54f766832, type: 3}
+    volume: 0.451
+    pitch: 0
+    loop: 0
+    playOnAwake: 0
+  - audMixGroup: {fileID: 243126595990931784, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Music
+    clip: {fileID: 8300000, guid: 88520fc50250d474a8a349e2c3b01fbf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+  - audMixGroup: {fileID: 243623265560619952, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Death
+    clip: {fileID: 8300000, guid: d5eaec32ceb4837469b39a8564a85428, type: 3}
+    volume: 0.515
+    pitch: 1.69
+    loop: 0
+    playOnAwake: 0
+  - audMixGroup: {fileID: 243679688543969204, guid: eede94167ef61e44aae88ce4467dccc3,
+      type: 2}
+    clipName: Goal
+    clip: {fileID: 8300000, guid: 75f4062f14373cf448fbe126d7ff7acc, type: 3}
+    volume: 0.387
+    pitch: 1.56
+    loop: 0
+    playOnAwake: 0

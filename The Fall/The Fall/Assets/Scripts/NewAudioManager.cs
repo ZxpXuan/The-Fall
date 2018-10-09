@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 [System.Serializable]
 public class Sound
 {
-    private AudioSource source;
+    public AudioMixerGroup audMixGroup;
 
+    private AudioSource source;
     public string clipName;
     public AudioClip clip;
 
     [Range(0f, 1f)]
     public float volume;
-    [Range(0f, 1f)]
+    [Range(0f, 3f)]
     public float pitch;
 
     public bool loop = false;
@@ -27,6 +29,7 @@ public class Sound
         source.volume = volume;
         source.playOnAwake = playOnAwake;
         source.loop = loop;
+        source.outputAudioMixerGroup = audMixGroup;
     }
 
     public void Play()
@@ -42,13 +45,25 @@ public class NewAudioManager : MonoBehaviour
     [SerializeField]
     Sound[] sound;
 
-    private void Awake()
+
+    private static bool created = false;
+
+    void Awake()
     {
+        if (!created)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            created = true;
+            Debug.Log("Awake: " + this.gameObject);
+
+        }
+
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
     }
+
 
     private void Start()
     {
@@ -59,9 +74,7 @@ public class NewAudioManager : MonoBehaviour
             sound[i].SetSource(_go.AddComponent<AudioSource>());
         }
 
-        PlaySound("Music");
-
-        
+        PlaySound("Music");       
     }
 
     public void PlaySound(string _name)

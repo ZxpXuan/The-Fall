@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 4572783089046702}
   - component: {fileID: 114170217762457598}
   - component: {fileID: 114941506760668086}
-  - component: {fileID: 114922189937790208}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1332,42 +1331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 46163f42fb629d048a4f18e871871d97, type: 2}
---- !u!114 &114922189937790208
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1685805148150310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound:
-  - clipName: Portal
-    clip: {fileID: 8300000, guid: fca4c007f076d1a4daef59d26f0e50ca, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    playOnAwake: 0
-  - clipName: Impact
-    clip: {fileID: 8300000, guid: 2396eaeaae5d7d145ba5024363b141ba, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    playOnAwake: 0
-  - clipName: Shoot
-    clip: {fileID: 8300000, guid: 47338866c4f34bf449a982c54f766832, type: 3}
-    volume: 0.451
-    pitch: 0
-    loop: 0
-    playOnAwake: 0
-  - clipName: Music
-    clip: {fileID: 8300000, guid: 88520fc50250d474a8a349e2c3b01fbf, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    playOnAwake: 0
 --- !u!114 &114941506760668086
 MonoBehaviour:
   m_ObjectHideFlags: 1

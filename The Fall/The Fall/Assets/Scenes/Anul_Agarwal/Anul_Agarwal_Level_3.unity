@@ -4962,6 +4962,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62c0c62b624754a688788027315d80ea, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &594141224
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.18243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.3814034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.353582
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &752300241
 Prefab:
   m_ObjectHideFlags: 0
@@ -5172,12 +5214,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &775498064 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114922189937790208, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1852694033}
-  m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
 --- !u!114 &775498065 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114941506760668086, guid: 07f16e6b63a754d15b4ead4abad5cab9,
@@ -14548,7 +14584,7 @@ Prefab:
         type: 2}
       propertyPath: audioMan
       value: 
-      objectReference: {fileID: 775498064}
+      objectReference: {fileID: 0}
     - target: {fileID: 114131400464479642, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: limit

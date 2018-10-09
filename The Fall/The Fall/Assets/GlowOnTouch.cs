@@ -24,7 +24,7 @@ public class GlowOnTouch : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision collision)
 	{
-        if(collision.gameObject.layer==9){
+        if(collision.gameObject.tag=="ball"){
 
             if (enableRenderer)
             {

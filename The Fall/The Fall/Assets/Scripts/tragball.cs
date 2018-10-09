@@ -10,6 +10,7 @@ public class tragball : MonoBehaviour
     private Vector3 offset;
     private bool isDrage = false;
     private float dis;
+    public float force;
    // private LineRenderer line; 
     //private GameObject clone;
     public GameObject emputy;
@@ -77,7 +78,10 @@ public class tragball : MonoBehaviour
                     {
                         go.transform.position = currentPosition;
                    }
+                    Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y, 0);
 
+                    force = dir.magnitude;
+                    Debug.Log(force);
 
                 }
                 //            float distance = Vector3.Distance(ball.transform.position, go.transform.position);
@@ -108,6 +112,9 @@ public class tragball : MonoBehaviour
                 //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y , 0);
+                
+               
+
                 ding.AddForce(dir, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;

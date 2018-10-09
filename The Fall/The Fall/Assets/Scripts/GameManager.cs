@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour {
     }
 	public void nextScene(){
         getScene();
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene(buildIndex + 1);
 
@@ -117,6 +118,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void loadScene(string name){
+        Time.timeScale = 1f;
 
         SceneManager.LoadScene(name);
 

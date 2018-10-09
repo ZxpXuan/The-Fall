@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour {
     public void displayWin(){
 
         winScreen.SetActive(true);
-       // Time.timeScale = 0f;
+        Time.timeScale = 0f;
     }
 
     public void displayLose(){

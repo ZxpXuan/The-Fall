@@ -11,6 +11,8 @@ public class tragball : MonoBehaviour
     private bool isDrage = false;
     private float dis;
     public float force;
+
+    public float ballSpeed = 1;
    // private LineRenderer line; 
     //private GameObject clone;
     public GameObject emputy;
@@ -115,7 +117,7 @@ public class tragball : MonoBehaviour
                 
                
 
-                ding.AddForce(dir, ForceMode.Impulse);
+                ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
                // line.enabled = false;
@@ -184,7 +186,7 @@ public class tragball : MonoBehaviour
                 //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir2 = new Vector3(go.transform.position.x - ding2.transform.position.x, go.transform.position.y - ding2.transform.position.y, 0);
-                ding2.AddForce(dir2, ForceMode.Impulse);
+                ding2.AddForce(dir2 , ForceMode.Impulse);
                 abale = abale + 1;
                 //abale2 = false;
             }

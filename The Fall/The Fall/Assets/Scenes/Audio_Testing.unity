@@ -243,6 +243,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1562567549 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114745304769278256, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963385653}
+  m_Script: {fileID: 11500000, guid: b3acebb8f49ce461f8d52d60dfb6cdb5, type: 3}
 --- !u!1 &1611504172
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +398,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1712177546 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1685805148150310, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2137304343}
+--- !u!114 &1712177547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1712177546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+  - clipName: Portal
+    clip: {fileID: 8300000, guid: fca4c007f076d1a4daef59d26f0e50ca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - clipName: Impact
+    clip: {fileID: 8300000, guid: 2396eaeaae5d7d145ba5024363b141ba, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+  - clipName: Shoot
+    clip: {fileID: 8300000, guid: 47338866c4f34bf449a982c54f766832, type: 3}
+    volume: 0.451
+    pitch: 0
+    loop: 0
+    playOnAwake: 0
+  - clipName: Music
+    clip: {fileID: 8300000, guid: 88520fc50250d474a8a349e2c3b01fbf, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    playOnAwake: 0
+--- !u!114 &1712177549 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2137304343}
+  m_Script: {fileID: 11500000, guid: 5b4b01e7435904409bffe9679eecfde4, type: 3}
 --- !u!114 &1768791009 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114473373561995136, guid: 0638a1e6fcb8343f9818337f557a8cf0,
@@ -403,12 +456,6 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54876198241505406, guid: 0638a1e6fcb8343f9818337f557a8cf0,
     type: 2}
   m_PrefabInternal: {fileID: 1963385653}
---- !u!114 &1829391717 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114366051993684796, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-    type: 2}
-  m_PrefabInternal: {fileID: 2137304343}
-  m_Script: {fileID: 11500000, guid: 212eb021df6e1774aaa4bb7acbe5ccc1, type: 3}
 --- !u!1001 &1963385653
 Prefab:
   m_ObjectHideFlags: 0
@@ -452,7 +499,7 @@ Prefab:
         type: 2}
       propertyPath: am
       value: 
-      objectReference: {fileID: 1829391717}
+      objectReference: {fileID: 0}
     - target: {fileID: 4722372500712198, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
@@ -474,9 +521,15 @@ Prefab:
     - target: {fileID: 114745304769278256, guid: 0638a1e6fcb8343f9818337f557a8cf0,
         type: 2}
       propertyPath: limit
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114745304769278256, guid: 0638a1e6fcb8343f9818337f557a8cf0,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1712177549}
+    m_RemovedComponents:
+    - {fileID: 82323658578697920, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0638a1e6fcb8343f9818337f557a8cf0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2137304343
@@ -560,6 +613,17 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114366051993684796, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: lim
+      value: 
+      objectReference: {fileID: 1562567549}
+    m_RemovedComponents:
+    - {fileID: 82295509483738452, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0

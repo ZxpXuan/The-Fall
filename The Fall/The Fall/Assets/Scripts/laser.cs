@@ -7,14 +7,11 @@ public class laser : MonoBehaviour
     //number of times the ball has made contact (mike)
     public  int collisionCount;
 
-    //impact SFX source
-    public AudioSource impactSFX;
+    NewAudioManager audMan;
 
     public Animator anim;
     
-    //audio script reference (mike)
-    [SerializeField]
-    AudioManager am;
+    //audio script reference (mike)   
 
     // public float fireSpeed = 2f;
     public Rigidbody Ball;
@@ -25,6 +22,9 @@ public class laser : MonoBehaviour
 
         // freeze the rotation so it doesnt go spinning after a collision
         Ball.freezeRotation = true;
+
+        audMan = NewAudioManager.instance;
+
     }
 
     // we want to store the laser's velocity every frame
@@ -43,16 +43,13 @@ public class laser : MonoBehaviour
     {
         // get the point of contact (mike)
         ContactPoint contact = collision.contacts[0];
-
-        // play a melody note
-       // am.PlayNote();
-
-        impactSFX.Play();
-        //anim.Play("BallImpact");
+        
+        audMan.PlaySound("Impact");
+        
 
         
         // add 1 to collision count every time ball hits surface (mike)
-        collisionCount += 1;
+        //collisionCount += 1;
 
         // if collision count reachs 9, reset it (mike)
         if (collisionCount > 2)

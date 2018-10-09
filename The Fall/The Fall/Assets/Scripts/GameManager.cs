@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         isRestartInitiated = false;
-        Cursor.visible = false;
+       // Cursor.visible = false;
         isPaused = false;
         collisionLeft = lim.limit;
     }

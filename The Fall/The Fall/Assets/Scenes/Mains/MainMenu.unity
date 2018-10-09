@@ -209,8 +209,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -731, y: 87}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: -302, y: 50}
+  m_SizeDelta: {x: 269.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522446101
 MonoBehaviour:
@@ -633,8 +633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -730, y: -204}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: -301, y: -116}
+  m_SizeDelta: {x: 269.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168608248
 MonoBehaviour:
@@ -838,8 +838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -730, y: -355}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: -301, y: -206}
+  m_SizeDelta: {x: 269.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227864688
 MonoBehaviour:
@@ -1088,8 +1088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -730, y: -54}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: -301, y: -32}
+  m_SizeDelta: {x: 269.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651948102
 MonoBehaviour:
@@ -1271,7 +1271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36, y: 406}
+  m_AnchoredPosition: {x: 153, y: -51}
   m_SizeDelta: {x: 900, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1843638350
@@ -1344,6 +1344,8 @@ MonoBehaviour:
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}
   bouncesLeft: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!114 &1860686912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,6 +1358,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManager: {fileID: 1860686911}
+  isPaused: 0
+  collisionLeft: 0
+  lim: {fileID: 0}
+  restartDelay: 0
 --- !u!4 &1860686913
 Transform:
   m_ObjectHideFlags: 0

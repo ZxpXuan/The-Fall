@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class levelmanager : MonoBehaviour {
     [SerializeField]
     public UIManager uIManager;
+
+    NewAudioManager audMan;
     
 	// Use this for initialization
 
     void Start () {
-		
+        audMan = NewAudioManager.instance;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +21,9 @@ public class levelmanager : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.gameObject.tag == "ball")
+        audMan.PlaySound("Goal");
+
+        if (collision.collider.gameObject.tag == "ball")
         {
             uIManager.displayWin();
        

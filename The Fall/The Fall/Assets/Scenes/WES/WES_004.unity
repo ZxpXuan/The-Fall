@@ -274,11 +274,6 @@ Prefab:
       propertyPath: uIManager
       value: 
       objectReference: {fileID: 263511780}
-    - target: {fileID: 65741335561071714, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3b23ecb003d554e92f1b5f14452d1d, type: 2}
   m_IsPrefabParent: 0
@@ -1187,6 +1182,37 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[2].volume
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[2].playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[5].audMixGroup
+      value: 
+      objectReference: {fileID: 243225766123973256, guid: eede94167ef61e44aae88ce4467dccc3,
+        type: 2}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 47338866c4f34bf449a982c54f766832, type: 3}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[2].pitch
+      value: 1.422
+      objectReference: {fileID: 0}
+    - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+        type: 2}
+      propertyPath: sound.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
   m_IsPrefabParent: 0
@@ -1761,6 +1787,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4529856423939502, guid: 2570150614a41bd408792caa829fc295, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.73
@@ -1798,6 +1829,26 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 263511781}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.49152565
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.44594964
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.0000015497208
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
   m_IsPrefabParent: 0

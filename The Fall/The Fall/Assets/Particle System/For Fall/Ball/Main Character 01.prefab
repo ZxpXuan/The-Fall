@@ -3708,15 +3708,15 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 0}
-    randomDistribution: 1
-    color: 1
+    light: {fileID: 108496816931498384, guid: 7c781e41bc8491143885931dae25a1b3, type: 2}
+    randomDistribution: 0
+    color: 0
     range: 1
     intensity: 1
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 29.43
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3769,7 +3769,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.1
+      scalar: 76.81
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3819,7 +3819,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 5
+    maxLights: 3
   TrailModule:
     enabled: 1
     mode: 0

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4077940664565600}
   - component: {fileID: 135294868360966430}
   - component: {fileID: 120812041680850004}
+  - component: {fileID: 114594262256343460}
   m_Layer: 0
   m_Name: emputy
   m_TagString: Untagged
@@ -144,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1563877534933358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.12, y: 3.22, z: 0}
+  m_LocalPosition: {x: -4.3, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809268989863688}
@@ -277,6 +278,21 @@ MonoBehaviour:
   anim: {fileID: 0}
   Ball: {fileID: 54536255048562068}
   minVelocity: 8
+--- !u!114 &114594262256343460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414896564229944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5b794f1a3624c1eb2d43bb4769c88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lr: {fileID: 120812041680850004}
+  p0: {fileID: 4077940664565600}
+  p1: {fileID: 4809268989863688}
+  layerOrder: 1
 --- !u!120 &120812041680850004
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -362,7 +378,7 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 46
     numCapVertices: 0
     alignment: 0
     textureMode: 0

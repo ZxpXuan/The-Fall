@@ -25,9 +25,12 @@ public class linedraw : MonoBehaviour {
     void Update()
 
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            lr.enabled = true;
+        }
 
         lr.SetPosition(0, p0.position);
-
         lr.SetPosition(1, p1.position);
         lr.startWidth = 0.1f;
         lr.endWidth = 0.2f;

@@ -14319,6 +14319,36 @@ Prefab:
       propertyPath: limit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.8937981
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.30588236
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
   m_IsPrefabParent: 0
@@ -19848,7 +19878,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 0.38, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1915866620
 Transform:

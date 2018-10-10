@@ -25,6 +25,8 @@ public class linedraw : MonoBehaviour {
     void Update()
 
     {
+        if (p0 == null || p1 == null) return;
+
         if(Input.GetMouseButtonDown(0))
         {
             lr.enabled = true;

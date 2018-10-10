@@ -1596,8 +1596,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 3.01
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.31
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1787,11 +1787,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4529856423939502, guid: 2570150614a41bd408792caa829fc295, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.73
@@ -1829,25 +1824,10 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 263511781}
-    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
+    - target: {fileID: 114131400464479642, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      propertyPath: limit
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.49152565
-      objectReference: {fileID: 0}
-    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
-      value: 0.44594964
-      objectReference: {fileID: 0}
-    - target: {fileID: 120812041680850004, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.0000015497208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}

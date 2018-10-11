@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class linedraw : MonoBehaviour {
 
-    public bool isAiming = false;
+    public NewAudioManager audMan;
 
     public LineRenderer lr;
 
@@ -17,6 +17,8 @@ public class linedraw : MonoBehaviour {
     void Start()
 
     {
+        audMan = NewAudioManager.instance;
+
         lr.positionCount = (2);
 
         lr.sortingLayerID = layerOrder;
@@ -27,7 +29,6 @@ public class linedraw : MonoBehaviour {
     void Update()
     {
         AimingLine();
-        //Debug.Log(isAiming);
     }
     
     public void AimingLine()
@@ -37,7 +38,6 @@ public class linedraw : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             lr.enabled = true;
-            isAiming = true;
         }
 
         lr.SetPosition(0, p0.position);
@@ -48,7 +48,12 @@ public class linedraw : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             lr.enabled = false;
-            isAiming = false;
         }
+    }
+
+    void OnMouseDown()
+    {
+        audMan.PlaySound("Aim");
+        print("sound");
     }
 }

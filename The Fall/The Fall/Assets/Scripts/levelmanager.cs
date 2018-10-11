@@ -11,12 +11,25 @@ public class levelmanager : MonoBehaviour {
 
     [SerializeField]
     List<ParticleSystem> ps;
+
+
+    private IEnumerator coroutine;
+
+    [SerializeField]
+    public float waitTime;
 	// Use this for initialization
 
     void Start () {
         audMan = NewAudioManager.instance;
+        coroutine = WaitAndWin(waitTime);
 	}
 	
+    IEnumerator WaitAndWin(float waitTime){
+
+        yield return new WaitForSeconds(waitTime);
+        uIManager.displayWin();
+    }
+
 	// Update is called once per frame
 	void Update () {
 
@@ -31,7 +44,7 @@ public class levelmanager : MonoBehaviour {
         }
         if (collision.collider.gameObject.tag == "ball")
         {
-            uIManager.displayWin();
+            StartCoroutine(coroutine);
        
         }
 

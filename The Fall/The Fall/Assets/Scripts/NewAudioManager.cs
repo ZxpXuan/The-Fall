@@ -45,10 +45,13 @@ public class NewAudioManager : MonoBehaviour
     [SerializeField]
     Sound[] sound;
 
-    //reference to the linedraw script
-    public linedraw lDraw;
+    //references
+    //public linedraw lDraw;
+
+    public tragball ballForce;
 
     public bool aimLine;
+    public float shootSpeed;
 
     private static bool created = false;
 
@@ -79,18 +82,20 @@ public class NewAudioManager : MonoBehaviour
         }
 
         PlaySound("Music");
-       
+      
     }
 
     void Update()
     {
-        aimLine = lDraw.isAiming;
-        Debug.Log(aimLine);
+        //aimLine = lDraw.isAiming;
+        shootSpeed = ballForce.force;
+
+        AimSounds();
     }
 
     void AimSounds()
     {
-        if(aimLine == true)
+        if(aimLine == true && shootSpeed < 0.1)
         {
             PlaySound("Aim");
         }      

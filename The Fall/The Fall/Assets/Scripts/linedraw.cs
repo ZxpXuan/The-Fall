@@ -22,6 +22,8 @@ public class linedraw : MonoBehaviour {
         lr.sortingLayerID = layerOrder;
     }
 
+
+
     void Update()
     {
         AimingLine();

@@ -35,7 +35,7 @@ public class limitation : MonoBehaviour {
      //   partSystem.transform.position = transform.position;
    //     partSystem.Play();
         Debug.Log("t " + i);
-        if (i > limit)
+        if (i > limit || collision.collider.tag == "outsidewall")
         {
             //    SceneManager.LoadScene(buildIndex);
             Destroy(gameObject);

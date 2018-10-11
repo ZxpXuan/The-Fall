@@ -8,7 +8,9 @@ public class levelmanager : MonoBehaviour {
     public UIManager uIManager;
 
     NewAudioManager audMan;
-    
+
+    [SerializeField]
+    List<ParticleSystem> ps;
 	// Use this for initialization
 
     void Start () {
@@ -23,6 +25,10 @@ public class levelmanager : MonoBehaviour {
     {
         audMan.PlaySound("Goal");
 
+        foreach(ParticleSystem part in ps){
+            part.Play();
+
+        }
         if (collision.collider.gameObject.tag == "ball")
         {
             uIManager.displayWin();

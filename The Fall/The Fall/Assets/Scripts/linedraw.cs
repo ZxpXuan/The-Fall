@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class linedraw : MonoBehaviour {
 
+    public bool isAiming = false;
+
     public LineRenderer lr;
 
     public Transform p0;
@@ -15,21 +17,25 @@ public class linedraw : MonoBehaviour {
     void Start()
 
     {
-
         lr.positionCount = (2);
 
         lr.sortingLayerID = layerOrder;
-
     }
 
     void Update()
-
+    {
+        AimingLine();
+        //Debug.Log(isAiming);
+    }
+    
+    public void AimingLine()
     {
         if (p0 == null || p1 == null) return;
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             lr.enabled = true;
+            isAiming = true;
         }
 
         lr.SetPosition(0, p0.position);
@@ -37,10 +43,10 @@ public class linedraw : MonoBehaviour {
         lr.startWidth = 0.1f;
         lr.endWidth = 0.2f;
 
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             lr.enabled = false;
+            isAiming = false;
         }
-
     }
 }

@@ -10,10 +10,10 @@ public class transdoor : MonoBehaviour {
     private float angle = 90;
 
     NewAudioManager audMan;
-    
+    public List<ParticleSystem> particleSystems;
 
 	// Use this for initialization
-	void Start () {
+    void Start (){
 
         audMan = NewAudioManager.instance;
 	}
@@ -33,6 +33,10 @@ public class transdoor : MonoBehaviour {
             portalSFX.Play();
             print("sound");
         }*/
+        foreach(ParticleSystem ps in particleSystems){
+
+            ps.Play();
+        }
         
         if(other.tag == "ball" && otherportal.tag == "no")
         {

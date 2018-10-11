@@ -88,7 +88,7 @@ public class NewAudioManager : MonoBehaviour
     void Update()
     {
         //aimLine = lDraw.isAiming;
-        shootSpeed = ballForce.force;
+        //shootSpeed = ballForce.force;
 
         AimSounds();
     }

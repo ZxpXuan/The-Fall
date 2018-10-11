@@ -316,6 +316,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1414896564229944, guid: 2570150614a41bd408792caa829fc295,
     type: 2}
   m_PrefabInternal: {fileID: 829268542}
+--- !u!114 &750748697 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114941506760668086, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 2128142481}
+  m_Script: {fileID: 11500000, guid: 6cc9c918ecb5c46e696fe4260620a3ec, type: 3}
 --- !u!1001 &752449115
 Prefab:
   m_ObjectHideFlags: 0
@@ -377,7 +383,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4529856423939502, guid: 2570150614a41bd408792caa829fc295, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.3
+      value: 5.79
       objectReference: {fileID: 0}
     - target: {fileID: 4529856423939502, guid: 2570150614a41bd408792caa829fc295, type: 2}
       propertyPath: m_LocalPosition.y
@@ -536,6 +542,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988977987599088, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+        type: 2}
+      propertyPath: uIManager
+      value: 
+      objectReference: {fileID: 750748697}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3b23ecb003d554e92f1b5f14452d1d, type: 2}
   m_IsPrefabParent: 0

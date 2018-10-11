@@ -246,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1655058779783326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.471771, y: -4.2622337, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.1000128, y: 0.68458277, z: 1}
   m_Children:
   - {fileID: 4731279101870058}
@@ -261,11 +261,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732939837985130}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3778702, z: 1}
-  m_Center: {x: 0, y: 0.029831503, z: 0}
+  m_Size: {x: 1.5637703, y: 1.7301402, z: 1}
+  m_Center: {x: 0.000003974164, y: 0.03748978, z: 0}
 --- !u!114 &114297837224875774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,7 +313,7 @@ MonoBehaviour:
   ps:
   - {fileID: 198865551925202278}
   - {fileID: 198702749286920856}
-  waitTime: 0
+  waitTime: 1
 --- !u!198 &198361422316718566
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -9512,7 +9512,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9681,7 +9681,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14100,7 +14100,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14269,7 +14269,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2

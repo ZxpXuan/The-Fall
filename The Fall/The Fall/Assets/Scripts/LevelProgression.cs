@@ -21,6 +21,7 @@ public class LevelProgression : MonoBehaviour {
         while(i<levelsUnlocked){
 
             levelButtons[i].interactable = true;
+            i++;
         }
         if(unlockAllLevels){
             foreach(Button bt in levelButtons){

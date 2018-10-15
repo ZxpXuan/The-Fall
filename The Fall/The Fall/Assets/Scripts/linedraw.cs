@@ -20,7 +20,6 @@ public class linedraw : MonoBehaviour {
         audMan = NewAudioManager.instance;
 
         lr.positionCount = (2);
-
         lr.sortingLayerID = layerOrder;
     }
 
@@ -54,6 +53,11 @@ public class linedraw : MonoBehaviour {
     void OnMouseDown()
     {
         audMan.PlaySound("Aim");
-        print("sound");
     }
+
+    void OnMouseUp()
+    {
+        audMan.StopSound("Aim");
+    }
+
 }

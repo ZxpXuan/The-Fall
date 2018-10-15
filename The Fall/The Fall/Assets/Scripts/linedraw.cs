@@ -53,6 +53,7 @@ public class linedraw : MonoBehaviour {
     void OnMouseDown()
     {
         audMan.PlaySound("Aim");
+        audMan.PlaySound("BallClick");
     }
 
     void OnMouseUp()

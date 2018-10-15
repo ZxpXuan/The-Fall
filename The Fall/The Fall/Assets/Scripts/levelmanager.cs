@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class levelmanager : MonoBehaviour {
     [SerializeField]
     public UIManager uIManager;
-
+    [SerializeField]
+    int nextLevelid;
     NewAudioManager audMan;
 
     [SerializeField]
@@ -28,6 +29,7 @@ public class levelmanager : MonoBehaviour {
 
         yield return new WaitForSeconds(waitTime);
         uIManager.displayWin();
+        PlayerPrefs.SetInt("levelsUnlocked", nextLevelid);
     }
 
 	// Update is called once per frame

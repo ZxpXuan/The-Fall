@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     private int buildIndex;
     private string sceneName;
 
+    public NewAudioManager audioMan;
+
     public UIManager uIManager;
 
     public bool isPaused;
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour {
        // Cursor.visible = false;
         isPaused = false;
         collisionLeft = lim.limit;
+
+        audioMan = NewAudioManager.instance;
     }
 	
 	// Update is called once per frame
@@ -65,6 +69,8 @@ public class GameManager : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
+            audioMan.PlaySound("Restart");
+
             getScene();
 
             SceneManager.LoadScene(buildIndex);

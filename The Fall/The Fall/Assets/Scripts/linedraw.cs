@@ -14,13 +14,14 @@ public class linedraw : MonoBehaviour {
 
     public int layerOrder = 0;
 
+    private bool able = true;
+
     void Start()
 
     {
         audMan = NewAudioManager.instance;
 
         lr.positionCount = (2);
-
         lr.sortingLayerID = layerOrder;
     }
 
@@ -35,25 +36,36 @@ public class linedraw : MonoBehaviour {
     {
         if (p0 == null || p1 == null) return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (able == true)
         {
-            lr.enabled = true;
-        }
 
-        lr.SetPosition(0, p0.position);
-        lr.SetPosition(1, p1.position);
-        lr.startWidth = 0.1f;
-        lr.endWidth = 0.2f;
+            if (Input.GetMouseButtonDown(0))
+            {
+                lr.enabled = true;
+            }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            lr.enabled = false;
+            lr.SetPosition(0, p0.position);
+            lr.SetPosition(1, p1.position);
+            lr.startWidth = 0.1f;
+            lr.endWidth = 0.2f;
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                lr.enabled = false;
+                able = false;
+            }
         }
     }
 
     void OnMouseDown()
     {
         audMan.PlaySound("Aim");
-        print("sound");
+        audMan.PlaySound("BallClick");
     }
+
+    void OnMouseUp()
+    {
+        audMan.StopSound("Aim");
+    }
+
 }

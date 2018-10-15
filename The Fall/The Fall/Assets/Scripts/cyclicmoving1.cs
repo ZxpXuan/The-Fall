@@ -20,14 +20,14 @@ public class cyclicmoving1 : MonoBehaviour
     {
 
         movingblocktime += 0.1f;
-        if (movingblocktime < midtime)
+        if (movingblocktime <= midtime)
         {
             cycblock.transform.Translate(Vector3.up * movingblockspeed);
         }
         if (movingblocktime > midtime)
         {
             cycblock.transform.Translate(Vector3.down * movingblockspeed);
-            if (movingblocktime > midtime * 2)
+            if (movingblocktime >= midtime * 1.975f)
             {
                 movingblocktime = 0.1f;
             }

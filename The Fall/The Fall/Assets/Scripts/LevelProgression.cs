@@ -15,7 +15,11 @@ public class LevelProgression : MonoBehaviour {
     public bool unlockAllLevels;
 	// Use this for initialization
 	void Start () {
+        foreach (Button bt in levelButtons)
+        {
+            bt.interactable = false;
 
+        }
         levelsUnlocked=  PlayerPrefs.GetInt("levelsUnlocked", 1);
         int i = 0;
         while(i<levelsUnlocked){

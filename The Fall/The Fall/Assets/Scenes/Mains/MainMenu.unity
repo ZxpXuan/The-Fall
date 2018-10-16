@@ -251,6 +251,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &639023074 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1160905774}
+  m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
 --- !u!1 &902554704
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +498,7 @@ Prefab:
     - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
         type: 2}
       propertyPath: sound.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4073489293967670, guid: 0e1d2bf3991451d46ad962ab0bd49d0f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -597,17 +603,17 @@ Prefab:
     - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
         type: 2}
       propertyPath: sound.Array.data[10].clipName
-      value: Restart
+      value: Music2
       objectReference: {fileID: 0}
     - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
         type: 2}
       propertyPath: sound.Array.data[10].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a84d30a456c712d43bf031f2e6c3773e, type: 3}
+      objectReference: {fileID: 8300000, guid: 88520fc50250d474a8a349e2c3b01fbf, type: 3}
     - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
         type: 2}
       propertyPath: sound.Array.data[10].volume
-      value: 0.108
+      value: 0.569
       objectReference: {fileID: 0}
     - target: {fileID: 114542297804554668, guid: 0e1d2bf3991451d46ad962ab0bd49d0f,
         type: 2}
@@ -1033,7 +1039,7 @@ GameObject:
   - component: {fileID: 1266016634}
   - component: {fileID: 1266016633}
   m_Layer: 5
-  m_Name: Play (3)
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,7 +1289,7 @@ GameObject:
   - component: {fileID: 1737549253}
   - component: {fileID: 1737549252}
   m_Layer: 5
-  m_Name: Play (2)
+  m_Name: Level_Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,7 +1352,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1737549253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639023074}
+        m_MethodName: UiSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1737549253
@@ -1599,7 +1616,7 @@ GameObject:
   - component: {fileID: 1873121422}
   - component: {fileID: 1873121421}
   m_Layer: 5
-  m_Name: Play (1)
+  m_Name: 'Play '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,6 +1691,17 @@ MonoBehaviour:
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 639023074}
+        m_MethodName: UiSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1873121422
@@ -1721,7 +1749,7 @@ GameObject:
   - component: {fileID: 1881147533}
   - component: {fileID: 1881147532}
   m_Layer: 5
-  m_Name: Play (4)
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

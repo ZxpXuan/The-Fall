@@ -91,30 +91,29 @@ public class NewAudioManager : MonoBehaviour
 
 
         for (int i = 0; i < sound.Length; i++)
-        {          
+        {
             GameObject _go = new GameObject("Sound" + i + "_" + sound[i].clipName);
             _go.transform.SetParent(this.transform);
             sound[i].SetSource(_go.AddComponent<AudioSource>());
         }
-        ChangeMusic();
 
-       // PlaySound("Music");       
+        ChangeMusic();
+     
     }
 
     void Update()
     {
-        
+           
     }
 
- 
+
 
     public void PlaySound(string _name)
     {
         for (int i = 0; i < sound.Length; i++)
         {
-            if(sound[i].clipName == _name)
-            {
-                print(i);
+            if (sound[i].clipName == _name)
+            {            
                 sound[i].Play();
                 return;
             }
@@ -132,6 +131,7 @@ public class NewAudioManager : MonoBehaviour
             }
         }
     }
+
     void OnLevelWasLoaded(int level)
     {
         if (this != instance) return;
@@ -149,29 +149,42 @@ public class NewAudioManager : MonoBehaviour
         }
         print(getCurrentLevel);
 
-     
+        if (previousLevel != getCurrentLevel &&(Application.loadedLevelName != "LevelSelect") )
+            ChangeMusic();
 
-        if (previousLevel !=getCurrentLevel)
-        ChangeMusic();
+        if(previousLevel == getCurrentLevel && previousLevel == 0)
+        {
+            if(Application.loadedLevelName!="LevelSelect")
+            ChangeMusic();
+
+        }
     }
 
 
-
-
-        public void ChangeMusic()
+    public void ChangeMusic()
     {
-
         if (getCurrentLevel == 0)
         {
             StopSound("Music");
             PlaySound("Main_Swell");
         }
+       
 
-        if (getCurrentLevel == 2)
+        if (getCurrentLevel ==2)
         {
             PlaySound("Music");
         }
 
+        if (getCurrentLevel == 3)
+        {
+            StopSound("Music");
+            PlaySound("Music2");
+        }
     }
-}
 
+    public void UiSFX()
+    {
+        PlaySound("Restart");
+    }
+
+}

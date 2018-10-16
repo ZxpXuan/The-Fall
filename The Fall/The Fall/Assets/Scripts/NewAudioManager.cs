@@ -164,6 +164,7 @@ public class NewAudioManager : MonoBehaviour
         if (getCurrentLevel == 0)
         {
             StopSound("Music");
+            PlaySound("Main_Swell");
         }
 
         if (getCurrentLevel == 2)

@@ -65,7 +65,7 @@ public class laser : MonoBehaviour
         Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
 
         // assign the reflected velocity back to the rigidbody
-        Ball.velocity = reflectedVelocity.normalized * Mathf.Max(speed,minVelocity);
+        Ball.velocity = reflectedVelocity.normalized * speed;
         // rotate the object by the same ammount we changed its velocity
         //Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         //transform.rotation = rotation * transform.rotation;

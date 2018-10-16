@@ -7,7 +7,7 @@ public class levelmanager : MonoBehaviour {
     [SerializeField]
     public UIManager uIManager;
     [SerializeField]
-    int nextLevelid;
+    public int nextLevelid;
     NewAudioManager audMan;
 
     [SerializeField]

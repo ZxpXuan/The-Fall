@@ -6,9 +6,8 @@ using UnityEngine.Audio;
 
 [System.Serializable]
 public class Sound
-{
+{  
     public AudioMixerGroup audMixGroup;
-
     private AudioSource source;
     public string clipName;
     public AudioClip clip;
@@ -52,13 +51,11 @@ public class NewAudioManager : MonoBehaviour
     [SerializeField]
     Sound[] sound;
 
-    //public tragball ballForce;
-
-    //public AudioSource aim;
-
-    //public AudioSource[] _go;
+    int getCurrentLevel;
+    levelmanager lm;
 
     private static bool created = false;
+    int previousLevel;
 
     void Awake()
     {
@@ -80,39 +77,33 @@ public class NewAudioManager : MonoBehaviour
 
     private void Start()
     {
-        //_go = new AudioSource[sound.Length];
+        lm = FindObjectOfType<levelmanager>();
+        if (lm == null)
+        {
+            getCurrentLevel = 0;
+        }
+        else
+        {
+            getCurrentLevel = lm.nextLevelid - 1;
+
+        }
+
+
 
         for (int i = 0; i < sound.Length; i++)
-        {
-
-            /*_go[i] = gameObject.AddComponent<AudioSource>();
-            _go[i].clip = sound[i].clip;
-            _go[i].volume = sound[i].volume;
-            _go[i].pitch = sound[i].pitch;
-            _go[i].loop = sound[i].loop;*/
-
-
-            //add a child audio source for each audioclip in array
+        {          
             GameObject _go = new GameObject("Sound" + i + "_" + sound[i].clipName);
             _go.transform.SetParent(this.transform);
             sound[i].SetSource(_go.AddComponent<AudioSource>());
         }
+        ChangeMusic();
 
-        PlaySound("Music");       
+       // PlaySound("Music");       
     }
 
     void Update()
     {
-        /*aim = _go[6];
-        aim.pitch = ballForce.force;
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            aim.Play();
-        } else if (Input.GetMouseButtonUp(0))
-        {
-            aim.Stop();
-        }*/
+        
     }
 
  
@@ -123,6 +114,7 @@ public class NewAudioManager : MonoBehaviour
         {
             if(sound[i].clipName == _name)
             {
+                print(i);
                 sound[i].Play();
                 return;
             }
@@ -140,10 +132,45 @@ public class NewAudioManager : MonoBehaviour
             }
         }
     }
-
-    public void ChangeSource()
+    void OnLevelWasLoaded(int level)
     {
-      
+        if (this != instance) return;
+
+        previousLevel = getCurrentLevel;
+        lm = FindObjectOfType<levelmanager>();
+        if (lm == null)
+        {
+            getCurrentLevel = 0;
+        }
+        else
+        {
+            getCurrentLevel = lm.nextLevelid - 1;
+
+        }
+        print(getCurrentLevel);
+
+     
+
+        if (previousLevel !=getCurrentLevel)
+        ChangeMusic();
+    }
+
+
+
+
+        public void ChangeMusic()
+    {
+
+        if (getCurrentLevel == 0)
+        {
+            StopSound("Music");
+        }
+
+        if (getCurrentLevel == 2)
+        {
+            PlaySound("Music");
+        }
+
     }
 }
 

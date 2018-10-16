@@ -94,11 +94,21 @@ public class transdoor : MonoBehaviour {
         }
         if (other.tag == "ball" && otherportal.tag == "leftportal")
         {
+            //otherportal.GetComponent<Collider>().enabled = false;
+            //if((ball.transform.position - otherportal.transform.position).magnitude > 1.5f)
+            //{
+            //    otherportal.GetComponent<Collider>().enabled = true;
+            //}
             audMan.PlaySound("Portal");
             other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "rightportal" )
         {
+            //otherportal.GetComponent<Collider>().enabled = false;
+            //if ((ball.transform.position - otherportal.transform.position).magnitude > 1.5f)
+            //{
+            //    otherportal.GetComponent<Collider>().enabled = true;
+            //}
             audMan.PlaySound("Portal");
             other.transform.position = new Vector3(otherportal.transform.position.x - 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }

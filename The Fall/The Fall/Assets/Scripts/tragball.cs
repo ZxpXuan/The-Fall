@@ -25,11 +25,13 @@ public class tragball : MonoBehaviour
 
     public Rigidbody ding2;
     private int abale = 1;
+    public GameObject MaxRing;
     //private bool abale = true ; 
     void Start()
     {
         cam = Camera.main;
         audMan = NewAudioManager.instance;
+        MaxRing.GetComponent<Renderer>().enabled = false;
        
     }
     void Update()
@@ -106,6 +108,8 @@ public class tragball : MonoBehaviour
 
                 //line.SetPosition(0, emputy.transform.position * 1.5f);
 
+                MaxRing.GetComponent<Renderer>().enabled = true;
+
             }
             else
             {
@@ -127,6 +131,8 @@ public class tragball : MonoBehaviour
                 ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
+
+                MaxRing.GetComponent<Renderer>().enabled = false;
                // line.enabled = false;
             }
 

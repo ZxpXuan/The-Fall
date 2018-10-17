@@ -9,6 +9,8 @@ public class transdoor : MonoBehaviour {
     public Rigidbody ball;
     private float angle = 90;
 
+    public bool activated;
+
     NewAudioManager audMan;
     public List<ParticleSystem> particleSystems;
 
@@ -25,7 +27,13 @@ public class transdoor : MonoBehaviour {
         orivelocity = ball.velocity;
     }
 
-    private void OnTriggerEnter(Collider other)
+	private void OnTriggerExit(Collider other)
+	{
+        if (other.tag == "ball")
+            activated = false;
+	}
+
+	private void OnTriggerEnter(Collider other)
     {
 
         /*if (other.tag == "ball")
@@ -33,10 +41,18 @@ public class transdoor : MonoBehaviour {
             portalSFX.Play();
             print("sound");
         }*/
+
+        if (activated || other.tag != "ball") return;
+
+        other.transform.position = otherportal.transform.position;
+        otherportal.GetComponent<transdoor>().activated = true;
+
+
         foreach(ParticleSystem ps in particleSystems){
 
             ps.Play();
         }
+        return;
         
         if(other.tag == "ball" && otherportal.tag == "no")
         {

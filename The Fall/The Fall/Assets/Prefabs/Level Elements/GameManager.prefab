@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4424469300380896}
   - component: {fileID: 114029487936136806}
   - component: {fileID: 114863438626911702}
+  - component: {fileID: 114660078572688434}
   m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
@@ -414,7 +415,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1685805148150310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9, y: 7.437968, z: 1.2092953}
+  m_LocalPosition: {x: 7.6175294, y: 7.437968, z: 1.2092953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4955824819076174}
@@ -453,7 +454,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 27
+  field of view: 26
   orthographic: 0
   orthographic size: 7.96
   m_Depth: -1
@@ -706,7 +707,7 @@ MonoBehaviour:
   audioMan: {fileID: 0}
   uIManager: {fileID: 114941506760668086}
   isPaused: 0
-  collisionLeft: 0
+  collisionLeft: 1
   lim: {fileID: 0}
   restartDelay: 2
 --- !u!114 &114178058585214406
@@ -741,7 +742,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bounces Left:'
+  m_Text: Bounces Left:1
 --- !u!114 &114205457566488920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1224,6 +1225,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114660078572688434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369896449052604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114711153938088856
 MonoBehaviour:
   m_ObjectHideFlags: 1

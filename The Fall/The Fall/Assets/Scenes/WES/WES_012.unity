@@ -415,6 +415,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &829268543 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1074827433825558, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 829268542}
 --- !u!1001 &942276177
 Prefab:
   m_ObjectHideFlags: 0
@@ -1238,8 +1243,8 @@ Transform:
   - {fileID: 2134798808}
   - {fileID: 1860656424}
   - {fileID: 633645109}
-  - {fileID: 1043693341}
   - {fileID: 385942932}
+  - {fileID: 1043693341}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1346,6 +1351,11 @@ Prefab:
       propertyPath: ding2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: MaxRing
+      value: 
+      objectReference: {fileID: 829268543}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0

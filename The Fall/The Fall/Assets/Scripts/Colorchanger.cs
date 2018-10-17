@@ -8,16 +8,28 @@ public class Colorchanger : MonoBehaviour
     [SerializeField] Gradient bottomColors;
     [SerializeField] float speed;
     [SerializeField] Material material;
+
     float timer;
-	// Use this for initialization
-	void Start ()
+    Color origTopColor;
+    Color origBottomColor;
+
+    private void OnApplicationQuit()
+    {
+        material.SetColor("_TColor", origTopColor);
+        material.SetColor("_BottomColor", origBottomColor);
+    }
+    
+    void Awake ()
     {
         if (!material)
             material = GetComponent<Renderer>().sharedMaterial;
 
         if (!material)
             enabled = false;
-	}
+
+        origTopColor = material.GetColor("_TColor");
+        origBottomColor = material.GetColor("_BottomColor");
+    }
 	
 	// Update is called once per frame
 	void Update ()

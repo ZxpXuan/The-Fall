@@ -5066,6 +5066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherportal: {fileID: 1108754810}
   ball: {fileID: 0}
+  activated: 0
   particleSystems: []
 --- !u!65 &423287718
 BoxCollider:
@@ -9750,6 +9751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherportal: {fileID: 1909870613}
   ball: {fileID: 0}
+  activated: 0
   particleSystems: []
 --- !u!65 &629462325
 BoxCollider:
@@ -10163,6 +10165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherportal: {fileID: 423287715}
   ball: {fileID: 0}
+  activated: 0
   particleSystems: []
 --- !u!65 &1108754814
 BoxCollider:
@@ -15366,6 +15369,11 @@ Prefab:
       propertyPath: emputy
       value: 
       objectReference: {fileID: 1984068355}
+    - target: {fileID: 95401032483385346, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
@@ -15417,6 +15425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherportal: {fileID: 629462323}
   ball: {fileID: 0}
+  activated: 0
   particleSystems: []
 --- !u!65 &1909870616
 BoxCollider:

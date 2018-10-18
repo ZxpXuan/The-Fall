@@ -35,6 +35,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AIM_VELOCITY = 2740226506U;
         static const AkUniqueID BOUNCE_COUNT = 2157217901U;
         static const AkUniqueID TIME_SLOW = 1245272470U;
     } // namespace GAME_PARAMETERS
@@ -53,6 +54,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID LEVEL_REVERB = 1182499932U;
+        static const AkUniqueID TIMESLOW = 127433965U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

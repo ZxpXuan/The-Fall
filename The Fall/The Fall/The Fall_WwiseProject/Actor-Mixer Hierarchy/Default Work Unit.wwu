@@ -15,6 +15,34 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{D51DBE61-9291-41BF-BA44-A4BD0866844B}" ShortID="512081535">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}" WorkUnitID="{9CC8BD14-C3F9-4A0D-9B44-EA2C0A7BC227}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{9EF5FAC7-B6C4-4797-AEF2-D8E50CB8EFCD}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>3</XPos>
+														<YPos>194</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -234,6 +262,9 @@
 								<Reference Name="UserAuxSend0">
 									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="TimeSlow" ID="{F73597C5-CFDA-4E09-A34B-DFD12ABF0B96}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="ImpactConcept2" ID="{58F43399-FA2D-453D-B105-36F9A7100274}" ShortID="626238511">
@@ -371,6 +402,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="ATT_Goal" ID="{EB8902A9-44DA-47D6-B237-FB96519B0B10}" WorkUnitID="{8C43C1AE-D046-4A07-926F-02D2B4693EB6}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
 								</Reference>

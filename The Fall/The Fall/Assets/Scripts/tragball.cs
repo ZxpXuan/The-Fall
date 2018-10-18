@@ -86,7 +86,7 @@ public class tragball : MonoBehaviour
                     Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y, 0);
 
                     force = dir.magnitude;
-                    //Debug.Log(force);
+                    AkSoundEngine.SetRTPCValue("Aim_Velocity", force);
 
                 }
                 //            float distance = Vector3.Distance(ball.transform.position, go.transform.position);

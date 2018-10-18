@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4644056236993118}
   - component: {fileID: 65741335561071714}
   - component: {fileID: 114988977987599088}
+  - component: {fileID: 114113318850975812}
   m_Layer: 0
   m_Name: D1_Objective_Green
   m_TagString: Untagged
@@ -266,6 +267,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5637703, y: 1.7301402, z: 1}
   m_Center: {x: 0.000003974164, y: 0.03748978, z: 0}
+--- !u!114 &114113318850975812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732939837985130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c318a1447247888caf7e77c22a4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  end: {fileID: 1732939837985130}
 --- !u!114 &114297837224875774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
+  nextLevelid: 0
   ps:
   - {fileID: 198865551925202278}
   - {fileID: 198702749286920856}

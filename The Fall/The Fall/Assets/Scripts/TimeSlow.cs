@@ -17,6 +17,7 @@ public class TimeSlow : MonoBehaviour {
 
         if (distance < 2.5 && Camera.main.GetComponent<Camera>().fieldOfView > 10)
         {
+            AkSoundEngine.SetRTPCValue("Time_Slow", 1);
             Camera.main.transform.LookAt(end.transform);
             Time.timeScale = 0.5f;
             Camera.main.GetComponent<Camera>().fieldOfView = Camera.main.GetComponent<Camera>().fieldOfView - 0.5f;
@@ -25,6 +26,7 @@ public class TimeSlow : MonoBehaviour {
         if(distance > 2.5)
         {
             Time.timeScale = 1;
+            AkSoundEngine.SetRTPCValue("Time_Slow", 0);
         }
 
 	}

@@ -36,6 +36,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BOUNCE_COUNT = 2157217901U;
+        static const AkUniqueID TIME_SLOW = 1245272470U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

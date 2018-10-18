@@ -8,7 +8,6 @@ public class levelmanager : MonoBehaviour {
     public UIManager uIManager;
     [SerializeField]
     public int nextLevelid;
-    NewAudioManager audMan;
 
     [SerializeField]
     List<ParticleSystem> ps;
@@ -21,7 +20,6 @@ public class levelmanager : MonoBehaviour {
 	// Use this for initialization
 
     void Start () {
-        audMan = NewAudioManager.instance;
         coroutine = WaitAndWin(waitTime);
 	}
 	
@@ -38,7 +36,8 @@ public class levelmanager : MonoBehaviour {
     }
     private void OnCollisionEnter(Collision collision)
     {
-        audMan.PlaySound("Goal");
+       
+        AkSoundEngine.PostEvent("Play_Goal_Reached", gameObject);
 
         foreach(ParticleSystem part in ps){
             part.Play();

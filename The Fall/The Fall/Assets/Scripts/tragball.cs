@@ -4,8 +4,6 @@ using UnityEngine;
 public class tragball : MonoBehaviour
 {
     //reference 
-    NewAudioManager audMan;
-
     private Camera cam;//发射射线的摄像机
     private GameObject go;//射线碰撞的物体
     public static string btnName;//射线碰撞物体的名字
@@ -29,8 +27,7 @@ public class tragball : MonoBehaviour
     //private bool abale = true ; 
     void Start()
     {
-        cam = Camera.main;
-        audMan = NewAudioManager.instance;
+        cam = Camera.main;       
         MaxRing.GetComponent<Renderer>().enabled = false;
        
     }
@@ -120,8 +117,7 @@ public class tragball : MonoBehaviour
             if (Input.GetMouseButtonUp(0) && btnName == "emputy")
             {
 
-                audMan.PlaySound("Shoot");
-                print("playshoot");
+                AkSoundEngine.PostEvent("Play_Shoot", gameObject);
                 //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y , 0);

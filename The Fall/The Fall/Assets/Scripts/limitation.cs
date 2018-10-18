@@ -7,7 +7,6 @@ public class limitation : MonoBehaviour {
     public int limit = 5;
     private int buildIndex;
     public GameManager gm;
-    public NewAudioManager audioMan;
     
     public GameObject particleOnDestroy;
     [SerializeField]
@@ -15,12 +14,13 @@ public class limitation : MonoBehaviour {
     // Use this for initialization
     void Start () {
         gm.updateBounces(limit - i);
-        audioMan = NewAudioManager.instance;
     }
 	
 	// Update is called once per frame
 	void Update () {
         getscene();
+
+        AkSoundEngine.SetRTPCValue("Bounce_Count", i);
 	}
     void getscene()
     {
@@ -40,10 +40,13 @@ public class limitation : MonoBehaviour {
             //    SceneManager.LoadScene(buildIndex);
             Destroy(gameObject);
             Instantiate(particleOnDestroy, transform.position,Quaternion.identity);
-            audioMan.PlaySound("Death");
+
+            AkSoundEngine.PostEvent("Play_Death", gameObject);
             gm.restartLevel();
         }
     }
+
+
 
    
 }

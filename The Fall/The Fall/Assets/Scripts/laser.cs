@@ -7,8 +7,6 @@ public class laser : MonoBehaviour
     //number of times the ball has made contact (mike)
     public  int collisionCount;
 
-    NewAudioManager audMan;
-
     public Animator anim;
     
     //audio script reference (mike)   
@@ -22,8 +20,6 @@ public class laser : MonoBehaviour
 
         // freeze the rotation so it doesnt go spinning after a collision
         Ball.freezeRotation = true;
-
-        audMan = NewAudioManager.instance;
 
     }
 
@@ -43,8 +39,8 @@ public class laser : MonoBehaviour
     {
         // get the point of contact (mike)
         ContactPoint contact = collision.contacts[0];
-        
-        audMan.PlaySound("Impact");
+
+        AkSoundEngine.PostEvent("Play_Impact", gameObject);
         
 
         

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class linedraw : MonoBehaviour {
 
-    public NewAudioManager audMan;
-
     public LineRenderer lr;
 
     public Transform p0;
@@ -19,8 +17,6 @@ public class linedraw : MonoBehaviour {
     void Start()
 
     {
-        audMan = NewAudioManager.instance;
-
         lr.positionCount = (2);
         lr.sortingLayerID = layerOrder;
     }
@@ -59,13 +55,6 @@ public class linedraw : MonoBehaviour {
 
     void OnMouseDown()
     {
-        audMan.PlaySound("Aim");
-        audMan.PlaySound("BallClick");
+        AkSoundEngine.PostEvent("Play_Aiming", gameObject);
     }
-
-    void OnMouseUp()
-    {
-        audMan.StopSound("Aim");
-    }
-
 }

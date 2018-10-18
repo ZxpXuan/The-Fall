@@ -11,8 +11,7 @@ public class doorup : MonoBehaviour
     private bool movable = false;
     public float upmos = 13;
     public float rightmos = 5;
-
-    public AudioSource triggerSFX;
+    
     //public float speedz;
     // Use this for initialization
     void Start()
@@ -58,7 +57,7 @@ public class doorup : MonoBehaviour
         {
             //speedz = speed * Time.deltaTime;
 
-            triggerSFX.Play();
+            AkSoundEngine.PostEvent("Play_Trigger_Hit", gameObject);
             able = false;
             movable = true;
 

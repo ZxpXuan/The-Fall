@@ -1,0 +1,346 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49578e0fb55bb134fbc6e6f9ae88017c, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4eb472a4b687e04b95e4c66b6214950d
+    m_lastTime: -8586619112413925666
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e5526abddeec864b872ba3465b0433f2
+    m_lastTime: -8586619014705320012
+    List:
+    - name: Level_Reverb
+      guid: 5a20685673dbb94ebfe40265865bf96f
+      id: 1182499932
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Level_Reverb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Level_Reverb
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: aa87d7330e082242a39aec4238b653a6
+    m_lastTime: -8586618958666404484
+    List:
+    - name: TheFall
+      guid: e353e4d3f2ba714b9c7c6e3fee09e6d7
+      id: 2681106293
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TheFall
+        ObjectType: 7
+      Path: Default Work Unit\TheFall
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: d2ec8e6196ee97458c692fefdf6ba80e
+    m_lastTime: -8586618955001842466
+    List:
+    - name: Play_Aiming
+      guid: 120b2e5aaef92842968f097df036e563
+      id: 1286977679
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Play_Aiming
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Play_Aiming
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Death
+      guid: 4808cfe4421aba43abf5e2131eb7e123
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Play_Death
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Play_Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Enter_Portal
+      guid: 794c5ebdc3b8c14abbf36888aa14f64d
+      id: 3691806113
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Play_Enter_Portal
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Play_Enter_Portal
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Goal_Reached
+      guid: 6710fe639705f74dab9e7a3df1955134
+      id: 2773446032
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Play_Goal_Reached
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Play_Goal_Reached
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Impact
+      guid: ab91b2d0b0c77d448c52aedfa3df8c32
+      id: 2764105556
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Play_Impact
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Play_Impact
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Menu_Click
+      guid: 297796576eec0b4ebb3665dbda9bb767
+      id: 1357778998
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Play_Menu_Click
+        ObjectType: 3
+      Path: Default Work Unit\SFX\UI\Play_Menu_Click
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Menu_Sting
+      guid: 664ea91ba5ee2c47a2d0ceefc3411215
+      id: 3771381609
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Play_Menu_Sting
+        ObjectType: 3
+      Path: Default Work Unit\SFX\UI\Play_Menu_Sting
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Restart
+      guid: 0d93b92dad6cc041b883ad39e7ca5807
+      id: 3483232275
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Play_Restart
+        ObjectType: 3
+      Path: Default Work Unit\SFX\UI\Play_Restart
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Shoot
+      guid: 10601d2e1343584881d424f1a89a9b50
+      id: 2641650631
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Play_Shoot
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Play_Shoot
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Spawn_Ball
+      guid: e5bd73fbfd05b9458bec81ca576b1f86
+      id: 2050766869
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Play_Spawn_Ball
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Play_Spawn_Ball
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Spawn_Level
+      guid: e8d012695007e140826e759f7a7f4298
+      id: 4224962356
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Play_Spawn_Level
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Play_Spawn_Level
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Trigger_Hit
+      guid: 59a61f05a1bbc7418be7da7736e8937f
+      id: 1240630412
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Play_Trigger_Hit
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Start_Goal_Static
+      guid: a62abd891fd2534585e8a189c78b50be
+      id: 3155875016
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Start_Goal_Static
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Start_Goal_Static
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Start_Music
+      guid: 8b2b0203f855dc48a1c1b2803e30bb1e
+      id: 540993415
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Start_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Start_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Start_Portal_Static
+      guid: ff7108a4c132494680ec8f14911748a6
+      id: 3237166277
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Level_Elements
+        ObjectType: 4
+      - ElementName: Start_Portal_Static
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Level_Elements\Start_Portal_Static
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: eff2256ba9417244a7f74ed2ae4df55c
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Stop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 14bdc89cf9c30d4a9b44ea2c0a7bc227
+    m_lastTime: -8586619085044813943
+    List:
+    - name: Bounce_Count
+      guid: 69af001d212ade44af581ccc1d25c117
+      id: 2157217901
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bounce_Count
+        ObjectType: 13
+      Path: Default Work Unit\Bounce_Count
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e8cbe9693cb55544ade9c6096b3961da
+    m_lastTime: -8586619112414552038
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 83e704debd41fd4bb0cb0b020ab68cc8
+    m_lastTime: -8586619112414395736
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 629d4f3f10fb9c4c9a862d0254c5978f
+    m_lastTime: -8586619112414239421
+    List: []
+  ExpandedItems:
+  - /The Fall_WwiseProject
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

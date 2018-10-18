@@ -5,8 +5,7 @@ using UnityEditor;
 
 public class Tracer : MonoBehaviour
 {
-	[SerializeField] bool useHandle;
-	[SerializeField, Range(0.5f, 5f)] float radius;
+	[SerializeField, Range(0.1f, 3f)] float radius;
 	[SerializeField, Range(0, 360)] float angle;
 	[SerializeField, Range(0, 10)] int maxBounce;
 	[SerializeField] Color wireColor = Color.white;
@@ -14,11 +13,12 @@ public class Tracer : MonoBehaviour
 	[SerializeField] Color endPointColor = Color.blue;
 
 	[Header("Handle Settings")]
+	[SerializeField] bool useDirectionHandle;
+	[SerializeField] bool usePositionHandle;
 	[SerializeField, Range(1f, 5)] float handleSize = 1;
 	[SerializeField, Range(1f, 10)] float handleDistance = 5;
 	[SerializeField] Color handleColor = Color.blue;
-
-	public Vector3 HandlePos { get; set; }
+	[HideInInspector] public Vector3 handleDir = Vector3.right;
 
 	private void OnDrawGizmos()
 	{
@@ -27,9 +27,9 @@ public class Tracer : MonoBehaviour
 		var pos = transform.position;
 		RaycastHit hit = new RaycastHit();
 		
-		if (useHandle)
+		if (useDirectionHandle)
 		{
-			dir = HandlePos.normalized;
+			dir = handleDir;
 			angle = Vector3.SignedAngle(Vector3.right, dir, Vector3.forward);
 			if (angle < 0) angle += 360;
 		}
@@ -37,7 +37,7 @@ public class Tracer : MonoBehaviour
 		{
 			dir = RotateVector(Vector3.right, angle);
 		}
-
+		
 		// Draw starting point
 		Gizmos.color = startPointColor;
 		Gizmos.DrawSphere(pos, radius);

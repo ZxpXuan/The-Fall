@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour {
             }
         }
         
-        if(isRestartInitiated&& restartStartTime + restartDelay <Time.time){
+        if(isRestartInitiated&& restartStartTime + restartDelay <Time.time && !uIManager.isWinInProgress){
             Application.LoadLevel(Application.loadedLevel);
 
 
@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour {
 
     public void restartLevel()
     {
+        
         isRestartInitiated = true;
         restartStartTime = Time.time;
 

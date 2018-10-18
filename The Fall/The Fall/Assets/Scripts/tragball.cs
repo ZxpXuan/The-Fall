@@ -24,6 +24,9 @@ public class tragball : MonoBehaviour
     public Rigidbody ding2;
     private int abale = 1;
     public GameObject MaxRing;
+
+    public float minDistance =2;
+    private Vector3 mousePos;
     //private bool abale = true ; 
     void Start()
     {
@@ -77,13 +80,17 @@ public class tragball : MonoBehaviour
                     if (Vector3.Distance(currentPosition, ding.transform.position) > 3)
                     {
                         var maxPosition = (currentPosition - ding.transform.position).normalized * 3.0f + ding.transform.position;
-                        go.transform.position = maxPosition;
+                     //   go.transform.position = maxPosition;
+                        mousePos = maxPosition;
+
                     }
                     else
                     {
-                        go.transform.position = currentPosition;
+                       // go.transform.position = currentPosition;
+                        mousePos = currentPosition;
+
                    }
-                    Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y, 0);
+                    Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
                     force = dir.magnitude;
                     AkSoundEngine.SetRTPCValue("Aim_Velocity", force);
@@ -112,22 +119,30 @@ public class tragball : MonoBehaviour
             {
                 isDrage = false;
             }
-           // print(btnName);
+            // print(btnName);
 
             if (Input.GetMouseButtonUp(0) && btnName == "emputy")
             {
 
-                AkSoundEngine.PostEvent("Play_Shoot", gameObject);
                 //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                Vector3 dir = new Vector3(go.transform.position.x - ding.transform.position.x, go.transform.position.y - ding.transform.position.y , 0);
-                
-               
+                Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
+
+                if (force > minDistance) { 
                 ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
+                AkSoundEngine.PostEvent("Play_Shoot", gameObject);
+                    if(cam.GetComponent<Animator>()!=null){
 
+                        cam.GetComponent<Animator>().enabled = false;
+                    }
+            }else{
+
+                //play error soudns
+
+            }
                 MaxRing.GetComponent<Renderer>().enabled = false;
                // line.enabled = false;
             }

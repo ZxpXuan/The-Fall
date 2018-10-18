@@ -43,6 +43,7 @@ public class transdoor : MonoBehaviour {
         if (activated || other.tag != "ball") return;
 
         other.transform.position = otherportal.transform.position;
+        AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
         otherportal.GetComponent<transdoor>().activated = true;
 
 

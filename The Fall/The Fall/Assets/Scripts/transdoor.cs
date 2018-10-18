@@ -11,13 +11,11 @@ public class transdoor : MonoBehaviour {
 
     public bool activated;
 
-    NewAudioManager audMan;
     public List<ParticleSystem> particleSystems;
 
 	// Use this for initialization
     void Start (){
 
-        audMan = NewAudioManager.instance;
 	}
 	
 	// Update is called once per frame
@@ -115,7 +113,7 @@ public class transdoor : MonoBehaviour {
             //{
             //    otherportal.GetComponent<Collider>().enabled = true;
             //}
-            audMan.PlaySound("Portal");
+            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "rightportal" )
@@ -125,17 +123,17 @@ public class transdoor : MonoBehaviour {
             //{
             //    otherportal.GetComponent<Collider>().enabled = true;
             //}
-            audMan.PlaySound("Portal");
+            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x - 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horidown")
         {
-            audMan.PlaySound("Portal");
+            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horiup")
         {
-            audMan.PlaySound("Portal");
+            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y - 1, otherportal.transform.position.z);
         }
 

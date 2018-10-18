@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 4644056236993118}
   - component: {fileID: 65741335561071714}
   - component: {fileID: 114988977987599088}
+  - component: {fileID: 114337344649598778}
   m_Layer: 0
   m_Name: D1_Objective_Blue
   m_TagString: Untagged
@@ -175,8 +176,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732939837985130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.98, y: -0.49, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.42, y: 1.07, z: 0}
   m_LocalScale: {x: 0.4761876, y: 1.4607438, z: 1}
   m_Children:
   - {fileID: 4879200753053924}
@@ -280,6 +281,19 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &114337344649598778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732939837985130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404c318a1447247888caf7e77c22a4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  end: {fileID: 1732939837985130}
 --- !u!114 &114959547747054810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,6 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
+  nextLevelid: 0
   ps:
   - {fileID: 198865551925202278}
   - {fileID: 198702749286920856}

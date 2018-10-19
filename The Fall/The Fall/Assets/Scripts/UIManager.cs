@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     public GameManager gm;
+
+    public bool isWinInProgress;
 	// Use this for initialization
 	void Start () {
         gm = GetComponent<GameManager>();
@@ -49,6 +51,7 @@ public class UIManager : MonoBehaviour {
 
         winScreen.SetActive(true);
         Time.timeScale = 0f;
+        isWinInProgress = true;
     }
 
     public void displayLose(){

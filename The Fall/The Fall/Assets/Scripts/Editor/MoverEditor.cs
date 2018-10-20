@@ -20,7 +20,7 @@ public class MoverEditor : Editor
 
 	SerializedProperty running;
 
-	Vector3 lastWorldPos;
+	Dictionary<Object, Vector3> lastWorldPositionMap = new Dictionary<Object, Vector3>();
 
 	private void OnEnable()
 	{
@@ -38,11 +38,16 @@ public class MoverEditor : Editor
 
 		running = serializedObject.FindProperty("running");
 
-		lastWorldPos = mover.transform.position;
+		lastWorldPositionMap.Clear();
+		lastWorldPositionMap.Add(target, mover.transform.position);
 	}
 
 	private void OnSceneGUI()
 	{
+		mover = target as Mover;
+		if (!lastWorldPositionMap.ContainsKey(target))
+			lastWorldPositionMap.Add(target, mover.transform.position);
+		
 		if (running.boolValue) return;
 
 		CheckLastWorldPosition();
@@ -55,7 +60,7 @@ public class MoverEditor : Editor
 		}
 		DrawLine();
 
-		lastWorldPos = mover.transform.position;
+		lastWorldPositionMap[target] = mover.transform.position;
 	}
 
 	private void DrawLine()
@@ -66,9 +71,9 @@ public class MoverEditor : Editor
 
 	private void CheckLastWorldPosition()
 	{
-		if (mover.transform.position == lastWorldPos) return;
-
-		var diff = mover.transform.position - lastWorldPos;
+		if (mover.transform.position == lastWorldPositionMap[target]) return;
+		
+		var diff = mover.transform.position - lastWorldPositionMap[target];
 		mover.StartPoint += diff;
 	}
 

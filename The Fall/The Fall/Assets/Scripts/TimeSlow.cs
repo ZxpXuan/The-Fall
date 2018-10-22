@@ -24,7 +24,8 @@ public class TimeSlow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // Vector3 distan = new Vector3(ball.transform.position.x - this.transform.position.x, ball.transform.position.y - this.transform.position.y, 0);
-        if(ball!=null)
+
+        if (ball!=null)
         distance = (ball.transform.position - this.transform.position).magnitude;
 
         if (distance < minDistance && Camera.main.GetComponent<Camera>().fieldOfView > maxZoom)
@@ -36,13 +37,16 @@ public class TimeSlow : MonoBehaviour {
                 oldCamFieldOfView = Camera.main.fieldOfView;
             }
            
-            AkSoundEngine.SetRTPCValue("Time_Slow", 1);
+            
+            
             Time.timeScale = timeSlow;
+            AkSoundEngine.SetRTPCValue("Time_Slow", 0);
+
             Camera.main.GetComponent<Camera>().fieldOfView = Camera.main.GetComponent<Camera>().fieldOfView - 0.7f;
             // Camera.main.transform.LookAt(end.transform);
-            print("1- " + Camera.main.transform.position);
+            //print("1- " + Camera.main.transform.position);
             Camera.main.transform.position = new Vector3(end.transform.position.x,end.transform.position.y,Camera.main.transform.position.z);
-            print("2- " + Camera.main.transform.position);
+            //print("2- " + Camera.main.transform.position);
 
         }
         if(distance > minDistance && isCamZooming )
@@ -55,11 +59,12 @@ public class TimeSlow : MonoBehaviour {
                 isCamZooming = false;
             }
             Camera.main.transform.position = oldCamTransform;
-            print("3- " + Camera.main.transform.position);
+            //print("3- " + Camera.main.transform.position);
 
             Camera.main.transform.rotation = Quaternion.Euler(0,0,0);
             Time.timeScale = 1;
-            AkSoundEngine.SetRTPCValue("Time_Slow", 0);
+
+            AkSoundEngine.SetRTPCValue("Time_Slow", 1);
         }
 
 	}

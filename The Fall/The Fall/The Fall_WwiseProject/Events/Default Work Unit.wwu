@@ -73,43 +73,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Start_Goal_Static" ID="{89BD2AA6-D21F-4553-85E8-A189C78B50BE}">
-									<ChildrenList>
-										<Action Name="" ID="{0A773080-721F-499D-BF11-BB09224D624D}" ShortID="322472760">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{38A17588-AF9D-4F48-AAAE-D850EA0E3F1A}" ShortID="792950091">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="36"/>
-												<Property Name="SeekPercent" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{37733BE0-70BA-4A3F-B23B-A1C6BF9D521F}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="40"/>
-																	<Property Name="Min" Type="Real64" Value="-40"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="Play_Spawn_Ball" ID="{FB73BDE5-05FD-45B9-8BEC-81CA576B1F86}"/>
 								<Event Name="Play_Spawn_Level" ID="{6912D0E8-0750-40E1-826E-759F7A7F4298}"/>
 								<Event Name="Stop_Portal_Static" ID="{8C89E39D-C1C7-4C4A-8859-383BED04477E}">
@@ -126,11 +89,49 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Stop_Goal_Static" ID="{F504921A-9628-4194-AB53-C58B70D1E834}">
+								<Event Name="Start_Goal_Static" ID="{BD801B39-51ED-435D-AFF9-A893BB6C8687}">
 									<ChildrenList>
-										<Action Name="" ID="{B549A3BF-A88F-4671-9636-715BC6DC391C}" ShortID="968594991">
+										<Action Name="" ID="{B5642750-B849-4785-9EB4-B1B9EDD92B48}" ShortID="316213210">
 											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{7B0CA9FF-B303-4E21-9FEE-7FCB6B5DB690}" ShortID="50221434">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="36"/>
+												<Property Name="SeekPercent" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E99957F3-BE49-4A27-925E-71D7C4E503D8}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="25"/>
+																	<Property Name="Min" Type="Real64" Value="-25"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Goal_Static" ID="{B2F2B274-1007-42B6-823F-FFD15D46FFB5}">
+									<ChildrenList>
+										<Action Name="" ID="{9A5CCE95-B824-4FAF-B454-98E06AE6DF20}" ShortID="786428091">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -177,7 +178,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Impacts" ID="{AB606494-3F08-4FD1-9689-1B151E43BDE2}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+													<ObjectRef Name="Impacts" ID="{082B263E-7DE0-4D09-A213-A7C25A6A7780}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -295,7 +296,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Static concept(Compressed)" ID="{61306C4E-DD55-4F89-8D62-BFE9CD873D00}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+											<ObjectRef Name="Music" ID="{9F33BD6C-4C61-4694-B721-A07937523720}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -309,7 +310,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Static concept(Compressed)" ID="{61306C4E-DD55-4F89-8D62-BFE9CD873D00}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+											<ObjectRef Name="Music" ID="{9F33BD6C-4C61-4694-B721-A07937523720}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

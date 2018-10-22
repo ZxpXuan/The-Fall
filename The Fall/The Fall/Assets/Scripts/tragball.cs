@@ -133,7 +133,7 @@ public class tragball : MonoBehaviour
                 ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
-                AkSoundEngine.PostEvent("Play_Shoot", gameObject);
+                
                     if(cam.GetComponent<Animator>()!=null){
 
                         cam.GetComponent<Animator>().enabled = false;

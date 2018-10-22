@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e5526abddeec864b872ba3465b0433f2
-    m_lastTime: -8586619014705320012
+    m_lastTime: -8586616602213050888
     List:
     - name: Level_Reverb
       guid: 5a20685673dbb94ebfe40265865bf96f
@@ -38,22 +38,31 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: aa87d7330e082242a39aec4238b653a6
-    m_lastTime: -8586617575154806102
+    m_lastTime: -8586613972732633512
     List:
-    - name: TheFall
-      guid: e353e4d3f2ba714b9c7c6e3fee09e6d7
-      id: 2681106293
+    - name: TheFallMusic
+      guid: 6f46933d3724e34f84d62f5d1af702cd
+      id: 456359398
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: TheFall
+      - ElementName: TheFallMusic
         ObjectType: 7
-      Path: Default Work Unit\TheFall
+      Path: Default Work Unit\TheFallMusic
+    - name: TheFallSFX
+      guid: e353e4d3f2ba714b9c7c6e3fee09e6d7
+      id: 787924302
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TheFallSFX
+        ObjectType: 7
+      Path: Default Work Unit\TheFallSFX
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d2ec8e6196ee97458c692fefdf6ba80e
-    m_lastTime: -8586617575337308364
+    m_lastTime: -8586613973620140918
     List:
     - name: Play_Aiming
       guid: 120b2e5aaef92842968f097df036e563
@@ -248,7 +257,7 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Start_Goal_Static
-      guid: a62abd891fd2534585e8a189c78b50be
+      guid: 391b80bded515d43aff9a893bb6c8687
       id: 3155875016
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -294,7 +303,7 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Stop_Goal_Static
-      guid: 1a9204f528969441ab53c58b70d1e834
+      guid: 74b2f2b20710b642823fffd15d46ffb5
       id: 951397446
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -343,8 +352,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 14bdc89cf9c30d4a9b44ea2c0a7bc227
-    m_lastTime: -8586619085044813943
+    m_lastTime: -8586616676065386767
     List:
+    - name: Aim_Velocity
+      guid: bbe032956aa102458b420b4b1a5e07ae
+      id: 2740226506
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Aim_Velocity
+        ObjectType: 13
+      Path: Default Work Unit\Aim_Velocity
     - name: Bounce_Count
       guid: 69af001d212ade44af581ccc1d25c117
       id: 2157217901
@@ -354,24 +372,64 @@ MonoBehaviour:
       - ElementName: Bounce_Count
         ObjectType: 13
       Path: Default Work Unit\Bounce_Count
+    - name: Time_Slow
+      guid: ec25efc1e8e7404b9e810724b0899034
+      id: 1245272470
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Time_Slow
+        ObjectType: 13
+      Path: Default Work Unit\Time_Slow
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e8cbe9693cb55544ade9c6096b3961da
-    m_lastTime: -8586619112414552038
+    m_lastTime: -8586613998581599334
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 83e704debd41fd4bb0cb0b020ab68cc8
-    m_lastTime: -8586619112414395736
-    List: []
+    m_lastTime: -8586613998581911831
+    List:
+    - name: Level_Difficulty
+      guid: a92a7137c6a44846853a7c6fe640a55f
+      id: 907080827
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level_Difficulty
+        ObjectType: 11
+      Path: Default Work Unit\Level_Difficulty
+      values:
+      - name: Easy
+        guid: 6c9addd19df2994fb45ac46d48c69b48
+        id: 529018163
+        PathAndIcons:
+        - ElementName: Easy
+          ObjectType: 10
+      - name: Hard
+        guid: 23ae326ee1a1e34b915186a2e874883c
+        id: 3599861390
+        PathAndIcons:
+        - ElementName: Hard
+          ObjectType: 10
+      - name: Medium
+        guid: 3626fec72e8b3e47b3676c4fbbabe618
+        id: 2849147824
+        PathAndIcons:
+        - ElementName: Medium
+          ObjectType: 10
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 629d4f3f10fb9c4c9a862d0254c5978f
     m_lastTime: -8586619112414239421
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /The Fall_WwiseProject
+  - /The Fall_WwiseProject/SoundBanks
+  - /The Fall_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -28,10 +28,25 @@ namespace AK
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;
-        static const AkUniqueID STOP_GOAL_STATIC = 951397446U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PORTAL_STATIC = 1797269043U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace LEVEL_DIFFICULTY
+        {
+            static const AkUniqueID GROUP = 907080827U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID EASY = 529018163U;
+                static const AkUniqueID HARD = 3599861390U;
+                static const AkUniqueID MEDIUM = 2849147824U;
+            } // namespace SWITCH
+        } // namespace LEVEL_DIFFICULTY
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
@@ -43,7 +58,8 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID THEFALL = 2681106293U;
+        static const AkUniqueID THEFALLMUSIC = 456359398U;
+        static const AkUniqueID THEFALLSFX = 787924302U;
     } // namespace BANKS
 
     namespace BUSSES
@@ -54,7 +70,6 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID LEVEL_REVERB = 1182499932U;
-        static const AkUniqueID TIMESLOW = 127433965U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

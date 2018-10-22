@@ -61,4 +61,9 @@ public class linedraw : MonoBehaviour {
         able = true;
         AkSoundEngine.PostEvent("Play_Aiming", gameObject);
     }
+
+    private void OnMouseUp()
+    {
+        AkSoundEngine.PostEvent("Play_Shoot", gameObject);
+    }
 }

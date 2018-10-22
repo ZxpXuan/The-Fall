@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{9ED9018D-40F2-4F17-BFE4-12E9DC15165D}" WorkUnitID="{311F4535-9EE0-42D7-89F5-66C6CCF94389}"/>
@@ -17,7 +24,6 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
-						<AuxBus Name="TimeSlow" ID="{F73597C5-CFDA-4E09-A34B-DFD12ABF0B96}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

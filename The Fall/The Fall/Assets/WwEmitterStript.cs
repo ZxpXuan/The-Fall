@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WwEmitterStript : MonoBehaviour {
 
-    public string EventName = "default";
+   /* public string EventName = "default";
     public string StopEvent = "default";
     public bool IsInCollider = false;
 
@@ -39,5 +39,5 @@ public class WwEmitterStript : MonoBehaviour {
         IsInCollider = true;
         AkSoundEngine.PostEvent(StopEvent, gameObject);
 
-    }
+    }*/
 }

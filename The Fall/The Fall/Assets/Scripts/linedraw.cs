@@ -40,11 +40,11 @@ public class linedraw : MonoBehaviour {
             {
                 lr.enabled = true;
             }
-            print (Input.mousePosition);
+
             Vector3 screenToWorld =Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z) );
             lr.SetPosition(0, new Vector3(screenToWorld.x,screenToWorld.y,0));
             lr.SetPosition(1, p1.position);
-            print(screenToWorld);
+            
             lr.startWidth = 0.1f;
             lr.endWidth = 0.2f;
 

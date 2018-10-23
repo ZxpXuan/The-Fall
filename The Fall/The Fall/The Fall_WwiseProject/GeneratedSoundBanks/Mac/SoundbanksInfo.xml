@@ -16,19 +16,28 @@
 			<ShortName>TheFallMusic</ShortName>
 			<Path>TheFallMusic.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game"/>
 				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Music"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="74446997" Language="SFX">
-					<ShortName>The_Fall_Music_B(Compressed).wav</ShortName>
-					<Path>SFX\The_Fall_Music_B(Compressed)_8956FC97.wem</Path>
-				</File>
-				<File Id="973157730" Language="SFX">
+				<File Id="47316527" Language="SFX">
 					<ShortName>The_Fall_Music_A(Compressed).wav</ShortName>
 					<Path>SFX\The_Fall_Music_A(Compressed)_8956FC97.wem</Path>
 				</File>
-				<File Id="1070709135" Language="SFX">
+				<File Id="53718916" Language="SFX">
+					<ShortName>Fall_Menu1_Sting_BitCrushed_Faded.wav</ShortName>
+					<Path>SFX\Fall_Menu1_Sting_BitCrushed_Faded_302A16E2.wem</Path>
+				</File>
+				<File Id="307770557" Language="SFX">
+					<ShortName>The_Fall_Music_B(Compressed).wav</ShortName>
+					<Path>SFX\The_Fall_Music_B(Compressed)_8956FC97.wem</Path>
+				</File>
+				<File Id="308222834" Language="SFX">
+					<ShortName>The_Fall_Music_B_To_C.wav</ShortName>
+					<Path>SFX\The_Fall_Music_B_To_C_8956FC97.wem</Path>
+				</File>
+				<File Id="436080097" Language="SFX">
 					<ShortName>The_Fall_Music_C(Compressed).wav</ShortName>
 					<Path>SFX\The_Fall_Music_C(Compressed)_8956FC97.wem</Path>
 				</File>
@@ -51,8 +60,8 @@
 				<Event Id="2050766869" Name="Play_Spawn_Ball" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Spawn_Ball" MaxAttenuation="0.000000"/>
 				<Event Id="4224962356" Name="Play_Spawn_Level" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Spawn_Level" MaxAttenuation="0.000000"/>
 				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit"/>
-				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static" MaxAttenuation="5.000000"/>
-				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="5.000000"/>
+				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static"/>
+				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="0.000000"/>
 				<Event Id="1797269043" Name="Stop_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -78,7 +87,7 @@
 				</File>
 				<File Id="161584208" Language="SFX">
 					<ShortName>FallMainSting2-03.wav</ShortName>
-					<Path>SFX\FallMainSting2-03_56D34C19.wem</Path>
+					<Path>SFX\FallMainSting2-03_5C82FD1C.wem</Path>
 				</File>
 				<File Id="169300806" Language="SFX">
 					<ShortName>SFX\UI_Click1.wav</ShortName>
@@ -99,6 +108,10 @@
 				<File Id="295408699" Language="SFX">
 					<ShortName>SFX\Complete2-02.wav</ShortName>
 					<Path>SFX\SFX\Complete2-02_56D34C19.wem</Path>
+				</File>
+				<File Id="352323340" Language="SFX">
+					<ShortName>The_Fall_Music_Menu(Compressed).wav</ShortName>
+					<Path>SFX\The_Fall_Music_Menu(Compressed)_4E954DAE.wem</Path>
 				</File>
 				<File Id="437261794" Language="SFX">
 					<ShortName>Metal2.wav</ShortName>
@@ -155,10 +168,6 @@
 				<File Id="993902946" Language="SFX">
 					<ShortName>SFX\UI_hover.wav</ShortName>
 					<Path>SFX\SFX\UI_hover_56D34C19.wem</Path>
-				</File>
-				<File Id="1057195292" Language="SFX">
-					<ShortName>PortalStatic1.wav</ShortName>
-					<Path>SFX\PortalStatic1_8956FC97.wem</Path>
 				</File>
 				<File Id="1063548857" Language="SFX">
 					<ShortName>GoalStatic.wav</ShortName>

@@ -819,19 +819,24 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>45</Value>
+										<Value>39</Value>
 									</ValueList>
 								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>29</Value>
+										<Value>43</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-230</Value>
 									</ValueList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="25"/>
@@ -858,7 +863,7 @@
 												<PointList>
 													<Point>
 														<XPos>0</XPos>
-														<YPos>-0.08818</YPos>
+														<YPos>-200</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>
@@ -878,9 +883,6 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="ATT_Goal" ID="{EB8902A9-44DA-47D6-B237-FB96519B0B10}" WorkUnitID="{8C43C1AE-D046-4A07-926F-02D2B4693EB6}"/>
-								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
 								</Reference>
@@ -916,9 +918,6 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="ATT_Portal" ID="{EAD83371-6732-421C-9152-4D583B3653E0}" WorkUnitID="{8C43C1AE-D046-4A07-926F-02D2B4693EB6}"/>
-								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
 								</Reference>
@@ -1029,6 +1028,75 @@
 								<ActiveSource Name="UI_hover" ID="{BFEA38BC-45BC-4464-B44F-308C50113C8C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Menu" ID="{33D7F6C1-BF9B-474F-A3F4-210C48401F04}" ShortID="978259479">
+					<ChildrenList>
+						<Sound Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{928A009B-4AB1-4A41-B2EF-B50247352FCF}" ShortID="643226230">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{02AE88C4-565E-4A84-A2BE-58661FD588FF}" ShortID="53718916">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="8.82351059941522E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.44999264437135"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.32940040204678"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Fall_Menu1_Sting_BitCrushed_Faded.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{02AE88C4-565E-4A84-A2BE-58661FD588FF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" ShortID="42762130">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="The_Fall_Music_Menu(Compressed)" ID="{9AF3F10D-AB19-4E2C-AFAC-81F64B41A0D1}" ShortID="352323340">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.28853556947798E-03"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.8963116242201E-03"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>The_Fall_Music_Menu(Compressed).wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="The_Fall_Music_Menu(Compressed)" ID="{9AF3F10D-AB19-4E2C-AFAC-81F64B41A0D1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 						<Sound Name="Fall_Sting_1" ID="{30561DA6-EAE3-4ED0-AE31-79EC1094BBE1}" ShortID="367132081">
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
@@ -1036,14 +1104,9 @@
 										<Value>12</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-100</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1057,6 +1120,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="FallMainSting2-03" ID="{1858C250-CDCA-4E75-8E40-76E2CC08E6D2}" ShortID="161584208">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.25540117872807"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.06677261513158"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.324163034539474"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.91351959978071"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>FallMainSting2-03.wav</AudioFile>
 								</AudioFileSource>

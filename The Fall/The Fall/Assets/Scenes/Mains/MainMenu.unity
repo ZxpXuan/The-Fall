@@ -355,6 +355,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1160905774}
   m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
+--- !u!114 &785776895 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114995176094856770, guid: af7a5045956fb8641b95662f6eac222a,
+    type: 2}
+  m_PrefabInternal: {fileID: 209988001}
+  m_Script: {fileID: 11500000, guid: 8d3e11c2e3051c74fbe381991fc6591e, type: 3}
 --- !u!1 &902554704
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,10 +574,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1843638349}
+  - {fileID: 1881147531}
   - {fileID: 1873121420}
   - {fileID: 1737549251}
   - {fileID: 1266016632}
-  - {fileID: 1881147531}
   - {fileID: 1957957654}
   m_Father: {fileID: 1224118897}
   m_RootOrder: 0
@@ -1170,7 +1176,7 @@ GameObject:
   - component: {fileID: 1266016634}
   - component: {fileID: 1266016633}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1188,7 +1194,7 @@ RectTransform:
   m_Children:
   - {fileID: 1260711167}
   m_Father: {fileID: 1032738671}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1420,7 +1426,7 @@ GameObject:
   - component: {fileID: 1737549253}
   - component: {fileID: 1737549252}
   m_Layer: 5
-  m_Name: Level_Select
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1438,7 +1444,7 @@ RectTransform:
   m_Children:
   - {fileID: 913546400}
   m_Father: {fileID: 1032738671}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1717,7 +1723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4b01e7435904409bffe9679eecfde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIManager: {fileID: 1860686911}
+  uIManager: {fileID: 0}
   isPaused: 0
   collisionLeft: 0
   lim: {fileID: 0}
@@ -1747,7 +1753,7 @@ GameObject:
   - component: {fileID: 1873121422}
   - component: {fileID: 1873121421}
   m_Layer: 5
-  m_Name: 'Play '
+  m_Name: Level_Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,7 +1771,7 @@ RectTransform:
   m_Children:
   - {fileID: 197109459}
   m_Father: {fileID: 1032738671}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1811,6 +1817,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 114995176094856770, guid: af7a5045956fb8641b95662f6eac222a,
+          type: 2}
+        m_MethodName: MenuSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1860686912}
         m_MethodName: loadScene
         m_Mode: 5
@@ -1820,17 +1838,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: LevelSelect
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 639023074}
-        m_MethodName: UiSFX
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1880,7 +1887,7 @@ GameObject:
   - component: {fileID: 1881147533}
   - component: {fileID: 1881147532}
   m_Layer: 5
-  m_Name: Credits
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1898,7 +1905,7 @@ RectTransform:
   m_Children:
   - {fileID: 1469723312}
   m_Father: {fileID: 1032738671}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1944,6 +1951,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 785776895}
+        m_MethodName: MenuSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1860686912}
         m_MethodName: loadScene
         m_Mode: 5

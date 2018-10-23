@@ -28,7 +28,7 @@ public class Soundbank_Manager : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
-        AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
+        //AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
 
     }
 
@@ -49,8 +49,8 @@ public class Soundbank_Manager : MonoBehaviour
 
         ChangeMusic();
        
-
     }
+
 
     void OnLevelWasLoaded(int level)
     {
@@ -77,6 +77,15 @@ public class Soundbank_Manager : MonoBehaviour
         ChangeMusic();
     }
 
+
+    public void MenuSystem()
+    {
+        AkSoundEngine.PostEvent("Start_Game", gameObject);
+        print("stop_menu_music");
+        AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
+        AkSoundEngine.PostEvent("Start_Music", gameObject);
+    }
+
     public void ChangeMusic()
     {
         if (getCurrentLevel == 0)
@@ -85,11 +94,10 @@ public class Soundbank_Manager : MonoBehaviour
             AkSoundEngine.PostEvent("Play_Menu_Sting", gameObject);
         }
 
-
-        if (getCurrentLevel == 2)
+        if (getCurrentLevel == 3)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
-            AkSoundEngine.PostEvent("Start_Music", gameObject);           
+
+            //AkSoundEngine.PostEvent("Start_Music", gameObject);           
             print("playmusic");
         }
          

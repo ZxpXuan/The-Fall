@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_SPAWN_BALL = 2050766869U;
         static const AkUniqueID PLAY_SPAWN_LEVEL = 4224962356U;
         static const AkUniqueID PLAY_TRIGGER_HIT = 1240630412U;
+        static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;

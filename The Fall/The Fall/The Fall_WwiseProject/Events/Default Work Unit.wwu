@@ -41,6 +41,11 @@
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -51,6 +56,11 @@
 										<Action Name="" ID="{47AFBEC5-8945-4B40-A635-3345B36F8C2E}" ShortID="1053297937">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="36"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="SeekPercent" Type="Real64">
 													<ModifierList>
 														<ModifierInfo>
@@ -252,6 +262,18 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{AC17B0F5-399F-47CB-94F1-2D9994528DEC}" ShortID="644475989">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="2.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Play_Menu_Click" ID="{57967729-EC6E-4E0B-BB36-65DBDA9BB767}">
@@ -282,6 +304,30 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Start_Game" ID="{BA08BA0F-80D6-42D6-8460-457CBC96B8CB}">
+									<ChildrenList>
+										<Action Name="" ID="{0F25954C-4104-4A88-A586-0655C22A661E}" ShortID="68696614">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B532B72E-E6C7-4A20-9D0F-205EC044CA51}" ShortID="1058580978">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{928A009B-4AB1-4A41-B2EF-B50247352FCF}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -293,10 +339,12 @@
 								<Action Name="" ID="{B7376352-FB69-48DE-A83E-D1721F81818F}" ShortID="208973940">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Music" ID="{9F33BD6C-4C61-4694-B721-A07937523720}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
+											<ObjectRef Name="Music" ID="{AA8FCD8E-0F93-41B2-AB9D-526687B0026B}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -310,7 +358,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Music" ID="{9F33BD6C-4C61-4694-B721-A07937523720}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
+											<ObjectRef Name="Music" ID="{AA8FCD8E-0F93-41B2-AB9D-526687B0026B}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

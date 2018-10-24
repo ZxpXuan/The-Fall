@@ -9,7 +9,7 @@ public class GreenEND : MonoBehaviour {
     private bool blue;
     //private GameObject b;
 
-    private BlueEND b1;
+    public BlueEND b1;
     // Use this for initialization
     void Start()
     {

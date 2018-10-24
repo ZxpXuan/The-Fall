@@ -6,7 +6,7 @@ public class BlueEND : MonoBehaviour {
     public bool blue = false;
     private int buildIndex;
     private bool green;
-    private GreenEND g1;
+    public GreenEND g1;
 	// Use this for initialization
 	void Start () {
 		

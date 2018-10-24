@@ -6,13 +6,14 @@ public class laser : MonoBehaviour
 {
     //number of times the ball has made contact (mike)
     public  int collisionCount;
-
-    public Animator anim;
     
     //audio script reference (mike)   
 
     // public float fireSpeed = 2f;
     public Rigidbody Ball;
+
+    [SerializeField]
+
     void Start()
     {
         // set our laser on its merry way. no need to update transform manually
@@ -44,15 +45,7 @@ public class laser : MonoBehaviour
         
 
         
-        // add 1 to collision count every time ball hits surface (mike)
-        //collisionCount += 1;
-
-        // if collision count reachs 9, reset it (mike)
-        if (collisionCount > 2)
-        {
-            collisionCount = 0;
-           
-        }
+      
         float speed = oldVelocity.magnitude;
 
 
@@ -62,9 +55,7 @@ public class laser : MonoBehaviour
 
         // assign the reflected velocity back to the rigidbody
         Ball.velocity = reflectedVelocity.normalized * speed;
-        // rotate the object by the same ammount we changed its velocity
-        //Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
-        //transform.rotation = rotation * transform.rotation;
+
     }
 
 

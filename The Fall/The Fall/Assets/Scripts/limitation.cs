@@ -11,13 +11,17 @@ public class limitation : MonoBehaviour {
     public GameObject particleOnDestroy;
     [SerializeField]
     public ParticleSystem partSystem;
+    [SerializeField]
+    public GameObject bounceCount;
     // Use this for initialization
     void Start () {
         gm.updateBounces(limit - i);
+        GetComponentInChildren<TextMesh>().text = "" + (limit - i);
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         getscene();
 
         AkSoundEngine.SetRTPCValue("Bounce_Count", i);
@@ -32,8 +36,9 @@ public class limitation : MonoBehaviour {
         i = i + 1;
         Instantiate(partSystem.gameObject, transform.position, Quaternion.identity);
         gm.updateBounces(limit - i);
-     //   partSystem.transform.position = transform.position;
-   //     partSystem.Play();
+        GetComponentInChildren<TextMesh>().text = "" + (limit - i);
+        //   partSystem.transform.position = transform.position;
+        //     partSystem.Play();
         Debug.Log("t " + i);
 
         if (collision.collider.tag == "limitadd2")

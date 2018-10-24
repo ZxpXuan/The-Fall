@@ -47,7 +47,7 @@ public class linedraw : MonoBehaviour {
             
             lr.startWidth = 0.1f;
             lr.endWidth = 0.2f;
-
+            print(Vector3.Angle(p1.position, new Vector3(screenToWorld.x, screenToWorld.y, 0)));
             if (Input.GetMouseButtonUp(0))
             {
                 lr.enabled = false;

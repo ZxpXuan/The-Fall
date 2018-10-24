@@ -35,6 +35,13 @@ public class limitation : MonoBehaviour {
      //   partSystem.transform.position = transform.position;
    //     partSystem.Play();
         Debug.Log("t " + i);
+
+        if (collision.collider.tag == "limitadd2")
+        {
+            limit = limit + 2;
+        }
+
+
         if (i > limit || collision.collider.tag == "outsidewall")
         {
             //    SceneManager.LoadScene(buildIndex);
@@ -44,6 +51,8 @@ public class limitation : MonoBehaviour {
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             gm.restartLevel();
         }
+
+
     }
 
 

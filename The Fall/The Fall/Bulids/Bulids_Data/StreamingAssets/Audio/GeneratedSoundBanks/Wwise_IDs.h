@@ -25,21 +25,43 @@ namespace AK
         static const AkUniqueID PLAY_SPAWN_BALL = 2050766869U;
         static const AkUniqueID PLAY_SPAWN_LEVEL = 4224962356U;
         static const AkUniqueID PLAY_TRIGGER_HIT = 1240630412U;
+        static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;
+        static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOP_PORTAL_STATIC = 1797269043U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace LEVEL_DIFFICULTY
+        {
+            static const AkUniqueID GROUP = 907080827U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID EASY = 529018163U;
+                static const AkUniqueID HARD = 3599861390U;
+                static const AkUniqueID MEDIUM = 2849147824U;
+            } // namespace SWITCH
+        } // namespace LEVEL_DIFFICULTY
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AIM_VELOCITY = 2740226506U;
         static const AkUniqueID BOUNCE_COUNT = 2157217901U;
+        static const AkUniqueID TIME_SLOW = 1245272470U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID THEFALL = 2681106293U;
+        static const AkUniqueID THEFALLMUSIC = 456359398U;
+        static const AkUniqueID THEFALLSFX = 787924302U;
     } // namespace BANKS
 
     namespace BUSSES

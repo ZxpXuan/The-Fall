@@ -16,7 +16,7 @@
 								<Property Name="Tempo" Type="Real64" Value="85"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-14</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -100,6 +100,18 @@
 													<PropertyList>
 														<Property Name="CueType" Type="int16" Value="2"/>
 														<Property Name="TimeMs" Type="Real64" Value="22588.2352941176"/>
+													</PropertyList>
+												</MusicCue>
+												<MusicCue Name="" ID="{FE04C39B-771F-406E-A7C9-1DF67BEF5FAA}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="2"/>
+														<Property Name="TimeMs" Type="Real64" Value="11238.5120350109"/>
+													</PropertyList>
+												</MusicCue>
+												<MusicCue Name="" ID="{E56182A9-C0F9-46B1-89F4-6862BFD1FF0B}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="2"/>
+														<Property Name="TimeMs" Type="Real64" Value="33978.1181619256"/>
 													</PropertyList>
 												</MusicCue>
 											</CueList>
@@ -416,7 +428,7 @@
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="1"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
 												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
@@ -451,7 +463,7 @@
 										<MusicTransition Name="Transition" ID="{E7AA229E-B07C-4447-BADD-44353D41E448}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 											</PropertyList>

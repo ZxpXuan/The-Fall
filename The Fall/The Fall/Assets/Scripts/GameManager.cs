@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField]
     List<Animator> objectToDisable;
+
+
+    Soundbank_Manager sbm;
     // Use this for initialization
 
     private void Awake()
@@ -39,13 +42,20 @@ public class GameManager : MonoBehaviour {
         }
     }
     void Start () {
+        sbm = FindObjectOfType<Soundbank_Manager>();
         isRestartInitiated = false;
        // Cursor.visible = false;
         isPaused = false;
+        if(lim!=null)
         collisionLeft = lim.limit;
        
     }
-	
+	public void soundBankManagerFunction()
+    {
+
+
+        sbm.MenuSystem();
+    }
 	// Update is called once per frame
 	void Update () {
 

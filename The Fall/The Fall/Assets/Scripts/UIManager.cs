@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour {
 	}
 
     public void updateBouncesLeft(int number){
-
+        if(bouncesLeft!=null)
         bouncesLeft.text = "Bounces Left:" + number;
 
     }

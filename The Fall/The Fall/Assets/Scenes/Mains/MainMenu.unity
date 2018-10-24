@@ -355,12 +355,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1160905774}
   m_Script: {fileID: 11500000, guid: c823f5c37d106d84981471e7a01965a2, type: 3}
---- !u!114 &785776895 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114995176094856770, guid: af7a5045956fb8641b95662f6eac222a,
-    type: 2}
-  m_PrefabInternal: {fileID: 209988001}
-  m_Script: {fileID: 11500000, guid: 8d3e11c2e3051c74fbe381991fc6591e, type: 3}
 --- !u!1 &902554704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1722,7 @@ MonoBehaviour:
   collisionLeft: 0
   lim: {fileID: 0}
   restartDelay: 0
+  objectToDisable: []
 --- !u!4 &1860686913
 Transform:
   m_ObjectHideFlags: 0
@@ -1939,8 +1934,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 785776895}
-        m_MethodName: MenuSystem
+      - m_Target: {fileID: 1860686912}
+        m_MethodName: soundBankManagerFunction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

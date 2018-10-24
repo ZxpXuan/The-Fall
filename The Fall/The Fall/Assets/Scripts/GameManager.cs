@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
     }
 	public void soundBankManagerFunction()
     {
+        sbm = FindObjectOfType<Soundbank_Manager>();
 
 
         sbm.MenuSystem();
@@ -175,12 +176,21 @@ public class GameManager : MonoBehaviour {
     }
 
     public void loadScene(string name){
+        sbm = FindObjectOfType<Soundbank_Manager>();
+
+        sbm.MenuSystem();
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(name);
 
     }
+    public void startSoundBankMusic(int level)
+    {
+        sbm = FindObjectOfType<Soundbank_Manager>();
 
+
+        sbm.startMusic(level);
+    }
     public void updateBounces(int number)
     {
         collisionLeft = number;

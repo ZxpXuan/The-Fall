@@ -71,7 +71,7 @@ public class Soundbank_Manager : MonoBehaviour
 
         if (previousLevel == getCurrentLevel && previousLevel == 0)
         {
-            if (Application.loadedLevelName != "LevelSelect") ;
+            if (Application.loadedLevelName != "LevelSelect");
 
         }
         ChangeMusic();
@@ -89,6 +89,16 @@ public class Soundbank_Manager : MonoBehaviour
     public void AnimationSFX()
     {
         AkSoundEngine.PostEvent("Start_Opening_Anim", gameObject);
+
+    }
+    public void startMusic(int level)
+    {
+        getCurrentLevel = level;
+        ChangeMusic();
+        AkSoundEngine.PostEvent("Start_Music", gameObject);
+        print(level);
+
+
     }
 
     public void ChangeMusic()
@@ -107,17 +117,16 @@ public class Soundbank_Manager : MonoBehaviour
 
         if (getCurrentLevel == 3)
         {
-
-            //AkSoundEngine.PostEvent("Start_Music", gameObject);           
-            print("playmusic");
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
         }
          
-        if (getCurrentLevel == 4)
+        if (getCurrentLevel == 4 || getCurrentLevel == 5)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Medium", gameObject);
+            print("55555");
         }
 
-        if (getCurrentLevel == 6)
+        if (getCurrentLevel == 6 || getCurrentLevel == 7 || getCurrentLevel == 8 || getCurrentLevel == 9 || getCurrentLevel == 10 || getCurrentLevel == 11)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Hard", gameObject);
         }

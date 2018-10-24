@@ -364,6 +364,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_Menu_Music" ID="{3999BF7E-4DEF-4098-86FD-FC285F78DA9D}">
+							<ChildrenList>
+								<Action Name="" ID="{EA5A8287-ED85-4972-B585-ECEAD3B19741}" ShortID="141367372">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

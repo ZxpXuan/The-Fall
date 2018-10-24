@@ -86,12 +86,23 @@ public class Soundbank_Manager : MonoBehaviour
         AkSoundEngine.PostEvent("Start_Music", gameObject);
     }
 
+    public void AnimationSFX()
+    {
+        AkSoundEngine.PostEvent("Start_Opening_Anim", gameObject);
+    }
+
     public void ChangeMusic()
     {
         if (getCurrentLevel == 0)
         {
             AkSoundEngine.PostEvent("Stop_Music", gameObject);
+            AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
             AkSoundEngine.PostEvent("Play_Menu_Sting", gameObject);
+        }
+
+        if( getCurrentLevel > 0)
+        {
+            AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
         }
 
         if (getCurrentLevel == 3)

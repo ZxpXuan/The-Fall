@@ -36,7 +36,7 @@ public class limitation : MonoBehaviour {
         i = i + 1;
         Instantiate(partSystem.gameObject, transform.position, Quaternion.identity);
         gm.updateBounces(limit - i);
-        GetComponentInChildren<TextMesh>().text = "" + (limit - i);
+       // GetComponentInChildren<TextMesh>().text = "" + (limit - i);
         //   partSystem.transform.position = transform.position;
         //     partSystem.Play();
         Debug.Log("t " + i);

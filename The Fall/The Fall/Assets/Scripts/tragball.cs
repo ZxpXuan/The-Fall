@@ -111,6 +111,7 @@ public class tragball : MonoBehaviour
                 //line.endWidth = 0.2f;
 
                 //line.SetPosition(0, emputy.transform.position * 1.5f);
+                ding.GetComponentInChildren<BallAngle>().startFadeOut();
 
                 MaxRing.GetComponent<Renderer>().enabled = true;
 
@@ -133,15 +134,18 @@ public class tragball : MonoBehaviour
                 ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
                 //abale = false;
                 abale = abale + 1;
-                   // ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
-                    if(cam.GetComponent<Animator>()!=null){
+                    ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
+
+                    //  ding.GetComponentInChildren<BallAngle>().gameObject.SetActive(false);
+                    ding.GetComponentInChildren<BallAngle>().startFadeOut();
+                    if (cam.GetComponent<Animator>()!=null){
 
                         cam.GetComponent<Animator>().enabled = false;
                     }
             }else{
 
-                //play error soudns
-
+                    //play error soudns
+                    ding.GetComponentInChildren<BallAngle>().startFadeIn();
             }
                 MaxRing.GetComponent<Renderer>().enabled = false;
                // line.enabled = false;

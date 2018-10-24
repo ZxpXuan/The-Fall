@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-//    private bool paused = false;
+   //private bool paused = false;
     private int buildIndex;
     private string sceneName;
 
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
     public int collisionLeft;
 
     public limitation lim;
+
+    private float pau = 0;
 
     public float restartDelay;
     private float restartStartTime;
@@ -47,24 +49,46 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Time.timeScale == 0)
+        {
+            pau = 1;
+        }
+
+        if (Time.timeScale == 1)
+        {
+            pau = 0;
+        }
+
+
         if(Input.GetKeyDown(KeyCode.S))
         {
             Cursor.visible = true;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
 
-            Time.timeScale = 0;
-         
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+            
+            Time.timeScale = pau;
+               /// paused = true;
+
+            }
+
+
+
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            
+            //    Time.timeScale = 1;
+            //   // paused = false;
+
+            //}
+        //}
        
-        if (Input.GetKeyDown(KeyCode.M) )
-        {
-            Time.timeScale = 1;
-         
-        }
+
+
+
         if (Input.GetKeyDown(KeyCode.F1))
         {
 

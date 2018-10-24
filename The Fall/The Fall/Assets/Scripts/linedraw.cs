@@ -19,7 +19,7 @@ public class linedraw : MonoBehaviour {
     {
        
         lr.positionCount = (2);
-        lr.sortingLayerID = layerOrder;
+       // lr.sortingLayerID = 15;
     }
 
 

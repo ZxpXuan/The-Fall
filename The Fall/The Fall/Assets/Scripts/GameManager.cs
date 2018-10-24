@@ -19,13 +19,29 @@ public class GameManager : MonoBehaviour {
     public float restartDelay;
     private float restartStartTime;
     private bool isRestartInitiated;
-	// Use this for initialization
-	void Start () {
+
+    [SerializeField]
+    List<Animator> objectToDisable;
+    // Use this for initialization
+
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("start_type", 99) == 0)
+        {
+            foreach (Animator anim in objectToDisable)
+            {
+                anim.enabled = false;
+
+            }
+            PlayerPrefs.SetInt("start_type", 1);
+        }
+    }
+    void Start () {
         isRestartInitiated = false;
        // Cursor.visible = false;
         isPaused = false;
         collisionLeft = lim.limit;
-
+       
     }
 	
 	// Update is called once per frame
@@ -66,11 +82,7 @@ public class GameManager : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            AkSoundEngine.PostEvent("Play_Restart", gameObject);
-
-            getScene();
-
-            SceneManager.LoadScene(buildIndex);
+            doRestart();
         }
 
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -86,12 +98,19 @@ public class GameManager : MonoBehaviour {
         }
         
         if(isRestartInitiated&& restartStartTime + restartDelay <Time.time && !uIManager.isWinInProgress){
-            Application.LoadLevel(Application.loadedLevel);
+            doRestart();
 
 
         }
     }
+    public void doRestart()
+    {
+        PlayerPrefs.SetInt("start_type", 0);
+        AkSoundEngine.PostEvent("Play_Restart", gameObject);
+        getScene();
+        SceneManager.LoadScene(buildIndex);
 
+    }
     public void restartLevel()
     {
         

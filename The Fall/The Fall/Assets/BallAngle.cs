@@ -43,7 +43,6 @@ public class BallAngle : MonoBehaviour {
             color.a = Mathf.Lerp(color.a, 1, t);
             renderer.color = color;
             textMesh.material.color = color;
-            print("fading in..." + color.a);
 
             if (color.a == 1)
             {
@@ -58,7 +57,7 @@ public class BallAngle : MonoBehaviour {
             renderer.color = color;
             textMesh.material.color = color;
 
-            print("fading out..." + color.a);
+
             if(color.a == 0)
             {
                 hasFadeOutStarted = false;
@@ -78,7 +77,6 @@ public class BallAngle : MonoBehaviour {
             hasFadeOutStarted = false;
             hasFadeInStarted = true;
             startTime = Time.time;
-            print("fade out");
         }
 
     }
@@ -92,7 +90,6 @@ public class BallAngle : MonoBehaviour {
             hasFadeOutStarted = true;
             hasFadeInStarted = false;
             startTime = Time.time;
-            print("fade out");
         }
     }
 }

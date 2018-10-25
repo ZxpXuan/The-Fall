@@ -182,6 +182,17 @@
 							<ChildrenList>
 								<Event Name="Play_Shoot" ID="{2E1D6010-4313-4858-81D4-24F1A89A9B50}">
 									<ChildrenList>
+										<Action Name="" ID="{FB09B3F4-7158-40A4-9BAD-4EE897167EBC}" ShortID="937395578">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shoot3" ID="{6A4EBCEC-5774-41A7-8BFD-55B364AEA45D}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 										<Action Name="" ID="{73A168CA-E070-4F1A-A338-0329DEA58733}" ShortID="584101247">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
@@ -300,6 +311,31 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Aim_Error" ID="{D08D3AD0-DF6B-4928-B413-62DDCC70CDEB}">
+									<ChildrenList>
+										<Action Name="" ID="{8A10B299-55B5-42A6-BEFC-BF3E5DEA67DD}" ShortID="836886102">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Aim_Error" ID="{820B2AB8-4E3C-436B-B605-6DE6C0A4A558}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{5B4CDC5A-5D49-4890-A1AA-CF4CB9563371}" ShortID="488250246">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="4"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shoot3" ID="{6A4EBCEC-5774-41A7-8BFD-55B364AEA45D}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

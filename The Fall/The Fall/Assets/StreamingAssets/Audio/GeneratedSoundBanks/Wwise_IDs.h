@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AIM_ERROR = 1571488543U;
         static const AkUniqueID PLAY_AIMING = 1286977679U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_ENTER_PORTAL = 3691806113U;

@@ -27,6 +27,9 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<MusicPlaylistContainer Name="A" ID="{703166F5-EA47-4D23-A310-F2F07EE74F26}" ShortID="673182706">
@@ -348,6 +351,7 @@
 											<ChildrenList>
 												<MusicPlaylistItem Name="" ID="{32831E0B-B7A8-4D7C-B703-73B823FFDB1B}" ShortID="74481752">
 													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
 														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 													</PropertyList>
 													<SegmentRef Name="The_Fall_Music_C(Compressed)" ID="{880D8C46-D567-47DD-AC9A-1ED3C620B1A5}"/>

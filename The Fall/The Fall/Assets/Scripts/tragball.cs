@@ -144,7 +144,7 @@ public class tragball : MonoBehaviour
                     }
             }else{
 
-                    //play error soudns
+                    AkSoundEngine.PostEvent("Aim_Error", gameObject);
                     ding.GetComponentInChildren<BallAngle>().startFadeIn();
             }
                 MaxRing.GetComponent<Renderer>().enabled = false;

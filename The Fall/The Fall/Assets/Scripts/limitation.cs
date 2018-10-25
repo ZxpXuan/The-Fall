@@ -8,7 +8,7 @@ public class limitation : MonoBehaviour {
     private int buildIndex;
     public GameManager gm;
 
-    public int limitadd = 2;
+    //public int limitadd = 2;
     
     public GameObject particleOnDestroy;
     [SerializeField]
@@ -21,7 +21,11 @@ public class limitation : MonoBehaviour {
         GetComponentInChildren<TextMesh>().text = "" + (limit - i);
 
     }
+    public void addBounce(int value)
+    {
 
+        limit += value;
+    }
     // Update is called once per frame
     void Update () {
         getscene();
@@ -46,7 +50,7 @@ public class limitation : MonoBehaviour {
 
         if (collision.collider.tag == "limitadd2")
         {
-            limit = limit + limitadd;
+          //  limit = limit + limitadd;
         }
 
 

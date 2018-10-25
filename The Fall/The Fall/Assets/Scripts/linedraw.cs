@@ -17,7 +17,8 @@ public class linedraw : MonoBehaviour {
     void Start()
 
     {
-       
+        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+
         lr.positionCount = (2);
        // lr.sortingLayerID = 15;
     }
@@ -60,10 +61,12 @@ public class linedraw : MonoBehaviour {
     {
         able = true;
         AkSoundEngine.PostEvent("Play_Aiming", gameObject);
+        print("downnnn");
     }
 
     private void OnMouseUp()
     {
-        AkSoundEngine.PostEvent("Play_Shoot", gameObject);
+        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+        AkSoundEngine.PostEvent("Play_Shoot", gameObject);      
     }
 }

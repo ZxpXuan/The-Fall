@@ -112,29 +112,6 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{7B0CA9FF-B303-4E21-9FEE-7FCB6B5DB690}" ShortID="50221434">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="36"/>
-												<Property Name="SeekPercent" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{E99957F3-BE49-4A27-925E-71D7C4E503D8}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="25"/>
-																	<Property Name="Min" Type="Real64" Value="-25"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
 										<Action Name="" ID="{84527762-F03A-474D-B1DC-2DE01039E53A}" ShortID="513630557">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
@@ -146,33 +123,11 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{F1DE1592-84C5-4C30-8CF7-AE24D880DA55}" ShortID="605684934">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="36"/>
-												<Property Name="SeekPercent" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6525C480-BEA3-4171-854B-12C1EC69BB6B}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="20"/>
-																	<Property Name="Min" Type="Real64" Value="-20"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
 										<Action Name="" ID="{C624487D-9E2C-43BB-808D-A011FA707A9F}" ShortID="816398080">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="12"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64" Value="-30"/>
 											</PropertyList>
 											<ReferenceList>
@@ -188,6 +143,7 @@
 										<Action Name="" ID="{9A5CCE95-B824-4FAF-B454-98E06AE6DF20}" ShortID="786428091">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -209,6 +165,7 @@
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="12"/>
 												<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64" Value="-16"/>
 											</PropertyList>
 											<ReferenceList>
@@ -264,6 +221,16 @@
 								</Event>
 								<Event Name="Play_Aiming" ID="{5A2E0B12-F9AE-4228-968F-097DF036E563}">
 									<ChildrenList>
+										<Action Name="" ID="{0AE02FB5-353F-44EC-9718-7FB7F3520E06}" ShortID="1014634920">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 										<Action Name="" ID="{223AFD51-D3BF-48B5-BF53-F58E98A947F0}" ShortID="551963115">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
@@ -309,6 +276,30 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="PortalConcept6" ID="{9EAEE816-C37D-4038-A2C5-96B5B1ABC83C}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Aiming" ID="{E8C57A5C-DF9E-4F0E-82E7-83C47B5DCADD}">
+									<ChildrenList>
+										<Action Name="" ID="{A3289CD0-683F-4F13-B5E4-765E99048220}" ShortID="844552872">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4AAEBEED-C3A7-490D-BE68-FDAA06A728AD}" ShortID="751782410">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="4"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -373,10 +364,33 @@
 										<Action Name="" ID="{38E26BBE-839F-466B-A6C1-AA5304EF2755}" ShortID="542343734">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{1C5DF543-ABCA-4FE1-B9B7-BC2EEA9A38F1}" ShortID="195010658">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{EE205B10-782E-4DB0-89CC-0B1E3B7DB720}" ShortID="11413799">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

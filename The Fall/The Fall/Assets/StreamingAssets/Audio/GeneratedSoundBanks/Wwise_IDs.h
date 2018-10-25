@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;
+        static const AkUniqueID STOP_AIMING = 3525056021U;
         static const AkUniqueID STOP_GOAL_STATIC = 951397446U;
         static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
@@ -68,6 +69,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

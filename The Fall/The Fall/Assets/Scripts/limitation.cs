@@ -7,6 +7,8 @@ public class limitation : MonoBehaviour {
     public int limit = 5;
     private int buildIndex;
     public GameManager gm;
+
+    public int limitadd = 2;
     
     public GameObject particleOnDestroy;
     [SerializeField]
@@ -44,7 +46,7 @@ public class limitation : MonoBehaviour {
 
         if (collision.collider.tag == "limitadd2")
         {
-            limit = limit + 2;
+            limit = limit + limitadd;
         }
 
 

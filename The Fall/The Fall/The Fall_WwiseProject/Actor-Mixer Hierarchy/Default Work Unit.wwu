@@ -880,20 +880,31 @@
 						</Sound>
 						<Sound Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" ShortID="128572403">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
+								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
-										<Value>450</Value>
+										<Value>1</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{0C8C7EF3-6766-48B4-893B-30E4A909E122}"/>
+											<Modifier Name="" ID="{0C8C7EF3-6766-48B4-893B-30E4A909E122}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeDoor : MonoBehaviour {
     public GameObject timedoo;
+    public float showtime = 3;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,7 +20,7 @@ public class TimeDoor : MonoBehaviour {
         if (collision.collider.tag == "ball")
         {
             timedoo.GetComponent<Renderer>().enabled = false;
-            Invoke("ShowAgain", 3f);
+            Invoke("ShowAgain", showtime);
         }
 
 	}

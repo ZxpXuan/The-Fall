@@ -848,7 +848,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -881,9 +881,19 @@
 						<Sound Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" ShortID="128572403">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>450</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0C8C7EF3-6766-48B4-893B-30E4A909E122}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

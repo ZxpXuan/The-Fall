@@ -16,7 +16,7 @@ public class cyclicmoving1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         movingblocktime += 0.1f;

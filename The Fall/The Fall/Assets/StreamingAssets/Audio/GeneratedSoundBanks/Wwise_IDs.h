@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
         static const AkUniqueID START_MUSIC = 540993415U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;
+        static const AkUniqueID STOP_GOAL_STATIC = 951397446U;
         static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PORTAL_STATIC = 1797269043U;

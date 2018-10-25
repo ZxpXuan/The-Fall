@@ -123,12 +123,13 @@ public class Soundbank_Manager : MonoBehaviour
         if (getCurrentLevel == 4 || getCurrentLevel == 5)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Medium", gameObject);
-            print("55555");
+
         }
 
-        if (getCurrentLevel == 6 || getCurrentLevel == 7 || getCurrentLevel == 8 || getCurrentLevel == 9 || getCurrentLevel == 10 || getCurrentLevel == 11)
+        if (getCurrentLevel > 5 )
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Hard", gameObject);
+            print("hardswitch");
         }
     }
 }

@@ -47,12 +47,12 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
-							<Value>7.84557907845579E-02</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Hard" ID="{6E32AE23-A1E1-4BE3-9151-86A2E874883C}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Game2menu" ID="{CD134146-8A34-4CA9-9770-DBD22874BDAC}">
@@ -86,6 +86,32 @@
 						<RTPCValue>
 							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
 							<Value>7.84557907845579E-02</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="SFX" ID="{E30F9429-656E-4209-ABBF-9F9D308EA04C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Start_Goal_Static" ID="{BD801B39-51ED-435D-AFF9-A893BB6C8687}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>6.58307210031347E-02</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

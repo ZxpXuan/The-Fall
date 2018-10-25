@@ -115,10 +115,11 @@ public class GameManager : MonoBehaviour {
 
             SceneManager.LoadScene(2);
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            doRestart();
-        }
+        if (Input.GetMouseButtonDown(1))
+            {
+                doRestart();
+            }
+        
 
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(isPaused){

@@ -264,6 +264,16 @@
 								</Event>
 								<Event Name="Play_Aiming" ID="{5A2E0B12-F9AE-4228-968F-097DF036E563}">
 									<ChildrenList>
+										<Action Name="" ID="{0AE02FB5-353F-44EC-9718-7FB7F3520E06}" ShortID="1014634920">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 										<Action Name="" ID="{223AFD51-D3BF-48B5-BF53-F58E98A947F0}" ShortID="551963115">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
@@ -309,6 +319,30 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="PortalConcept6" ID="{9EAEE816-C37D-4038-A2C5-96B5B1ABC83C}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Aiming" ID="{E8C57A5C-DF9E-4F0E-82E7-83C47B5DCADD}">
+									<ChildrenList>
+										<Action Name="" ID="{A3289CD0-683F-4F13-B5E4-765E99048220}" ShortID="844552872">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4AAEBEED-C3A7-490D-BE68-FDAA06A728AD}" ShortID="751782410">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="4"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -373,6 +407,7 @@
 										<Action Name="" ID="{38E26BBE-839F-466B-A6C1-AA5304EF2755}" ShortID="542343734">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">

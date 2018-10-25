@@ -143,6 +143,11 @@ public class GameManager : MonoBehaviour {
         PlayerPrefs.SetInt("start_type", 0);
         AkSoundEngine.PostEvent("Play_Restart", gameObject);
         AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+
+        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+      
+   
+
         getScene();
         SceneManager.LoadScene(buildIndex);
 

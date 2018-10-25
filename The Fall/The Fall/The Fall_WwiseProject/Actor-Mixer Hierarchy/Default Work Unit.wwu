@@ -874,6 +874,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="GoalStatic" ID="{F021A860-C331-4A88-A426-5E7A09C40F80}" ShortID="1063548857">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.228800986842105"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.51681085526316"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.18378947368421"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>GoalStatic.wav</AudioFile>
 								</AudioFileSource>
@@ -930,6 +935,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="PortalStatic1" ID="{CA94EEDA-31C6-455A-BB5C-5DE9B6FBEDF5}" ShortID="1057195292">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.137948830409357"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.163814236111111"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.21554504751462"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.28503554459064"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>PortalStatic1.wav</AudioFile>
 								</AudioFileSource>

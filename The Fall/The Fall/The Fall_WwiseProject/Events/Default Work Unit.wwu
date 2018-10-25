@@ -112,29 +112,6 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{7B0CA9FF-B303-4E21-9FEE-7FCB6B5DB690}" ShortID="50221434">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="36"/>
-												<Property Name="SeekPercent" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{E99957F3-BE49-4A27-925E-71D7C4E503D8}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="25"/>
-																	<Property Name="Min" Type="Real64" Value="-25"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
 										<Action Name="" ID="{84527762-F03A-474D-B1DC-2DE01039E53A}" ShortID="513630557">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="1"/>
@@ -146,33 +123,11 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{F1DE1592-84C5-4C30-8CF7-AE24D880DA55}" ShortID="605684934">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="36"/>
-												<Property Name="SeekPercent" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6525C480-BEA3-4171-854B-12C1EC69BB6B}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="20"/>
-																	<Property Name="Min" Type="Real64" Value="-20"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
 										<Action Name="" ID="{C624487D-9E2C-43BB-808D-A011FA707A9F}" ShortID="816398080">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="12"/>
 												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64" Value="-30"/>
 											</PropertyList>
 											<ReferenceList>
@@ -188,6 +143,7 @@
 										<Action Name="" ID="{9A5CCE95-B824-4FAF-B454-98E06AE6DF20}" ShortID="786428091">
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
@@ -209,6 +165,7 @@
 											<PropertyList>
 												<Property Name="ActionType" Type="int16" Value="12"/>
 												<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64" Value="-16"/>
 											</PropertyList>
 											<ReferenceList>

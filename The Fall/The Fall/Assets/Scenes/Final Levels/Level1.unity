@@ -395,6 +395,11 @@ RectTransform:
   m_AnchoredPosition: {x: 14, y: -157}
   m_SizeDelta: {x: 285.5, y: 74.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &438794441 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95797938578853530, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 2051652449}
 --- !u!1001 &502880559
 Prefab:
   m_ObjectHideFlags: 0
@@ -812,6 +817,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: objectToDisable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224449521420138864, guid: 07f16e6b63a754d15b4ead4abad5cab9,
         type: 2}
       propertyPath: m_LocalPosition.z
@@ -916,6 +926,11 @@ Prefab:
       propertyPath: minDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: objectToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 438794441}
     m_RemovedComponents:
     - {fileID: 81327204297952682, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
@@ -1144,6 +1159,11 @@ Prefab:
         type: 2}
       propertyPath: m_Positions.Array.data[1].y
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 95797938578853530, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}

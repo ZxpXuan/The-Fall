@@ -55,6 +55,7 @@ public class limitation : MonoBehaviour {
             Instantiate(particleOnDestroy, transform.position,Quaternion.identity);
 
             AkSoundEngine.PostEvent("Play_Death", gameObject);
+            AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
             gm.restartLevel();
         }
 

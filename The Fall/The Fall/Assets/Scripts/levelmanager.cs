@@ -39,8 +39,9 @@ public class levelmanager : MonoBehaviour {
     {
        
         AkSoundEngine.PostEvent("Play_Goal_Reached", gameObject);
+        AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
-        foreach(ParticleSystem part in ps){
+        foreach (ParticleSystem part in ps){
             part.Play();
 
         }

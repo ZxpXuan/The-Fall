@@ -824,7 +824,6 @@
 										<Value>39</Value>
 									</ValueList>
 								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>43</Value>
@@ -851,37 +850,6 @@
 									<ValueList>
 										<Value>-1</Value>
 									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{38EB1C16-5F0F-4026-B801-26CEB99DF3C3}" ShortID="1017258025">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}" WorkUnitID="{9CC8BD14-C3F9-4A0D-9B44-EA2C0A7BC227}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{EAD8A96F-3848-42F4-AA46-932FB48AD8E6}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-200</YPos>
-														<Flags>5</Flags>
-													</Point>
-													<Point>
-														<XPos>0.10087</XPos>
-														<YPos>-200</YPos>
-														<Flags>0</Flags>
-													</Point>
-													<Point>
-														<XPos>1</XPos>
-														<YPos>-200</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>

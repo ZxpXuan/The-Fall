@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WwEmitterStript : MonoBehaviour {
-
-   /* public string EventName = "default";
+    /*
+    public string EventName = "default";
     public string StopEvent = "default";
     public bool IsInCollider = false;
 
@@ -19,7 +19,7 @@ public class WwEmitterStript : MonoBehaviour {
 		
 	}
 
-    private void OnTrigger(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;

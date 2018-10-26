@@ -44,6 +44,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1282412867952390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4584127102999014}
+  - component: {fileID: 54337564971212084}
+  - component: {fileID: 114902588874458200}
+  m_Layer: 0
+  m_Name: TEST BALL_Start (2)
+  m_TagString: ball
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1282416378802350
 GameObject:
   m_ObjectHideFlags: 1
@@ -173,11 +190,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989264046978980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.93, y: 7.39, z: 0}
+  m_LocalPosition: {x: -7.14, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4230516006382658}
   - {fileID: 4544833262944886}
+  - {fileID: 4584127102999014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -194,6 +212,34 @@ Transform:
   m_Father: {fileID: 4275588135201694}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4584127102999014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282412867952390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4275588135201694}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54337564971212084
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282412867952390}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
 --- !u!54 &54754642567992416
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -257,7 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionCount: 0
-  anim: {fileID: 0}
   Ball: {fileID: 54754642567992416}
   minVelocity: 8
 --- !u!114 &114822154363747542
@@ -271,13 +316,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3acebb8f49ce461f8d52d60dfb6cdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limit: 0
+  limit: 3
   gm: {fileID: 0}
-  audioMan: {fileID: 0}
   particleOnDestroy: {fileID: 1948484987851110, guid: 1b4dd46a369b81445ad6147f64ff6534,
     type: 2}
   partSystem: {fileID: 198887168778951688, guid: 033702a3bd4ece343b1a4a175574b5f2,
     type: 2}
+  bounceCount: {fileID: 0}
+--- !u!114 &114902588874458200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1282412867952390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0efddcf95403a94a86f03b81a941cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.5
+  angle: 151.31381
+  maxBounce: 4
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  startPointColor: {r: 0, g: 1, b: 0, a: 1}
+  endPointColor: {r: 1, g: 0, b: 0.020645618, a: 1}
+  useDirectionHandle: 1
+  usePositionHandle: 1
+  handleSize: 1
+  handleDistance: 9.9
+  handleColor: {r: 0.8829899, g: 0, b: 1, a: 1}
+  handleDir: {x: -0.87726194, y: 0.480012, z: 0}
 --- !u!114 &114994523756063130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,7 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5b794f1a3624c1eb2d43bb4769c88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audMan: {fileID: 0}
   lr: {fileID: 120173016152746466}
   p0: {fileID: 4544833262944886}
   p1: {fileID: 4230516006382658}

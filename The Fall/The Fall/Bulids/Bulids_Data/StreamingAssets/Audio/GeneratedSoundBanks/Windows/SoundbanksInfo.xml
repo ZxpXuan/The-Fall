@@ -49,6 +49,7 @@
 			<ShortName>TheFallSFX</ShortName>
 			<Path>TheFallSFX.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1571488543" Name="Aim_Error" ObjectPath="\Events\Default Work Unit\SFX\Ball\Aim_Error"/>
 				<Event Id="1286977679" Name="Play_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Aiming"/>
 				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Death"/>
 				<Event Id="3691806113" Name="Play_Enter_Portal" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Enter_Portal"/>
@@ -63,6 +64,8 @@
 				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit"/>
 				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static"/>
 				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="0.000000"/>
+				<Event Id="3525056021" Name="Stop_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Stop_Aiming" MaxAttenuation="0.000000"/>
+				<Event Id="951397446" Name="Stop_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static" MaxAttenuation="0.000000"/>
 				<Event Id="1797269043" Name="Stop_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -170,9 +173,17 @@
 					<ShortName>SFX\UI_hover.wav</ShortName>
 					<Path>SFX\SFX\UI_hover_56D34C19.wem</Path>
 				</File>
+				<File Id="1020489139" Language="SFX">
+					<ShortName>38 Track 38.wav</ShortName>
+					<Path>SFX\38 Track 38_6A66DA96.wem</Path>
+				</File>
+				<File Id="1057195292" Language="SFX">
+					<ShortName>PortalStatic1.wav</ShortName>
+					<Path>SFX\PortalStatic1_6E2E9715.wem</Path>
+				</File>
 				<File Id="1063548857" Language="SFX">
 					<ShortName>GoalStatic.wav</ShortName>
-					<Path>SFX\GoalStatic_8956FC97.wem</Path>
+					<Path>SFX\GoalStatic_5CB6BD6B.wem</Path>
 				</File>
 				<File Id="1068618229" Language="SFX">
 					<ShortName>SFX\DeathConcept2.wav</ShortName>

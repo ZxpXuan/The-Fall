@@ -26,6 +26,8 @@ public class Tracer : MonoBehaviour
 		var dir = Vector3.one;
 		var pos = transform.position;
 		RaycastHit hit = new RaycastHit();
+
+        Physics.queriesHitTriggers = true;
 		
 		if (useDirectionHandle)
 		{
@@ -51,7 +53,7 @@ public class Tracer : MonoBehaviour
 			{
 				// Draw line in editor
 				Gizmos.DrawRay(pos, dir * hit.distance);
-
+                
 				// Calcuate the new position and direction
 				pos += dir * hit.distance;
 				dir = Vector3.Reflect(dir, hit.normal);

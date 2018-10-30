@@ -35,7 +35,7 @@ public class levelmanager : MonoBehaviour {
 	void Update () {
 
     }
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
        
         AkSoundEngine.PostEvent("Play_Goal_Reached", gameObject);
@@ -45,7 +45,7 @@ public class levelmanager : MonoBehaviour {
             part.Play();
 
         }
-        if (collision.gameObject.tag == "ball")
+        if (collision.collider.gameObject.tag == "ball")
         {
             StartCoroutine(coroutine);
        

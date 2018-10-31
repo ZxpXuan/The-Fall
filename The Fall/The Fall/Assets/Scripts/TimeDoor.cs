@@ -19,7 +19,9 @@ public class TimeDoor : MonoBehaviour {
 	{
         if (collision.collider.tag == "ball")
         {
-            timedoo.GetComponent<Renderer>().enabled = false;
+            // timedoo.GetComponent<Renderer>().enabled = false;
+        //    timedoo.active = false;
+            timedoo.SetActive(false) ;
             Invoke("ShowAgain", showtime);
         }
 
@@ -28,7 +30,9 @@ public class TimeDoor : MonoBehaviour {
     public void ShowAgain()
 
     {
-        timedoo.GetComponent<Renderer>().enabled = true;
+       // timedoo.active = true;
+        timedoo.SetActive(true);
+        // timedoo.GetComponent<Renderer>().enabled = true;
     }
 
 

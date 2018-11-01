@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e5526abddeec864b872ba3465b0433f2
-    m_lastTime: -8586616602213050888
+    m_lastTime: -8586611342199000599
     List:
     - name: Level_Reverb
       guid: 5a20685673dbb94ebfe40265865bf96f
@@ -38,7 +38,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: aa87d7330e082242a39aec4238b653a6
-    m_lastTime: -8586613972732633512
+    m_lastTime: -8586611336601214282
     List:
     - name: TheFallMusic
       guid: 6f46933d3724e34f84d62f5d1af702cd
@@ -62,8 +62,24 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d2ec8e6196ee97458c692fefdf6ba80e
-    m_lastTime: -8586613973620140918
+    m_lastTime: -8586607181312295161
     List:
+    - name: Aim_Error
+      guid: d03a8dd06bdf2849b41362ddcc70cdeb
+      id: 1571488543
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Aim_Error
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Aim_Error
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Aiming
       guid: 120b2e5aaef92842968f097df036e563
       id: 1286977679
@@ -256,6 +272,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Start_Game
+      guid: 0fba08bad680d6428460457cbc96b8cb
+      id: 1114964412
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Start_Game
+        ObjectType: 3
+      Path: Default Work Unit\SFX\UI\Start_Game
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Start_Goal_Static
       guid: 391b80bded515d43aff9a893bb6c8687
       id: 3155875016
@@ -302,6 +334,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Aiming
+      guid: 5c7ac5e89edf0e4f82e783c47b5dcadd
+      id: 3525056021
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Ball
+        ObjectType: 4
+      - ElementName: Stop_Aiming
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Ball\Stop_Aiming
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Goal_Static
       guid: 74b2f2b20710b642823fffd15d46ffb5
       id: 951397446
@@ -315,6 +363,20 @@ MonoBehaviour:
       - ElementName: Stop_Goal_Static
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Stop_Goal_Static
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Menu_Music
+      guid: 7ebf9939ef4d984086fdfc285f78da9d
+      id: 3945748993
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Stop_Menu_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Stop_Menu_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

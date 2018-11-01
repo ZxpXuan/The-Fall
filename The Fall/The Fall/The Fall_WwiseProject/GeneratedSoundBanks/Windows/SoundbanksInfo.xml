@@ -17,6 +17,7 @@
 			<Path>TheFallMusic.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game"/>
+				<Event Id="1003497107" Name="Start_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Menu_Music"/>
 				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Music"/>
 				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Menu_Music" MaxAttenuation="0.000000"/>
 				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0.000000"/>
@@ -34,9 +35,17 @@
 					<ShortName>The_Fall_Music_B_To_C.wav</ShortName>
 					<Path>SFX\The_Fall_Music_B_To_C_8956FC97.wem</Path>
 				</File>
+				<File Id="352323340" Language="SFX">
+					<ShortName>The_Fall_Music_Menu(Compressed).wav</ShortName>
+					<Path>SFX\The_Fall_Music_Menu(Compressed)_D840ACF7.wem</Path>
+				</File>
 				<File Id="436080097" Language="SFX">
 					<ShortName>The_Fall_Music_C(Compressed).wav</ShortName>
 					<Path>SFX\The_Fall_Music_C(Compressed)_8956FC97.wem</Path>
+				</File>
+				<File Id="993902946" Language="SFX">
+					<ShortName>SFX\UI_hover.wav</ShortName>
+					<Path>SFX\SFX\UI_hover_56D34C19.wem</Path>
 				</File>
 				<File Id="1027916952" Language="SFX">
 					<ShortName>The_Fall_Music_B(Compressed).wav</ShortName>
@@ -63,6 +72,7 @@
 				<Event Id="4224962356" Name="Play_Spawn_Level" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Spawn_Level" MaxAttenuation="0.000000"/>
 				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit"/>
 				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static"/>
+				<Event Id="1967504570" Name="Start_Opening_Anim" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Opening_Anim"/>
 				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="0.000000"/>
 				<Event Id="3525056021" Name="Stop_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Stop_Aiming" MaxAttenuation="0.000000"/>
 				<Event Id="951397446" Name="Stop_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static" MaxAttenuation="0.000000"/>
@@ -103,7 +113,7 @@
 				</File>
 				<File Id="170259432" Language="SFX">
 					<ShortName>Glass1.wav</ShortName>
-					<Path>SFX\Glass1_181697EC.wem</Path>
+					<Path>SFX\Glass1_861C69AA.wem</Path>
 				</File>
 				<File Id="198501661" Language="SFX">
 					<ShortName>SFX\PortalConcept6.wav</ShortName>
@@ -127,7 +137,7 @@
 				</File>
 				<File Id="315634734" Language="SFX">
 					<ShortName>Fire2.wav</ShortName>
-					<Path>SFX\Fire2_BD536E1C.wem</Path>
+					<Path>SFX\Fire2_3188BF9F.wem</Path>
 				</File>
 				<File Id="319476158" Language="SFX">
 					<ShortName>thump1.wav</ShortName>
@@ -137,17 +147,13 @@
 					<ShortName>thump3.wav</ShortName>
 					<Path>SFX\thump3_56D34C19.wem</Path>
 				</File>
-				<File Id="352323340" Language="SFX">
-					<ShortName>The_Fall_Music_Menu(Compressed).wav</ShortName>
-					<Path>SFX\The_Fall_Music_Menu(Compressed)_D840ACF7.wem</Path>
-				</File>
 				<File Id="437261794" Language="SFX">
 					<ShortName>Metal2.wav</ShortName>
 					<Path>SFX\Metal2_56D34C19.wem</Path>
 				</File>
 				<File Id="445375944" Language="SFX">
 					<ShortName>Glass2.wav</ShortName>
-					<Path>SFX\Glass2_7FDD64CB.wem</Path>
+					<Path>SFX\Glass2_A519AADB.wem</Path>
 				</File>
 				<File Id="461551322" Language="SFX">
 					<ShortName>Note3.wav</ShortName>
@@ -163,7 +169,7 @@
 				</File>
 				<File Id="567623184" Language="SFX">
 					<ShortName>Fire1.wav</ShortName>
-					<Path>SFX\Fire1_68D969BE.wem</Path>
+					<Path>SFX\Fire1_15764B10.wem</Path>
 				</File>
 				<File Id="595145526" Language="SFX">
 					<ShortName>Glass7.wav</ShortName>
@@ -183,7 +189,7 @@
 				</File>
 				<File Id="652943065" Language="SFX">
 					<ShortName>Fire4.wav</ShortName>
-					<Path>SFX\Fire4_70B72876.wem</Path>
+					<Path>SFX\Fire4_8469B0F4.wem</Path>
 				</File>
 				<File Id="679780921" Language="SFX">
 					<ShortName>Voice3.wav</ShortName>
@@ -195,7 +201,7 @@
 				</File>
 				<File Id="772585177" Language="SFX">
 					<ShortName>Fire5.wav</ShortName>
-					<Path>SFX\Fire5_D20BCD29.wem</Path>
+					<Path>SFX\Fire5_B88BF76D.wem</Path>
 				</File>
 				<File Id="777279287" Language="SFX">
 					<ShortName>Flame4.wav</ShortName>
@@ -207,7 +213,7 @@
 				</File>
 				<File Id="850005335" Language="SFX">
 					<ShortName>Fire3.wav</ShortName>
-					<Path>SFX\Fire3_6925FB01.wem</Path>
+					<Path>SFX\Fire3_3E19A886.wem</Path>
 				</File>
 				<File Id="870579763" Language="SFX">
 					<ShortName>SFX\UI_Click2.wav</ShortName>

@@ -28,7 +28,9 @@ namespace AK
         static const AkUniqueID PLAY_TRIGGER_HIT = 1240630412U;
         static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
+        static const AkUniqueID START_MENU_MUSIC = 1003497107U;
         static const AkUniqueID START_MUSIC = 540993415U;
+        static const AkUniqueID START_OPENING_ANIM = 1967504570U;
         static const AkUniqueID START_PORTAL_STATIC = 3237166277U;
         static const AkUniqueID STOP_AIMING = 3525056021U;
         static const AkUniqueID STOP_GOAL_STATIC = 951397446U;
@@ -39,6 +41,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace IN_MENU
+        {
+            static const AkUniqueID GROUP = 1631528850U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FALSE = 2452206122U;
+                static const AkUniqueID TRUE = 3053630529U;
+            } // namespace SWITCH
+        } // namespace IN_MENU
+
         namespace LEVEL_DIFFICULTY
         {
             static const AkUniqueID GROUP = 907080827U;

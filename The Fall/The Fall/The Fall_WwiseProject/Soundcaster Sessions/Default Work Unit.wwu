@@ -9,6 +9,14 @@
 							<ObjectRef Name="Play_Menu_Sting" ID="{1BA94E66-EEA5-472C-A2D0-CEEFC3411215}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Start_Menu_Music" ID="{52E7B9B9-DA20-4857-BEE6-0B95596FC58F}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Menu_Music" ID="{3999BF7E-4DEF-4098-86FD-FC285F78DA9D}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -26,7 +34,8 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Hard" ID="{6E32AE23-A1E1-4BE3-9151-86A2E874883C}"/>
+						<CurrentSwitchRef Name="True" ID="{5318CBC9-534C-4416-8DC2-C3280746AA13}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Music" ID="{CD64F68C-CCD9-4A76-807B-DFCE5CDFAC1E}">

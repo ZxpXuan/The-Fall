@@ -222,5 +222,5 @@ public class tragball : MonoBehaviour
 
         }
 
-
-    }
+   
+}

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
    //private bool paused = false;
     private int buildIndex;
-    private string sceneName;
+    private string sceneName;  
 
     public UIManager uIManager;
 

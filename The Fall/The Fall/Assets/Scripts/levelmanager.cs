@@ -22,6 +22,8 @@ public class levelmanager : MonoBehaviour {
     void Start () {
         coroutine = WaitAndWin(waitTime);
 
+  
+
     }
 	
     IEnumerator WaitAndWin(float waitTime){

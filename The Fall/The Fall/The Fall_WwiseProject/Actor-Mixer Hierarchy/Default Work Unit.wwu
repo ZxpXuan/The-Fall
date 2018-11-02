@@ -677,6 +677,34 @@
 						<BlendContainer Name="Death" ID="{298C20E4-5642-46B1-A811-AF09EF0D599F}" ShortID="98071432">
 							<PropertyList>
 								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{CD6266B1-A5FC-4A55-8392-190C4F37D485}" ShortID="938241106">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}" WorkUnitID="{9CC8BD14-C3F9-4A0D-9B44-EA2C0A7BC227}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{F31D2535-F45E-488E-9C00-5C2F1ABDB89E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-1985</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>4</Value>
@@ -1019,7 +1047,7 @@
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>930</Value>
+												<Value>300</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -1279,13 +1307,13 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>2.99896</XPos>
-														<YPos>890</YPos>
+														<XPos>4.03344</XPos>
+														<YPos>971</YPos>
 														<Flags>0</Flags>
 													</Point>
 													<Point>
 														<XPos>10</XPos>
-														<YPos>1260</YPos>
+														<YPos>1423</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

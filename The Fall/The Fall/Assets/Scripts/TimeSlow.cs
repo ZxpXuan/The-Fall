@@ -18,8 +18,10 @@ public class TimeSlow : MonoBehaviour {
 	void Start () {
         isCamZooming = false;
         Time.timeScale = 1;
+        AkSoundEngine.SetRTPCValue("Time_Slow", 0);
 
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -41,6 +43,7 @@ public class TimeSlow : MonoBehaviour {
             
             Time.timeScale = timeSlow;
             AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
+            AkSoundEngine.SetRTPCValue("Time_Slow", 1);
 
             Camera.main.GetComponent<Camera>().fieldOfView = Camera.main.GetComponent<Camera>().fieldOfView - 0.7f;
             // Camera.main.transform.LookAt(end.transform);
@@ -65,6 +68,7 @@ public class TimeSlow : MonoBehaviour {
             Time.timeScale = 1;
 
             AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+            AkSoundEngine.SetRTPCValue("Time_Slow", 0);
         }
 
 	}

@@ -540,11 +540,6 @@ RectTransform:
   m_AnchoredPosition: {x: 41.999977, y: -143}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &438794441 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95797938578853530, guid: 2570150614a41bd408792caa829fc295,
-    type: 2}
-  m_PrefabInternal: {fileID: 2051652449}
 --- !u!1001 &502880559
 Prefab:
   m_ObjectHideFlags: 0
@@ -613,6 +608,11 @@ Prefab:
         type: 2}
       propertyPath: maxZoom
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114113318850975812, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3b23ecb003d554e92f1b5f14452d1d, type: 2}
@@ -1279,7 +1279,7 @@ Prefab:
         type: 2}
       propertyPath: objectToDisable.Array.data[0]
       value: 
-      objectReference: {fileID: 438794441}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81327204297952682, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
@@ -1513,6 +1513,11 @@ Prefab:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 95797938578853530, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95561431354423454, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: m_Enabled
       value: 0

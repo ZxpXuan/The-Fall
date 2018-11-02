@@ -557,11 +557,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1074827433825558, guid: 2570150614a41bd408792caa829fc295,
     type: 2}
   m_PrefabInternal: {fileID: 203279822}
---- !u!95 &203279824 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95797938578853530, guid: 2570150614a41bd408792caa829fc295,
-    type: 2}
-  m_PrefabInternal: {fileID: 203279822}
 --- !u!1 &307362698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,7 +5311,7 @@ Prefab:
     - target: {fileID: 114113318850975812, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3b23ecb003d554e92f1b5f14452d1d, type: 2}
@@ -20044,7 +20039,7 @@ Prefab:
         type: 2}
       propertyPath: objectToDisable.Array.data[1]
       value: 
-      objectReference: {fileID: 203279824}
+      objectReference: {fileID: 1360328932}
     - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
         type: 2}
       propertyPath: objectToDisable.Array.data[2]
@@ -25059,6 +25054,11 @@ Transform:
 --- !u!1 &1329654963 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1414896564229944, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 203279822}
+--- !u!95 &1360328932 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95561431354423454, guid: 2570150614a41bd408792caa829fc295,
     type: 2}
   m_PrefabInternal: {fileID: 203279822}
 --- !u!1 &1622485633 stripped

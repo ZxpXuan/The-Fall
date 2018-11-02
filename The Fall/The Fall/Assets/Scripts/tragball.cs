@@ -20,7 +20,7 @@ public class tragball : MonoBehaviour
    
    // public GameObject ball;
     public Rigidbody ding;
-
+    private float speedMultiplier = 0.25f;
     public Rigidbody ding2;
     private int abale = 1;
     public GameObject MaxRing;
@@ -42,6 +42,8 @@ public class tragball : MonoBehaviour
         RaycastHit hitInfo;
         //
 
+        
+      
         //ball1 control
         if(abale == 1)
         {
@@ -72,12 +74,14 @@ public class tragball : MonoBehaviour
                 Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
 
+                
+
                 if (btnName != null && btnName == "emputy")
                 {
                     //Vector3 location = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     // location.z = 0;
                     //dis = (ball.transform.position - go.transform.position).sqrMagnitude;
-                    if (Vector3.Distance(currentPosition, ding.transform.position) > 3)
+                    if (Vector3.Distance(currentPosition, ding.transform.position) > 0.4)
                     {
                         var maxPosition = (currentPosition - ding.transform.position).normalized * 3.0f + ding.transform.position;
                      //   go.transform.position = maxPosition;
@@ -90,6 +94,7 @@ public class tragball : MonoBehaviour
                         mousePos = currentPosition;
 
                    }
+
                     Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
                     force = dir.magnitude;
@@ -100,7 +105,6 @@ public class tragball : MonoBehaviour
                 // DisplayTrajectoryLineRenderer2();
 
                 isDrage = true;
-
 
                 //clone = (GameObject)Instantiate(emputy, emputy.transform.position, Quaternion.identity);
                 //line = emputy.GetComponent<LineRenderer>();
@@ -115,6 +119,9 @@ public class tragball : MonoBehaviour
 
                 MaxRing.GetComponent<Renderer>().enabled = true;
 
+
+               // ballSpeed = ballSpeed * force;
+
             }
             else
             {
@@ -124,14 +131,17 @@ public class tragball : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0) && btnName == "emputy")
             {
-
-                //Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
-                //Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+                Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
+                float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
+               Debug.Log(mult);
+                //Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
 
                 if (force > minDistance) { 
-                ding.AddForce(dir * ballSpeed, ForceMode.Impulse);
+                ding.AddForce(dir * mult * speedMultiplier, ForceMode.Impulse);
+                    FindObjectOfType<GameManager>().GetComponent<LineRenderer>().enabled = false;
                 //abale = false;
                 abale = abale + 1;
                     ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);

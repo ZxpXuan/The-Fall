@@ -460,7 +460,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976648974045416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26247072, y: 3.567968, z: -29.590704}
+  m_LocalPosition: {x: 0.32, y: 3.45, z: -29.590704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4572783089046702}
@@ -484,7 +484,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 26
+  field of view: 26.7
   orthographic: 0
   orthographic size: 7.96
   m_Depth: -1
@@ -771,6 +771,7 @@ MonoBehaviour:
   collisionLeft: 1
   lim: {fileID: 0}
   restartDelay: 2
+  objectToDisable: []
 --- !u!114 &114178058585214406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -987,6 +988,7 @@ MonoBehaviour:
   ding: {fileID: 0}
   ding2: {fileID: 0}
   MaxRing: {fileID: 0}
+  minDistance: 2
 --- !u!114 &114305887113921566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1455,6 +1457,7 @@ MonoBehaviour:
   bouncesLeft: {fileID: 114178058585214406}
   pauseMenu: {fileID: 1789217160009804}
   gm: {fileID: 114170217762457598}
+  isWinInProgress: 0
 --- !u!124 &124713836499542458
 Behaviour:
   m_ObjectHideFlags: 1

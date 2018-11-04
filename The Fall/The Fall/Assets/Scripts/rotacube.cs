@@ -5,7 +5,7 @@ using UnityEngine;
 public class rotacube : MonoBehaviour {
 
 
-    public Transform cube;
+  
     public float speed = 4.0f;
 //    private bool _mouseDown = false;
 
@@ -18,7 +18,7 @@ public class rotacube : MonoBehaviour {
 	void Update () {
         
             
-            cube.Rotate(Vector3.back, Time.deltaTime * speed, Space.World);
+        transform.Rotate(Vector3.back, Time.deltaTime * speed, Space.World);
 
         
     }

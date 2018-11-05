@@ -474,6 +474,18 @@
 								<RandomSequenceContainer Name="High" ID="{079472A9-1711-4E33-8510-4EC39ADAF59C}" ShortID="467536149">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{ECBB2D0B-DFA7-42C5-87E3-ECC1F6CF9003}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="76"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>2</Value>
@@ -500,6 +512,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="High_ap_1" ID="{CCB342C4-E87C-445E-B664-767ADA4EA717}" ShortID="112245833">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.990143914473684"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.2497265625"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.58379214638158"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>High_ap_1.wav</AudioFile>
 												</AudioFileSource>
@@ -519,6 +536,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="High_ap_2" ID="{9DC07ECE-46AD-4D3D-9678-BC2AEDF95050}" ShortID="88628497">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.885964912280702"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.302631578947368"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.73464912280702"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>High_ap_2.wav</AudioFile>
 												</AudioFileSource>
@@ -538,6 +560,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="High_ap_3" ID="{A1399C53-20D6-4927-A0E2-FCB83594C554}" ShortID="17111417">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.581140350877193"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.320175438596491"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.55701754385965"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>High_ap_3.wav</AudioFile>
 												</AudioFileSource>
@@ -557,6 +584,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="High_ap_4" ID="{5943FF4B-AFF4-49FB-B3E5-5377293B1A32}" ShortID="766326013">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.451754385964912"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.399122807017544"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.55701754385965"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>High_ap_4.wav</AudioFile>
 												</AudioFileSource>

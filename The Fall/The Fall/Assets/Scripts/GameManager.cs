@@ -38,6 +38,16 @@ public class GameManager : MonoBehaviour {
                 anim.enabled = false;
 
             }
+
+            LineRenderer lr = GetComponent<LineRenderer>();
+            float x1 = PlayerPrefs.GetFloat("xShot",0);
+            float y1 = PlayerPrefs.GetFloat("yShot", 0);
+
+            lr.SetPosition(0, new Vector3(x1, y1, 0));
+            lr.SetPosition(1, lim.transform.position);
+
+            lr.startWidth = 0.1f;
+            lr.endWidth = 0.2f;
             PlayerPrefs.SetInt("start_type", 1);
         }
     }

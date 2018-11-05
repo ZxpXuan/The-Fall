@@ -144,6 +144,9 @@ public class tragball : MonoBehaviour
                     FindObjectOfType<GameManager>().GetComponent<LineRenderer>().enabled = false;
                 //abale = false;
                 abale = abale + 1;
+                    PlayerPrefs.SetFloat("xShot", currentPosition.x);
+                    PlayerPrefs.SetFloat("yShot", currentPosition.y);
+
                     ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
 
                     //  ding.GetComponentInChildren<BallAngle>().gameObject.SetActive(false);

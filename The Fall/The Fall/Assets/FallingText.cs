@@ -23,7 +23,7 @@ public class FallingText : MonoBehaviour {
         startTime = Time.time;
         hasFallingStarted = true;
         numberToDisplay = numberToDisp;
-        print("boucneee");
+
     }
 	// Update is called once per frame
 	void Update () {

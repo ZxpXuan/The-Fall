@@ -46,7 +46,7 @@ public class limitation : MonoBehaviour {
        // GetComponentInChildren<TextMesh>().text = "" + (limit - i);
         //   partSystem.transform.position = transform.position;
         //     partSystem.Play();
-        Debug.Log("t " + i);
+
 
         if (collision.collider.tag == "limitadd2")
         {

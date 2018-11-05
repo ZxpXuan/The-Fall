@@ -27,10 +27,17 @@ public class GameManager : MonoBehaviour {
 
 
     Soundbank_Manager sbm;
+
+    [SerializeField]
+    public int currentWorldTries;
+
+    public bool hasBallBeenShot;
     // Use this for initialization
 
     private void Awake()
     {
+        currentWorldTries = 0;
+        hasBallBeenShot = false;
         if (PlayerPrefs.GetInt("start_type", 99) == 0)
         {
             foreach (Animator anim in objectToDisable)
@@ -38,16 +45,21 @@ public class GameManager : MonoBehaviour {
                 anim.enabled = false;
 
             }
+            if (PlayerPrefs.GetInt("hasBallBeenShot", 0) == 1)
+            {
+                LineRenderer lr = GetComponent<LineRenderer>();
+                float x1 = PlayerPrefs.GetFloat("xShot", 0);
+                float y1 = PlayerPrefs.GetFloat("yShot", 0);
+                currentWorldTries = PlayerPrefs.GetInt("currentWorldTries", 0);
 
-            LineRenderer lr = GetComponent<LineRenderer>();
-            float x1 = PlayerPrefs.GetFloat("xShot",0);
-            float y1 = PlayerPrefs.GetFloat("yShot", 0);
+                lr.SetPosition(0, new Vector3(x1, y1, 0));
+                lr.SetPosition(1, lim.transform.position);
 
-            lr.SetPosition(0, new Vector3(x1, y1, 0));
-            lr.SetPosition(1, lim.transform.position);
+                lr.startWidth = 0.1f;
+                lr.endWidth = 0.2f;
+             //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
-            lr.startWidth = 0.1f;
-            lr.endWidth = 0.2f;
+            }
             PlayerPrefs.SetInt("start_type", 1);
         }
     }
@@ -58,9 +70,11 @@ public class GameManager : MonoBehaviour {
         isPaused = false;
         if(lim!=null)
         collisionLeft = lim.limit;
-       
+
+
+
     }
-	public void soundBankManagerFunction()
+    public void soundBankManagerFunction()
     {
         sbm = FindObjectOfType<Soundbank_Manager>();
 
@@ -151,13 +165,17 @@ public class GameManager : MonoBehaviour {
     }
     public void doRestart()
     {
+
+
         PlayerPrefs.SetInt("start_type", 0);
         AkSoundEngine.PostEvent("Play_Restart", gameObject);
         AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
         AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
-      
-   
+        
+        PlayerPrefs.SetInt("currentWorldTries", currentWorldTries + 1);
+        PlayerPrefs.SetInt("totalWorldTries", PlayerPrefs.GetInt("totalWorldTries", 0) + 1);
+
 
         getScene();
         SceneManager.LoadScene(buildIndex);

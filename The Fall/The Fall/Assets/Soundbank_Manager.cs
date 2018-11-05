@@ -114,25 +114,25 @@ public class Soundbank_Manager : MonoBehaviour
         if ( getCurrentLevel > 0)
         {
             AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);          
-            print("stop_menu_music");
+          //  print("stop_menu_music");
         }
 
         if (getCurrentLevel == 3)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
-            print("Easy_Switch");
+         //   print("Easy_Switch");
         }
          
         if (getCurrentLevel == 4 || getCurrentLevel == 5)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Medium", gameObject);
-            print("Med_Switch");
+        //    print("Med_Switch");
         }
 
         if (getCurrentLevel > 5)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Hard", gameObject);
-            print("hardswitch");
+         //   print("hardswitch");
         }
     }
 }

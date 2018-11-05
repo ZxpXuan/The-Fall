@@ -14,6 +14,8 @@ public class linedraw : MonoBehaviour {
 
     private bool able = true;
 
+    public bool lockDistance;
+    public float maxDistance;
     void Start()
 
     {
@@ -41,14 +43,21 @@ public class linedraw : MonoBehaviour {
             {
                 lr.enabled = true;
             }
+            Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 
-            Vector3 screenToWorld =Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z) );
-            lr.SetPosition(0, new Vector3(screenToWorld.x,screenToWorld.y,0));
+            /* if (lockDistance && Vector3.Distance(p1.position, screenToWorld) < maxDistance)
+           {
+               lr.SetPosition(0, new Vector3(screenToWorld.x, screenToWorld.y, 0));
+               lr.SetPosition(1, p1.position);
+
+               lr.startWidth = 0.1f;
+               lr.endWidth = 0.2f;
+           } */
+            lr.SetPosition(0, new Vector3(screenToWorld.x, screenToWorld.y, 0));
             lr.SetPosition(1, p1.position);
-            
+
             lr.startWidth = 0.1f;
             lr.endWidth = 0.2f;
-
             if (Input.GetMouseButtonUp(0))
             {
                 lr.enabled = false;
@@ -61,7 +70,7 @@ public class linedraw : MonoBehaviour {
     {
         able = true;
         AkSoundEngine.PostEvent("Play_Aiming", gameObject);
-        print("downnnn");
+
     }
 
     private void OnMouseUp()

@@ -135,7 +135,6 @@ public class tragball : MonoBehaviour
                 Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                 Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
                 float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
-               Debug.Log(mult);
                 //Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
 
@@ -146,9 +145,9 @@ public class tragball : MonoBehaviour
                 abale = abale + 1;
                     PlayerPrefs.SetFloat("xShot", currentPosition.x);
                     PlayerPrefs.SetFloat("yShot", currentPosition.y);
-
+                    PlayerPrefs.SetInt("hasBallBeenShot", 1);
                     ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
-
+                    GetComponentInParent<GameManager>().hasBallBeenShot = true;
                     //  ding.GetComponentInChildren<BallAngle>().gameObject.SetActive(false);
                     ding.GetComponentInChildren<BallAngle>().startFadeOut();
                     if (cam.GetComponent<Animator>()!=null){

@@ -6,7 +6,7 @@ public class AI : MonoBehaviour {
     [System.Serializable]
     public class DialogueSet{
         public Brain.MoodTypes moodType;
-
+        public Brain.GameState stateType;
         public List<string> dialogue;
 
         public bool randomize;
@@ -48,6 +48,8 @@ public class AI : MonoBehaviour {
     public int currentLevelTries;
     public int totalWorldTries;
     public Brain.MoodTypes currentMood = Brain.MoodTypes.Neutral;
+    public Brain.GameState currentGameState = Brain.GameState.Start;
+
     public int happinessLevel;
 
 
@@ -76,13 +78,42 @@ public class AI : MonoBehaviour {
 	}
     public void playMoodSound()
     {
+        string mood;
+
+        mood = "Happy";
+      
+        switch (currentMood)
+        {
+            case Brain.MoodTypes.VeryDisappointed:
+                mood = "VDisappointed";
+                break;
+            case Brain.MoodTypes.Disappointted:
+                mood = "Disappointed";
+                break;
+            case Brain.MoodTypes.Neutral:
+                mood = "Neutral";
+                break;
+            case Brain.MoodTypes.Happy:
+                mood = "Happy";
+                break;
+            case Brain.MoodTypes.VeryHappy:
+                mood = "VeryHappy";
+                break;
+
+        }
+
+      
         foreach( DialogueSet ds in dialogueSet)
         {
 
-            if(ds.moodType == currentMood)
+            if(ds.stateType == currentGameState)
             {
                 int random = Random.Range(0, ds.dialogue.Count);
                 print(ds.dialogue[random]);
+                AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
+                AkSoundEngine.PostEvent(ds.dialogue[0],gameObject);
+
+
                 break;
             }
 
@@ -138,10 +169,22 @@ public class AI : MonoBehaviour {
     {
 
         currentMood += value;
-            Vector3 screenToWorld =Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z) );
+        playMoodSound();
+
+    }
+    public void setMood(Brain.MoodTypes type)
+    {
+        currentMood = type;
         playMoodSound();
 
     }
 
+    public void setGameState(Brain.GameState state)
+    {
+        currentGameState = state;
+        playMoodSound();
+
+
+    }
 
 }

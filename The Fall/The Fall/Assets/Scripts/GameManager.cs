@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
     public int currentWorldTries;
 
     public bool hasBallBeenShot;
+
+    public List<Vector3> contactPoints;
     // Use this for initialization
 
     private void Awake()

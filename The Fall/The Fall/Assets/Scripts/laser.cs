@@ -12,7 +12,6 @@ public class laser : MonoBehaviour
     // public float fireSpeed = 2f;
     public Rigidbody Ball;
 
-    [SerializeField]
 
     void Start()
     {
@@ -26,6 +25,7 @@ public class laser : MonoBehaviour
 
     // we want to store the laser's velocity every frame
     // so we can use this data during collisions to reflect
+    [SerializeField]
     private Vector3 oldVelocity;
     [SerializeField]
     private float minVelocity = 10f;

@@ -413,32 +413,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSet:
   - moodType: 1
+    stateType: 2
     dialogue:
-    - Disappointed 1
-    - Disappointed 2
-    - Disappointed 3
-    - Disappointed 4
-    randomize: 0
-  - moodType: 2
-    dialogue:
-    - Neutral 1
-    - Neutral 2
-    - Neutral 3
-    - Neutral 4
-    randomize: 0
-  - moodType: 3
-    dialogue:
-    - Happy 1
-    - Happy 2
-    - Happy 3
-    - Happy 4
-    randomize: 0
-  - moodType: 4
-    dialogue:
-    - Very Happy 1
-    - Very Happy 2
-    - Very Happy 3
-    - Very Happy 4
+    - Narrator_Death
     randomize: 0
   moodSet:
   - moodTypes: 4
@@ -472,6 +449,7 @@ MonoBehaviour:
   currentLevelTries: 0
   totalWorldTries: 0
   currentMood: 2
+  currentGameState: 0
   happinessLevel: 0
 --- !u!114 &888174989
 MonoBehaviour:

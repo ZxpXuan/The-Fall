@@ -552,7 +552,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+											<ObjectRef Name="Menu_Music" ID="{380FF5DA-BEBB-47F5-8454-3D2BE0D62D74}" WorkUnitID="{134A5535-8CEF-447A-8D53-37B0634F99C2}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -569,6 +569,24 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Narrator" ID="{3F09B4B8-6CED-4820-BA66-5215CA433263}" ShortID="824920992">
+					<ChildrenList>
+						<Event Name="Narrator_Death" ID="{D9861040-DFCA-4411-A30C-B64CD00DC7BC}">
+							<ChildrenList>
+								<Action Name="" ID="{D6762291-8975-446D-A757-9C7DF217B077}" ShortID="1030203736">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="On_Death" ID="{28FF9E91-5A84-4AA5-8027-49443CAB0810}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

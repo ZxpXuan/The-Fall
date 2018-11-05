@@ -109,10 +109,10 @@ public class AI : MonoBehaviour {
             if(ds.stateType == currentGameState)
             {
                 int random = Random.Range(0, ds.dialogue.Count);
-                print(ds.dialogue[random]);
+               
                 AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
                 AkSoundEngine.PostEvent(ds.dialogue[0],gameObject);
-
+                print(ds.dialogue[0]);
 
                 break;
             }
@@ -129,12 +129,6 @@ public class AI : MonoBehaviour {
                     currentMood = cat.moodTypes;
                     break;
                 }
-
-            
-       
-
-            
-
         }
 
         playMoodSound();

@@ -26,6 +26,21 @@
 						</AuxBus>
 						<Bus Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}"/>
 						<Bus Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}"/>
+						<AuxBus Name="Narrator" ID="{1906BA7B-2F4D-41A0-BD7B-87E586A509DA}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Delay (Custom)" ID="{FB281801-F30A-47AD-9A29-DC494D5A6422}" ShortID="14321557" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+											<PropertyList>
+												<Property Name="DelayTime" Type="Real32" Value="0.05"/>
+												<Property Name="Feedback" Type="Real32" Value="41.5"/>
+												<Property Name="WetDryMix" Type="Real32" Value="41.5"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

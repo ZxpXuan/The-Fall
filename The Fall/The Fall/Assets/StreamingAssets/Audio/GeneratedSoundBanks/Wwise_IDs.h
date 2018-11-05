@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AIM_ERROR = 1571488543U;
+        static const AkUniqueID NARRATOR_DEATH = 1035940725U;
         static const AkUniqueID PLAY_AIMING = 1286977679U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_ENTER_PORTAL = 3691806113U;
@@ -63,8 +64,25 @@ namespace AK
                 static const AkUniqueID EASY = 529018163U;
                 static const AkUniqueID HARD = 3599861390U;
                 static const AkUniqueID MEDIUM = 2849147824U;
+                static const AkUniqueID SECOND_EASY = 3268631962U;
+                static const AkUniqueID SECOND_HARD = 998402519U;
+                static const AkUniqueID SECOND_MED = 1546301258U;
             } // namespace SWITCH
         } // namespace LEVEL_DIFFICULTY
+
+        namespace NARRATOR_MOOD
+        {
+            static const AkUniqueID GROUP = 2108477644U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID DISAPPOINTED = 82996173U;
+                static const AkUniqueID HAPPY = 1427264549U;
+                static const AkUniqueID NEUTRAL = 670611050U;
+                static const AkUniqueID VDISAPPOINTED = 3558088801U;
+                static const AkUniqueID VHAPPY = 3418266193U;
+            } // namespace SWITCH
+        } // namespace NARRATOR_MOOD
 
     } // namespace SWITCHES
 
@@ -92,6 +110,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID LEVEL_REVERB = 1182499932U;
+        static const AkUniqueID NARRATOR = 3272864290U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

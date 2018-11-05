@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	951397446	Stop_Goal_Static			\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static	
+	1035940725	Narrator_Death			\Default Work Unit\Narrator\Narrator_Death	
 	1172822028	Play_Death			\Default Work Unit\SFX\Ball\Play_Death	
 	1230525119	Wall_Appear			\Default Work Unit\SFX\Level_Elements\Wall_Appear	
 	1240630412	Play_Trigger_Hit			\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit	
@@ -21,6 +22,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	3771381609	Play_Menu_Sting			\Default Work Unit\SFX\UI\Play_Menu_Sting	
 	4224962356	Play_Spawn_Level			\Default Work Unit\SFX\Level_Elements\Play_Spawn_Level	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2108477644	Narrator_Mood			\Default Work Unit\Narrator_Mood	
+
+Switch	ID	Name	Switch Group			Notes
+	82996173	Disappointed	Narrator_Mood			
+	670611050	Neutral	Narrator_Mood			
+	1427264549	Happy	Narrator_Mood			
+	3418266193	VHappy	Narrator_Mood			
+	3558088801	VDisappointed	Narrator_Mood			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1245272470	Time_Slow			\Default Work Unit\Time_Slow	
 	2157217901	Bounce_Count			\Default Work Unit\Bounce_Count	
@@ -30,15 +41,17 @@ Effect plug-ins	ID	Name	Type				Notes
 	3395979371	Straight_Delay	Wwise Stereo Delay			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	17111417	High_ap_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_3_886CBE8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_3		237540
-	31632225	Low1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low1_4269477D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low1		263796
+	17111417	High_ap_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_3_03706CDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_3		237540
+	31632225	Low1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low1_3A3AB1A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low1		263796
 	44492403	Metal4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal4		99340
 	46570503	Note4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note4		49312
 	52410626	Flame3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame3		87428
+	65798351	Hmm	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Hmm_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Hmm		529264
+	80214999	Oh_Dear2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Oh_Dear2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Oh_Dear2		617464
 	88479568	Voice2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice2		54052
-	88628497	High_ap_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_2_660B4065.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_2		275012
+	88628497	High_ap_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_2_E354CE01.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_2		275012
 	95252519	Trigger	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Trigger_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Trigger		139920
-	112245833	High_ap_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_1_D0B99190.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_1		256204
+	112245833	High_ap_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_1_B69F239C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_1		256204
 	156048466	Glass4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass4		384064
 	161584208	Fall_Sting_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\FallMainSting2-03_62EAA334.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Fall_Sting_1		1073220
 	169300806	UI_Click1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_Click1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click1		192152
@@ -53,6 +66,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	319476158	thump1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump1		278280
 	333960489	High3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High3		384064
 	336421410	thump3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump3		278280
+	418949962	Asked_Too_Much2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Asked_Too_Much2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Asked_Too_Much2		617464
 	437261794	Metal2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal2		99340
 	445375944	Glass2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass2_A519AADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass2		287220
 	461551322	Note3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note3		49312
@@ -60,24 +74,28 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	490400559	Glass5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass5		384064
 	567623184	Fire1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire1_15764B10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire1		183300
 	595145526	Glass7	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass7		384064
-	624514289	Low2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low2_7E0CCECC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low2		247196
+	624514289	Low2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low2_5AA925BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low2		247196
 	625828542	Metal3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal3		99340
 	625982357	Note2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note2		49312
 	627389439	AimSwellConcept	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\AimSwellConcept_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\AimSwellConcept		210112
+	647762667	I'm_Sure	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\I'm_Sure_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\I'm_Sure		705664
 	652943065	Fire4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire4_8469B0F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire4		183508
 	679780921	Voice3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice3		54052
-	766326013	High_ap_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_4_2C7A2512.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_4		222380
+	708777935	Interesting2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting2		617464
+	766326013	High_ap_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_4_8FEA568D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_4		222380
 	768982178	Voice4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice4		54052
 	772585177	Fire5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire5_B88BF76D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire5		108964
 	777279287	Flame4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame4		87428
 	784611864	Flame1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame1		87428
 	787069680	High1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High1		384064
+	847602493	Really_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Really_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Really_2		529264
 	850005335	Fire3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire3_3E19A886.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire3		134784
-	865166560	Low4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low4_BF27FA5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low4		264908
+	865166560	Low4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low4_2DB1AB41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low4		264908
 	870579763	UI_Click2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_Click2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click2		192152
+	888835473	Interesting1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting1		529264
 	893859057	thump2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump2		278280
 	896999008	High2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High2		384064
-	927733360	Low3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low3_BE0F8472.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low3		275432
+	927733360	Low3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low3_C4CBF6BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low3		275432
 	928577004	thump4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump4		278280
 	965128274	Note1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note1		49312
 	969934671	Flame2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame2		87428
@@ -86,6 +104,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	993902946	UI_hover	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_hover_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_hover		7860
 	1020489139	Aim_Error	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\38 Track 38_6A66DA96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Aim_Error		42176
 	1021680210	Glass3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass3		384064
+	1024744969	Sing2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Sing2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Sing2		705664
+	1036444360	Admire	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Admire_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Admire		882064
+	1039503267	C'mon	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\C'mon_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\C'mon		970264
 	1057195292	PortalStatic1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\PortalStatic1_6E2E9715.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\PortalStatic1		781408
 	1063548857	GoalStatic	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\GoalStatic_5CB6BD6B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\GoalStatic		803352
 

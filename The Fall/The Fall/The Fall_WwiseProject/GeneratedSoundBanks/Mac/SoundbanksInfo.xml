@@ -77,8 +77,18 @@
 				<Event Id="3525056021" Name="Stop_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Stop_Aiming" MaxAttenuation="0.000000"/>
 				<Event Id="951397446" Name="Stop_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static" MaxAttenuation="0.000000"/>
 				<Event Id="1797269043" Name="Stop_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static" MaxAttenuation="0.000000"/>
+				<Event Id="1230525119" Name="Wall_Appear" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Appear"/>
+				<Event Id="2274397818" Name="Wall_Destroy" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Destroy"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="17111417" Language="SFX">
+					<ShortName>High_ap_3.wav</ShortName>
+					<Path>SFX\High_ap_3_56D34C19.wem</Path>
+				</File>
+				<File Id="31632225" Language="SFX">
+					<ShortName>Low1.wav</ShortName>
+					<Path>SFX\Low1_4269477D.wem</Path>
+				</File>
 				<File Id="44492403" Language="SFX">
 					<ShortName>Metal4.wav</ShortName>
 					<Path>SFX\Metal4_56D34C19.wem</Path>
@@ -95,9 +105,17 @@
 					<ShortName>Voice2.wav</ShortName>
 					<Path>SFX\Voice2_56D34C19.wem</Path>
 				</File>
+				<File Id="88628497" Language="SFX">
+					<ShortName>High_ap_2.wav</ShortName>
+					<Path>SFX\High_ap_2_56D34C19.wem</Path>
+				</File>
 				<File Id="95252519" Language="SFX">
 					<ShortName>SFX\Trigger.wav</ShortName>
 					<Path>SFX\SFX\Trigger_56D34C19.wem</Path>
+				</File>
+				<File Id="112245833" Language="SFX">
+					<ShortName>High_ap_1.wav</ShortName>
+					<Path>SFX\High_ap_1_56D34C19.wem</Path>
 				</File>
 				<File Id="156048466" Language="SFX">
 					<ShortName>Glass4.wav</ShortName>
@@ -118,6 +136,10 @@
 				<File Id="198501661" Language="SFX">
 					<ShortName>SFX\PortalConcept6.wav</ShortName>
 					<Path>SFX\SFX\PortalConcept6_56D34C19.wem</Path>
+				</File>
+				<File Id="220571911" Language="SFX">
+					<ShortName>High4.wav</ShortName>
+					<Path>SFX\High4_56D34C19.wem</Path>
 				</File>
 				<File Id="245469834" Language="SFX">
 					<ShortName>Metal1.wav</ShortName>
@@ -142,6 +164,10 @@
 				<File Id="319476158" Language="SFX">
 					<ShortName>thump1.wav</ShortName>
 					<Path>SFX\thump1_56D34C19.wem</Path>
+				</File>
+				<File Id="333960489" Language="SFX">
+					<ShortName>High3.wav</ShortName>
+					<Path>SFX\High3_56D34C19.wem</Path>
 				</File>
 				<File Id="336421410" Language="SFX">
 					<ShortName>thump3.wav</ShortName>
@@ -175,6 +201,10 @@
 					<ShortName>Glass7.wav</ShortName>
 					<Path>SFX\Glass7_56D34C19.wem</Path>
 				</File>
+				<File Id="624514289" Language="SFX">
+					<ShortName>Low2.wav</ShortName>
+					<Path>SFX\Low2_7E0CCECC.wem</Path>
+				</File>
 				<File Id="625828542" Language="SFX">
 					<ShortName>Metal3.wav</ShortName>
 					<Path>SFX\Metal3_56D34C19.wem</Path>
@@ -195,6 +225,10 @@
 					<ShortName>Voice3.wav</ShortName>
 					<Path>SFX\Voice3_56D34C19.wem</Path>
 				</File>
+				<File Id="766326013" Language="SFX">
+					<ShortName>High_ap_4.wav</ShortName>
+					<Path>SFX\High_ap_4_56D34C19.wem</Path>
+				</File>
 				<File Id="768982178" Language="SFX">
 					<ShortName>Voice4.wav</ShortName>
 					<Path>SFX\Voice4_56D34C19.wem</Path>
@@ -211,9 +245,17 @@
 					<ShortName>Flame1.wav</ShortName>
 					<Path>SFX\Flame1_56D34C19.wem</Path>
 				</File>
+				<File Id="787069680" Language="SFX">
+					<ShortName>High1.wav</ShortName>
+					<Path>SFX\High1_56D34C19.wem</Path>
+				</File>
 				<File Id="850005335" Language="SFX">
 					<ShortName>Fire3.wav</ShortName>
 					<Path>SFX\Fire3_3E19A886.wem</Path>
+				</File>
+				<File Id="865166560" Language="SFX">
+					<ShortName>Low4.wav</ShortName>
+					<Path>SFX\Low4_BF27FA5B.wem</Path>
 				</File>
 				<File Id="870579763" Language="SFX">
 					<ShortName>SFX\UI_Click2.wav</ShortName>
@@ -222,6 +264,14 @@
 				<File Id="893859057" Language="SFX">
 					<ShortName>thump2.wav</ShortName>
 					<Path>SFX\thump2_56D34C19.wem</Path>
+				</File>
+				<File Id="896999008" Language="SFX">
+					<ShortName>High2.wav</ShortName>
+					<Path>SFX\High2_56D34C19.wem</Path>
+				</File>
+				<File Id="927733360" Language="SFX">
+					<ShortName>Low3.wav</ShortName>
+					<Path>SFX\Low3_BE0F8472.wem</Path>
 				</File>
 				<File Id="928577004" Language="SFX">
 					<ShortName>thump4.wav</ShortName>

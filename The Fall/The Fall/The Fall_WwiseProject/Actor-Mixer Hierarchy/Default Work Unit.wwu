@@ -199,6 +199,376 @@
 								<ActiveSource Name="PortalStatic1" ID="{CA94EEDA-31C6-455A-BB5C-5DE9B6FBEDF5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<BlendContainer Name="Wall_Destroy" ID="{46EA409F-76A4-4070-9BE6-80854661C5E7}" ShortID="154931735">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>300</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EFE463AD-AE08-4B5A-A468-C7BFA55FD453}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="High" ID="{FFBC4612-22FF-4B72-94E3-BA731E996F8D}" ShortID="365853220">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="High1" ID="{747E1D66-5FBA-4B06-A71C-295A2FE993F0}" ShortID="147197518">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High1" ID="{6C57B394-C2D3-48AB-8FCA-756A12E3F2B1}" ShortID="787069680">
+													<Language>SFX</Language>
+													<AudioFile>High1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High1" ID="{6C57B394-C2D3-48AB-8FCA-756A12E3F2B1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High2" ID="{E729A449-2076-472D-BDA0-027FE8141B57}" ShortID="236495768">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High2" ID="{5F5FEAB2-1CEB-41F1-8AEF-5FE29A02F612}" ShortID="896999008">
+													<Language>SFX</Language>
+													<AudioFile>High2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High2" ID="{5F5FEAB2-1CEB-41F1-8AEF-5FE29A02F612}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High3" ID="{7E8B31F3-B5B8-4CE2-8698-90B2E9975296}" ShortID="66347641">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High3" ID="{7BE3AE70-21B6-4442-BFFC-B84C2DFC7254}" ShortID="333960489">
+													<Language>SFX</Language>
+													<AudioFile>High3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High3" ID="{7BE3AE70-21B6-4442-BFFC-B84C2DFC7254}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High4" ID="{44DA79B8-776D-4389-BE14-2AF966C4E518}" ShortID="286484085">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High4" ID="{5E2D5117-EF50-4F66-ADE7-3334B93CF05E}" ShortID="220571911">
+													<Language>SFX</Language>
+													<AudioFile>High4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High4" ID="{5E2D5117-EF50-4F66-ADE7-3334B93CF05E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Low" ID="{EF1748F1-4C55-4D1B-AC11-AD8E8A8865CA}" ShortID="86198364">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>350</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Low1" ID="{AF34B2ED-0BB7-49DD-96FE-180C7C73236F}" ShortID="255916129">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Low1" ID="{F9BA3BE8-D207-42BF-B3C5-8E0D70D666D5}" ShortID="31632225">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.94517644371345"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.53336988304093E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.40893124086257"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Low1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Low1" ID="{F9BA3BE8-D207-42BF-B3C5-8E0D70D666D5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Low2" ID="{75AC8C85-CE01-4B2A-833A-F26D7956D530}" ShortID="632911235">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Low2" ID="{E416419C-341B-4229-B1B9-599DEE50E3AD}" ShortID="624514289">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.901008543494152"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.2871550621345"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Low2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Low2" ID="{E416419C-341B-4229-B1B9-599DEE50E3AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Low3" ID="{B791C092-7040-42DC-B87B-325F884B955C}" ShortID="6642662">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Low3" ID="{EBAB7484-D7F7-4ADA-9F37-260E000DE1F9}" ShortID="927733360">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.81140350877193"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.43421052631579"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Low3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Low3" ID="{EBAB7484-D7F7-4ADA-9F37-260E000DE1F9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Low4" ID="{E5DF54B6-A8AA-46E3-9A0D-4DC6F6E4BCB2}" ShortID="876289243">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Low4" ID="{A29725D0-384E-4FE5-A374-A57E0EE2E2FE}" ShortID="865166560">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.868421052631579"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.37938596491228"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Low4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Low4" ID="{A29725D0-384E-4FE5-A374-A57E0EE2E2FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Wall_Appear" ID="{BADE34A0-B595-4A8D-8A9A-199C8738CF5F}" ShortID="628283278">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="High" ID="{079472A9-1711-4E33-8510-4EC39ADAF59C}" ShortID="467536149">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="High_ap_1" ID="{EB780443-9FB9-402D-925A-CC6C3DEA99E8}" ShortID="610447868">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High_ap_1" ID="{CCB342C4-E87C-445E-B664-767ADA4EA717}" ShortID="112245833">
+													<Language>SFX</Language>
+													<AudioFile>High_ap_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High_ap_1" ID="{CCB342C4-E87C-445E-B664-767ADA4EA717}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High_ap_2" ID="{DF025266-D199-4C0F-AFAD-A8A6F2DADBE8}" ShortID="799923490">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High_ap_2" ID="{9DC07ECE-46AD-4D3D-9678-BC2AEDF95050}" ShortID="88628497">
+													<Language>SFX</Language>
+													<AudioFile>High_ap_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High_ap_2" ID="{9DC07ECE-46AD-4D3D-9678-BC2AEDF95050}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High_ap_3" ID="{C01F530E-F8E5-488C-AF38-FBA248FEC43E}" ShortID="88205665">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High_ap_3" ID="{A1399C53-20D6-4927-A0E2-FCB83594C554}" ShortID="17111417">
+													<Language>SFX</Language>
+													<AudioFile>High_ap_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High_ap_3" ID="{A1399C53-20D6-4927-A0E2-FCB83594C554}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="High_ap_4" ID="{9FE54B09-3E39-41F2-A83B-991981FE1D7A}" ShortID="180595141">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="High_ap_4" ID="{5943FF4B-AFF4-49FB-B3E5-5377293B1A32}" ShortID="766326013">
+													<Language>SFX</Language>
+													<AudioFile>High_ap_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="High_ap_4" ID="{5943FF4B-AFF4-49FB-B3E5-5377293B1A32}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{A258F8FF-E5F9-4572-90B3-9A6FB42243BC}" ShortID="879764973">

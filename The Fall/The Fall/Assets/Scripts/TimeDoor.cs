@@ -22,6 +22,7 @@ public class TimeDoor : MonoBehaviour {
             // timedoo.GetComponent<Renderer>().enabled = false;
         //    timedoo.active = false;
             timedoo.SetActive(false) ;
+            AkSoundEngine.PostEvent("Wall_Destroy", gameObject);
             Invoke("ShowAgain", showtime);
         }
 
@@ -32,6 +33,7 @@ public class TimeDoor : MonoBehaviour {
     {
        // timedoo.active = true;
         timedoo.SetActive(true);
+        AkSoundEngine.PostEvent("Wall_Appear", gameObject);
         // timedoo.GetComponent<Renderer>().enabled = true;
     }
 

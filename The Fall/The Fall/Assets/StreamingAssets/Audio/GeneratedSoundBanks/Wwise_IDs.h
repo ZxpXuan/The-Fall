@@ -37,6 +37,8 @@ namespace AK
         static const AkUniqueID STOP_MENU_MUSIC = 3945748993U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_PORTAL_STATIC = 1797269043U;
+        static const AkUniqueID WALL_APPEAR = 1230525119U;
+        static const AkUniqueID WALL_DESTROY = 2274397818U;
     } // namespace EVENTS
 
     namespace SWITCHES

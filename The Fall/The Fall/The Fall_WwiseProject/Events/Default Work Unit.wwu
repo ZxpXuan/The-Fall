@@ -211,6 +211,34 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Wall_Destroy" ID="{FFA72DC0-3E8B-47FB-BD6B-296C476A8D34}">
+									<ChildrenList>
+										<Action Name="" ID="{9A4F9ED1-9BFF-4F85-A93C-45CB7C362DE0}" ShortID="383131755">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Wall_Destroy" ID="{46EA409F-76A4-4070-9BE6-80854661C5E7}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Wall_Appear" ID="{A8C9517E-2FC9-4857-939A-8A5AEB339B36}">
+									<ChildrenList>
+										<Action Name="" ID="{1342B039-6313-4211-AC44-E0D735B19CCC}" ShortID="10791068">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Wall_Appear" ID="{BADE34A0-B595-4A8D-8A9A-199C8738CF5F}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Ball" ID="{ABFDE401-6F30-430A-8DAB-CB246267BFA8}" ShortID="447391888">

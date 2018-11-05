@@ -82,6 +82,10 @@ public class AI : MonoBehaviour {
             if(ds.moodType == currentMood)
             {
                 int random = Random.Range(0, ds.dialogue.Count);
+
+                AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
+
+
                 print(ds.dialogue[random]);
                 break;
             }
@@ -138,7 +142,7 @@ public class AI : MonoBehaviour {
     {
 
         currentMood += value;
-            Vector3 screenToWorld =Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z) );
+           // Vector3 screenToWorld =Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z) );
         playMoodSound();
 
     }

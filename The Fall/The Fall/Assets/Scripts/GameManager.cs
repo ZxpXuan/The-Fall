@@ -62,7 +62,15 @@ public class GameManager : MonoBehaviour {
              //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
             }
+            GetComponent<AI>().justSetState(Brain.GameState.Mute);
+
             PlayerPrefs.SetInt("start_type", 1);
+        }
+        else
+        {
+            GetComponent<AI>().justSetState(Brain.GameState.Start);
+
+
         }
     }
     void Start () {

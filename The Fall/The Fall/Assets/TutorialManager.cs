@@ -14,6 +14,9 @@ public class TutorialManager : MonoBehaviour {
     public List<GameObject> tutorialOrder;
 
     [SerializeField]
+    public List<string> tutorialAudioOrder;
+
+    [SerializeField]
     public List <AudioClip> tutorialAudio;
 
     private int currentTutorial;
@@ -29,7 +32,10 @@ public class TutorialManager : MonoBehaviour {
         startTutorial();
         currentTutorial = 0;
         isTutorialActive = true;
-	}
+        GetComponent<AI>().justSetState(Brain.GameState.Tutorial);
+        GetComponent<AI>().enableTimeTracking = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -49,10 +55,15 @@ public class TutorialManager : MonoBehaviour {
         foreach(GameObject go in tutorialOrder){
 
             go.SetActive(false);
-
+            
         }
-        tutorialOrder[index].SetActive(true);
-        audioSource.clip = tutorialAudio[index];
+        if (tutorialAudioOrder.Count == tutorialOrder.Count && tutorialOrder.Count != 0)
+        {
+            AkSoundEngine.PostEvent(tutorialAudioOrder[index], gameObject);
+
+            tutorialOrder[index].SetActive(true);
+            audioSource.clip = tutorialAudio[index];
+        }
         currentTutorial = index;
     }
 
@@ -63,8 +74,12 @@ public class TutorialManager : MonoBehaviour {
     }
 
     public void endTutorial(){
-
+        isTutorialActive = false;
         tutorialPanel.SetActive(false);
         tb.enabled = true;
+        GetComponent<AI>().enableTimeTracking = true;
+        GetComponent<AI>().levelStartTime = Time.time;
+        GetComponent<AI>().justSetState(Brain.GameState.Start);
+
     }
 }

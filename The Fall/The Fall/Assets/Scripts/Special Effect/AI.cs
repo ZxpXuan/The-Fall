@@ -50,12 +50,14 @@ public class AI : MonoBehaviour
     public int currentLevelTries;
     public int totalWorldTries;
     public Brain.MoodTypes currentMood = Brain.MoodTypes.Neutral;
-    public Brain.GameState currentGameState = Brain.GameState.Start;
+    public Brain.GameState currentGameState = Brain.GameState.Mute;
 
     public int happinessLevel;
 
 
-    private float levelStartTime;
+    public float levelStartTime;
+
+    public bool enableTimeTracking;
     // Use this for initialization
     void Start()
     {
@@ -63,7 +65,6 @@ public class AI : MonoBehaviour
         currentLevelTries = PlayerPrefs.GetInt("currentWorldTries", 0);
         totalWorldTries = PlayerPrefs.GetInt("totalWorldTries", 0);
         levelStartTime = Time.time;
-        justSetState(Brain.GameState.Start);
         calculateCurrentMood();
     }
 
@@ -77,7 +78,11 @@ public class AI : MonoBehaviour
     {
 
         if (!GetComponent<GameManager>().hasBallBeenShot)
+        {
+            if(enableTimeTracking)
             calculateTimeMood();
+
+        }
 
 
     }
@@ -197,4 +202,6 @@ public class AI : MonoBehaviour
 
 
     }
+
+
 }

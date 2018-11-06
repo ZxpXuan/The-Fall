@@ -20,7 +20,8 @@ public class limitation : MonoBehaviour {
     public GameObject bounceCount;
 
 
-
+    [SerializeField]
+    public GameObject maxRing;
 
 
 

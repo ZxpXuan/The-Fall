@@ -31,7 +31,7 @@ public class tragball : MonoBehaviour
     void Start()
     {
         cam = Camera.main;       
-        MaxRing.GetComponent<Renderer>().enabled = false;
+        FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
        
     }
     void Update()
@@ -116,11 +116,11 @@ public class tragball : MonoBehaviour
 
                 //line.SetPosition(0, emputy.transform.position * 1.5f);
                 ding.GetComponentInChildren<BallAngle>().startFadeOut();
+                FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = true;
 
-                MaxRing.GetComponent<Renderer>().enabled = true;
 
 
-               // ballSpeed = ballSpeed * force;
+                // ballSpeed = ballSpeed * force;
 
             }
             else
@@ -159,8 +159,9 @@ public class tragball : MonoBehaviour
                     AkSoundEngine.PostEvent("Aim_Error", gameObject);
                     ding.GetComponentInChildren<BallAngle>().startFadeIn();
             }
-                MaxRing.GetComponent<Renderer>().enabled = false;
-               // line.enabled = false;
+                FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
+
+                // line.enabled = false;
             }
 
         }

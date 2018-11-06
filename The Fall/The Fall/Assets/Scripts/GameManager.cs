@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
+        //lim = FindObjectOfType<limitation>();
         currentWorldTries = 0;
         hasBallBeenShot = false;
         if (PlayerPrefs.GetInt("start_type", 99) == 0)

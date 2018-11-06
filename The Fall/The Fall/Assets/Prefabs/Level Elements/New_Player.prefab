@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114498797614579070}
   - component: {fileID: 114131400464479642}
   - component: {fileID: 114401549088340264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Ball
   m_TagString: ball
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1563877534933358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.36, y: 0.03, z: 0}
+  m_LocalPosition: {x: -9.01, y: 3.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809268989863688}
@@ -519,13 +519,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3acebb8f49ce461f8d52d60dfb6cdb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limit: 2
+  limit: 4
   gm: {fileID: 0}
   particleOnDestroy: {fileID: 1419027444204190, guid: 2c63f77eed2ba324f8e9425ca7143644,
     type: 2}
   partSystem: {fileID: 198357011594792870, guid: ba8e6913ab50fd74287ea7de2aa06d93,
     type: 2}
   bounceCount: {fileID: 0}
+  maxRing: {fileID: 1074827433825558}
+  collisionCount: 0
+  Ball: {fileID: 0}
+  oldVelocity: {x: 0, y: 0, z: 0}
+  minVelocity: 10
 --- !u!114 &114401549088340264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionCount: 0
   Ball: {fileID: 54536255048562068}
+  oldVelocity: {x: 0, y: 0, z: 0}
   minVelocity: 8
 --- !u!114 &114577852971715146
 MonoBehaviour:
@@ -596,13 +602,15 @@ MonoBehaviour:
   p0: {fileID: 4077940664565600}
   p1: {fileID: 4809268989863688}
   layerOrder: 1
+  lockDistance: 0
+  maxDistance: 0
 --- !u!114 &114804447307329098
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143086731341052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16dc32075770c4542a8fd83f5f9ac444, type: 3}
   m_Name: 

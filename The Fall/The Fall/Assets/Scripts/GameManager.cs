@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour {
     private float restartStartTime;
     private bool isRestartInitiated;
 
-    [SerializeField]
-    List<Animator> objectToDisable;
+   // [SerializeField]
+    //List<Animator> objectToDisable;
 
 
     Soundbank_Manager sbm;
@@ -38,16 +38,26 @@ public class GameManager : MonoBehaviour {
     
     private void Awake()
     {
+       
         lim = FindObjectOfType<limitation>();
         currentWorldTries = 0;
         hasBallBeenShot = false;
         if (PlayerPrefs.GetInt("start_type", 99) == 0)
         {
-            foreach (Animator anim in objectToDisable)
+            Animator[] anim= FindObjectsOfType<Animator>();
+            int i = 0;
+            while(i< anim.Length)
             {
-                anim.enabled = false;
+                anim[i].enabled = false;
 
+                i++;
             }
+
+           // //foreach (Animator anima in objectToDisable)
+           // {
+               // anima.enabled = false;
+
+          //  }
             if (PlayerPrefs.GetInt("hasBallBeenShot", 0) == 1)
             {
                 LineRenderer lr = GetComponent<LineRenderer>();

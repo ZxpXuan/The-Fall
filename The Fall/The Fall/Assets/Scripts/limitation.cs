@@ -39,6 +39,7 @@ public class limitation : MonoBehaviour {
         gm.updateBounces(limit - i);
         GetComponentInChildren<TextMesh>().text = "" + (limit - i);
         Ball.freezeRotation = true;
+        GetComponentInChildren<BallAngle>().enabled = true;
     }
     public void addBounce(int value)
     {

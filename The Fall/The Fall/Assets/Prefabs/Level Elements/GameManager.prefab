@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 114170217762457598}
   - component: {fileID: 114941506760668086}
   - component: {fileID: 120696458765757830}
+  - component: {fileID: 114125361444036250}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -644,6 +645,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114125361444036250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685805148150310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83466db46a7eb44c9b0c93dee89041c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSet: []
+  moodSet: []
+  timeCategoriser: []
+  currentLevelTries: 0
+  totalWorldTries: 0
+  currentMood: 1
+  currentGameState: 6
+  happinessLevel: 0
+  levelStartTime: 0
+  enableTimeTracking: 0
 --- !u!114 &114134434739323988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -773,6 +795,9 @@ MonoBehaviour:
   lim: {fileID: 0}
   restartDelay: 2
   objectToDisable: []
+  currentWorldTries: 0
+  hasBallBeenShot: 0
+  contactPoints: []
 --- !u!114 &114178058585214406
 MonoBehaviour:
   m_ObjectHideFlags: 1

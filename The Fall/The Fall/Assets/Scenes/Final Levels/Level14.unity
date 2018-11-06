@@ -545,9 +545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568a5bd8f0a22ce4da14160a1ad8cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towardEnd: 1
+  towardEnd: 0
   speed: 3
-  startingPercentage: 0
+  startingPercentage: 1
   startPoint: {x: -9.23, y: -0.6, z: 0}
   angle: 0
   distance: 18
@@ -852,6 +852,57 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 388988130}
   m_Script: {fileID: 11500000, guid: 5b4b01e7435904409bffe9679eecfde4, type: 3}
+--- !u!1001 &534753551
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1834677976}
+    m_Modifications:
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.3199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488216789712690, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_Name
+      value: Z3_death block_SSSS_H (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &534753552 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac,
+    type: 2}
+  m_PrefabInternal: {fileID: 534753551}
 --- !u!1001 &597981384
 Prefab:
   m_ObjectHideFlags: 0
@@ -913,6 +964,57 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &727858495
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1834677976}
+    m_Modifications:
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488216789712690, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+      propertyPath: m_Name
+      value: Z3_death block_SSSS_H (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0b80585b593f48645a9a256ddfb111ac, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &727858496 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac,
+    type: 2}
+  m_PrefabInternal: {fileID: 727858495}
 --- !u!1001 &829268542
 Prefab:
   m_ObjectHideFlags: 0
@@ -969,17 +1071,17 @@ Prefab:
     - target: {fileID: 114577852971715146, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: angle
-      value: 43.74896
+      value: 51.842323
       objectReference: {fileID: 0}
     - target: {fileID: 114577852971715146, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: handleDir.x
-      value: 0.72726417
+      value: 0.6178277
       objectReference: {fileID: 0}
     - target: {fileID: 114577852971715146, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: handleDir.y
-      value: 0.68635774
+      value: 0.78631353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
@@ -1850,9 +1952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568a5bd8f0a22ce4da14160a1ad8cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towardEnd: 1
+  towardEnd: 0
   speed: 3
-  startingPercentage: 0
+  startingPercentage: 1
   startPoint: {x: -9.23, y: 7.9, z: 0}
   angle: 0
   distance: 18
@@ -1906,6 +2008,8 @@ Transform:
   - {fileID: 1311789020}
   - {fileID: 1808636942}
   - {fileID: 112773715}
+  - {fileID: 534753552}
+  - {fileID: 727858496}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

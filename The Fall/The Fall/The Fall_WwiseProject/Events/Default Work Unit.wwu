@@ -592,6 +592,118 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Narrator_Impatience" ID="{2F9C1356-9977-494A-9148-1705B6CE7E99}">
+							<ChildrenList>
+								<Action Name="" ID="{32F34FFF-66DF-4113-823A-5E73A47DBC2E}" ShortID="488521257">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Impatiance" ID="{8DD46B38-F39F-472E-B8C4-9B56C3A734AD}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Greeting_Generic" ID="{305273B6-7E41-46C5-929F-0CF004875468}">
+							<ChildrenList>
+								<Action Name="" ID="{515D84B6-DBB1-4707-9A08-0473CC07DE00}" ShortID="500175678">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Greetings_General" ID="{7D809799-EC1C-4FE7-936A-50D58D4A65FB}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Tut1_1" ID="{7CE2FEBF-487D-4286-8E0B-9B275521B54A}">
+							<ChildrenList>
+								<Action Name="" ID="{F042D711-1F7E-437A-A710-79A7E7EABF98}" ShortID="235588908">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Welcome_2" ID="{04BE8D23-9C61-4594-8A18-A25722A2ECD5}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Tut1_2" ID="{50913046-D687-4663-AEAD-49176DAEFDC7}">
+							<ChildrenList>
+								<Action Name="" ID="{26C77383-488F-4F94-AACF-8F4CE2E86EB3}" ShortID="1016413900">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BOunce_2" ID="{12AA4059-8103-44F9-98C3-F4B071A19B6C}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Tut1_3" ID="{4A3EA6E4-832C-4A42-841B-A792FD106818}">
+							<ChildrenList>
+								<Action Name="" ID="{B8138169-71C7-40CB-AF73-1493979ED66A}" ShortID="491266358">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="To_Shoot2" ID="{20BDE8E6-62CD-4F96-9FF9-FFB89320F718}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Tut_2" ID="{F970D558-C57A-4AF0-A0CB-0B55080C2350}">
+							<ChildrenList>
+								<Action Name="" ID="{4B7E9C72-B0E5-4379-BFF2-F60E31FDEFD4}" ShortID="896183792">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="New_Moving_Obj" ID="{84497FC5-F820-4F67-A25F-CF9D77485744}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Tut_3" ID="{84952F3E-3DE2-4D5F-84D9-4144F1F8D941}">
+							<ChildrenList>
+								<Action Name="" ID="{2508CF78-7D9F-4564-81F4-DEFE64B835C7}" ShortID="1043358746">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="New_Ooh_Portals" ID="{2193D739-FA0F-41E3-8769-5627C83E8A97}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Narrator_Compliment" ID="{64C0B3C2-1291-4367-BFC5-DCC173CB5C3E}">
+							<ChildrenList>
+								<Action Name="" ID="{8DD86489-5171-4384-8731-19A677191A72}" ShortID="344600871">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Congratz" ID="{E46AC4E2-E026-48A1-8CC7-1C26FDF8B094}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -14,7 +14,15 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AIM_ERROR = 1571488543U;
+        static const AkUniqueID NARRATOR_COMPLIMENT = 2187083841U;
         static const AkUniqueID NARRATOR_DEATH = 1035940725U;
+        static const AkUniqueID NARRATOR_GREETING_GENERIC = 4022731410U;
+        static const AkUniqueID NARRATOR_IMPATIENCE = 1028928662U;
+        static const AkUniqueID NARRATOR_TUT_2 = 327987379U;
+        static const AkUniqueID NARRATOR_TUT_3 = 327987378U;
+        static const AkUniqueID NARRATOR_TUT1_1 = 3847834209U;
+        static const AkUniqueID NARRATOR_TUT1_2 = 3847834210U;
+        static const AkUniqueID NARRATOR_TUT1_3 = 3847834211U;
         static const AkUniqueID PLAY_AIMING = 1286977679U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_ENTER_PORTAL = 3691806113U;
@@ -105,6 +113,7 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID VOICE = 3170124113U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

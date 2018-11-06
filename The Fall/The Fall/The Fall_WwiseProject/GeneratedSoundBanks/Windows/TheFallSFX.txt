@@ -1,5 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
+	327987378	Narrator_Tut_3			\Default Work Unit\Narrator\Narrator_Tut_3	
+	327987379	Narrator_Tut_2			\Default Work Unit\Narrator\Narrator_Tut_2	
 	951397446	Stop_Goal_Static			\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static	
+	1028928662	Narrator_Impatience			\Default Work Unit\Narrator\Narrator_Impatience	
 	1035940725	Narrator_Death			\Default Work Unit\Narrator\Narrator_Death	
 	1172822028	Play_Death			\Default Work Unit\SFX\Ball\Play_Death	
 	1230525119	Wall_Appear			\Default Work Unit\SFX\Level_Elements\Wall_Appear	
@@ -10,6 +13,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1797269043	Stop_Portal_Static			\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static	
 	1967504570	Start_Opening_Anim			\Default Work Unit\SFX\Level_Elements\Start_Opening_Anim	
 	2050766869	Play_Spawn_Ball			\Default Work Unit\SFX\Level_Elements\Play_Spawn_Ball	
+	2187083841	Narrator_Compliment			\Default Work Unit\Narrator\Narrator_Compliment	
 	2274397818	Wall_Destroy			\Default Work Unit\SFX\Level_Elements\Wall_Destroy	
 	2641650631	Play_Shoot			\Default Work Unit\SFX\Ball\Play_Shoot	
 	2764105556	Play_Impact			\Default Work Unit\SFX\Ball\Play_Impact	
@@ -20,6 +24,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	3525056021	Stop_Aiming			\Default Work Unit\SFX\Ball\Stop_Aiming	
 	3691806113	Play_Enter_Portal			\Default Work Unit\SFX\Ball\Play_Enter_Portal	
 	3771381609	Play_Menu_Sting			\Default Work Unit\SFX\UI\Play_Menu_Sting	
+	3847834209	Narrator_Tut1_1			\Default Work Unit\Narrator\Narrator_Tut1_1	
+	3847834210	Narrator_Tut1_2			\Default Work Unit\Narrator\Narrator_Tut1_2	
+	3847834211	Narrator_Tut1_3			\Default Work Unit\Narrator\Narrator_Tut1_3	
+	4022731410	Narrator_Greeting_Generic			\Default Work Unit\Narrator\Narrator_Greeting_Generic	
 	4224962356	Play_Spawn_Level			\Default Work Unit\SFX\Level_Elements\Play_Spawn_Level	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -33,80 +41,114 @@ Switch	ID	Name	Switch Group			Notes
 	3558088801	VDisappointed	Narrator_Mood			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	1245272470	Time_Slow			\Default Work Unit\Time_Slow	
 	2157217901	Bounce_Count			\Default Work Unit\Bounce_Count	
 	2740226506	Aim_Velocity			\Default Work Unit\Aim_Velocity	
 
-Effect plug-ins	ID	Name	Type				Notes
-	3395979371	Straight_Delay	Wwise Stereo Delay			
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	17111417	High_ap_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_3_03706CDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_3		237540
-	31632225	Low1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low1_3A3AB1A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low1		263796
+	2043577	Imp_Hpy_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_2_C9A81744.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_2		322112
+	17111417	High_ap_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_3_03706CDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Appear\High\High_ap_3		237540
+	27954089	Greet_Dis_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Dis_3_30B816DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Disappionted\Greet_Dis_3		424528
+	30143869	Welcome_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Welcome_2_4F50ADDA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Tutorial_1\Welcome_2		534388
+	31632225	Low1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low1_3A3AB1A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\Low\Low1		263796
 	44492403	Metal4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal4		99340
 	46570503	Note4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note4		49312
 	52410626	Flame3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame3		87428
-	65798351	Hmm	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Hmm_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Hmm		529264
-	80214999	Oh_Dear2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Oh_Dear2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Oh_Dear2		617464
+	65798351	Hmm	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Hmm_B36D940E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Hmm		237972
+	73242151	Greet_Hpy_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_1_641B706F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_1		368340
+	80214999	Oh_Dear2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Oh_Dear2_E296C001.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Oh_Dear2		305380
 	88479568	Voice2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice2		54052
-	88628497	High_ap_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_2_E354CE01.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_2		275012
-	95252519	Trigger	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Trigger_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Trigger		139920
-	112245833	High_ap_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_1_B69F239C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_1		256204
+	88628497	High_ap_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_2_E354CE01.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Appear\High\High_ap_2		275012
+	95252519	Trigger	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Trigger_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Trigger		139920
+	112245833	High_ap_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_1_B69F239C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Appear\High\High_ap_1		256204
+	121498137	Greet_Hpy_6	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_6_2EF658EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_6		430508
+	145666830	Greet_Hpy_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_3_FD16C470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_3		352864
 	156048466	Glass4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass4		384064
-	161584208	Fall_Sting_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\FallMainSting2-03_62EAA334.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Fall_Sting_1		1073220
+	161584208	Fall_Sting_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\FallMainSting2-03_62EAA334.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Fall_Sting_1		1073220
+	168345899	Imp_Dis_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Dis_3_FD26B4B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Disappointed\Imp_Dis_3		284972
 	169300806	UI_Click1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_Click1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click1		192152
 	170259432	Glass1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass1_861C69AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass1		345328
+	191734149	Greet_Nu_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_2_20D90007.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_2		440292
+	195477368	Imp_Dis_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Dis_1_DD27D505.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Disappointed\Imp_Dis_1		341840
 	198501661	PortalConcept6	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\PortalConcept6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\PortalConcept6		241760
-	220571911	High4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High4		480236
+	220571911	High4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\High\High4		480236
 	245469834	Metal1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal1		99340
+	255677979	Greet_Dis_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Dis_1_F09796EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Disappionted\Greet_Dis_1		428588
 	270967207	Shoot3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Shoot3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Shoot3		109916
-	295408699	Complete2-02	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Complete2-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Complete2-02		315892
+	278173825	Greet_Nu_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_1_E4061AAF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_1		352460
+	295408699	Complete2-02	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\Complete2-02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Complete2-02		315892
+	296582851	Greet_Hpy_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_2_B22002F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_2		374332
 	313218285	Glass6	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass6		384064
 	315634734	Fire2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire2_3188BF9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire2		140196
 	319476158	thump1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump1		278280
-	333960489	High3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High3		384064
+	326376669	Greet_Nu_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_4_6E14349A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_4		393384
+	333960489	High3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\High\High3		384064
 	336421410	thump3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump3		278280
-	418949962	Asked_Too_Much2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Asked_Too_Much2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Asked_Too_Much2		617464
+	378302267	Greet_Nu_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_3_91385AE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_3		567560
+	397044146	New_Ooh_Portals	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\New_Ooh_Portals_67246E17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Tutorial_3\New_Ooh_Portals		404892
+	402558551	Greet_Nu_6	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_6_CCD19872.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_6		414760
+	418949962	Asked_Too_Much2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Asked_Too_Much2_172C7E10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Asked_Too_Much2		362244
+	421673878	Imp_Hpy_6	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_6_EA19D1CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_6		386616
+	425245753	Greet_Dis_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Dis_2_C028BDDC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Disappionted\Greet_Dis_2		528492
 	437261794	Metal2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal2		99340
 	445375944	Glass2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass2_A519AADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass2		287220
 	461551322	Note3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note3		49312
 	464154206	thump5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump5		278280
+	478118920	To_Shoot2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\To_Shoot2_70E5E13B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Tutorial_1\To_Shoot2		737964
 	490400559	Glass5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass5		384064
+	491552843	Imp_Hpy_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_4_B72E5B29.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_4		323660
+	517610230	Imp_Nu_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Nu_2_0F53A465.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Neutral\Imp_Nu_2		340680
+	556136457	Imp_Hpy_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_1_F2093573.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_1		349384
+	559597215	Not_Bad2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Not_Bad2_15005CB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Congratz\Not_Bad2		471916
 	567623184	Fire1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire1_15764B10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire1		183300
+	586415068	Imp_Nu_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Nu_4_297CB2A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Neutral\Imp_Nu_4		414372
 	595145526	Glass7	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass7		384064
-	624514289	Low2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low2_5AA925BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low2		247196
+	624514289	Low2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low2_5AA925BB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\Low\Low2		247196
 	625828542	Metal3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Metal3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Metal\Metal3		99340
 	625982357	Note2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note2		49312
 	627389439	AimSwellConcept	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\AimSwellConcept_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\AimSwellConcept		210112
-	647762667	I'm_Sure	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\I'm_Sure_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\I'm_Sure		705664
+	647220043	Imp_Nu_1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Nu_1_FD2F5777.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Neutral\Imp_Nu_1		258764
+	647762667	I'm_Sure	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\I'm_Sure_974F4F47.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\I'm_Sure		539320
+	648586546	Imp_Hpy_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_3_FC175E36.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_3		358860
 	652943065	Fire4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire4_8469B0F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire4		183508
+	676836335	Imp_Nu_3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Nu_3_F233CD76.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Neutral\Imp_Nu_3		659632
 	679780921	Voice3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice3		54052
-	708777935	Interesting2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting2		617464
-	766326013	High_ap_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_4_8FEA568D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Appear\High\High_ap_4		222380
+	708777935	Interesting2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting2_46434D03.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting2		356152
+	731353363	Congratulations	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Wel_Done_8BE0045A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Congratz\Congratulations		431780
+	732447586	BOunce_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\BOunce_2_4EFC4BC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Tutorial_1\BOunce_2		775584
+	766326013	High_ap_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High_ap_4_8FEA568D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Appear\High\High_ap_4		222380
 	768982178	Voice4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice4		54052
 	772585177	Fire5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire5_B88BF76D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire5		108964
 	777279287	Flame4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame4		87428
 	784611864	Flame1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame1		87428
-	787069680	High1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High1		384064
+	787069680	High1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\High\High1		384064
+	815610686	Imp_Hpy_5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Hpy_5_8425F3FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Happy\Imp_Hpy_5		383908
+	816312119	New_Moving_Obj	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\New_Moving_Obj_050F323D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Tutorial_2\New_Moving_Obj		244580
 	847602493	Really_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Really_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Really_2		529264
 	850005335	Fire3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Fire3_3E19A886.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Mid\Fire3		134784
-	865166560	Low4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low4_2DB1AB41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low4		264908
+	856034329	Greet_Hpy_4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_4_6882D418.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_4		344740
+	865166560	Low4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low4_2DB1AB41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\Low\Low4		264908
 	870579763	UI_Click2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_Click2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click2		192152
-	888835473	Interesting1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting1		529264
+	878323316	Imp_Nu_5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Nu_5_74F6C664.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Neutral\Imp_Nu_5		433328
+	888835473	Interesting1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Interesting1_38B2DE28.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\Interesting1		258280
 	893859057	thump2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump2		278280
-	896999008	High2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\High\High2		384064
-	927733360	Low3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low3_C4CBF6BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\Wall_Destroy\Low\Low3		275432
+	896999008	High2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\High2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\High\High2		384064
+	927733360	Low3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Low3_C4CBF6BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\Wall_Destroy\Low\Low3		275432
 	928577004	thump4	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\thump4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\Low\thump4		278280
+	928924918	Imp_Dis_2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Imp_Dis_2_CA0837ED.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Impatiance\Disappointed\Imp_Dis_2		227336
 	965128274	Note1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Note1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Notes\Note1		49312
 	969934671	Flame2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Flame2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Flame\Flame2		87428
 	971122452	Glass9	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass9_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass9		384064
 	977109968	Voice1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Voice1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Impacts\Voice\Voice1		54052
 	993902946	UI_hover	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\SFX\UI_hover_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_hover		7860
+	1001637090	Well_Done2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Well_Done2_73934A35.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Congratz\Well_Done2		279556
 	1020489139	Aim_Error	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\38 Track 38_6A66DA96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Aim_Error		42176
 	1021680210	Glass3	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Glass3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ball\Death\High\Glass3		384064
-	1024744969	Sing2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Sing2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Sing2		705664
-	1036444360	Admire	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Admire_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Admire		882064
-	1039503267	C'mon	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\C'mon_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\C'mon		970264
-	1057195292	PortalStatic1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\PortalStatic1_6E2E9715.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\PortalStatic1		781408
-	1063548857	GoalStatic	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\GoalStatic_5CB6BD6B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level\GoalStatic		803352
+	1024744969	Sign	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Sing2_AED1F9DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Happy\Sign		334296
+	1036444360	Admire	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Admire_4082EC1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Disappointed\Admire		576460
+	1039503267	C'mon	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\C'mon_2103355A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\On_Death\Neutral\C'mon		280912
+	1046504146	So_Good2	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\So_Good2_F950B2F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Congratz\So_Good2		498124
+	1057195292	PortalStatic1	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\PortalStatic1_6E2E9715.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\PortalStatic1		781408
+	1058882495	Greet_Nu_5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Nu_5_5CE157AB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Neutral\Greet_Nu_5		352768
+	1063548857	GoalStatic	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\GoalStatic_5CB6BD6B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Level_Elements\GoalStatic		803352
+	1067885850	Greet_Hpy_5	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\Greet_Hpy_5_FB111F21.wem		\Actor-Mixer Hierarchy\Default Work Unit\Narrator\Level_Greetings_General\Happy\Greet_Hpy_5		410312
 

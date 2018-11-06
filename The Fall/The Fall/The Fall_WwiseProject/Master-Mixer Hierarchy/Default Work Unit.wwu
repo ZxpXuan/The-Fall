@@ -32,15 +32,40 @@
 									<Custom>
 										<Effect Name="Wwise Delay (Custom)" ID="{FB281801-F30A-47AD-9A29-DC494D5A6422}" ShortID="14321557" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 											<PropertyList>
-												<Property Name="DelayTime" Type="Real32" Value="0.05"/>
-												<Property Name="Feedback" Type="Real32" Value="41.5"/>
-												<Property Name="WetDryMix" Type="Real32" Value="41.5"/>
+												<Property Name="DelayTime" Type="Real32" Value="0.04"/>
+												<Property Name="Feedback" Type="Real32" Value="48.5"/>
+												<Property Name="WetDryMix" Type="Real32" Value="52"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
+						<Bus Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}"/>
+									<DuckingParam>
+										<Volume>-8</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeExp1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+								<DuckItem>
+									<BusRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}"/>
+									<DuckingParam>
+										<Volume>-8</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>0.5</FadeOutTime>
+										<FadeCurve>FadeExp1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

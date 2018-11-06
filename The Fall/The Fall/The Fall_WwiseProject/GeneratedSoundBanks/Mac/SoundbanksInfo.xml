@@ -71,7 +71,15 @@
 			<Path>TheFallSFX.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1571488543" Name="Aim_Error" ObjectPath="\Events\Default Work Unit\SFX\Ball\Aim_Error"/>
+				<Event Id="2187083841" Name="Narrator_Compliment" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Compliment"/>
 				<Event Id="1035940725" Name="Narrator_Death" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Death"/>
+				<Event Id="4022731410" Name="Narrator_Greeting_Generic" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Greeting_Generic"/>
+				<Event Id="1028928662" Name="Narrator_Impatience" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Impatience"/>
+				<Event Id="3847834209" Name="Narrator_Tut1_1" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_1"/>
+				<Event Id="3847834210" Name="Narrator_Tut1_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_2"/>
+				<Event Id="3847834211" Name="Narrator_Tut1_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_3"/>
+				<Event Id="327987379" Name="Narrator_Tut_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_2"/>
+				<Event Id="327987378" Name="Narrator_Tut_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_3"/>
 				<Event Id="1286977679" Name="Play_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Aiming"/>
 				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Death"/>
 				<Event Id="3691806113" Name="Play_Enter_Portal" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Enter_Portal"/>
@@ -94,9 +102,21 @@
 				<Event Id="2274397818" Name="Wall_Destroy" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Destroy"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="2043577" Language="SFX">
+					<ShortName>Imp_Hpy_2.wav</ShortName>
+					<Path>SFX\Imp_Hpy_2_C9A81744.wem</Path>
+				</File>
 				<File Id="17111417" Language="SFX">
 					<ShortName>High_ap_3.wav</ShortName>
 					<Path>SFX\High_ap_3_03706CDC.wem</Path>
+				</File>
+				<File Id="27954089" Language="SFX">
+					<ShortName>Greet_Dis_3.wav</ShortName>
+					<Path>SFX\Greet_Dis_3_30B816DD.wem</Path>
+				</File>
+				<File Id="30143869" Language="SFX">
+					<ShortName>Welcome_2.wav</ShortName>
+					<Path>SFX\Welcome_2_4F50ADDA.wem</Path>
 				</File>
 				<File Id="31632225" Language="SFX">
 					<ShortName>Low1.wav</ShortName>
@@ -116,11 +136,15 @@
 				</File>
 				<File Id="65798351" Language="SFX">
 					<ShortName>Hmm.wav</ShortName>
-					<Path>SFX\Hmm_56D34C19.wem</Path>
+					<Path>SFX\Hmm_B36D940E.wem</Path>
+				</File>
+				<File Id="73242151" Language="SFX">
+					<ShortName>Greet_Hpy_1.wav</ShortName>
+					<Path>SFX\Greet_Hpy_1_641B706F.wem</Path>
 				</File>
 				<File Id="80214999" Language="SFX">
 					<ShortName>Oh_Dear2.wav</ShortName>
-					<Path>SFX\Oh_Dear2_56D34C19.wem</Path>
+					<Path>SFX\Oh_Dear2_E296C001.wem</Path>
 				</File>
 				<File Id="88479568" Language="SFX">
 					<ShortName>Voice2.wav</ShortName>
@@ -138,6 +162,14 @@
 					<ShortName>High_ap_1.wav</ShortName>
 					<Path>SFX\High_ap_1_B69F239C.wem</Path>
 				</File>
+				<File Id="121498137" Language="SFX">
+					<ShortName>Greet_Hpy_6.wav</ShortName>
+					<Path>SFX\Greet_Hpy_6_2EF658EC.wem</Path>
+				</File>
+				<File Id="145666830" Language="SFX">
+					<ShortName>Greet_Hpy_3.wav</ShortName>
+					<Path>SFX\Greet_Hpy_3_FD16C470.wem</Path>
+				</File>
 				<File Id="156048466" Language="SFX">
 					<ShortName>Glass4.wav</ShortName>
 					<Path>SFX\Glass4_56D34C19.wem</Path>
@@ -146,6 +178,10 @@
 					<ShortName>FallMainSting2-03.wav</ShortName>
 					<Path>SFX\FallMainSting2-03_62EAA334.wem</Path>
 				</File>
+				<File Id="168345899" Language="SFX">
+					<ShortName>Imp_Dis_3.wav</ShortName>
+					<Path>SFX\Imp_Dis_3_FD26B4B6.wem</Path>
+				</File>
 				<File Id="169300806" Language="SFX">
 					<ShortName>SFX\UI_Click1.wav</ShortName>
 					<Path>SFX\SFX\UI_Click1_56D34C19.wem</Path>
@@ -153,6 +189,14 @@
 				<File Id="170259432" Language="SFX">
 					<ShortName>Glass1.wav</ShortName>
 					<Path>SFX\Glass1_861C69AA.wem</Path>
+				</File>
+				<File Id="191734149" Language="SFX">
+					<ShortName>Greet_Nu_2.wav</ShortName>
+					<Path>SFX\Greet_Nu_2_20D90007.wem</Path>
+				</File>
+				<File Id="195477368" Language="SFX">
+					<ShortName>Imp_Dis_1.wav</ShortName>
+					<Path>SFX\Imp_Dis_1_DD27D505.wem</Path>
 				</File>
 				<File Id="198501661" Language="SFX">
 					<ShortName>SFX\PortalConcept6.wav</ShortName>
@@ -166,13 +210,25 @@
 					<ShortName>Metal1.wav</ShortName>
 					<Path>SFX\Metal1_56D34C19.wem</Path>
 				</File>
+				<File Id="255677979" Language="SFX">
+					<ShortName>Greet_Dis_1.wav</ShortName>
+					<Path>SFX\Greet_Dis_1_F09796EC.wem</Path>
+				</File>
 				<File Id="270967207" Language="SFX">
 					<ShortName>SFX\Shoot3.wav</ShortName>
 					<Path>SFX\SFX\Shoot3_56D34C19.wem</Path>
 				</File>
+				<File Id="278173825" Language="SFX">
+					<ShortName>Greet_Nu_1.wav</ShortName>
+					<Path>SFX\Greet_Nu_1_E4061AAF.wem</Path>
+				</File>
 				<File Id="295408699" Language="SFX">
 					<ShortName>SFX\Complete2-02.wav</ShortName>
 					<Path>SFX\SFX\Complete2-02_56D34C19.wem</Path>
+				</File>
+				<File Id="296582851" Language="SFX">
+					<ShortName>Greet_Hpy_2.wav</ShortName>
+					<Path>SFX\Greet_Hpy_2_B22002F3.wem</Path>
 				</File>
 				<File Id="313218285" Language="SFX">
 					<ShortName>Glass6.wav</ShortName>
@@ -186,6 +242,10 @@
 					<ShortName>thump1.wav</ShortName>
 					<Path>SFX\thump1_56D34C19.wem</Path>
 				</File>
+				<File Id="326376669" Language="SFX">
+					<ShortName>Greet_Nu_4.wav</ShortName>
+					<Path>SFX\Greet_Nu_4_6E14349A.wem</Path>
+				</File>
 				<File Id="333960489" Language="SFX">
 					<ShortName>High3.wav</ShortName>
 					<Path>SFX\High3_56D34C19.wem</Path>
@@ -194,9 +254,29 @@
 					<ShortName>thump3.wav</ShortName>
 					<Path>SFX\thump3_56D34C19.wem</Path>
 				</File>
+				<File Id="378302267" Language="SFX">
+					<ShortName>Greet_Nu_3.wav</ShortName>
+					<Path>SFX\Greet_Nu_3_91385AE1.wem</Path>
+				</File>
+				<File Id="397044146" Language="SFX">
+					<ShortName>New_Ooh_Portals.wav</ShortName>
+					<Path>SFX\New_Ooh_Portals_67246E17.wem</Path>
+				</File>
+				<File Id="402558551" Language="SFX">
+					<ShortName>Greet_Nu_6.wav</ShortName>
+					<Path>SFX\Greet_Nu_6_CCD19872.wem</Path>
+				</File>
 				<File Id="418949962" Language="SFX">
 					<ShortName>Asked_Too_Much2.wav</ShortName>
-					<Path>SFX\Asked_Too_Much2_56D34C19.wem</Path>
+					<Path>SFX\Asked_Too_Much2_172C7E10.wem</Path>
+				</File>
+				<File Id="421673878" Language="SFX">
+					<ShortName>Imp_Hpy_6.wav</ShortName>
+					<Path>SFX\Imp_Hpy_6_EA19D1CA.wem</Path>
+				</File>
+				<File Id="425245753" Language="SFX">
+					<ShortName>Greet_Dis_2.wav</ShortName>
+					<Path>SFX\Greet_Dis_2_C028BDDC.wem</Path>
 				</File>
 				<File Id="437261794" Language="SFX">
 					<ShortName>Metal2.wav</ShortName>
@@ -214,13 +294,37 @@
 					<ShortName>thump5.wav</ShortName>
 					<Path>SFX\thump5_56D34C19.wem</Path>
 				</File>
+				<File Id="478118920" Language="SFX">
+					<ShortName>To_Shoot2.wav</ShortName>
+					<Path>SFX\To_Shoot2_70E5E13B.wem</Path>
+				</File>
 				<File Id="490400559" Language="SFX">
 					<ShortName>Glass5.wav</ShortName>
 					<Path>SFX\Glass5_56D34C19.wem</Path>
 				</File>
+				<File Id="491552843" Language="SFX">
+					<ShortName>Imp_Hpy_4.wav</ShortName>
+					<Path>SFX\Imp_Hpy_4_B72E5B29.wem</Path>
+				</File>
+				<File Id="517610230" Language="SFX">
+					<ShortName>Imp_Nu_2.wav</ShortName>
+					<Path>SFX\Imp_Nu_2_0F53A465.wem</Path>
+				</File>
+				<File Id="556136457" Language="SFX">
+					<ShortName>Imp_Hpy_1.wav</ShortName>
+					<Path>SFX\Imp_Hpy_1_F2093573.wem</Path>
+				</File>
+				<File Id="559597215" Language="SFX">
+					<ShortName>Not_Bad2.wav</ShortName>
+					<Path>SFX\Not_Bad2_15005CB3.wem</Path>
+				</File>
 				<File Id="567623184" Language="SFX">
 					<ShortName>Fire1.wav</ShortName>
 					<Path>SFX\Fire1_15764B10.wem</Path>
+				</File>
+				<File Id="586415068" Language="SFX">
+					<ShortName>Imp_Nu_4.wav</ShortName>
+					<Path>SFX\Imp_Nu_4_297CB2A5.wem</Path>
 				</File>
 				<File Id="595145526" Language="SFX">
 					<ShortName>Glass7.wav</ShortName>
@@ -242,13 +346,25 @@
 					<ShortName>SFX\AimSwellConcept.wav</ShortName>
 					<Path>SFX\SFX\AimSwellConcept_8956FC97.wem</Path>
 				</File>
+				<File Id="647220043" Language="SFX">
+					<ShortName>Imp_Nu_1.wav</ShortName>
+					<Path>SFX\Imp_Nu_1_FD2F5777.wem</Path>
+				</File>
 				<File Id="647762667" Language="SFX">
 					<ShortName>I'm_Sure.wav</ShortName>
-					<Path>SFX\I'm_Sure_56D34C19.wem</Path>
+					<Path>SFX\I'm_Sure_974F4F47.wem</Path>
+				</File>
+				<File Id="648586546" Language="SFX">
+					<ShortName>Imp_Hpy_3.wav</ShortName>
+					<Path>SFX\Imp_Hpy_3_FC175E36.wem</Path>
 				</File>
 				<File Id="652943065" Language="SFX">
 					<ShortName>Fire4.wav</ShortName>
 					<Path>SFX\Fire4_8469B0F4.wem</Path>
+				</File>
+				<File Id="676836335" Language="SFX">
+					<ShortName>Imp_Nu_3.wav</ShortName>
+					<Path>SFX\Imp_Nu_3_F233CD76.wem</Path>
 				</File>
 				<File Id="679780921" Language="SFX">
 					<ShortName>Voice3.wav</ShortName>
@@ -256,7 +372,15 @@
 				</File>
 				<File Id="708777935" Language="SFX">
 					<ShortName>Interesting2.wav</ShortName>
-					<Path>SFX\Interesting2_56D34C19.wem</Path>
+					<Path>SFX\Interesting2_46434D03.wem</Path>
+				</File>
+				<File Id="731353363" Language="SFX">
+					<ShortName>Wel_Done.wav</ShortName>
+					<Path>SFX\Wel_Done_8BE0045A.wem</Path>
+				</File>
+				<File Id="732447586" Language="SFX">
+					<ShortName>BOunce_2.wav</ShortName>
+					<Path>SFX\BOunce_2_4EFC4BC9.wem</Path>
 				</File>
 				<File Id="766326013" Language="SFX">
 					<ShortName>High_ap_4.wav</ShortName>
@@ -282,6 +406,14 @@
 					<ShortName>High1.wav</ShortName>
 					<Path>SFX\High1_56D34C19.wem</Path>
 				</File>
+				<File Id="815610686" Language="SFX">
+					<ShortName>Imp_Hpy_5.wav</ShortName>
+					<Path>SFX\Imp_Hpy_5_8425F3FA.wem</Path>
+				</File>
+				<File Id="816312119" Language="SFX">
+					<ShortName>New_Moving_Obj.wav</ShortName>
+					<Path>SFX\New_Moving_Obj_050F323D.wem</Path>
+				</File>
 				<File Id="847602493" Language="SFX">
 					<ShortName>Really_2.wav</ShortName>
 					<Path>SFX\Really_2_56D34C19.wem</Path>
@@ -289,6 +421,10 @@
 				<File Id="850005335" Language="SFX">
 					<ShortName>Fire3.wav</ShortName>
 					<Path>SFX\Fire3_3E19A886.wem</Path>
+				</File>
+				<File Id="856034329" Language="SFX">
+					<ShortName>Greet_Hpy_4.wav</ShortName>
+					<Path>SFX\Greet_Hpy_4_6882D418.wem</Path>
 				</File>
 				<File Id="865166560" Language="SFX">
 					<ShortName>Low4.wav</ShortName>
@@ -298,9 +434,13 @@
 					<ShortName>SFX\UI_Click2.wav</ShortName>
 					<Path>SFX\SFX\UI_Click2_56D34C19.wem</Path>
 				</File>
+				<File Id="878323316" Language="SFX">
+					<ShortName>Imp_Nu_5.wav</ShortName>
+					<Path>SFX\Imp_Nu_5_74F6C664.wem</Path>
+				</File>
 				<File Id="888835473" Language="SFX">
 					<ShortName>Interesting1.wav</ShortName>
-					<Path>SFX\Interesting1_56D34C19.wem</Path>
+					<Path>SFX\Interesting1_38B2DE28.wem</Path>
 				</File>
 				<File Id="893859057" Language="SFX">
 					<ShortName>thump2.wav</ShortName>
@@ -317,6 +457,10 @@
 				<File Id="928577004" Language="SFX">
 					<ShortName>thump4.wav</ShortName>
 					<Path>SFX\thump4_56D34C19.wem</Path>
+				</File>
+				<File Id="928924918" Language="SFX">
+					<ShortName>Imp_Dis_2.wav</ShortName>
+					<Path>SFX\Imp_Dis_2_CA0837ED.wem</Path>
 				</File>
 				<File Id="965128274" Language="SFX">
 					<ShortName>Note1.wav</ShortName>
@@ -338,6 +482,10 @@
 					<ShortName>SFX\UI_hover.wav</ShortName>
 					<Path>SFX\SFX\UI_hover_56D34C19.wem</Path>
 				</File>
+				<File Id="1001637090" Language="SFX">
+					<ShortName>Well_Done2.wav</ShortName>
+					<Path>SFX\Well_Done2_73934A35.wem</Path>
+				</File>
 				<File Id="1020489139" Language="SFX">
 					<ShortName>38 Track 38.wav</ShortName>
 					<Path>SFX\38 Track 38_6A66DA96.wem</Path>
@@ -348,23 +496,35 @@
 				</File>
 				<File Id="1024744969" Language="SFX">
 					<ShortName>Sing2.wav</ShortName>
-					<Path>SFX\Sing2_56D34C19.wem</Path>
+					<Path>SFX\Sing2_AED1F9DE.wem</Path>
 				</File>
 				<File Id="1036444360" Language="SFX">
 					<ShortName>Admire.wav</ShortName>
-					<Path>SFX\Admire_56D34C19.wem</Path>
+					<Path>SFX\Admire_4082EC1C.wem</Path>
 				</File>
 				<File Id="1039503267" Language="SFX">
 					<ShortName>C'mon.wav</ShortName>
-					<Path>SFX\C'mon_56D34C19.wem</Path>
+					<Path>SFX\C'mon_2103355A.wem</Path>
+				</File>
+				<File Id="1046504146" Language="SFX">
+					<ShortName>So_Good2.wav</ShortName>
+					<Path>SFX\So_Good2_F950B2F4.wem</Path>
 				</File>
 				<File Id="1057195292" Language="SFX">
 					<ShortName>PortalStatic1.wav</ShortName>
 					<Path>SFX\PortalStatic1_6E2E9715.wem</Path>
 				</File>
+				<File Id="1058882495" Language="SFX">
+					<ShortName>Greet_Nu_5.wav</ShortName>
+					<Path>SFX\Greet_Nu_5_5CE157AB.wem</Path>
+				</File>
 				<File Id="1063548857" Language="SFX">
 					<ShortName>GoalStatic.wav</ShortName>
 					<Path>SFX\GoalStatic_5CB6BD6B.wem</Path>
+				</File>
+				<File Id="1067885850" Language="SFX">
+					<ShortName>Greet_Hpy_5.wav</ShortName>
+					<Path>SFX\Greet_Hpy_5_FB111F21.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

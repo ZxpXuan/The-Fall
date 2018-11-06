@@ -24,7 +24,7 @@ public class tragball : MonoBehaviour
     public Rigidbody ding2;
     private int abale = 1;
     public GameObject MaxRing;
-
+    public GameManager gm;
     public float minDistance =2;
     private Vector3 mousePos;
     //private bool abale = true ; 
@@ -32,7 +32,7 @@ public class tragball : MonoBehaviour
     {
         cam = Camera.main;       
         FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
-        ding = FindObjectOfType<Rigidbody>();
+        //ding = FindObjectOfType<Rigidbody>();
     }
     void Update()
     {
@@ -136,7 +136,7 @@ public class tragball : MonoBehaviour
                 Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
                 float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
                 //Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
-
+                //gm.GetComponent<AI>().
 
                 if (force > minDistance) { 
                 ding.AddForce(dir * mult * speedMultiplier, ForceMode.Impulse);

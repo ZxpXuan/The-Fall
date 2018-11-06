@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 
     public List<Vector3> contactPoints;
     // Use this for initialization
-
+    
     private void Awake()
     {
         lim = FindObjectOfType<limitation>();
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour {
         
         PlayerPrefs.SetInt("currentWorldTries", currentWorldTries + 1);
         PlayerPrefs.SetInt("totalWorldTries", PlayerPrefs.GetInt("totalWorldTries", 0) + 1);
-
+     //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
         getScene();
         SceneManager.LoadScene(buildIndex);
@@ -215,7 +215,9 @@ public class GameManager : MonoBehaviour {
 	public void nextScene(){
         getScene();
         Time.timeScale = 1f;
+        PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
+      //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 
 
@@ -226,7 +228,9 @@ public class GameManager : MonoBehaviour {
 
         sbm.MenuSystem();
         Time.timeScale = 1f;
+        PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
+       // PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(name);
 
     }

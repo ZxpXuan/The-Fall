@@ -50,7 +50,7 @@ public class AI : MonoBehaviour
     public int currentLevelTries;
     public int totalWorldTries;
     public Brain.MoodTypes currentMood = Brain.MoodTypes.Neutral;
-    public Brain.GameState currentGameState = Brain.GameState.Mute;
+    public Brain.GameState currentGameState = Brain.GameState.Start;
 
     public int happinessLevel;
 
@@ -61,10 +61,13 @@ public class AI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        enableTimeTracking = true;
         //switch(PlayerPrefs.GetInt("brainMood", 0))
         currentLevelTries = PlayerPrefs.GetInt("currentWorldTries", 0);
         totalWorldTries = PlayerPrefs.GetInt("totalWorldTries", 0);
         levelStartTime = Time.time;
+        print(currentGameState);
+
         calculateCurrentMood();
     }
 

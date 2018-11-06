@@ -120,7 +120,9 @@ public class limitation : MonoBehaviour {
 
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
-            FindObjectOfType<AI>().setGameState(Brain.GameState.Death);
+
+           if(! gm.GetComponent<UIManager>().isWinInProgress)
+                FindObjectOfType<AI>().setGameState(Brain.GameState.Death);
 
             gm.restartLevel();
         }

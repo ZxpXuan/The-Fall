@@ -1000,7 +1000,7 @@ Prefab:
     - target: {fileID: 65741335561071714, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114113318850975812, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
         type: 2}
@@ -1816,6 +1816,41 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[0].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[1].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[2].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[3].dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1858,6 +1893,101 @@ Prefab:
       propertyPath: emputy
       value: 
       objectReference: {fileID: 1223087504}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: currentGameState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[0].dialogue.Array.data[0]
+      value: Narrator_Greeting_Generic
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.data[0].moodTypes
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.data[0].toRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.data[1].moodTypes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.data[1].toRange
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: moodSet.Array.data[1].fromRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[0].timeTaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[0].fromRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[0].toRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[1].dialogue.Array.data[0]
+      value: Narrator_Impatience
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[1].stateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[2].stateType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[2].dialogue.Array.data[0]
+      value: Narrator_Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[3].stateType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: dialogueSet.Array.data[3].dialogue.Array.data[0]
+      value: Narrator_Compliment
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].timeTaker
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].fromRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].toRange
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0

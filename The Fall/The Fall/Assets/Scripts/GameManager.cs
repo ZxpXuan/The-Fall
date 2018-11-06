@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
-        //lim = FindObjectOfType<limitation>();
+        lim = FindObjectOfType<limitation>();
         currentWorldTries = 0;
         hasBallBeenShot = false;
         if (PlayerPrefs.GetInt("start_type", 99) == 0)
@@ -63,13 +63,13 @@ public class GameManager : MonoBehaviour {
              //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
             }
-            GetComponent<AI>().justSetState(Brain.GameState.Mute);
+        //    GetComponent<AI>().justSetState(Brain.GameState.Mute);
 
             PlayerPrefs.SetInt("start_type", 1);
         }
         else
         {
-            GetComponent<AI>().justSetState(Brain.GameState.Start);
+     //       GetComponent<AI>().justSetState(Brain.GameState.Start);
 
 
         }

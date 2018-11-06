@@ -1365,6 +1365,16 @@
 				</ActorMixer>
 				<ActorMixer Name="Narrator" ID="{B6EBDB83-F0CB-4A70-ADE5-7DAF37FFF503}" ShortID="684682183">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
 								<Value>3</Value>

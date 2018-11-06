@@ -32,7 +32,7 @@ public class tragball : MonoBehaviour
     {
         cam = Camera.main;       
         FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
-       
+        ding = FindObjectOfType<Rigidbody>();
     }
     void Update()
     {

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI : MonoBehaviour {
+public class AI : MonoBehaviour
+{
     [System.Serializable]
-    public class DialogueSet{
+    public class DialogueSet
+    {
         public Brain.MoodTypes moodType;
         public Brain.GameState stateType;
         public List<string> dialogue;
@@ -16,7 +18,7 @@ public class AI : MonoBehaviour {
     public class TriesCategoriser
     {
         public Brain.MoodTypes moodTypes;
-     
+
         public float fromRange;
         public float toRange;
 
@@ -27,10 +29,10 @@ public class AI : MonoBehaviour {
     public class TimeCategoriser
     {
 
-        public Brain.TimeTaker timeTaker;
+        public Brain.GameState timeTaker;
         public float fromRange;
         public float toRange;
-        public int changeMoodBy;
+
         public bool hasMoodBeenAffected;
     }
 
@@ -54,39 +56,40 @@ public class AI : MonoBehaviour {
 
 
     private float levelStartTime;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         //switch(PlayerPrefs.GetInt("brainMood", 0))
         currentLevelTries = PlayerPrefs.GetInt("currentWorldTries", 0);
         totalWorldTries = PlayerPrefs.GetInt("totalWorldTries", 0);
         levelStartTime = Time.time;
+        justSetState(Brain.GameState.Start);
         calculateCurrentMood();
-	}
+    }
 
     private void OnLevelWasLoaded(int level)
     {
-        
+
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        if(!GetComponent<GameManager>().hasBallBeenShot)
-        calculateTimeMood();
+        if (!GetComponent<GameManager>().hasBallBeenShot)
+            calculateTimeMood();
 
 
-	}
+    }
     public void playMoodSound()
     {
         string mood;
 
         mood = "Happy";
-      
+
         switch (currentMood)
         {
-            case Brain.MoodTypes.VeryDisappointed:
-                mood = "VDisappointed";
-                break;
+
             case Brain.MoodTypes.Disappointted:
                 mood = "Disappointed";
                 break;
@@ -96,23 +99,21 @@ public class AI : MonoBehaviour {
             case Brain.MoodTypes.Happy:
                 mood = "Happy";
                 break;
-            case Brain.MoodTypes.VeryHappy:
-                mood = "VeryHappy";
-                break;
+
 
         }
 
-      
-        foreach( DialogueSet ds in dialogueSet)
+
+        foreach (DialogueSet ds in dialogueSet)
         {
 
-            if(ds.stateType == currentGameState)
+            if (ds.stateType == currentGameState)
             {
                 int random = Random.Range(0, ds.dialogue.Count);
-               
+                print(ds.dialogue[random]);
                 AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
-                AkSoundEngine.PostEvent(ds.dialogue[0],gameObject);
-                print(ds.dialogue[0]);
+                AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
+
 
                 break;
             }
@@ -120,23 +121,30 @@ public class AI : MonoBehaviour {
         }
 
     }
-    public void calculateCurrentMood(){
+    public void calculateCurrentMood()
+    {
         foreach (TriesCategoriser cat in moodSet)
         {
-          
-                if(cat.fromRange <= currentLevelTries && cat.toRange >= currentLevelTries)
-                {
-                    currentMood = cat.moodTypes;
-                    break;
-                }
+
+            if (cat.fromRange <= currentLevelTries && cat.toRange >= currentLevelTries)
+            {
+                currentMood = cat.moodTypes;
+                break;
+            }
+
+
+
+
+
+
         }
 
         playMoodSound();
 
     }
 
-   
- 
+
+
     public void calculateTimeMood()
     {
 
@@ -146,8 +154,8 @@ public class AI : MonoBehaviour {
             {
                 if (!tc.hasMoodBeenAffected)
                 {
-                    switchMood(tc.changeMoodBy);
-                   
+                    setGameState(tc.timeTaker);
+
                     tc.hasMoodBeenAffected = true;
                 }
 
@@ -181,4 +189,12 @@ public class AI : MonoBehaviour {
 
     }
 
+
+    public void justSetState(Brain.GameState state)
+
+    {
+        currentGameState = state;
+
+
+    }
 }

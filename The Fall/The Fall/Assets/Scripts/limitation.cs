@@ -34,6 +34,7 @@ public class limitation : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Ball = GetComponent<Rigidbody>();
         gm.updateBounces(limit - i);
         GetComponentInChildren<TextMesh>().text = "" + (limit - i);
         Ball.freezeRotation = true;
@@ -118,7 +119,7 @@ public class limitation : MonoBehaviour {
 
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
-            FindObjectOfType<AI>().setMood(Brain.MoodTypes.Death);
+            FindObjectOfType<AI>().setGameState(Brain.GameState.Death);
 
             gm.restartLevel();
         }

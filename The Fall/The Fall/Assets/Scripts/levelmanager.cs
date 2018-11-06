@@ -29,7 +29,9 @@ public class levelmanager : MonoBehaviour {
     IEnumerator WaitAndWin(float waitTime){
 
         yield return new WaitForSeconds(waitTime);
-        uIManager.displayWin();
+        //uIManager.displayWin();
+        uIManager.GetComponent<GameManager>().nextScene();
+
         PlayerPrefs.SetInt("levelsUnlocked", nextLevelid);
     }
 
@@ -49,6 +51,7 @@ public class levelmanager : MonoBehaviour {
         }
         if (collision.collider.gameObject.tag == "ball")
         {
+            uIManager.GetComponent<AI>().setGameState(Brain.GameState.Winner);
             StartCoroutine(coroutine);
        
         }

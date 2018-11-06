@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Brain : MonoBehaviour {
   
-    public enum MoodTypes { VeryDisappointed, Disappointted, Neutral, Happy, VeryHappy, Death };
-    public enum GameState { Start, Ingame, Death, Winner};
+    public enum MoodTypes {  Disappointted, Neutral, Happy };
+    public enum GameState { Start, MidWay, Impatient, VeryImpatient, Death, Winner, };
 
     public enum TimeTaker { TooLong,Long,Normal,Short,JustStarted};
     public enum TrackingType { Time, Tries };

@@ -635,7 +635,7 @@ Prefab:
         type: 2}
       propertyPath: objectToDisable.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1762064256}
     - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
         type: 2}
       propertyPath: objectToDisable.Array.data[1]
@@ -6660,6 +6660,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!95 &1762064256 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95513379754898158, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 1779048553}
 --- !u!1001 &1770386585
 Prefab:
   m_ObjectHideFlags: 0
@@ -6799,6 +6804,16 @@ Prefab:
         type: 2}
       propertyPath: handleDir.y
       value: -0.000000096330744
+      objectReference: {fileID: 0}
+    - target: {fileID: 95513379754898158, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114804447307329098, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}

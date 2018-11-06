@@ -2148,10 +2148,20 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="Disappionted" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}" ShortID="215940130">
 									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -2267,10 +2277,20 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Happy" ID="{97C38A1F-D7C8-474A-8BB7-C3426B5DED56}" ShortID="927757640">
 									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -2444,10 +2464,20 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Neutral" ID="{AD6BD929-FF3A-40FE-8C4A-27D1ED804652}" ShortID="969816981">
 									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UserAuxSendVolume0" Type="Real64">

@@ -38,7 +38,16 @@ public class GameManager : MonoBehaviour {
     
     private void Awake()
     {
-       
+
+        levelmanager[] lm = FindObjectsOfType<levelmanager>();
+
+        int x = 0;
+        while (x < lm.Length){
+
+            lm[x].uIManager = GetComponent<UIManager>();
+
+            x++;
+        }
         lim = FindObjectOfType<limitation>();
         currentWorldTries = 0;
         hasBallBeenShot = false;

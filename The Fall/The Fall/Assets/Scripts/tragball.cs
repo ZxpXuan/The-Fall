@@ -25,6 +25,9 @@ public class tragball : MonoBehaviour
     public float minDistance = 2;
     private Vector3 mousePos;
 
+
+    [SerializeField]
+    public float maxForceDistance=5;
     void Start()
     {
         cam = Camera.main;
@@ -35,7 +38,7 @@ public class tragball : MonoBehaviour
     void Update()
     {
 
-        if (GetComponent<GameManager>().hasBallBeenShot != true) { 
+        if (GameManager.Instance.hasBallBeenShot != true) { 
             //整体初始位置 
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             //从摄像机发出到点击坐标的射线
@@ -106,7 +109,7 @@ public class tragball : MonoBehaviour
 
                     if (force > minDistance)
                     {
-                        ding.AddForce(dir * mult * speedMultiplier, ForceMode.Impulse);
+                        ding.AddForce(dir * Mathf.Clamp( mult,0,maxForceDistance) * speedMultiplier, ForceMode.Impulse);
                         FindObjectOfType<GameManager>().GetComponent<LineRenderer>().enabled = false;
 
                         abale = abale + 1;
@@ -114,7 +117,7 @@ public class tragball : MonoBehaviour
                         PlayerPrefs.SetFloat("yShot", currentPosition.y);
                         PlayerPrefs.SetInt("hasBallBeenShot", 1);
                         ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
-                        GetComponent<GameManager>().hasBallBeenShot = true;
+                        GameManager.Instance.hasBallBeenShot = true;
                         ding.GetComponentInChildren<BallAngle>().startFadeOut();
                         if (cam.GetComponent<Animator>() != null)
                         {

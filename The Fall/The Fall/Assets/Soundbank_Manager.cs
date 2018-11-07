@@ -157,7 +157,15 @@ public class Soundbank_Manager : MonoBehaviour
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject);
             //   print("hardswitch");
-        } 
+        }
+
+        if (getCurrentLevel == 20)
+        {
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject);
+            //   print("hardswitch");
+        }
+
+
 
 
     }

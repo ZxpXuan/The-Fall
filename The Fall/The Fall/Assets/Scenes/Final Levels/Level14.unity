@@ -843,7 +843,8 @@ Prefab:
       propertyPath: MaxRing
       value: 
       objectReference: {fileID: 829268544}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &451152477 stripped
@@ -852,6 +853,30 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 388988130}
   m_Script: {fileID: 11500000, guid: 5b4b01e7435904409bffe9679eecfde4, type: 3}
+--- !u!1 &480526241 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1685805148150310, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 388988130}
+--- !u!114 &480526246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480526241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ffb9cb2b87048758c49ecc905fb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0
+  ballSpeed: 1
+  emputy: {fileID: 0}
+  ding: {fileID: 0}
+  ding2: {fileID: 0}
+  MaxRing: {fileID: 0}
+  gm: {fileID: 451152477}
+  minDistance: 2
 --- !u!1001 &534753551
 Prefab:
   m_ObjectHideFlags: 0
@@ -903,67 +928,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4220031591830088, guid: 0b80585b593f48645a9a256ddfb111ac,
     type: 2}
   m_PrefabInternal: {fileID: 534753551}
---- !u!1001 &597981384
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 2}
-      propertyPath: ding
-      value: 
-      objectReference: {fileID: 829268545}
-    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 2}
-      propertyPath: emputy
-      value: 
-      objectReference: {fileID: 829268546}
-    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 2}
-      propertyPath: MaxRing
-      value: 
-      objectReference: {fileID: 829268544}
-    - target: {fileID: 1685805148150310, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-      propertyPath: m_Name
-      value: GameManager (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &727858495
 Prefab:
   m_ObjectHideFlags: 0
@@ -1882,7 +1846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4390613462660040, guid: 0ef944207b0ece342a125a9b282c62ee, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1174196658338692, guid: 0ef944207b0ece342a125a9b282c62ee, type: 2}
       propertyPath: m_IsActive

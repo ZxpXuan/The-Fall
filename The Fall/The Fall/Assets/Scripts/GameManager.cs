@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public  class GameManager : MonoSingleton<GameManager> {
    //private bool paused = false;
     private int buildIndex;
     private string sceneName;  

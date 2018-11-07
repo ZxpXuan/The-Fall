@@ -17,13 +17,14 @@ public class linedraw : MonoBehaviour {
 
     public bool lockDistance;
     public float maxDistance;
-
+    GameManager gm;
     void Start()
     {
         AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
 
         launchRay.positionCount = 2;
 		aimingRay.positionCount = 2;
+      
 	}
 
 
@@ -37,7 +38,7 @@ public class linedraw : MonoBehaviour {
     {
         if (p0 == null || p1 == null) return;
 
-        if (able == true)
+        if (able == true && !GameManager.Instance.hasBallBeenShot)
         {
 
             if (Input.GetMouseButtonDown(0))

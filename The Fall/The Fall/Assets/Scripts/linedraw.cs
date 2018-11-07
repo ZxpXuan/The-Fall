@@ -16,7 +16,7 @@ public class linedraw : MonoBehaviour {
     private bool able = true;
 
     public bool lockDistance;
-    public float maxDistance;
+    public float maxDistance=3;
     GameManager gm;
     void Start()
     {
@@ -24,7 +24,7 @@ public class linedraw : MonoBehaviour {
 
         launchRay.positionCount = 2;
 		aimingRay.positionCount = 2;
-      
+        transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 	}
 
 
@@ -82,6 +82,12 @@ public class linedraw : MonoBehaviour {
 				aimingRay.gameObject.SetActive(false);
 				able = false;
             }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            launchRay.enabled = false;
+            aimingRay.gameObject.SetActive(false);
+            able = false;
         }
     }
 

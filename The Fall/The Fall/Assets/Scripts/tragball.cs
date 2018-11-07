@@ -17,7 +17,8 @@ public class tragball : MonoBehaviour
     public GameObject emputy;
 
     public Rigidbody ding;
-    private float speedMultiplier = 0.25f;
+    [SerializeField]
+    private float speedMultiplier =1f;
     public Rigidbody ding2;
     private int abale = 1;
     public GameObject MaxRing;
@@ -27,7 +28,7 @@ public class tragball : MonoBehaviour
 
 
     [SerializeField]
-    public float maxForceDistance=5;
+    public float maxForceDistance=3;
     void Start()
     {
         cam = Camera.main;

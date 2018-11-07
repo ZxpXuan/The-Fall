@@ -945,16 +945,6 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114131400464479642, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: Ball
-      value: 
-      objectReference: {fileID: 829268547}
-    - target: {fileID: 114131400464479642, guid: 2570150614a41bd408792caa829fc295,
-        type: 2}
-      propertyPath: limit
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
   m_IsPrefabParent: 0
@@ -963,6 +953,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1092063579556558, guid: 2570150614a41bd408792caa829fc295,
     type: 2}
   m_PrefabInternal: {fileID: 829268542}
+--- !u!114 &829268544 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114131400464479642, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 829268542}
+  m_Script: {fileID: 11500000, guid: b3acebb8f49ce461f8d52d60dfb6cdb5, type: 3}
 --- !u!54 &829268547 stripped
 Rigidbody:
   m_PrefabParentObject: {fileID: 54536255048562068, guid: 2570150614a41bd408792caa829fc295,
@@ -2052,6 +2048,11 @@ Prefab:
       propertyPath: objectToDisable.Array.data[1]
       value: 
       objectReference: {fileID: 402311074}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: lim
+      value: 
+      objectReference: {fileID: 829268544}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0

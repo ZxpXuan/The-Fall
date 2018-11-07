@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class linedraw : MonoBehaviour {
 
-    public LineRenderer lr;
+    public LineRenderer launchRay;
+	public LineRenderer aimingRay;
 
     public Transform p0;
 
@@ -16,14 +17,14 @@ public class linedraw : MonoBehaviour {
 
     public bool lockDistance;
     public float maxDistance;
-    void Start()
 
+    void Start()
     {
         AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
 
-        lr.positionCount = (2);
-       // lr.sortingLayerID = 15;
-    }
+        launchRay.positionCount = 2;
+		aimingRay.positionCount = 2;
+	}
 
 
 
@@ -41,27 +42,44 @@ public class linedraw : MonoBehaviour {
 
             if (Input.GetMouseButtonDown(0))
             {
-                lr.enabled = true;
-            }
-            Vector3 screenToWorld = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+                launchRay.enabled = true;
+				aimingRay.gameObject.SetActive(true);
+			}
+            Vector3 targPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+			targPos.z = 0;
+			
+			var toTarget = (targPos - p1.position);
+			var dist = toTarget.sqrMagnitude;
 
-            /* if (lockDistance && Vector3.Distance(p1.position, screenToWorld) < maxDistance)
-           {
-               lr.SetPosition(0, new Vector3(screenToWorld.x, screenToWorld.y, 0));
-               lr.SetPosition(1, p1.position);
+			RaycastHit hit;
+			var aimRayStartPos = p1.position + toTarget.normalized * maxDistance;
+			var aimRayEndPos = aimRayStartPos;
+			if (Physics.SphereCast(p1.position, 0.5f, toTarget, out hit))
+			{
+				aimRayEndPos = aimRayStartPos + toTarget.normalized * (hit.distance - maxDistance);
+			}
 
-               lr.startWidth = 0.1f;
-               lr.endWidth = 0.2f;
-           } */
-            lr.SetPosition(0, new Vector3(screenToWorld.x, screenToWorld.y, 0));
-            lr.SetPosition(1, p1.position);
+			if (dist > maxDistance * maxDistance)
+			{
+				targPos = aimRayStartPos;
+			}
+			
+            launchRay.SetPosition(0, targPos);
+            launchRay.SetPosition(1, p1.position);
+			aimingRay.SetPosition(0, aimRayStartPos);
+			aimingRay.SetPosition(1, aimRayEndPos);
 
-            lr.startWidth = 0.1f;
-            lr.endWidth = 0.2f;
+			aimingRay.transform.position = aimRayEndPos;
+			aimingRay.material.mainTextureOffset = new Vector2(-Time.time % 1, 0);
+			aimingRay.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, (Mathf.Sin(Time.time * 5) + 1) * 0.5f);
+			
+			launchRay.startWidth = 0.1f;
+            launchRay.endWidth = 0.2f;
             if (Input.GetMouseButtonUp(0))
             {
-                lr.enabled = false;
-                able = false;
+                launchRay.enabled = false;
+				aimingRay.gameObject.SetActive(false);
+				able = false;
             }
         }
     }

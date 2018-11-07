@@ -1365,6 +1365,7 @@
 				</ActorMixer>
 				<ActorMixer Name="Narrator" ID="{B6EBDB83-F0CB-4A70-ADE5-7DAF37FFF503}" ShortID="684682183">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
@@ -3288,6 +3289,7 @@
 										<Value>11</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-510</Value>

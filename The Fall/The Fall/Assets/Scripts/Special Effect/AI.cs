@@ -32,7 +32,7 @@ public class AI : MonoBehaviour
         public Brain.GameState timeTaker;
         public float fromRange;
         public float toRange;
-
+        public int reduceMoodBy;
         public bool hasMoodBeenAffected;
     }
 
@@ -162,9 +162,12 @@ public class AI : MonoBehaviour
             {
                 if (!tc.hasMoodBeenAffected)
                 {
-                    setGameState(tc.timeTaker);
 
+                    currentMood += tc.reduceMoodBy;
+
+                    setGameState(tc.timeTaker);
                     tc.hasMoodBeenAffected = true;
+
                 }
 
                 break;

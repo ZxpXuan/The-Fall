@@ -437,14 +437,17 @@ MonoBehaviour:
   - timeTaker: 2
     fromRange: 0
     toRange: 5
+    reduceMoodBy: 0
     hasMoodBeenAffected: 0
   - timeTaker: 1
     fromRange: 6
     toRange: 10
+    reduceMoodBy: 0
     hasMoodBeenAffected: 0
   - timeTaker: 0
     fromRange: 11
     toRange: 15
+    reduceMoodBy: 0
     hasMoodBeenAffected: 0
   currentLevelTries: 0
   totalWorldTries: 0
@@ -896,6 +899,18 @@ Prefab:
         type: 2}
       propertyPath: lockDistance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077940664565600, guid: 2570150614a41bd408792caa829fc295, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077940664565600, guid: 2570150614a41bd408792caa829fc295, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077940664565600, guid: 2570150614a41bd408792caa829fc295, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}

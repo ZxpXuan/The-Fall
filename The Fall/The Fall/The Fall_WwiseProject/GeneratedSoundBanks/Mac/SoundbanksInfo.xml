@@ -16,7 +16,6 @@
 			<ShortName>TheFallMusic</ShortName>
 			<Path>TheFallMusic.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game"/>
 				<Event Id="1003497107" Name="Start_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Menu_Music"/>
 				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Music"/>
 				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Menu_Music" MaxAttenuation="0.000000"/>
@@ -26,10 +25,6 @@
 				<File Id="47316527" Language="SFX">
 					<ShortName>The_Fall_Music_A(Compressed).wav</ShortName>
 					<Path>SFX\The_Fall_Music_A(Compressed)_8956FC97.wem</Path>
-				</File>
-				<File Id="53718916" Language="SFX">
-					<ShortName>Fall_Menu1_Sting_BitCrushed_Faded.wav</ShortName>
-					<Path>SFX\Fall_Menu1_Sting_BitCrushed_Faded_B23C0C93.wem</Path>
 				</File>
 				<File Id="308222834" Language="SFX">
 					<ShortName>The_Fall_Music_B_To_C.wav</ShortName>
@@ -54,10 +49,6 @@
 				<File Id="968211500" Language="SFX">
 					<ShortName>The_Fall_Music_C(new)4_Compressed.wav</ShortName>
 					<Path>SFX\The_Fall_Music_C(new)4_Compressed_8956FC97.wem</Path>
-				</File>
-				<File Id="993902946" Language="SFX">
-					<ShortName>SFX\UI_hover.wav</ShortName>
-					<Path>SFX\SFX\UI_hover_56D34C19.wem</Path>
 				</File>
 				<File Id="1027916952" Language="SFX">
 					<ShortName>The_Fall_Music_B(Compressed).wav</ShortName>
@@ -92,6 +83,7 @@
 				<Event Id="2050766869" Name="Play_Spawn_Ball" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Spawn_Ball" MaxAttenuation="0.000000"/>
 				<Event Id="4224962356" Name="Play_Spawn_Level" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Spawn_Level" MaxAttenuation="0.000000"/>
 				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit"/>
+				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game"/>
 				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static"/>
 				<Event Id="1967504570" Name="Start_Opening_Anim" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Opening_Anim"/>
 				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="0.000000"/>
@@ -133,6 +125,10 @@
 				<File Id="52410626" Language="SFX">
 					<ShortName>Flame3.wav</ShortName>
 					<Path>SFX\Flame3_56D34C19.wem</Path>
+				</File>
+				<File Id="53718916" Language="SFX">
+					<ShortName>Fall_Menu1_Sting_BitCrushed_Faded.wav</ShortName>
+					<Path>SFX\Fall_Menu1_Sting_BitCrushed_Faded_B23C0C93.wem</Path>
 				</File>
 				<File Id="65798351" Language="SFX">
 					<ShortName>Hmm.wav</ShortName>

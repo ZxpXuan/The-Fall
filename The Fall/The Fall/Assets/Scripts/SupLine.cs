@@ -25,7 +25,7 @@ public class SupLine : MonoBehaviour {
 
             angle = Vector3.Angle(sp, dric);
 
-            print(angle);
+
             if (angle > 0 && angle < 22.5f)
             {
                 heng.SetActive(true);

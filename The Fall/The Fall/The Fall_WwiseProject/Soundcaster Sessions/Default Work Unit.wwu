@@ -25,7 +25,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
-							<Value>6.58307210031347E-02</Value>
+							<Value>0.223069590085796</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
@@ -35,7 +35,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="True" ID="{5318CBC9-534C-4416-8DC2-C3280746AA13}"/>
-						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Second_Easy" ID="{429C66C1-9C86-49B3-A5B0-7BE5EB39C374}"/>
 						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
@@ -49,7 +49,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
-							<Value>7.33484235752023E-312</Value>
+							<Value>9.16229211310375E-312</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
@@ -63,8 +63,8 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
-						<CurrentSwitchRef Name="Second_Hard" ID="{778018A6-5E73-4EA0-8C6E-F4308FDC9D52}"/>
-						<CurrentSwitchRef Name="Happy" ID="{6267A212-9940-4AD0-A6BC-7C59DB2A5EAA}"/>
+						<CurrentSwitchRef Name="Second_Med" ID="{098D6755-8430-46E6-8710-E3402D357BB2}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Game2menu" ID="{CD134146-8A34-4CA9-9770-DBD22874BDAC}">
@@ -118,6 +118,10 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Play_Impact" ID="{D0B291AB-C7B0-447D-8C52-AEDFA3DF8C32}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
 							<Position X="1" Y="1"/>
 						</Module>
@@ -125,7 +129,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
-							<Value>10</Value>
+							<Value>5.7</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>

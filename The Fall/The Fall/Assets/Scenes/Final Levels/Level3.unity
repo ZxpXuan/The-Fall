@@ -682,8 +682,74 @@ Prefab:
       objectReference: {fileID: 285221505}
     m_RemovedComponents:
     - {fileID: 81327204297952682, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
+    - {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &338561865 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1685805148150310, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 338561864}
+--- !u!114 &338561866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338561865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83466db46a7eb44c9b0c93dee89041c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSet:
+  - moodType: 0
+    stateType: 0
+    dialogue:
+    - Narrator_Tut_2
+    randomize: 0
+  - moodType: 0
+    stateType: 2
+    dialogue:
+    - Narrator_Impatience
+    randomize: 0
+  - moodType: 0
+    stateType: 4
+    dialogue:
+    - Narrator_Death
+    randomize: 0
+  - moodType: 0
+    stateType: 5
+    dialogue:
+    - Narrator_Compliment
+    randomize: 0
+  moodSet:
+  - moodTypes: 2
+    fromRange: 0
+    toRange: 2
+  - moodTypes: 1
+    fromRange: 3
+    toRange: 5
+  - moodTypes: 0
+    fromRange: 6
+    toRange: 8
+  timeCategoriser:
+  - timeTaker: 2
+    fromRange: 15
+    toRange: 20
+    reduceMoodBy: 0
+    hasMoodBeenAffected: 0
+  - timeTaker: 3
+    fromRange: 15
+    toRange: 20
+    reduceMoodBy: 0
+    hasMoodBeenAffected: 0
+  currentLevelTries: 0
+  totalWorldTries: 0
+  currentMood: 0
+  currentGameState: 0
+  happinessLevel: 0
+  levelStartTime: 0
+  enableTimeTracking: 0
 --- !u!1001 &338750976
 Prefab:
   m_ObjectHideFlags: 0

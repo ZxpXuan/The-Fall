@@ -507,6 +507,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Menu_Button" ID="{CC68172F-5FFB-480A-8638-AF18926830B2}">
+									<ChildrenList>
+										<Action Name="" ID="{DF9BB97D-6D89-4BEA-AA0D-1EF52DFEBE6A}" ShortID="589224141">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="UI_hover" ID="{DD5229AF-3104-44E2-B1A9-53A5C8860791}" WorkUnitID="{C7E064FE-FC78-49FA-8B90-F5E8834AD3A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -515,11 +529,9 @@
 					<ChildrenList>
 						<Event Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}">
 							<ChildrenList>
-								<Action Name="" ID="{B7376352-FB69-48DE-A83E-D1721F81818F}" ShortID="208973940">
+								<Action Name="" ID="{EC0DB86F-BCEE-45F6-95AD-61BC27B63236}" ShortID="368231486">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
-										<Property Name="Delay" Type="Real64" Value="3.5"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -667,6 +679,7 @@
 								<Action Name="" ID="{4B7E9C72-B0E5-4379-BFF2-F60E31FDEFD4}" ShortID="896183792">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -681,6 +694,7 @@
 								<Action Name="" ID="{2508CF78-7D9F-4564-81F4-DEFE64B835C7}" ShortID="1043358746">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

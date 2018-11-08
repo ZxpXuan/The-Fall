@@ -84,11 +84,12 @@ public class tragball : MonoBehaviour
                         {
                             mousePos = currentPosition;
                         }
-
+                        float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
                         Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
                         force = dir.magnitude;
-                        AkSoundEngine.SetRTPCValue("Aim_Velocity", force);
+                        print(mult);
+                        AkSoundEngine.SetRTPCValue("Aim_Velocity", mult);
                     }
 
                     isDrage = true;

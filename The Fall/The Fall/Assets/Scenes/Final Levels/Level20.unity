@@ -15306,7 +15306,8 @@ Prefab:
       propertyPath: objectToDisable.Array.data[6]
       value: 
       objectReference: {fileID: 938893965}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1646222847 stripped
@@ -15332,6 +15333,71 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1646222849 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1685805148150310, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1646222846}
+--- !u!114 &1646222850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646222849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83466db46a7eb44c9b0c93dee89041c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSet:
+  - moodType: 0
+    stateType: 0
+    dialogue:
+    - Narrator_Greeting_Generic
+    randomize: 0
+  - moodType: 0
+    stateType: 2
+    dialogue:
+    - Narrator_Impatience
+    randomize: 0
+  - moodType: 0
+    stateType: 4
+    dialogue:
+    - Narrator_Death
+    randomize: 0
+  - moodType: 0
+    stateType: 5
+    dialogue:
+    - Narrator_Compliment
+    randomize: 0
+  moodSet:
+  - moodTypes: 2
+    fromRange: 0
+    toRange: 2
+  - moodTypes: 1
+    fromRange: 3
+    toRange: 5
+  - moodTypes: 0
+    fromRange: 6
+    toRange: 8
+  timeCategoriser:
+  - timeTaker: 2
+    fromRange: 15
+    toRange: 20
+    reduceMoodBy: 0
+    hasMoodBeenAffected: 0
+  - timeTaker: 3
+    fromRange: 15
+    toRange: 20
+    reduceMoodBy: 0
+    hasMoodBeenAffected: 0
+  currentLevelTries: 0
+  totalWorldTries: 0
+  currentMood: 0
+  currentGameState: 0
+  happinessLevel: 0
+  levelStartTime: 0
+  enableTimeTracking: 0
 --- !u!1 &1646328856
 GameObject:
   m_ObjectHideFlags: 0

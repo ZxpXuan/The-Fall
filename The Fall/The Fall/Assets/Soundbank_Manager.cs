@@ -71,6 +71,8 @@ public class Soundbank_Manager : MonoBehaviour
             if (Application.loadedLevelName != "LevelSelect");
 
         }
+
+
         ChangeMusic();
     }
 
@@ -81,6 +83,11 @@ public class Soundbank_Manager : MonoBehaviour
         AkSoundEngine.PostEvent("Start_Game", gameObject);
         AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
         AkSoundEngine.PostEvent("Start_Music", gameObject);
+    }
+
+    public void MenuClick()
+    {
+        AkSoundEngine.PostEvent("Menu_Button", gameObject);
     }
 
     public void AnimationSFX()

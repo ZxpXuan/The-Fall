@@ -50,7 +50,7 @@ public class linedraw : MonoBehaviour {
 			targPos.z = 0;
 			
 			var toTarget = (targPos - p1.position);
-			var dist = toTarget.sqrMagnitude;
+			var dist = toTarget.sqrMagnitude;           
 
 			RaycastHit hit;
 			var aimRayStartPos = p1.position + toTarget.normalized * maxDistance;

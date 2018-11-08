@@ -245,7 +245,7 @@ public  class GameManager : MonoSingleton<GameManager> {
     public void loadScene(string name){
         sbm = FindObjectOfType<Soundbank_Manager>();
 
-        sbm.MenuSystem();
+        //sbm.MenuSystem();
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("hasBallBeenShot", 0);
 
@@ -260,6 +260,8 @@ public  class GameManager : MonoSingleton<GameManager> {
 
         sbm.startMusic(level);
     }
+
+  
     public void updateBounces(int number)
     {
         collisionLeft = number;

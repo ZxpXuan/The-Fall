@@ -117,6 +117,11 @@ public class Soundbank_Manager : MonoBehaviour
            
         }
 
+        if (getCurrentLevel < 0)
+        {
+            AkSoundEngine.PostEvent("Stop_Music", gameObject);
+        }
+
 
         if ( getCurrentLevel > 0)
         {

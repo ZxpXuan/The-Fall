@@ -402,10 +402,8 @@ MonoBehaviour:
   tutorialPanel: {fileID: 689500036}
   tutorialOrder: []
   tutorialAudioOrder: []
-  tutorialAudio: []
   isTutorialActive: 0
   tb: {fileID: 1427995517}
-  audioSource: {fileID: 0}
 --- !u!114 &888174988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,7 +681,18 @@ Prefab:
       propertyPath: minDistance
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 888174986}
+    - target: {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: force
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1427995517 stripped

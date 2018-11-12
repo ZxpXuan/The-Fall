@@ -16,8 +16,7 @@ public class TutorialManager : MonoBehaviour {
     [SerializeField]
     public List<string> tutorialAudioOrder;
 
-    [SerializeField]
-    public List <AudioClip> tutorialAudio;
+    
 
     private int currentTutorial;
 
@@ -25,15 +24,18 @@ public class TutorialManager : MonoBehaviour {
 
     public tragball tb;
 
-    public AudioSource audioSource;
+ //   public AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
         tb.enabled = false;
-        startTutorial();
-        currentTutorial = 0;
-        isTutorialActive = true;
-        GetComponent<AI>().justSetState(Brain.GameState.Tutorial);
-        GetComponent<AI>().enableTimeTracking = false;
+        if (tutorialAudioOrder.Count > 0)
+        {
+            startTutorial();
+            currentTutorial = 0;
+            isTutorialActive = true;
+            GetComponent<AI>().justSetState(Brain.GameState.Tutorial);
+            GetComponent<AI>().enableTimeTracking = false;
+        }
 
     }
 	
@@ -60,15 +62,16 @@ public class TutorialManager : MonoBehaviour {
         if (tutorialAudioOrder.Count == tutorialOrder.Count && tutorialOrder.Count != 0)
         {
             AkSoundEngine.PostEvent(tutorialAudioOrder[index], gameObject);
-
+            
             tutorialOrder[index].SetActive(true);
-            audioSource.clip = tutorialAudio[index];
+           // audioSource.clip = tutorialAudio[index];
         }
         currentTutorial = index;
     }
 
     public void startTutorial(){
-        
+            AkSoundEngine.PostEvent(tutorialAudioOrder[0], gameObject);
+
         tutorialPanel.SetActive(true);
         updateTutorial(currentTutorial);
     }

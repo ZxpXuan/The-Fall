@@ -51,7 +51,7 @@ public class transdoor : MonoBehaviour {
 
             ps.Play();
         }
-        return;
+       
         
         if(other.tag == "ball" && otherportal.tag == "no")
         {

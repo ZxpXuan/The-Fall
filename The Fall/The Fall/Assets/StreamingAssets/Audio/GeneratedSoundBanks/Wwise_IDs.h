@@ -73,7 +73,6 @@ namespace AK
                 static const AkUniqueID HARD = 3599861390U;
                 static const AkUniqueID MEDIUM = 2849147824U;
                 static const AkUniqueID SECOND_EASY = 3268631962U;
-                static const AkUniqueID SECOND_HARD = 998402519U;
                 static const AkUniqueID SECOND_MED = 1546301258U;
             } // namespace SWITCH
         } // namespace LEVEL_DIFFICULTY

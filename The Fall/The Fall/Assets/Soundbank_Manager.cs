@@ -74,6 +74,8 @@ public class Soundbank_Manager : MonoBehaviour
 
 
         ChangeMusic();
+
+        Debug.Log("level" + getCurrentLevel);
     }
 
 
@@ -129,7 +131,7 @@ public class Soundbank_Manager : MonoBehaviour
           //  print("stop_menu_music");
         }
 
-        if (getCurrentLevel == 3)
+        if (getCurrentLevel == 2)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
             print("Easy_Switch");

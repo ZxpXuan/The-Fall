@@ -88,7 +88,7 @@ public class tragball : MonoBehaviour
                         Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
 
                         force = dir.magnitude;
-                        print(mult);
+                        //print(mult);
                         AkSoundEngine.SetRTPCValue("Aim_Velocity", mult);
                     }
 

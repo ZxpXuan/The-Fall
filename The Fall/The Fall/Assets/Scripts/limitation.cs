@@ -36,6 +36,7 @@ public class limitation : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Ball = GetComponent<Rigidbody>();
+        gm = GameManager.Instance;
         GameManager.Instance.updateBounces(limit - i);
         GetComponentInChildren<TextMesh>().text = "" + (limit - i);
         Ball.freezeRotation = true;

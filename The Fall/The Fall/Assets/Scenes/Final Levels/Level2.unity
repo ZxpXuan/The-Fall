@@ -5894,6 +5894,7 @@ Prefab:
       objectReference: {fileID: 1697277471}
     m_RemovedComponents:
     - {fileID: 114125361444036250, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
+    - {fileID: 114295540661460626, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1901022775 stripped
@@ -5974,6 +5975,27 @@ MonoBehaviour:
   levelStartTime: 0
   enableTimeTracking: 0
   printer: {fileID: 0}
+--- !u!114 &1901022781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1901022775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ffb9cb2b87048758c49ecc905fb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0
+  ballSpeed: 1.8
+  emputy: {fileID: 891416043}
+  ding: {fileID: 1697277473}
+  speedMultiplier: 1
+  ding2: {fileID: 0}
+  MaxRing: {fileID: 2072275260}
+  gm: {fileID: 0}
+  minDistance: 2
+  maxForceDistance: 3
 --- !u!1001 &1961335722
 Prefab:
   m_ObjectHideFlags: 0

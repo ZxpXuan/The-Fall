@@ -34,7 +34,7 @@ public class tragball : MonoBehaviour
         cam = Camera.main;
         FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
         ding = FindObjectOfType<limitation>().GetComponent<Rigidbody>();
-        gm = GetComponent<GameManager>();
+        gm = GameManager.Instance;
     }
     void Update()
     {
@@ -112,7 +112,7 @@ public class tragball : MonoBehaviour
                     if (force > minDistance)
                     {
                         ding.AddForce(dir * Mathf.Clamp( mult,0,maxForceDistance) * speedMultiplier, ForceMode.Impulse);
-                        FindObjectOfType<GameManager>().GetComponent<LineRenderer>().enabled = false;
+                       GameManager.Instance.GetComponent<LineRenderer>().enabled = false;
 
                         abale = abale + 1;
                         PlayerPrefs.SetFloat("xShot", currentPosition.x);

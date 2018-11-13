@@ -17,11 +17,11 @@ public class linedraw : MonoBehaviour {
 
     public bool lockDistance;
     public float maxDistance=3;
-    GameManager gm;
+  
     void Start()
     {
         AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
-
+        maxDistance = 3;
         launchRay.positionCount = 2;
 		aimingRay.positionCount = 2;
         transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);

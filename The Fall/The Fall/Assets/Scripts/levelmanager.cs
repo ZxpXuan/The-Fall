@@ -30,8 +30,8 @@ public class levelmanager : MonoBehaviour {
 
         yield return new WaitForSeconds(waitTime);
         //uIManager.displayWin();
-        uIManager.GetComponent<GameManager>().nextScene();
-
+        //uIManager.GetComponent<GameManager>().nextScene();
+        GameManager.Instance.nextScene();
         PlayerPrefs.SetInt("levelsUnlocked", nextLevelid);
     }
 

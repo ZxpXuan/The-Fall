@@ -454,6 +454,7 @@ MonoBehaviour:
   happinessLevel: 0
   levelStartTime: 0
   enableTimeTracking: 0
+  printer: {fileID: 0}
 --- !u!114 &888174989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +466,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a00f6f69889467784ea775d6dac1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &903144598 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1993959159568590, guid: af7a5045956fb8641b95662f6eac222a,
+    type: 2}
+  m_PrefabInternal: {fileID: 519849870}
+--- !u!114 &903144599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 903144598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699316d8bdc2d964cbeb76e747dd232e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0a256a2e6816c034c80929ffac4dc856,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 
 --- !u!1 &908516465
 GameObject:
   m_ObjectHideFlags: 0

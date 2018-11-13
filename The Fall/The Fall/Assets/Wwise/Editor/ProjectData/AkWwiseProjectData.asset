@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e5526abddeec864b872ba3465b0433f2
-    m_lastTime: -8586600145993652425
+    m_lastTime: -8586595656995308788
     List:
     - name: Level_Reverb
       guid: 5a20685673dbb94ebfe40265865bf96f
@@ -49,8 +49,26 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: aa87d7330e082242a39aec4238b653a6
-    m_lastTime: -8586595908120956268
+    m_lastTime: -8586594900774892427
     List:
+    - name: FallNarrator
+      guid: 927f83262b268f41a8060a2b709a09b5
+      id: 3496721321
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: FallNarrator
+        ObjectType: 7
+      Path: Default Work Unit\FallNarrator
+    - name: NewNarrator
+      guid: 71ab287f07955c47ae380700c3cb6732
+      id: 3582165986
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NewNarrator
+        ObjectType: 7
+      Path: Default Work Unit\NewNarrator
     - name: TheFallMusic
       guid: 6f46933d3724e34f84d62f5d1af702cd
       id: 456359398
@@ -60,15 +78,6 @@ MonoBehaviour:
       - ElementName: TheFallMusic
         ObjectType: 7
       Path: Default Work Unit\TheFallMusic
-    - name: TheFallNarrator
-      guid: 7fa0f6d76fcc064bb849a1420cfbf8f0
-      id: 325570642
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: TheFallNarrator
-        ObjectType: 7
-      Path: Default Work Unit\TheFallNarrator
     - name: TheFallSFX
       guid: e353e4d3f2ba714b9c7c6e3fee09e6d7
       id: 787924302
@@ -82,7 +91,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d2ec8e6196ee97458c692fefdf6ba80e
-    m_lastTime: -8586595908121267837
+    m_lastTime: -8586595671209242975
     List:
     - name: Aim_Error
       guid: d03a8dd06bdf2849b41362ddcc70cdeb
@@ -383,38 +392,6 @@ MonoBehaviour:
       - ElementName: Play_Shoot
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Play_Shoot
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Spawn_Ball
-      guid: e5bd73fbfd05b9458bec81ca576b1f86
-      id: 2050766869
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 4
-      - ElementName: Level_Elements
-        ObjectType: 4
-      - ElementName: Play_Spawn_Ball
-        ObjectType: 3
-      Path: Default Work Unit\SFX\Level_Elements\Play_Spawn_Ball
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Spawn_Level
-      guid: e8d012695007e140826e759f7a7f4298
-      id: 4224962356
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: SFX
-        ObjectType: 4
-      - ElementName: Level_Elements
-        ObjectType: 4
-      - ElementName: Play_Spawn_Level
-        ObjectType: 3
-      Path: Default Work Unit\SFX\Level_Elements\Play_Spawn_Level
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

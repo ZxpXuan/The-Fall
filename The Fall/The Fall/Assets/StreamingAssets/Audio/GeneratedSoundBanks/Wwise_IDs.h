@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AIM_ERROR = 1571488543U;
+        static const AkUniqueID MENU_BUTTON = 938529747U;
         static const AkUniqueID NARRATOR_COMPLIMENT = 2187083841U;
         static const AkUniqueID NARRATOR_DEATH = 1035940725U;
         static const AkUniqueID NARRATOR_GREETING_GENERIC = 4022731410U;
@@ -32,8 +33,6 @@ namespace AK
         static const AkUniqueID PLAY_MENU_STING = 3771381609U;
         static const AkUniqueID PLAY_RESTART = 3483232275U;
         static const AkUniqueID PLAY_SHOOT = 2641650631U;
-        static const AkUniqueID PLAY_SPAWN_BALL = 2050766869U;
-        static const AkUniqueID PLAY_SPAWN_LEVEL = 4224962356U;
         static const AkUniqueID PLAY_TRIGGER_HIT = 1240630412U;
         static const AkUniqueID START_GAME = 1114964412U;
         static const AkUniqueID START_GOAL_STATIC = 3155875016U;
@@ -103,6 +102,8 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID FALLNARRATOR = 3496721321U;
+        static const AkUniqueID NEWNARRATOR = 3582165986U;
         static const AkUniqueID THEFALLMUSIC = 456359398U;
         static const AkUniqueID THEFALLSFX = 787924302U;
     } // namespace BANKS

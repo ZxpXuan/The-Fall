@@ -45,11 +45,15 @@
 							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Music" ID="{6B25F2EF-41A9-4472-A7F7-4ED2AE4DF55C}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
-							<Value>9.16229211310375E-312</Value>
+							<Value>10</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
@@ -63,7 +67,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
-						<CurrentSwitchRef Name="Second_Med" ID="{098D6755-8430-46E6-8710-E3402D357BB2}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
 						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

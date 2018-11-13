@@ -151,31 +151,31 @@ public class Soundbank_Manager : MonoBehaviour
 
         if (getCurrentLevel == 8 || getCurrentLevel == 9 || getCurrentLevel == 10)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject);
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
                print("secondeasyswitch");
         }
 
         if (getCurrentLevel == 11 || getCurrentLevel == 12 || getCurrentLevel == 13)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject);
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject); //secondmed
                print("secondmedswitch");
         }
 
         if (getCurrentLevel == 14 || getCurrentLevel == 15 || getCurrentLevel == 16 || getCurrentLevel > 16)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject);
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
             print("secondHardSwitch");
         }
 
         if (getCurrentLevel > 16)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject);
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject); //secondMed
             //   print("hardswitch");
         }
 
         if (getCurrentLevel == 20)
         {
-            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject);
+            AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //Seconeasy
             //   print("hardswitch");
         }
 

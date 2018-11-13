@@ -235,7 +235,7 @@ public  class GameManager : MonoSingleton<GameManager> {
         getScene();
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("hasBallBeenShot", 0);
-
+        print("nextt");
       //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 

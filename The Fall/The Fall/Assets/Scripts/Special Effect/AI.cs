@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class AI : MonoBehaviour
 {
@@ -58,6 +60,10 @@ public class AI : MonoBehaviour
     public float levelStartTime;
 
     public bool enableTimeTracking;
+
+
+    [SerializeField]
+    public Text printer;
     // Use this for initialization
     void Start()
     {
@@ -121,7 +127,7 @@ public class AI : MonoBehaviour
                 print(ds.dialogue[random]);
                 AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
                 AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
-
+             //   printer.text = "Speaking-" + ds.dialogue[0] + " \nMood- " + mood;
 
                 break;
             }

@@ -280,6 +280,7 @@ MonoBehaviour:
   happinessLevel: 0
   levelStartTime: 0
   enableTimeTracking: 0
+  printer: {fileID: 0}
 --- !u!1 &289137674
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +853,11 @@ Prefab:
     - target: {fileID: 1487087179623424, guid: c7d2a4c58b324c54391d0616eb52a785, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95928911950430272, guid: c7d2a4c58b324c54391d0616eb52a785,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7d2a4c58b324c54391d0616eb52a785, type: 2}

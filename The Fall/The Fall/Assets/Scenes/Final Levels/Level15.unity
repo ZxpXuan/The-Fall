@@ -396,6 +396,7 @@ MonoBehaviour:
   happinessLevel: 0
   levelStartTime: 0
   enableTimeTracking: 0
+  printer: {fileID: 0}
 --- !u!114 &451152477 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
@@ -643,6 +644,16 @@ Prefab:
     - target: {fileID: 4266352639187262, guid: c7d2a4c58b324c54391d0616eb52a785, type: 2}
       propertyPath: m_LocalPosition.x
       value: -11.291626
+      objectReference: {fileID: 0}
+    - target: {fileID: 95928911950430272, guid: c7d2a4c58b324c54391d0616eb52a785,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95897709812861254, guid: c7d2a4c58b324c54391d0616eb52a785,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7d2a4c58b324c54391d0616eb52a785, type: 2}

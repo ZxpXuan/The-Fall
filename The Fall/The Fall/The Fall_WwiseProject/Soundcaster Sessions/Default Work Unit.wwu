@@ -151,7 +151,7 @@
 						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
-				<SoundcasterSession Name="Narrator_Duckingh" ID="{81AC4122-3006-4F19-8EC3-1C902C922872}">
+				<SoundcasterSession Name="Narrator_Ducking" ID="{81AC4122-3006-4F19-8EC3-1C902C922872}">
 					<ModuleList>
 						<Module>
 							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
@@ -163,19 +163,15 @@
 						</Module>
 						<Module>
 							<ObjectRef Name="Narrator_Compliment" ID="{64C0B3C2-1291-4367-BFC5-DCC173CB5C3E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Aiming" ID="{5A2E0B12-F9AE-4228-968F-097DF036E563}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
-							<Position X="2" Y="1"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Narrator_Greeting_Generic" ID="{305273B6-7E41-46C5-929F-0CF004875468}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
-							<Position X="3" Y="0"/>
+							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Narrator_Impatience" ID="{2F9C1356-9977-494A-9148-1705B6CE7E99}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
-							<Position X="3" Y="1"/>
+							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -195,8 +191,8 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
-						<CurrentSwitchRef Name="Medium" ID="{C7FE2636-8B2E-473E-B367-6C4FBBABE618}"/>
-						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

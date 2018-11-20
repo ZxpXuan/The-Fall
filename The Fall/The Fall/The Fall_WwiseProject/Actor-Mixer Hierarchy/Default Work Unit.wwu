@@ -1392,7 +1392,6 @@
 				<ActorMixer Name="Narrator" ID="{B6EBDB83-F0CB-4A70-ADE5-7DAF37FFF503}" ShortID="684682183">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
-						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
@@ -1462,7 +1461,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Hmm" ID="{E8CFB323-0F2F-4D76-AA58-7103BD53BCFF}" ShortID="80754019">
+										<Sound Name="Death_Hpy_1" ID="{E8CFB323-0F2F-4D76-AA58-7103BD53BCFF}" ShortID="80754019">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1486,7 +1485,7 @@
 												<ActiveSource Name="Hmm" ID="{EBB409A8-4E69-45C8-AC22-D105F053FDEC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Oh_Dear2" ID="{3023E3DA-0F84-4EB0-8DBA-F815EC3615D4}" ShortID="428444676">
+										<Sound Name="Death_Hpy_2" ID="{3023E3DA-0F84-4EB0-8DBA-F815EC3615D4}" ShortID="428444676">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1510,7 +1509,7 @@
 												<ActiveSource Name="Oh_Dear2" ID="{74C74E8D-88A5-4F4D-8A23-3F1E90C21B94}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Sign" ID="{4E58295A-6350-4511-AA0D-A37EE5FAC0E0}" ShortID="174009825">
+										<Sound Name="Death_Hpy_3" ID="{4E58295A-6350-4511-AA0D-A37EE5FAC0E0}" ShortID="174009825">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1534,6 +1533,70 @@
 												<ActiveSource Name="Sing2" ID="{F0F9FD2B-CFE2-4A49-95C1-9DC8CAB6D62A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Death_Hpy_4" ID="{1BF0F3DC-2ABB-4002-844B-419F67D727BF}" ShortID="556807275">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_H_4" ID="{859B5049-4BA0-4451-B1C1-39152F29ECFC}" ShortID="83710978">
+													<Language>SFX</Language>
+													<AudioFile>Death_H_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_H_4" ID="{859B5049-4BA0-4451-B1C1-39152F29ECFC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_Hpy_5" ID="{211B7C40-A062-4054-BBA0-4BB4063F2407}" ShortID="695532976">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_H_5" ID="{B7AC03D6-6A8F-4F4C-AC17-C82301D1C52F}" ShortID="640627932">
+													<Language>SFX</Language>
+													<AudioFile>Death_H_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_H_5" ID="{B7AC03D6-6A8F-4F4C-AC17-C82301D1C52F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_Hpy_6" ID="{A94F8A74-C0E8-40A3-B02C-4270B53A767D}" ShortID="324383768">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Hpy_6" ID="{23549B25-86E0-407E-8FBB-9239D6F00D8E}" ShortID="861940552">
+													<Language>SFX</Language>
+													<AudioFile>Death_Hpy_6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Hpy_6" ID="{23549B25-86E0-407E-8FBB-9239D6F00D8E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Neutral" ID="{44B85932-ADF4-4109-A0C7-7001AB1B5460}" ShortID="1034096839">
@@ -1549,7 +1612,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="C'mon" ID="{73358F66-1333-4281-AD2D-9CB0CFB9DF39}" ShortID="390209419">
+										<Sound Name="Death_Neu_1" ID="{73358F66-1333-4281-AD2D-9CB0CFB9DF39}" ShortID="390209419">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1580,7 +1643,7 @@
 												<ActiveSource Name="C'mon" ID="{0C776AC0-759A-4CC8-BB1C-571A757CA5E8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Really_2" ID="{3020A8E2-C4D5-4633-8506-19665675ACC4}" ShortID="551164201">
+										<Sound Name="Death_Neu_3" ID="{3020A8E2-C4D5-4633-8506-19665675ACC4}" ShortID="551164201">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1599,38 +1662,7 @@
 												<ActiveSource Name="Really_2" ID="{FDC9E267-0C96-40F4-A408-E2634550B42C}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Interesting1" ID="{2A57FF62-CB11-422D-BF47-09EB02DFC05F}" ShortID="1038144417">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Interesting1" ID="{F4A41CCB-36A6-4746-BE0D-804A998585EF}" ShortID="888835473">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.769736842105263"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.733552631578947"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.19736842105263"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Interesting1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Interesting1" ID="{F4A41CCB-36A6-4746-BE0D-804A998585EF}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Interesting2" ID="{78F3C078-8FF5-4B70-AA78-5B0AF1C99EDB}" ShortID="892344529">
+										<Sound Name="Death_Neu_2" ID="{78F3C078-8FF5-4B70-AA78-5B0AF1C99EDB}" ShortID="892344529">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1660,6 +1692,70 @@
 												<ActiveSource Name="Interesting2" ID="{1E02512D-E58E-4DFB-95C0-A494A2727F56}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Death_Neu_4" ID="{26034F1E-FA2C-4636-963D-116AB920BEE8}" ShortID="636099304">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Neu_4" ID="{D401934E-CB5C-4F4B-A33D-CECF15809264}" ShortID="73176215">
+													<Language>SFX</Language>
+													<AudioFile>Death_Neu_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Neu_4" ID="{D401934E-CB5C-4F4B-A33D-CECF15809264}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_Neu_5" ID="{EAC1D154-F44B-4351-BD5C-1BCFAAB0EC5E}" ShortID="701435781">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Neu_5" ID="{86DC33FD-8E42-4447-80E2-D222F2A231E3}" ShortID="801848853">
+													<Language>SFX</Language>
+													<AudioFile>Death_Neu_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Neu_5" ID="{86DC33FD-8E42-4447-80E2-D222F2A231E3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_Neu_6" ID="{5C6ADD1D-1F85-4966-B028-ED2E30F8D927}" ShortID="357381254">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Neu_6" ID="{6A59C837-265A-4F4D-A5E6-3043BDBA8B51}" ShortID="518692454">
+													<Language>SFX</Language>
+													<AudioFile>Death_Neu_6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Neu_6" ID="{6A59C837-265A-4F4D-A5E6-3043BDBA8B51}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Disappointed" ID="{23F77C40-4049-41EC-86C0-168DE0EDF83A}" ShortID="1052147123">
@@ -1675,7 +1771,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Admire" ID="{D0E5709C-7BCB-4126-B274-A3CF81C53B8E}" ShortID="236636188">
+										<Sound Name="Death_Dis_1" ID="{D0E5709C-7BCB-4126-B274-A3CF81C53B8E}" ShortID="236636188">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1705,7 +1801,7 @@
 												<ActiveSource Name="Admire" ID="{BF10219F-3B8E-4D7B-8E8C-6C7FA353765A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Asked_Too_Much2" ID="{A2C11FE6-AEEA-499E-9AF5-330ADC4B2484}" ShortID="1007245562">
+										<Sound Name="Death_Dis_2" ID="{A2C11FE6-AEEA-499E-9AF5-330ADC4B2484}" ShortID="1007245562">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1729,7 +1825,7 @@
 												<ActiveSource Name="Asked_Too_Much2" ID="{62611C33-D6EA-4B24-AE25-D6E502BA5977}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="I'm_Sure" ID="{7245C6AA-ED45-476B-A66A-10DEE6F5C86C}" ShortID="135040541">
+										<Sound Name="Death_Dis_3" ID="{7245C6AA-ED45-476B-A66A-10DEE6F5C86C}" ShortID="135040541">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1758,6 +1854,301 @@
 												<ActiveSource Name="I'm_Sure" ID="{2C978C49-039E-4752-B818-97FEE139CCE7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Death_Dis_4" ID="{6C54BCC6-F960-4C9C-9435-F0A864E1A277}" ShortID="33026771">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Dis_4" ID="{4506D7A6-2599-4BE9-9B55-BC66F486927C}" ShortID="613675443">
+													<Language>SFX</Language>
+													<AudioFile>Death_Dis_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Dis_4" ID="{4506D7A6-2599-4BE9-9B55-BC66F486927C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_Dis_5" ID="{514ADE05-13D4-478D-A01B-3713CF0F622C}" ShortID="252286317">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_Dis_5" ID="{C40B107B-E3F3-44D8-8577-ECD33F9680DD}" ShortID="556457294">
+													<Language>SFX</Language>
+													<AudioFile>Death_Dis_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_Dis_5" ID="{C40B107B-E3F3-44D8-8577-ECD33F9680DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Disappointed" ID="{8D1BE3CB-42F2-494F-BFBC-0F628BB4CAAC}" ShortID="571042149">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Death_VD_1" ID="{8EBEB155-E097-4E5C-9C93-212DA8C164E8}" ShortID="318092193">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_1" ID="{525265F9-202E-4300-B4C2-BC12CB9C014E}" ShortID="546691221">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_1" ID="{525265F9-202E-4300-B4C2-BC12CB9C014E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VD_2" ID="{B9C073B9-0829-41BC-96A5-5B2C0F41ADD7}" ShortID="986438824">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_2" ID="{2BA9BC41-C077-4EE7-9ED9-D1CADE55E59E}" ShortID="970109741">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_2" ID="{2BA9BC41-C077-4EE7-9ED9-D1CADE55E59E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VD_3" ID="{5EF0227A-F496-441B-8199-04AD22809D60}" ShortID="531856540">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_3" ID="{6B43B4E3-53E9-4754-B8B3-BBC28C2424C6}" ShortID="869482296">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_3" ID="{6B43B4E3-53E9-4754-B8B3-BBC28C2424C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VD_5" ID="{3581ABFD-99C0-4A05-B6CC-FDF6A67D5C22}" ShortID="833486921">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_5" ID="{DF5D3987-DC0A-4BD2-8F1A-5486083A9036}" ShortID="333730461">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_5" ID="{DF5D3987-DC0A-4BD2-8F1A-5486083A9036}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VD_6" ID="{2DC7B309-088C-4D16-805E-785A7772D72C}" ShortID="304255483">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_6" ID="{7E312A5C-893E-4724-8061-91F6EADC9928}" ShortID="251089787">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_6" ID="{7E312A5C-893E-4724-8061-91F6EADC9928}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VD_4" ID="{799A36E7-CBF0-457B-B84C-950107D2BAE7}" ShortID="23661701">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="Narrator" ID="{1906BA7B-2F4D-41A0-BD7B-87E586A509DA}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VD_2(3)" ID="{66165830-51BB-4105-B564-F9627D6F086F}" ShortID="937519351">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.63157894736842E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.399122807017544"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VD_2(3).wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VD_2(3)" ID="{66165830-51BB-4105-B564-F9627D6F086F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Happy" ID="{2736B238-1E72-4E3B-9207-787F1EB66258}" ShortID="937318508">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Death_VH_1" ID="{EDE68E87-C5CD-4727-9DF8-FC1AFB18ECC2}" ShortID="184800441">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VH_1" ID="{9B25CFCA-E5E8-437A-96C2-7C8983FD4393}" ShortID="975986801">
+													<Language>SFX</Language>
+													<AudioFile>Death_VH_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VH_1" ID="{9B25CFCA-E5E8-437A-96C2-7C8983FD4393}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VH_2" ID="{FDBFCFBE-5B8F-4008-9B43-C86C26076DF0}" ShortID="333129300">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VH_2" ID="{9184D759-9753-4CFC-A25D-F2D4CF2BE0A6}" ShortID="634742679">
+													<Language>SFX</Language>
+													<AudioFile>Death_VH_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VH_2" ID="{9184D759-9753-4CFC-A25D-F2D4CF2BE0A6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VH_3" ID="{D5B3278A-ADD1-4AE6-AB01-9532822F9765}" ShortID="348184591">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VH_3" ID="{593AE953-AED6-4679-A6AF-F4962EA2E9B1}" ShortID="327769538">
+													<Language>SFX</Language>
+													<AudioFile>Death_VH_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VH_3" ID="{593AE953-AED6-4679-A6AF-F4962EA2E9B1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VH_4" ID="{82387581-BF51-4E9F-ADC5-05F837AAA9AA}" ShortID="448361943">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VH_4" ID="{A75A22FD-44CE-447B-860A-36BBD48723ED}" ShortID="944949560">
+													<Language>SFX</Language>
+													<AudioFile>Death_VH_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VH_4" ID="{A75A22FD-44CE-447B-860A-36BBD48723ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Death_VH_5" ID="{25C86BF1-F8BD-49D3-8AF2-E3E9AAE24634}" ShortID="749236059">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VH_5" ID="{2158E109-24D5-406E-AC24-AD55EADDDE09}" ShortID="272615380">
+													<Language>SFX</Language>
+													<AudioFile>Death_VH_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VH_5" ID="{2158E109-24D5-406E-AC24-AD55EADDDE09}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
@@ -1767,17 +2158,23 @@
 										<ItemRef Name="Neutral" ID="{44B85932-ADF4-4109-A0C7-7001AB1B5460}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
+										<ItemRef Name="Very_Happy" ID="{2736B238-1E72-4E3B-9207-787F1EB66258}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
 										<ItemRef Name="Disappointed" ID="{23F77C40-4049-41EC-86C0-168DE0EDF83A}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Happy" ID="{4E861DAE-82FE-4030-BE5A-CCE5793CEEBE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Very_Disappointed" ID="{8D1BE3CB-42F2-494F-BFBC-0F628BB4CAAC}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="VHappy" ID="{77ADA104-12D1-4545-B6BC-AE6125B6EFF6}"/>
 										<ItemList>
-											<ItemRef Name="Happy" ID="{4E861DAE-82FE-4030-BE5A-CCE5793CEEBE}"/>
+											<ItemRef Name="Very_Happy" ID="{2736B238-1E72-4E3B-9207-787F1EB66258}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -1795,7 +2192,7 @@
 									<Grouping>
 										<SwitchRef Name="VDisappointed" ID="{722C0C97-F0A7-4E10-999E-FFE85CB26F16}"/>
 										<ItemList>
-											<ItemRef Name="Disappointed" ID="{23F77C40-4049-41EC-86C0-168DE0EDF83A}"/>
+											<ItemRef Name="Very_Disappointed" ID="{8D1BE3CB-42F2-494F-BFBC-0F628BB4CAAC}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -1807,146 +2204,6 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<RandomSequenceContainer Name="Congratz" ID="{E46AC4E2-E026-48A1-8CC7-1C26FDF8B094}" ShortID="503202047">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-100</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Not_Bad2" ID="{0B487BDB-4005-4744-921E-A79E3D2537F1}" ShortID="888045668">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Not_Bad2" ID="{9225B997-EEE9-4CBD-8537-D0DA29366A15}" ShortID="559597215">
-											<PropertyList>
-												<Property Name="TrimBegin" Type="Real64" Value="0.825109649122807"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Not_Bad2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Not_Bad2" ID="{9225B997-EEE9-4CBD-8537-D0DA29366A15}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="So_Good2" ID="{FC4CE08B-2E37-44CA-82CA-4C3165095220}" ShortID="827694447">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="So_Good2" ID="{82B51777-9621-439D-85C7-9DE6DA2063BB}" ShortID="1046504146">
-											<PropertyList>
-												<Property Name="TrimBegin" Type="Real64" Value="2.1765350877193"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>So_Good2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="So_Good2" ID="{82B51777-9621-439D-85C7-9DE6DA2063BB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Congratulations" ID="{4C05AEA5-9E50-402B-8C91-474AEED8B36B}" ShortID="778224804">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Wel_Done" ID="{223ED9C4-FCF3-406A-B0FD-2B26154285D6}" ShortID="731353363">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.9780701754386"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.517543859649123"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.96491228070175"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Wel_Done.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Wel_Done" ID="{223ED9C4-FCF3-406A-B0FD-2B26154285D6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Well_Done2" ID="{0D05D34A-CE9A-4417-90E0-205CB677DEA5}" ShortID="415366625">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-3</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Well_Done2" ID="{FDECBD09-25C5-439F-A1B2-F0584F246E3D}" ShortID="1001637090">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.2828947368421"/>
-												<Property Name="TrimBegin" Type="Real64" Value="2.37938596491228"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.96381578947368"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Well_Done2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Well_Done2" ID="{FDECBD09-25C5-439F-A1B2-F0584F246E3D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<ActorMixer Name="Tutorial_1" ID="{1346676D-7808-451D-84D6-674AEEE459E7}" ShortID="392103050">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -2162,6 +2419,11 @@
 						</ActorMixer>
 						<SwitchContainer Name="Level_Greetings_General" ID="{7D809799-EC1C-4FE7-936A-50D58D4A65FB}" ShortID="424718007">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>3</Value>
@@ -2171,6 +2433,9 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}" WorkUnitID="{DE04E783-41BD-4BFD-B0CB-0B020AB68CC8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
@@ -2183,7 +2448,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Disappionted" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}" ShortID="215940130">
+								<RandomSequenceContainer Name="Disappointed" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}" ShortID="215940130">
 									<PropertyList>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
@@ -2191,11 +2456,6 @@
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-100</Value>
-											</ValueList>
-										</Property>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -2372,36 +2632,6 @@
 												<ActiveSource Name="Greet_Hpy_1" ID="{F18038D4-43ED-4ACA-983B-BA8AD9D30C63}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Hpy_2" ID="{E7C91697-0764-4970-B709-341A5E94EFB1}" ShortID="181597743">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Greet_Hpy_2" ID="{D6709689-1393-4D1A-A52D-D6219FAE0108}" ShortID="296582851">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.315789473684211"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.12171052631579"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Greet_Hpy_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Greet_Hpy_2" ID="{D6709689-1393-4D1A-A52D-D6219FAE0108}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Greet_Hpy_3" ID="{38ECA0B8-7831-47FA-9B5E-7F3283B7E536}" ShortID="16330645">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2425,31 +2655,7 @@
 												<ActiveSource Name="Greet_Hpy_3" ID="{85B5B698-C00C-408B-9E10-8CE747D5A090}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Hpy_4" ID="{72271B65-ABA5-4342-93F9-0C757D7D918E}" ShortID="377850563">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Greet_Hpy_4" ID="{63C2A9E4-42E8-49B2-A2C0-489DD8BF2AE7}" ShortID="856034329">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.328947368421052"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.194078947368421"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.14802631578947"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Greet_Hpy_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Greet_Hpy_4" ID="{63C2A9E4-42E8-49B2-A2C0-489DD8BF2AE7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Greet_Hpy_5" ID="{49B33D34-62C6-452D-A64E-696D42834709}" ShortID="647742400">
+										<Sound Name="Greet_Hpy_2" ID="{49B33D34-62C6-452D-A64E-696D42834709}" ShortID="647742400">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2471,30 +2677,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Greet_Hpy_5" ID="{62BC61BF-D68B-406D-AF63-628F83B94269}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Greet_Hpy_6" ID="{A9D13723-39F0-4D97-836B-FC84677AD99E}" ShortID="575043145">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Greet_Hpy_6" ID="{D3B030E4-180D-4CE0-AE0D-801FCB54163E}" ShortID="121498137">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.729489795918367"/>
-														<Property Name="TrimBegin" Type="Real64" Value="6.82563551736484E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.50842105263158"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Greet_Hpy_6.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Greet_Hpy_6" ID="{D3B030E4-180D-4CE0-AE0D-801FCB54163E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2559,30 +2741,6 @@
 												<ActiveSource Name="Greet_Nu_1" ID="{6D976076-756B-4E62-95A2-9B1D0CD24C37}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Nu_2" ID="{443C5810-9B2D-47EE-8709-A90B3F7B4B6D}" ShortID="527239804">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Greet_Nu_2" ID="{BB370AFB-FBB2-4ACB-B919-882CEEE1629F}" ShortID="191734149">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.93859649122807"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.421052631578948"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.91666666666667"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Greet_Nu_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Greet_Nu_2" ID="{BB370AFB-FBB2-4ACB-B919-882CEEE1629F}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Greet_Nu_3" ID="{4E4A887F-013E-40F1-BA9C-98DE66AC72D7}" ShortID="924859313">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2608,32 +2766,7 @@
 												<ActiveSource Name="Greet_Nu_3" ID="{9222D138-4D58-4677-A84B-2E18A4CFA6F9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Nu_4" ID="{7FCEF0DB-928D-45C2-B143-453650C44113}" ShortID="73457547">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Greet_Nu_4" ID="{64F0A802-27BE-4731-8DB9-9620CF0DFD49}" ShortID="326376669">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.118969298245614"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.395285087719298"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.249451754385965"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.47916666666667"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Greet_Nu_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Greet_Nu_4" ID="{64F0A802-27BE-4731-8DB9-9620CF0DFD49}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Greet_Nu_5" ID="{7DF433D9-5707-4616-92F2-774F6A50CAB3}" ShortID="149590966">
+										<Sound Name="Greet_Nu_2" ID="{7DF433D9-5707-4616-92F2-774F6A50CAB3}" ShortID="149590966">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2657,7 +2790,22 @@
 												<ActiveSource Name="Greet_Nu_5" ID="{098E99AF-0E8C-456C-AE4C-2BFED500BC91}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Nu_6" ID="{AC6F7B24-81AF-4663-830E-37254CC667DC}" ShortID="968653206">
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Happy" ID="{42011153-CFED-4E37-BDBF-1F378CB7B041}" ShortID="163607301">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Greetings_VH_1" ID="{E75675CD-A560-457C-BF16-522BF86F8FB2}" ShortID="657589766">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2667,19 +2815,156 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Greet_Nu_6" ID="{D7568275-226F-469A-B848-75961E9EE16E}" ShortID="402558551">
+												<AudioFileSource Name="Greetings_VH_1" ID="{D9CF81C9-1C76-4526-BFC6-B3AA248D7DA0}" ShortID="693208066">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.82456140350878E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.557017543859649"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.771929824561404"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.12280701754386"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.12280701754386"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.60964912280702"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Greet_Nu_6.wav</AudioFile>
+													<AudioFile>Greetings_VH_1.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Greet_Nu_6" ID="{D7568275-226F-469A-B848-75961E9EE16E}" Platform="Linked"/>
+												<ActiveSource Name="Greetings_VH_1" ID="{D9CF81C9-1C76-4526-BFC6-B3AA248D7DA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Greetings_VH_2" ID="{7151C126-5D55-4544-B438-50787E56FAA9}" ShortID="677908225">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Greetings_VH_2" ID="{BBD0C052-0AD7-425C-95E4-F9A1997CC486}" ShortID="203561363">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="6.52412280701755E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.456688596491228"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.13157894736842"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Greetings_VH_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Greetings_VH_2" ID="{BBD0C052-0AD7-425C-95E4-F9A1997CC486}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Greetings_VH_3" ID="{7BAA6A3A-7BF5-4E34-BA1B-73E6F3FA4455}" ShortID="967615071">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Greetings_VH_3" ID="{52FD9E5E-1F66-47E9-A18F-9392FCBB0974}" ShortID="355686734">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.144736842105263"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.701754385964912"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.53947368421053"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Greetings_VH_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Greetings_VH_3" ID="{52FD9E5E-1F66-47E9-A18F-9392FCBB0974}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Disappointed" ID="{689D37F8-D140-4637-B138-EAE5498D1BA4}" ShortID="431713208">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Greetings_VD_1" ID="{3CD4C33C-43A9-4099-B66A-C2C09A5E9AF4}" ShortID="660533815">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Greetings_VD_1" ID="{F73B250A-14A4-4D6C-9A1E-0CA467A52A05}" ShortID="240196402">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.164473684210526"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Greetings_VD_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Greetings_VD_1" ID="{F73B250A-14A4-4D6C-9A1E-0CA467A52A05}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Greetings_VD_2" ID="{24F448E4-8D7E-4101-8C32-B1B66FDF097D}" ShortID="428705668">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Greetings_VD_2" ID="{201A569F-CF5E-46F8-BAB3-4E1C34121C78}" ShortID="104463917">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.141447368421053"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.925986842105263"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Greetings_VD_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Greetings_VD_2" ID="{201A569F-CF5E-46F8-BAB3-4E1C34121C78}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Greetings_VD_3" ID="{D4B75FE9-3E4F-4BA0-AD73-B2F6EBB289A1}" ShortID="549210306">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Greetings_VD_3" ID="{BDAE734B-9924-4465-9E8E-54C3D1B2A728}" ShortID="175658029">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.264802631578947"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.521929824561403"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.39857456140351"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Greetings_VD_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Greetings_VD_3" ID="{BDAE734B-9924-4465-9E8E-54C3D1B2A728}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2694,14 +2979,20 @@
 										<ItemRef Name="Neutral" ID="{AD6BD929-FF3A-40FE-8C4A-27D1ED804652}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Disappionted" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}"/>
+										<ItemRef Name="Very_Happy" ID="{42011153-CFED-4E37-BDBF-1F378CB7B041}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Disappointed" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Very_Disappointed" ID="{689D37F8-D140-4637-B138-EAE5498D1BA4}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
 										<SwitchRef Name="VHappy" ID="{77ADA104-12D1-4545-B6BC-AE6125B6EFF6}"/>
 										<ItemList>
-											<ItemRef Name="Happy" ID="{97C38A1F-D7C8-474A-8BB7-C3426B5DED56}"/>
+											<ItemRef Name="Very_Happy" ID="{42011153-CFED-4E37-BDBF-1F378CB7B041}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -2713,13 +3004,13 @@
 									<Grouping>
 										<SwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
 										<ItemList>
-											<ItemRef Name="Disappionted" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}"/>
+											<ItemRef Name="Disappointed" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="VDisappointed" ID="{722C0C97-F0A7-4E10-999E-FFE85CB26F16}"/>
 										<ItemList>
-											<ItemRef Name="Disappionted" ID="{BDD43C68-9389-42E7-8B5B-37B08F4E6DFA}"/>
+											<ItemRef Name="Very_Disappointed" ID="{689D37F8-D140-4637-B138-EAE5498D1BA4}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -2735,6 +3026,9 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}" WorkUnitID="{DE04E783-41BD-4BFD-B0CB-0B020AB68CC8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
@@ -2855,6 +3149,32 @@
 												<ActiveSource Name="Imp_Dis_3" ID="{5C77374A-B0C4-402E-93F0-DE2BABEA1D2D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Imp_Dis_4" ID="{7CAC806A-42B5-4457-9B2B-1EBEB57BE6F4}" ShortID="1025378560">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_Dis_4" ID="{3166C4A8-64D2-4671-98E1-8383DFB1A9D7}" ShortID="383385249">
+													<Language>SFX</Language>
+													<AudioFile>Imp_Dis_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_Dis_4" ID="{3166C4A8-64D2-4671-98E1-8383DFB1A9D7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Happy" ID="{CD2A1F82-AC68-42A1-BC8C-5825D081470C}" ShortID="624981751">
@@ -2907,31 +3227,6 @@
 												<ActiveSource Name="Imp_Hpy_1" ID="{2243BA48-2CAF-41B4-A903-3B6EE92F7642}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_2" ID="{C3A63A98-40C8-4927-9E20-B06534105BA3}" ShortID="568860545">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Imp_Hpy_2" ID="{96621BE3-D872-451B-8551-2773718BA49E}" ShortID="2043577">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="4.27631578947368E-02"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.664473684210526"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.26315789473684E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.87828947368421"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Imp_Hpy_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Imp_Hpy_2" ID="{96621BE3-D872-451B-8551-2773718BA49E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Imp_Hpy_3" ID="{0718B209-B5C8-4AC6-AFB4-B9FE31F56B53}" ShortID="984964449">
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2956,31 +3251,7 @@
 												<ActiveSource Name="Imp_Hpy_3" ID="{FFB6E452-CCFF-4ABF-91A1-EC36A7902B31}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_4" ID="{8B48743F-FD92-4B8F-8230-5B3A28358A66}" ShortID="828011740">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Imp_Hpy_4" ID="{695B5CDE-208A-45C9-A751-D04DEB2B5DBE}" ShortID="491552843">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.283991228070176"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.149671052631579"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.98410087719298"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Imp_Hpy_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Imp_Hpy_4" ID="{695B5CDE-208A-45C9-A751-D04DEB2B5DBE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Imp_Hpy_5" ID="{8439C503-6933-4C53-A993-DA943A314D90}" ShortID="539835409">
+										<Sound Name="Imp_Hpy_2" ID="{8439C503-6933-4C53-A993-DA943A314D90}" ShortID="539835409">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3005,14 +3276,7 @@
 												<ActiveSource Name="Imp_Hpy_5" ID="{4FE8A8F9-702C-49EC-8A98-18A93021C06D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_6" ID="{642D15A8-2172-4448-BA96-5ED84E9EFED1}" ShortID="204219121">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="Imp_Hpy_4" ID="{764C4C66-8C32-454A-95F1-0CA871BD3F9A}" ShortID="482394945">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3022,18 +3286,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Imp_Hpy_6" ID="{4024C354-B27D-46B3-822D-FE7BFF57D77D}" ShortID="421673878">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.234100877192982"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.230263157894737"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.42160087719298"/>
-													</PropertyList>
+												<AudioFileSource Name="Imp_Hpy_4" ID="{55EDDD64-C223-46DB-A58C-9FAE0D5948F0}" ShortID="853164434">
 													<Language>SFX</Language>
-													<AudioFile>Imp_Hpy_6.wav</AudioFile>
+													<AudioFile>Imp_Hpy_4.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Imp_Hpy_6" ID="{4024C354-B27D-46B3-822D-FE7BFF57D77D}" Platform="Linked"/>
+												<ActiveSource Name="Imp_Hpy_4" ID="{55EDDD64-C223-46DB-A58C-9FAE0D5948F0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -3064,31 +3323,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_Nu_1" ID="{D0AED38B-2A85-4B42-B295-1573BE3B72F7}" ShortID="639848103">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Imp_Nu_1" ID="{C94FEFFE-B2A8-4594-BC8E-C5A6B0B6D582}" ShortID="647220043">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.254934210526316"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.142543859649123"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.60910087719298"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Imp_Nu_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Imp_Nu_1" ID="{C94FEFFE-B2A8-4594-BC8E-C5A6B0B6D582}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Imp_Nu_2" ID="{AEB3E2DD-BA7C-443A-998C-EB5681AE541B}" ShortID="553980472">
+										<Sound Name="Imp_Nu_1" ID="{AEB3E2DD-BA7C-443A-998C-EB5681AE541B}" ShortID="553980472">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3119,7 +3354,7 @@
 												<ActiveSource Name="Imp_Nu_2" ID="{DACADAB7-AC9B-4888-B169-6EEF7DC57D30}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Nu_3" ID="{56B41E73-D2E6-47DB-A591-E48A44C7EF21}" ShortID="596776172">
+										<Sound Name="Imp_Nu_2" ID="{56B41E73-D2E6-47DB-A591-E48A44C7EF21}" ShortID="596776172">
 											<PropertyList>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
@@ -3150,7 +3385,7 @@
 												<ActiveSource Name="Imp_Nu_3" ID="{D97A920E-85AA-4082-B581-0ADA2CAAD42B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Nu_4" ID="{9B859E2C-AD11-4D31-BEF3-AAC2F5DCF2C8}" ShortID="85332328">
+										<Sound Name="Imp_Nu_3" ID="{9B859E2C-AD11-4D31-BEF3-AAC2F5DCF2C8}" ShortID="85332328">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3181,7 +3416,7 @@
 												<ActiveSource Name="Imp_Nu_4" ID="{C79925CC-C103-418E-A3FE-3240B8796E7D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Nu_5" ID="{D80B70BF-E6D7-4FBF-9200-740C9EF91843}" ShortID="936782097">
+										<Sound Name="Imp_Neu_4" ID="{F7EEE990-FD17-407C-8162-99832CBEC77E}" ShortID="562573020">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3191,18 +3426,292 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Imp_Nu_5" ID="{7B77F26A-28FF-4287-A58F-972E894F582A}" ShortID="878323316">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.535087719298245"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.390350877192983"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.84649122807018"/>
-													</PropertyList>
+												<AudioFileSource Name="Imp_Neu_4" ID="{DB1ED015-783B-4114-A66B-6ACF5A461DDA}" ShortID="772457920">
 													<Language>SFX</Language>
-													<AudioFile>Imp_Nu_5.wav</AudioFile>
+													<AudioFile>Imp_Neu_4.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Imp_Nu_5" ID="{7B77F26A-28FF-4287-A58F-972E894F582A}" Platform="Linked"/>
+												<ActiveSource Name="Imp_Neu_4" ID="{DB1ED015-783B-4114-A66B-6ACF5A461DDA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Verry_Happy" ID="{953C6DA2-0C0D-4FDE-B237-49048AFBFB24}" ShortID="577965271">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Imp_VH_1" ID="{269510EB-9A81-4427-95C7-E6DEA7D59F5C}" ShortID="903615142">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VH_1" ID="{28B9B445-B483-4A7D-BABD-32851C3B5CED}" ShortID="705212636">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="7.12719298245614E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.054824561403509"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.257675438596491"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.36019736842105"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VH_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VH_1" ID="{28B9B445-B483-4A7D-BABD-32851C3B5CED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VH_2" ID="{2088AF67-F6F9-48E6-992A-3644C369D641}" ShortID="924686602">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VH_2" ID="{1D907E09-9540-4FA2-8591-AADF09C9ED6A}" ShortID="772477979">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.108552631578947"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.12828947368421"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.89144736842105"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VH_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VH_2" ID="{1D907E09-9540-4FA2-8591-AADF09C9ED6A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VH_3" ID="{B8F8AD90-FA3E-440F-81A2-F0D1283E2475}" ShortID="657825570">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VH_3" ID="{1763D102-40E3-43B0-AFC9-41E9AAC64C3B}" ShortID="386772719">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="3.60635964912281E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.052456140350877"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.275394736842105"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VH_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VH_3" ID="{1763D102-40E3-43B0-AFC9-41E9AAC64C3B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VH_4" ID="{19408F8E-59B5-456A-A0FB-625029633906}" ShortID="745946127">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VH_4" ID="{0BA4E050-D68B-4789-B49D-ECB76CCB18AA}" ShortID="664591045">
+													<Language>SFX</Language>
+													<AudioFile>Imp_VH_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VH_4" ID="{0BA4E050-D68B-4789-B49D-ECB76CCB18AA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Disappointed" ID="{B0F9447B-562D-4A4F-8477-759C823E7681}" ShortID="457280269">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Imp_VD_1" ID="{B9FE473C-F7F8-4306-ABBB-D688B784D5C5}" ShortID="1064850369">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VD_1(2)" ID="{9CD4DB25-9BDC-4832-AA80-6FBF39E3EC48}" ShortID="93295401">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.41228070175439E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="7.67543859649122E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.432017543859649"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.74122807017544"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VD_1(2).wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VD_1(2)" ID="{9CD4DB25-9BDC-4832-AA80-6FBF39E3EC48}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VD_3" ID="{1848D25B-00F1-4030-AEC2-26E70B9F6EFB}" ShortID="37232697">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VD_3" ID="{574B5F93-528C-4AFD-A47D-9B21CDAF5895}" ShortID="68563977">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.63157894736842E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.263157894736842"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.535087719298246"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.95175438596491"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VD_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VD_3" ID="{574B5F93-528C-4AFD-A47D-9B21CDAF5895}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VD_4" ID="{079B76FA-66C6-47B0-8BAA-7933903C70E9}" ShortID="181038333">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VD_4" ID="{EB55FE2C-8812-4F56-96B3-5B7B6DF833D9}" ShortID="578953221">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="3.28947368421053E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.279605263157895"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.95065789473684"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VD_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VD_4" ID="{EB55FE2C-8812-4F56-96B3-5B7B6DF833D9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VD_5" ID="{91B5643D-2A76-4315-B875-32EE0C72A665}" ShortID="525805273">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Imp_VD_5" ID="{BE4F9B47-CA56-4A0A-8825-ECD13AEABA87}" ShortID="185383829">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.479714912280701"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Imp_VD_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Imp_VD_5" ID="{BE4F9B47-CA56-4A0A-8825-ECD13AEABA87}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Imp_VD_2" ID="{135D1A7B-BB93-4DFC-8992-408663CE551F}" ShortID="1046585582">
+											<PropertyList>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="Narrator" ID="{1906BA7B-2F4D-41A0-BD7B-87E586A509DA}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Death_VD_4" ID="{145D959D-4CE8-4EA6-893B-EB5207FDAF06}" ShortID="320354256">
+													<Language>SFX</Language>
+													<AudioFile>Death_VD_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Death_VD_4" ID="{145D959D-4CE8-4EA6-893B-EB5207FDAF06}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -3211,7 +3720,13 @@
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
+										<ItemRef Name="Very_Disappointed" ID="{B0F9447B-562D-4A4F-8477-759C823E7681}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
 										<ItemRef Name="Happy" ID="{CD2A1F82-AC68-42A1-BC8C-5825D081470C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Verry_Happy" ID="{953C6DA2-0C0D-4FDE-B237-49048AFBFB24}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Neutral" ID="{6D4AAEDB-E7ED-4C30-829C-6E090061FF79}"/>
@@ -3224,7 +3739,7 @@
 									<Grouping>
 										<SwitchRef Name="VHappy" ID="{77ADA104-12D1-4545-B6BC-AE6125B6EFF6}"/>
 										<ItemList>
-											<ItemRef Name="Happy" ID="{CD2A1F82-AC68-42A1-BC8C-5825D081470C}"/>
+											<ItemRef Name="Verry_Happy" ID="{953C6DA2-0C0D-4FDE-B237-49048AFBFB24}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -3242,13 +3757,854 @@
 									<Grouping>
 										<SwitchRef Name="VDisappointed" ID="{722C0C97-F0A7-4E10-999E-FFE85CB26F16}"/>
 										<ItemList>
-											<ItemRef Name="Disappointed" ID="{BE3E3CE0-AAE0-4994-9694-AAAA6E2FF79D}"/>
+											<ItemRef Name="Very_Disappointed" ID="{B0F9447B-562D-4A4F-8477-759C823E7681}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
 										<SwitchRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}"/>
 										<ItemList>
 											<ItemRef Name="Neutral" ID="{6D4AAEDB-E7ED-4C30-829C-6E090061FF79}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<ActorMixer Name="Tutorial_4" ID="{241F2FD8-7459-4807-9DE8-D5371890C692}" ShortID="862562312">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Tut_Greet_3" ID="{3CAAE179-2D8D-4648-8ED0-EEFDD6266CB8}" ShortID="785186088">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Tut_Greet_3" ID="{380605A5-72BB-4463-85AF-DADC5BBD7E2E}" ShortID="723231781">
+											<Language>SFX</Language>
+											<AudioFile>Tut_Greet_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Tut_Greet_3" ID="{380605A5-72BB-4463-85AF-DADC5BBD7E2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Tutorial_5" ID="{CE3DB6CC-E670-4501-887B-A8CFC5B7A1BB}" ShortID="715417304">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Tut_Greet_4" ID="{78507E4E-9E63-40D5-8F05-E0FA4A19950E}" ShortID="754283467">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Tut_Greet_4" ID="{20E16CCE-FFB5-43F9-B405-5BC64DEF9E61}" ShortID="936695879">
+											<Language>SFX</Language>
+											<AudioFile>Tut_Greet_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Tut_Greet_4" ID="{20E16CCE-FFB5-43F9-B405-5BC64DEF9E61}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<SwitchContainer Name="Congratz" ID="{7D2CD35F-F4FD-4158-82CA-C13439269D4A}" ShortID="901475723">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}" WorkUnitID="{DE04E783-41BD-4BFD-B0CB-0B020AB68CC8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Narrator_Mood" ID="{EA300DC6-5708-46D3-8C72-447051FDB643}" WorkUnitID="{DE04E783-41BD-4BFD-B0CB-0B020AB68CC8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Very_Happy" ID="{A011E240-3F37-4A87-AB91-EB95EFED793B}" ShortID="434809573">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Congratz_VH_1" ID="{7781C23F-4385-4173-8F7E-678C497C955C}" ShortID="443205269">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VH_1" ID="{5ACD04B4-58ED-4B27-A56F-490F2AE89687}" ShortID="937534766">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.213815789473684"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.537280701754386"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.74342105263158"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VH_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VH_1" ID="{5ACD04B4-58ED-4B27-A56F-490F2AE89687}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VH_2" ID="{3273A351-9686-4098-B541-3EFDEFE4DA14}" ShortID="708620644">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VH_2" ID="{660EEDFA-658D-4538-9A8E-FE1E2FBF4321}" ShortID="583770870">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="2.30263157894737E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="4.11184210526316E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.38815789473684E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.28618421052632"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VH_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VH_2" ID="{660EEDFA-658D-4538-9A8E-FE1E2FBF4321}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VH_3" ID="{DC352486-83E4-43D4-8590-AA3B26F6E561}" ShortID="696461575">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VH_3" ID="{B751222D-F5DA-4EC7-A5C9-1A381984E3C3}" ShortID="123125061">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="8.22368421052632E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="2.13815789473684E-02"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VH_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VH_3" ID="{B751222D-F5DA-4EC7-A5C9-1A381984E3C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VH_4" ID="{B6AFF361-F92E-4F42-9950-FA634843A3F4}" ShortID="405848008">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VH_4" ID="{F011316D-6D26-4055-8DFA-4451EAD85200}" ShortID="609100086">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.31578947368425E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.161184210526316"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VH_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VH_4" ID="{F011316D-6D26-4055-8DFA-4451EAD85200}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VH_5" ID="{6C8AE849-D32A-4206-BA27-AC70339A5798}" ShortID="1030631416">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VH_5" ID="{7A2DCA67-2E74-45DF-9200-F5E700462C1A}" ShortID="500451625">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="1.09649122807018E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.228070175438597"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VH_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VH_5" ID="{7A2DCA67-2E74-45DF-9200-F5E700462C1A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Happy" ID="{66F194E1-F684-43C1-9EB5-AE0F83B86A3E}" ShortID="492846570">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Congratz_H_1" ID="{4F20FF6C-BD45-4D82-AB61-EB1197D3D179}" ShortID="868065626">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_H_1" ID="{098E71A2-10DC-4C97-B10F-30504B72FF15}" ShortID="245392080">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.449561403508772"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_H_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_H_1" ID="{098E71A2-10DC-4C97-B10F-30504B72FF15}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_H_2" ID="{ACE5B32B-8C91-4B25-9120-617CDD2DF4CE}" ShortID="55656456">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_H_2" ID="{4925D67E-F948-4C4B-8ECC-ACF229C3A07A}" ShortID="724764249">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="7.89473684210527E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.486842105263158"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.79824561403509"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_H_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_H_2" ID="{4925D67E-F948-4C4B-8ECC-ACF229C3A07A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_H_3" ID="{70D3B8EE-0B97-41BA-B5E7-DA94A9DEF3DE}" ShortID="768622531">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_H_3" ID="{78B00AEB-5890-410D-B123-51016E481752}" ShortID="904679458">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.174342105263158"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.143092105263158"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.972039473684209"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_H_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_H_3" ID="{78B00AEB-5890-410D-B123-51016E481752}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_H_4" ID="{ED05BCF0-BD2D-4C4B-ABDC-1EE6B3D2F035}" ShortID="703493009">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_H_4" ID="{8A9B24C9-5CE4-4C62-A712-28D0C7FB13B2}" ShortID="696077823">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="5.37280701754386E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="4.71491228070176E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.48245614035088E-02"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.828947368421053"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_H_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_H_4" ID="{8A9B24C9-5CE4-4C62-A712-28D0C7FB13B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_H_5" ID="{9287675A-B044-4AAC-B369-43B8190F6E2C}" ShortID="122167406">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_H_5" ID="{B4249E52-6BD9-4B63-B08A-03D26C465A24}" ShortID="135655404">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.139802631578947"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.153508771929824"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.07510964912281"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_H_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_H_5" ID="{B4249E52-6BD9-4B63-B08A-03D26C465A24}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Neutral" ID="{AEB3EF80-9389-4550-90F1-9F6AC88E3AF3}" ShortID="40588580">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Congratz_Neu_1" ID="{684626A3-1A76-4D2A-9AE4-A1E0051FEFAB}" ShortID="370497836">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Neu_1" ID="{4DF09A9C-0CDA-4A48-8328-E23F51F71620}" ShortID="416477332">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.144736842105263"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.464912280701754"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.57236842105263"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Neu_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Neu_1" ID="{4DF09A9C-0CDA-4A48-8328-E23F51F71620}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Neu_2" ID="{BFE752D2-D65B-4855-8AF5-A5AD77BE9031}" ShortID="772985960">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Neu_2" ID="{44921809-35F4-4461-88B1-60EFE7086039}" ShortID="290839033">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="7.73026315789476E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.457236842105263"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.25986842105263"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Neu_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Neu_2" ID="{44921809-35F4-4461-88B1-60EFE7086039}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Neu_3" ID="{C4DE4EA8-E923-4B20-BD28-2F64BFDA4EED}" ShortID="714770692">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Neu_3" ID="{C4A69F29-F5F4-4123-A88F-4764D9705EDA}" ShortID="1058425099">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.460526315789474"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.36019736842105"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Neu_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Neu_3" ID="{C4A69F29-F5F4-4123-A88F-4764D9705EDA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Neu_4" ID="{940D8076-89B7-4750-B490-84E4A2B24C3E}" ShortID="941071420">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Neu_4" ID="{8676FBB7-88B7-484A-9526-07B1409F5123}" ShortID="655771658">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="8.77192982456142E-03"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="5.92105263157894E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.219298245614035"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.55482456140351"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Neu_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Neu_4" ID="{8676FBB7-88B7-484A-9526-07B1409F5123}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Neu_5" ID="{E5B1FE88-BB76-470C-BB26-8A55E23AF461}" ShortID="198660246">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Neu_5" ID="{32F3CD72-0CA7-430B-A589-BD234CAA0F74}" ShortID="416873939">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.133223684210526"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.21052631578947"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Neu_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Neu_5" ID="{32F3CD72-0CA7-430B-A589-BD234CAA0F74}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dissapointed" ID="{9046195E-B30E-4871-A424-DF1C202B657E}" ShortID="36269026">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Congratz_Dis_1" ID="{FC6438CD-9794-437B-BB74-BC0A3DD57D0B}" ShortID="249551176">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Dis_1" ID="{9EE4A40A-BAE5-40E5-85FB-DE9119CD41E7}" ShortID="651664379">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.211074561403509"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Dis_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Dis_1" ID="{9EE4A40A-BAE5-40E5-85FB-DE9119CD41E7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Dis_2" ID="{24CA39B6-12D4-47A9-808B-990AD36C5791}" ShortID="303764259">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Dis_2" ID="{1B57BDA4-6943-4BC5-848F-BDEC6E923127}" ShortID="218166800">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.128837719298246"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Dis_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Dis_2" ID="{1B57BDA4-6943-4BC5-848F-BDEC6E923127}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Dis_3" ID="{C149B95A-2170-4908-8C49-7BD17B746196}" ShortID="1056215879">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Dis_3" ID="{31553013-955B-4158-893B-D25D9A98E4E0}" ShortID="577875518">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="8.22368421052631E-02"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.203947368421053"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.149671052631579"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.15131578947368"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Dis_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Dis_3" ID="{31553013-955B-4158-893B-D25D9A98E4E0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_Dis_4" ID="{D2B72459-7107-4668-B9CE-94EB70F0025D}" ShortID="1025186882">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_Dis_4" ID="{7D1CB1C1-4444-4BE5-B44A-6B44E2D7A3BB}" ShortID="818367716">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.043859649122807"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.43859649122807"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.15625"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.1655701754386"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_Dis_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_Dis_4" ID="{7D1CB1C1-4444-4BE5-B44A-6B44E2D7A3BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Very_Disappointed" ID="{D1F194A6-1BF4-42EC-84BB-22938D3E0411}" ShortID="138583515">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Congratz_VD_1" ID="{A12CE523-0B2C-4D0B-96DA-D152BBAFD6B7}" ShortID="334919562">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VD_1" ID="{9E6593FE-97BB-4FA1-AD77-609EAB65C6F8}" ShortID="857540524">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.105263157894737"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.430921052631579"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.50328947368421"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VD_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VD_1" ID="{9E6593FE-97BB-4FA1-AD77-609EAB65C6F8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VD_2" ID="{D939F86D-8AC2-4A23-B8C6-6FC36387CADC}" ShortID="729612234">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VD_2" ID="{78A01420-4C08-4F6F-90B2-CB9D9FEB29B4}" ShortID="561932729">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.356359649122807"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.449561403508772"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.99287280701754"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VD_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VD_2" ID="{78A01420-4C08-4F6F-90B2-CB9D9FEB29B4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VD_3" ID="{77687413-4838-43A6-AC0C-4D906D0F1FA1}" ShortID="764493241">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VD_3" ID="{7B074DEA-A943-4B8F-AB3D-CD12F915DA31}" ShortID="689279227">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.304276315789474"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VD_3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VD_3" ID="{7B074DEA-A943-4B8F-AB3D-CD12F915DA31}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VD_5" ID="{0BE694CD-4DC1-48D2-8435-1996B84F9B2C}" ShortID="82099542">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VD_5" ID="{42C44FAF-2CAC-4988-A85D-DFF9C1137207}" ShortID="467938584">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="5.75657894736841E-02"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.21655701754386"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VD_5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VD_5" ID="{42C44FAF-2CAC-4988-A85D-DFF9C1137207}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Congratz_VD_4(2)" ID="{8158C7A6-75DC-49F4-A322-15BECD78F93D}" ShortID="998104941">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Congratz_VD_4(2)" ID="{E8D58ACF-BA33-496A-BB9F-7BC2AC21F5A5}" ShortID="90774846">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.279046052631579"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.207916666666667"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.15029605263158"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Congratz_VD_4(2).wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Congratz_VD_4(2)" ID="{E8D58ACF-BA33-496A-BB9F-7BC2AC21F5A5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Very_Happy" ID="{A011E240-3F37-4A87-AB91-EB95EFED793B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dissapointed" ID="{9046195E-B30E-4871-A424-DF1C202B657E}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Neutral" ID="{AEB3EF80-9389-4550-90F1-9F6AC88E3AF3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Very_Disappointed" ID="{D1F194A6-1BF4-42EC-84BB-22938D3E0411}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Happy" ID="{66F194E1-F684-43C1-9EB5-AE0F83B86A3E}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="VHappy" ID="{77ADA104-12D1-4545-B6BC-AE6125B6EFF6}"/>
+										<ItemList>
+											<ItemRef Name="Very_Happy" ID="{A011E240-3F37-4A87-AB91-EB95EFED793B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Happy" ID="{6267A212-9940-4AD0-A6BC-7C59DB2A5EAA}"/>
+										<ItemList>
+											<ItemRef Name="Happy" ID="{66F194E1-F684-43C1-9EB5-AE0F83B86A3E}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+										<ItemList>
+											<ItemRef Name="Dissapointed" ID="{9046195E-B30E-4871-A424-DF1C202B657E}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="VDisappointed" ID="{722C0C97-F0A7-4E10-999E-FFE85CB26F16}"/>
+										<ItemList>
+											<ItemRef Name="Very_Disappointed" ID="{D1F194A6-1BF4-42EC-84BB-22938D3E0411}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Neutral" ID="{DCD7FDB9-A8E1-4F2C-8B03-A3553562753F}"/>
+										<ItemList>
+											<ItemRef Name="Neutral" ID="{AEB3EF80-9389-4550-90F1-9F6AC88E3AF3}"/>
 										</ItemList>
 									</Grouping>
 								</GroupingList>

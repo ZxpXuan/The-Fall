@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>51</Value>
@@ -25,7 +30,15 @@
 							</ReferenceList>
 						</AuxBus>
 						<Bus Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}"/>
-						<Bus Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}"/>
+						<Bus Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 						<AuxBus Name="Narrator" ID="{1906BA7B-2F4D-41A0-BD7B-87E586A509DA}">
 							<ReferenceList>
 								<Reference Name="Effect0">
@@ -43,6 +56,11 @@
 						</AuxBus>
 						<Bus Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<DuckingList>

@@ -423,6 +423,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -478,6 +483,76 @@ Prefab:
     - target: {fileID: 1789217160009804, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].fromRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].toRange
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[0].fromRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[0].toRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].reduceMoodBy
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: currentMood
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[2].timeTaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[2].fromRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[2].toRange
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[3].timeTaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[3].fromRange
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[3].toRange
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[3].reduceMoodBy
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178214040131814, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: timeCategoriser.Array.data[1].timeTaker
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
@@ -538,7 +613,7 @@ MonoBehaviour:
   uIManager: {fileID: 0}
   nextLevelid: 2
   ps: []
-  waitTime: 0.2
+  waitTime: 3
 --- !u!1 &1913838169
 GameObject:
   m_ObjectHideFlags: 0

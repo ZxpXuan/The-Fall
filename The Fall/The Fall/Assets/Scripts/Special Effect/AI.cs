@@ -103,8 +103,10 @@ public class AI : MonoBehaviour
 
         switch (currentMood)
         {
-
-            case Brain.MoodTypes.Disappointted:
+            case Brain.MoodTypes.VDisappointed:
+                mood = "VDisappointed";
+                break;
+            case Brain.MoodTypes.Disappointed:
                 mood = "Disappointed";
                 break;
             case Brain.MoodTypes.Neutral:
@@ -114,7 +116,9 @@ public class AI : MonoBehaviour
                 mood = "Happy";
                 break;
 
-
+            case Brain.MoodTypes.VHappy:
+                mood = "VHappy";
+                break;
         }
 
 

@@ -10,25 +10,19 @@ public class tragball : MonoBehaviour
     private Vector3 screenSpace;
     private Vector3 offset;
     private bool isDrage = false;
-    private float dis;
     public float force;
-
-    public float ballSpeed = 1;
-    public GameObject emputy;
 
     public Rigidbody ding;
     [SerializeField]
     private float speedMultiplier =1f;
     public Rigidbody ding2;
     private int abale = 1;
-    public GameObject MaxRing;
     public GameManager gm;
     public float minDistance = 2;
     private Vector3 mousePos;
+	
+    [SerializeField] float maxForceDistance=3;
 
-
-    [SerializeField]
-    public float maxForceDistance=3;
     void Start()
     {
         cam = Camera.main;
@@ -100,13 +94,16 @@ public class tragball : MonoBehaviour
                 else
                 {
                     isDrage = false;
-                }
+				}
+				Debug.DrawLine(mousePos, ding.transform.position, Color.blue);
 
-                if (Input.GetMouseButtonUp(0) && btnName == "emputy")
+				if (Input.GetMouseButtonUp(0) && btnName == "emputy")
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                    Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
+					mousePos = cam.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * screenSpace.z);
+                    Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0).normalized;
+					
                     float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
 
                     if (force > minDistance)

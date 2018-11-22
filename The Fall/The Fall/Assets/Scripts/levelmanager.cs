@@ -20,9 +20,11 @@ public class levelmanager : MonoBehaviour {
 	// Use this for initialization
 
     void Start () {
+        waitTime = 2;
+
         coroutine = WaitAndWin(waitTime);
 
-  
+
 
     }
 	

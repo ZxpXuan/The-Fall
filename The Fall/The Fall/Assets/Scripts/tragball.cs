@@ -14,7 +14,7 @@ public class tragball : MonoBehaviour
 
     public Rigidbody ding;
     [SerializeField]
-    private float speedMultiplier =1f;
+    private float speedMultiplier =3f;
     public Rigidbody ding2;
     private int abale = 1;
     public GameManager gm;
@@ -29,6 +29,7 @@ public class tragball : MonoBehaviour
         FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
         ding = FindObjectOfType<limitation>().GetComponent<Rigidbody>();
         gm = GameManager.Instance;
+        speedMultiplier = 3f;
     }
     void Update()
     {

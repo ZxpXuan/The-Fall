@@ -123,6 +123,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1414896564229944, guid: 2570150614a41bd408792caa829fc295,
     type: 2}
   m_PrefabInternal: {fileID: 2051652449}
+--- !u!120 &405745656 stripped
+LineRenderer:
+  m_PrefabParentObject: {fileID: 120122750232245332, guid: 2570150614a41bd408792caa829fc295,
+    type: 2}
+  m_PrefabInternal: {fileID: 2051652449}
 --- !u!1001 &502880559
 Prefab:
   m_ObjectHideFlags: 0
@@ -554,6 +559,29 @@ Prefab:
       propertyPath: timeCategoriser.Array.data[1].timeTaker
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114090244697714132, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: force
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114090244697714132, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: ballSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114090244697714132, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 2}
+      propertyPath: speedMultiplier
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079558614399812, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714595976136218, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 2}
   m_IsPrefabParent: 0
@@ -574,7 +602,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 1419529198}
-  tutorialOrder: []
+  tutorialOrder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tutorialAudioOrder: []
   isTutorialActive: 0
   tb: {fileID: 0}
@@ -794,7 +828,7 @@ Prefab:
     - target: {fileID: 114594262256343460, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
       propertyPath: maxDistance
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114594262256343460, guid: 2570150614a41bd408792caa829fc295,
         type: 2}
@@ -818,6 +852,55 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54536255048562068, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54536255048562068, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54536255048562068, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120122750232245332, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114577852971715146, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: angle
+      value: 135.4177
+      objectReference: {fileID: 0}
+    - target: {fileID: 114577852971715146, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: handleDir.y
+      value: 0.7019331
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383051259869728, guid: 2570150614a41bd408792caa829fc295, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23722514773165476, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594262256343460, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594262256343460, guid: 2570150614a41bd408792caa829fc295,
+        type: 2}
+      propertyPath: aimingRay
+      value: 
+      objectReference: {fileID: 405745656}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2570150614a41bd408792caa829fc295, type: 2}
   m_IsPrefabParent: 0

@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<ValueList>
-								<Value>6</Value>
+								<Value>5</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxSoundPerInstance" Type="int16">
@@ -46,6 +46,11 @@
 										<Value>-5</Value>
 									</ValueList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0">
@@ -58,6 +63,9 @@
 											</PropertyList>
 										</Effect>
 									</Custom>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 								</Reference>
 							</ReferenceList>
 						</AuxBus>

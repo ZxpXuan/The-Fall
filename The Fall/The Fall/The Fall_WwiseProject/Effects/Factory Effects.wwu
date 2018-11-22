@@ -130,8 +130,8 @@
 						</Effect>
 						<Effect Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="0.23"/>
-								<Property Name="Feedback" Type="Real32" Value="19"/>
+								<Property Name="DelayTime" Type="Real32" Value="0.32"/>
+								<Property Name="Feedback" Type="Real32" Value="45.5"/>
 								<Property Name="WetDryMix" Type="Real32" Value="20"/>
 							</PropertyList>
 						</Effect>
@@ -1730,9 +1730,12 @@
 						<Effect Name="Three_Voices" ID="{71CA20BE-8C1D-4A0C-92AF-BFCE183D5651}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 							<PropertyList>
 								<Property Name="DryLevel" Type="Real32" Value="-3"/>
+								<Property Name="Voice1FilterFrequency" Type="Real32" Value="634"/>
+								<Property Name="Voice1FilterType" Type="int32" Value="1"/>
 								<Property Name="Voice1Pitch" Type="Real32" Value="-100"/>
 								<Property Name="Voice2Enable" Type="bool" Value="True"/>
-								<Property Name="Voice2Pitch" Type="Real32" Value="100"/>
+								<Property Name="Voice2Pitch" Type="Real32" Value="-1300"/>
+								<Property Name="WindowSize" Type="int32" Value="256"/>
 							</PropertyList>
 						</Effect>
 					</ChildrenList>

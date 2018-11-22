@@ -31,6 +31,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -195,9 +196,6 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-								</Reference>
-								<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-									<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
@@ -1940,6 +1938,13 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Very_Disappointed" ID="{8D1BE3CB-42F2-494F-BFBC-0F628BB4CAAC}" ShortID="571042149">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2061,47 +2066,26 @@
 												<ActiveSource Name="Death_VD_6" ID="{7E312A5C-893E-4724-8061-91F6EADC9928}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_4" ID="{799A36E7-CBF0-457B-B84C-950107D2BAE7}" ShortID="23661701">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>-100</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UserAuxSendVolume0" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>6</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="Death_VD_4(Bleeped)" ID="{C320A40D-A6F4-4C17-BC21-A17C562F5B6C}" ShortID="246250799">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="Narrator" ID="{1906BA7B-2F4D-41A0-BD7B-87E586A509DA}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Imp_VD_2(3)" ID="{66165830-51BB-4105-B564-F9627D6F086F}" ShortID="937519351">
+												<AudioFileSource Name="Imp_VD_2(Bleeped)" ID="{D64653E8-ED98-457E-812A-6E630773D215}" ShortID="640566069">
 													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="2.63157894736842E-02"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.399122807017544"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.34106098579783E-02"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Imp_VD_2(3).wav</AudioFile>
+													<AudioFile>Imp_VD_2(Bleeped).wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Imp_VD_2(3)" ID="{66165830-51BB-4105-B564-F9627D6F086F}" Platform="Linked"/>
+												<ActiveSource Name="Imp_VD_2(Bleeped)" ID="{D64653E8-ED98-457E-812A-6E630773D215}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -4722,7 +4706,7 @@
 												<ActiveSource Name="BOunce_2" ID="{CFC47626-B8D5-4201-80FB-A6B2B0CEE0CB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_3" ID="{20BDE8E6-62CD-4F96-9FF9-FFB89320F718}" ShortID="406544567">
+										<Sound Name="Tut_1_6" ID="{20BDE8E6-62CD-4F96-9FF9-FFB89320F718}" ShortID="406544567">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4783,6 +4767,139 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Welcome_2" ID="{C521B375-1EA3-4DCE-AF41-143D2741C949}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tut_1_7" ID="{D58750DA-3A32-429D-95F3-38F0CB5CB67B}" ShortID="882593875">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Drag" ID="{C14EBD9E-C089-46CF-9AD4-75DCE85120D4}" ShortID="246904871">
+													<Language>SFX</Language>
+													<AudioFile>Drag.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Drag" ID="{C14EBD9E-C089-46CF-9AD4-75DCE85120D4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tut_1_8" ID="{3135F04E-CB3F-437B-971E-90C408D435F0}" ShortID="577561924">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lets_Start" ID="{5A78872D-B423-4F7C-8BD2-831D68E3FD62}" ShortID="406144920">
+													<Language>SFX</Language>
+													<AudioFile>Lets_Start.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Lets_Start" ID="{5A78872D-B423-4F7C-8BD2-831D68E3FD62}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tut_1_4" ID="{FA3DFD50-D696-4578-BA72-8E70F651AF83}" ShortID="95702576">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pause" ID="{F931FDA0-E81D-49D5-9BA3-95FBD622AC4B}" ShortID="919381078">
+													<Language>SFX</Language>
+													<AudioFile>Pause.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pause" ID="{F931FDA0-E81D-49D5-9BA3-95FBD622AC4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tut_1_5" ID="{182C6682-A56F-4D80-A8A5-37DEAC18C300}" ShortID="211645061">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Retry" ID="{79212ED4-A0B4-4862-B5D2-7AAEE7BF71E4}" ShortID="645943349">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="0.203399122807017"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Retry.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Retry" ID="{79212ED4-A0B4-4862-B5D2-7AAEE7BF71E4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tut_1_3" ID="{9131CF61-D105-4498-8B58-430CF721249E}" ShortID="529077961">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="This_Objective" ID="{89D1F710-E8D0-4E50-AE2A-C1D7173EF1C1}" ShortID="680595730">
+													<Language>SFX</Language>
+													<AudioFile>This_Objective.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="This_Objective" ID="{89D1F710-E8D0-4E50-AE2A-C1D7173EF1C1}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>

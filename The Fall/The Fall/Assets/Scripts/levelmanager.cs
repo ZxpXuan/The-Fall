@@ -17,6 +17,9 @@ public class levelmanager : MonoBehaviour {
 
     [SerializeField]
     public float waitTime;
+
+    [SerializeField]
+    public int gameWinID;
 	// Use this for initialization
 
     void Start () {
@@ -51,11 +54,17 @@ public class levelmanager : MonoBehaviour {
             part.Play();
 
         }
-        if (collision.collider.gameObject.tag == "ball")
+        if (collision.collider.gameObject.tag == "ball" && gameWinID != nextLevelid)
         {
             uIManager.GetComponent<AI>().setGameState(Brain.GameState.Winner);
             StartCoroutine(coroutine);
        
+        }
+
+      else  if(gameWinID == nextLevelid)
+        {
+
+            GameManager.Instance.winGame();
         }
 
     }

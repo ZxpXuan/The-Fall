@@ -274,4 +274,11 @@ public  class GameManager : MonoSingleton<GameManager> {
         sceneName = SceneManager.GetActiveScene().name;
         buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
+
+
+    public void winGame()
+    {
+
+
+    }
 }

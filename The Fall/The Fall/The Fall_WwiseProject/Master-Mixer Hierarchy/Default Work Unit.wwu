@@ -69,7 +69,7 @@
 								</Reference>
 							</ReferenceList>
 						</AuxBus>
-						<Bus Name="Voice" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}">
+						<Bus Name="Voice_Generic" ID="{DAA5656E-C96E-4347-BD5C-65D38AFD8556}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
@@ -95,6 +95,35 @@
 										<FadeInTime>1</FadeInTime>
 										<FadeOutTime>0.5</FadeOutTime>
 										<FadeCurve>FadeExp1</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
+						<Bus Name="Voice_Congratz" ID="{3A4498F3-A592-4A0E-8BF1-1EC8079090FC}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}"/>
+									<DuckingParam>
+										<Volume>-11</Volume>
+										<FadeInTime>0.5</FadeInTime>
+										<FadeOutTime>0.200000002980232</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+								<DuckItem>
+									<BusRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}"/>
+									<DuckingParam>
+										<Volume>-11</Volume>
+										<FadeInTime>0.5</FadeInTime>
+										<FadeOutTime>0.200000002980232</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
 							</DuckingList>

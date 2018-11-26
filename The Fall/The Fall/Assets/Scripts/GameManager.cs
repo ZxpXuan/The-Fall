@@ -279,6 +279,6 @@ public  class GameManager : MonoSingleton<GameManager> {
     public void winGame()
     {
 
-
+        uIManager.displayWin();
     }
 }

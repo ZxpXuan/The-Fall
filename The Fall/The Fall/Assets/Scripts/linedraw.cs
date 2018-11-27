@@ -24,6 +24,7 @@ public class linedraw : MonoBehaviour {
         maxDistance = 3;
         launchRay.positionCount = 2;
 		aimingRay.positionCount = 2;
+        able = false;
         transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 	}
 

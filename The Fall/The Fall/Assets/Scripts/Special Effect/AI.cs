@@ -72,7 +72,7 @@ public class AI : MonoBehaviour
         currentLevelTries = PlayerPrefs.GetInt("currentWorldTries", 0);
         totalWorldTries = PlayerPrefs.GetInt("totalWorldTries", 0);
         levelStartTime = Time.time;
-        print(currentGameState);
+
 
         calculateCurrentMood();
     }

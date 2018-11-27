@@ -695,6 +695,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c3b23ecb003d554e92f1b5f14452d1d, type: 2}
   m_IsPrefabParent: 0
+--- !u!198 &956579085 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198702749286920856, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 956579084}
+--- !u!198 &956579086 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198865551925202278, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 956579084}
 --- !u!114 &1052271517 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
@@ -5859,8 +5869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
   nextLevelid: 7
-  ps: []
-  waitTime: 0
+  ps:
+  - {fileID: 956579086}
+  - {fileID: 956579085}
+  waitTime: 0.5
   gameWinID: 0
 --- !u!1 &2130084705
 GameObject:

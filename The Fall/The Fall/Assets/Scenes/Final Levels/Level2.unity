@@ -333,6 +333,16 @@ Transform:
   m_PrefabParentObject: {fileID: 4644056236993118, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
     type: 2}
   m_PrefabInternal: {fileID: 374372492}
+--- !u!198 &374372494 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198702749286920856, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374372492}
+--- !u!198 &374372495 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198865551925202278, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374372492}
 --- !u!1001 &725508671
 Prefab:
   m_ObjectHideFlags: 0
@@ -5386,7 +5396,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
   nextLevelid: 3
-  ps: []
+  ps:
+  - {fileID: 374372495}
+  - {fileID: 374372494}
   waitTime: 0.3
   gameWinID: 0
 --- !u!95 &1132991359

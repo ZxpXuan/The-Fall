@@ -19313,9 +19313,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIManager: {fileID: 0}
   nextLevelid: 10
-  ps: []
+  ps:
+  - {fileID: 956579088}
+  - {fileID: 956579087}
   waitTime: 0
   gameWinID: 0
+--- !u!198 &956579087 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198702749286920856, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 956579084}
+--- !u!198 &956579088 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198865551925202278, guid: 7c3b23ecb003d554e92f1b5f14452d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 956579084}
 --- !u!1001 &957304534
 Prefab:
   m_ObjectHideFlags: 0

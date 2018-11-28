@@ -74,38 +74,42 @@ public class limitation : MonoBehaviour {
     {
 
 
+        if (collision.gameObject.layer != 10)
+        {
 
 
+            // get the point of contact (mike)
+            ContactPoint contact = collision.contacts[0];
 
-        // get the point of contact (mike)
-        ContactPoint contact = collision.contacts[0];
-
-        AkSoundEngine.PostEvent("Play_Impact", gameObject);
-
-
-
-
-        float speed = oldVelocity.magnitude;
-
-
-
-        // reflect our old velocity off the contact point's normal vector
-        Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
-
-        // assign the reflected velocity back to the rigidbody
-        Ball.velocity = reflectedVelocity.normalized * speed;
+            AkSoundEngine.PostEvent("Play_Impact", gameObject);
 
 
 
 
+            float speed = oldVelocity.magnitude;
 
-        i = i + 1;
-        Instantiate(partSystem.gameObject, transform.position, Quaternion.identity);
-        gm.updateBounces(limit - i);
-        GetComponent<FallingText>().spawnNumbers(7, limit - i);
-       // GetComponentInChildren<TextMesh>().text = "" + (limit - i);
-        //   partSystem.transform.position = transform.position;
-        //     partSystem.Play();
+
+
+            // reflect our old velocity off the contact point's normal vector
+            Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
+
+            // assign the reflected velocity back to the rigidbody
+            Ball.velocity = reflectedVelocity.normalized * speed;
+
+
+
+
+
+            i = i + 1;
+            Instantiate(partSystem.gameObject, transform.position, Quaternion.identity);
+            gm.updateBounces(limit - i);
+            GetComponent<FallingText>().spawnNumbers(7, limit - i);
+            // GetComponentInChildren<TextMesh>().text = "" + (limit - i);
+            //   partSystem.transform.position = transform.position;
+            //     partSystem.Play();
+
+        }
+
 
 
         if (collision.collider.tag == "limitadd2")

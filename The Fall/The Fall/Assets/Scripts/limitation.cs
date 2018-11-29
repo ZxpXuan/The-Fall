@@ -74,7 +74,7 @@ public class limitation : MonoBehaviour {
     {
 
 
-        if (collision.gameObject.tag != "Objective")
+        if (collision.gameObject.layer != 10)
         {
 
 

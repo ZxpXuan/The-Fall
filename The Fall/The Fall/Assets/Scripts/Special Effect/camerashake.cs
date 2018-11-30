@@ -4,7 +4,24 @@ using UnityEngine;
 
 public class camerashake : MonoBehaviour {
     private Vector3 deltaPosition = Vector3.zero; 
-    private bool cancelShake = false;  
+    private bool cancelShake = false;
+
+    static Camera _camera;
+    static Camera Camera
+    {
+        get
+        {
+            if (_camera != null)
+                return _camera;
+
+            _camera = Camera.main;
+            return _camera;
+        }
+    }
+
+    static bool shaking;
+    static Vector3 orgPosition;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +31,14 @@ public class camerashake : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void Shake()
+    {
+        print(Camera.transform.position);
+        if (!shaking)
+            orgPosition = Camera.transform.position;  //摄像机震动前的位置
+        StartCoroutine(ShakeCamera());
+    }
 
     //public void ShakeCamera()
     //{
@@ -33,21 +58,26 @@ public class camerashake : MonoBehaviour {
     {
         float t = 0;    //计时器
         float speed = 1 / shakeTime;    //震动速度
-        Vector3 orgPosition = Camera.main.transform.localPosition;  //摄像机震动前的位置
+        shaking = true;
 
         while (t < 1 && !cancelShake)
         {
+            if (_camera == null) yield break;
             t += Time.deltaTime * speed;
-            Camera.main.transform.position = orgPosition + new Vector3(Mathf.Sin(rate * t), Mathf.Cos(rate * t), 0) * Mathf.Lerp(shakeStrength, 0, t);
+            Camera.transform.position = orgPosition + new Vector3(Mathf.Sin(rate * t), Mathf.Cos(rate * t), 0) * Mathf.Lerp(shakeStrength, 0, t);
             yield return null;
         }
         cancelShake = false;
-        Camera.main.transform.position = orgPosition;      //还原摄像机位置
+        Camera.transform.position = orgPosition;      //还原摄像机位置
+        shaking = false ;
+
+        Destroy(this.gameObject);
     }
 
 	private void OnCollisionEnter(Collision collision)
 	{
-        StartCoroutine(ShakeCamera());
+        var go = new GameObject().AddComponent<camerashake>();
+        go.Shake();
 	}
-
+    
 }

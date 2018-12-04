@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<ValueList>
-								<Value>5</Value>
+								<Value>2</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxSoundPerInstance" Type="int16">
@@ -73,7 +73,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
@@ -100,13 +100,6 @@
 							</DuckingList>
 						</Bus>
 						<Bus Name="Voice_Congratz" ID="{3A4498F3-A592-4A0E-8BF1-1EC8079090FC}">
-							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<DuckingList>
 								<DuckItem>
 									<BusRef Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}"/>

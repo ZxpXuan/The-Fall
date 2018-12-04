@@ -23,7 +23,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="PortalConcept6" ID="{9EAEE816-C37D-4038-A2C5-96B5B1ABC83C}" ShortID="779053354">
+						<Sound Name="Ball_Portal_Enter" ID="{9EAEE816-C37D-4038-A2C5-96B5B1ABC83C}" ShortID="779053354">
 							<PropertyList>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -81,7 +81,7 @@
 								<ActiveSource Name="PortalConcept6" ID="{FE6444C3-AE9F-4D27-87D9-75CAFEC55140}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="AimSwellConcept" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" ShortID="597373374">
+						<Sound Name="Ball_Aim_Swell_Loop" ID="{F26FA8E8-028E-49F8-824C-2A0B1BCA1BC4}" ShortID="597373374">
 							<PropertyList>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -162,21 +162,29 @@
 								<ActiveSource Name="AimSwellConcept" ID="{D9E1193B-2FCD-45AB-8354-1D2E80980A91}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Shoot3" ID="{6A4EBCEC-5774-41A7-8BFD-55B364AEA45D}" ShortID="303112995">
+						<Sound Name="Ball_Shoot" ID="{6A4EBCEC-5774-41A7-8BFD-55B364AEA45D}" ShortID="303112995">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>26</Value>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>24</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-50</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{62BF7EC3-3FE2-4847-BA02-CA24866B50B7}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-76"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -189,7 +197,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -214,7 +222,7 @@
 								<ActiveSource Name="Shoot3" ID="{0896DF6D-76C1-4B88-9417-9B2FF0FC6F6F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Aim_Error" ID="{820B2AB8-4E3C-436B-B605-6DE6C0A4A558}" ShortID="864238053">
+						<Sound Name="Ball_Aim_Error" ID="{820B2AB8-4E3C-436B-B605-6DE6C0A4A558}" ShortID="864238053">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
@@ -334,7 +342,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Fire1" ID="{97659D51-5735-47DD-BD2B-6D482C796723}" ShortID="57699790">
+										<Sound Name="Ball_Death_Mid_1" ID="{97659D51-5735-47DD-BD2B-6D482C796723}" ShortID="57699790">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -363,7 +371,7 @@
 												<ActiveSource Name="Fire1" ID="{3077FE7B-D27C-4F65-86D5-4672FC4409C4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Fire2" ID="{55829D53-2EF8-4017-9AE1-CA02B51AECCB}" ShortID="179092159">
+										<Sound Name="Ball_Death_Mid_2" ID="{55829D53-2EF8-4017-9AE1-CA02B51AECCB}" ShortID="179092159">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -394,7 +402,7 @@
 												<ActiveSource Name="Fire2" ID="{10A9C9D5-A722-482D-B050-C32EE426ADAD}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Fire3" ID="{576CF619-1B8A-41F2-A82E-16AFF6DCF45E}" ShortID="586562233">
+										<Sound Name="Ball_Death_Mid_3" ID="{576CF619-1B8A-41F2-A82E-16AFF6DCF45E}" ShortID="586562233">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -426,7 +434,7 @@
 												<ActiveSource Name="Fire3" ID="{E07C7131-5BA7-40C9-845E-3C45D66F3713}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Fire4" ID="{71139F31-1A53-4432-AD20-594DE9A7BE65}" ShortID="129266966">
+										<Sound Name="Ball_Death_Mid_4" ID="{71139F31-1A53-4432-AD20-594DE9A7BE65}" ShortID="129266966">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -455,7 +463,7 @@
 												<ActiveSource Name="Fire4" ID="{6677E5CD-A264-4A23-B61D-532081E969F4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Fire5" ID="{B84B3106-0767-4C30-9544-1018F1DEC160}" ShortID="282371954">
+										<Sound Name="Ball_Death_Mid_5" ID="{B84B3106-0767-4C30-9544-1018F1DEC160}" ShortID="282371954">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -507,7 +515,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="thump3" ID="{0B8B96C6-CF4C-471E-9992-331FFD465502}" ShortID="810866769">
+										<Sound Name="Ball_Death_Low_3" ID="{0B8B96C6-CF4C-471E-9992-331FFD465502}" ShortID="810866769">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -526,7 +534,7 @@
 												<ActiveSource Name="thump3" ID="{CC05BFF0-8C7F-405E-A397-B17076FE98AC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="thump5" ID="{00700E4E-C514-49D8-8521-105784CB60F2}" ShortID="798278540">
+										<Sound Name="Ball_Death_Low_5" ID="{00700E4E-C514-49D8-8521-105784CB60F2}" ShortID="798278540">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -545,7 +553,7 @@
 												<ActiveSource Name="thump5" ID="{A08106ED-DD5E-4E9A-ACA1-C9CE98951CBB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="thump4" ID="{D93D41AE-4EE9-477A-8A2B-A30D2CE72169}" ShortID="98023277">
+										<Sound Name="Ball_Death_Low_4" ID="{D93D41AE-4EE9-477A-8A2B-A30D2CE72169}" ShortID="98023277">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -564,7 +572,7 @@
 												<ActiveSource Name="thump4" ID="{29995FA6-9B4E-47EC-9086-5C7211DD265D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="thump2" ID="{3CC8B7B6-6D87-4F62-95C1-24984EBCECF3}" ShortID="780049105">
+										<Sound Name="Ball_Death_Low_2" ID="{3CC8B7B6-6D87-4F62-95C1-24984EBCECF3}" ShortID="780049105">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -583,7 +591,7 @@
 												<ActiveSource Name="thump2" ID="{733F60AB-E34B-467F-95BA-B66FF6D96465}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="thump1" ID="{8DC63B2F-5782-49CC-81CC-9977B3F335A1}" ShortID="298774528">
+										<Sound Name="Ball_Death_Low_1" ID="{8DC63B2F-5782-49CC-81CC-9977B3F335A1}" ShortID="298774528">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -638,7 +646,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Glass1" ID="{68F97416-707F-483F-857F-EC881DEEE28B}" ShortID="500107320">
+										<Sound Name="Ball_Death_High_1" ID="{68F97416-707F-483F-857F-EC881DEEE28B}" ShortID="500107320">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -668,7 +676,7 @@
 												<ActiveSource Name="Glass1" ID="{69CAC479-9A16-43AA-8157-7D7E54C1A423}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass2" ID="{1A562A74-E6AD-4166-A421-1FADFEC7E03D}" ShortID="576509920">
+										<Sound Name="Ball_Death_High_2" ID="{1A562A74-E6AD-4166-A421-1FADFEC7E03D}" ShortID="576509920">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -698,7 +706,7 @@
 												<ActiveSource Name="Glass2" ID="{29753634-4FFA-405B-9732-88E90C7FEA85}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass3" ID="{39BD2038-BC80-4F91-AF85-4A54D504EBAC}" ShortID="667561240">
+										<Sound Name="Ball_Death_High_3" ID="{39BD2038-BC80-4F91-AF85-4A54D504EBAC}" ShortID="667561240">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -724,7 +732,7 @@
 												<ActiveSource Name="Glass3" ID="{EDFF0054-0AC7-4289-86C1-147C818E50C2}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass4" ID="{9F8641F1-9CD8-45A9-ACF9-377B42110865}" ShortID="277843993">
+										<Sound Name="Ball_Death_High_4" ID="{9F8641F1-9CD8-45A9-ACF9-377B42110865}" ShortID="277843993">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -750,7 +758,7 @@
 												<ActiveSource Name="Glass4" ID="{7E132B0E-AEB1-4D42-8D79-5D6C55E2E235}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass5" ID="{EDC14185-0FAB-4960-80C9-8446A509BB45}" ShortID="809125068">
+										<Sound Name="Ball_Death_High_5" ID="{EDC14185-0FAB-4960-80C9-8446A509BB45}" ShortID="809125068">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -776,7 +784,7 @@
 												<ActiveSource Name="Glass5" ID="{32C645BD-DD04-457C-94A9-8DB737A9DAF7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass6" ID="{F7030905-0988-4E86-99E5-0CD95C18E263}" ShortID="158269701">
+										<Sound Name="Ball_Death_High_6" ID="{F7030905-0988-4E86-99E5-0CD95C18E263}" ShortID="158269701">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -802,7 +810,7 @@
 												<ActiveSource Name="Glass6" ID="{9A9E739F-D755-47F3-BFC4-E2A1ED932375}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass7" ID="{E8C58483-F08A-4535-9CD3-3CA7827F90A9}" ShortID="158268921">
+										<Sound Name="Ball_Death_High_7" ID="{E8C58483-F08A-4535-9CD3-3CA7827F90A9}" ShortID="158268921">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -828,7 +836,7 @@
 												<ActiveSource Name="Glass7" ID="{FD2C1424-3E96-4EF5-9B12-942117C2EF15}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Glass9" ID="{46B00558-1E1F-45F2-8139-5EAA89722610}" ShortID="211115324">
+										<Sound Name="Ball_Death_High_8" ID="{46B00558-1E1F-45F2-8139-5EAA89722610}" ShortID="211115324">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -916,7 +924,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Voice" ID="{AC77CA75-5356-4F6F-BB88-F12255896DE3}" ShortID="382280490">
+								<RandomSequenceContainer Name="High B" ID="{AC77CA75-5356-4F6F-BB88-F12255896DE3}" ShortID="382280490">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
@@ -944,7 +952,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Voice1" ID="{9742F6DD-2F35-40C1-AE54-72C74FD43C7A}" ShortID="360469851">
+										<Sound Name="Ball_Impact_High_B_1" ID="{9742F6DD-2F35-40C1-AE54-72C74FD43C7A}" ShortID="360469851">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -970,7 +978,7 @@
 												<ActiveSource Name="Voice1" ID="{7D41D859-FF74-456E-B5E6-41698A5D7AED}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Voice2" ID="{91DBDD29-66D7-427C-A30A-2C43E0A9B88B}" ShortID="129190115">
+										<Sound Name="Ball_Impact_High_B_2" ID="{91DBDD29-66D7-427C-A30A-2C43E0A9B88B}" ShortID="129190115">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -996,7 +1004,7 @@
 												<ActiveSource Name="Voice2" ID="{D2D0A781-9342-4932-AB0B-D18B2E408469}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Voice3" ID="{034851AF-0D02-4728-AEFD-FBF96B7153C7}" ShortID="409839285">
+										<Sound Name="Ball_Impact_High_B_3" ID="{034851AF-0D02-4728-AEFD-FBF96B7153C7}" ShortID="409839285">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1022,7 +1030,7 @@
 												<ActiveSource Name="Voice3" ID="{6176A45E-9C22-46F1-B00F-39F037F9DE79}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Voice4" ID="{2DE2CDE9-5F3A-4C36-A0A3-65EB74D6C53B}" ShortID="372235103">
+										<Sound Name="Ball_Impact_High_B_4" ID="{2DE2CDE9-5F3A-4C36-A0A3-65EB74D6C53B}" ShortID="372235103">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1050,7 +1058,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Metal" ID="{D56067BE-FAE9-4F3B-8A58-3DC4FC197687}" ShortID="658855893">
+								<RandomSequenceContainer Name="Mid" ID="{D56067BE-FAE9-4F3B-8A58-3DC4FC197687}" ShortID="658855893">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
@@ -1068,7 +1076,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Metal1" ID="{5E4B0A48-A5C2-4E1C-B062-089571C4DE8F}" ShortID="651676785">
+										<Sound Name="Ball_Impact_Mid_1" ID="{5E4B0A48-A5C2-4E1C-B062-089571C4DE8F}" ShortID="651676785">
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
@@ -1104,7 +1112,7 @@
 												<ActiveSource Name="Metal1" ID="{D77195CC-7F95-4295-B23B-486FD0F47F77}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Metal2" ID="{8DBB8F7D-0CF2-44F4-88B4-781F3EE8F300}" ShortID="397160020">
+										<Sound Name="Ball_Impact_Mid_2" ID="{8DBB8F7D-0CF2-44F4-88B4-781F3EE8F300}" ShortID="397160020">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1130,7 +1138,7 @@
 												<ActiveSource Name="Metal2" ID="{2148BD15-DC80-4809-AA2A-3A99687B0C4D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Metal3" ID="{CC61FCB8-E2D1-4398-8223-F5FC473EEB71}" ShortID="804824985">
+										<Sound Name="Ball_Impact_Mid_3" ID="{CC61FCB8-E2D1-4398-8223-F5FC473EEB71}" ShortID="804824985">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1156,7 +1164,7 @@
 												<ActiveSource Name="Metal3" ID="{AE912CDB-B41B-4DCE-AA64-18B4535E56CC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Metal4" ID="{010959A7-C3DC-4F07-8332-7001E0893ED7}" ShortID="647187301">
+										<Sound Name="Ball_Impact_Mid_4" ID="{010959A7-C3DC-4F07-8332-7001E0893ED7}" ShortID="647187301">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1184,7 +1192,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Flame" ID="{E519D690-7A46-4140-A3F6-1CE43E559976}" ShortID="795341514">
+								<RandomSequenceContainer Name="Low" ID="{E519D690-7A46-4140-A3F6-1CE43E559976}" ShortID="795341514">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 									</PropertyList>
@@ -1197,7 +1205,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Flame1" ID="{EEBDD164-EEC0-42F6-AE72-16235DFDB663}" ShortID="1020337372">
+										<Sound Name="Ball_Impact_Low_1" ID="{EEBDD164-EEC0-42F6-AE72-16235DFDB663}" ShortID="1020337372">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1223,7 +1231,7 @@
 												<ActiveSource Name="Flame1" ID="{13714A15-40B3-4E6B-AC74-E80245FD6EC9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Flame2" ID="{123E4C8E-8D92-4824-8DB1-B6E4CF23B2B8}" ShortID="910228874">
+										<Sound Name="Ball_Impact_Low_2" ID="{123E4C8E-8D92-4824-8DB1-B6E4CF23B2B8}" ShortID="910228874">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1249,7 +1257,7 @@
 												<ActiveSource Name="Flame2" ID="{4737BAE8-A516-4393-9EA7-6983E0CC1139}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Flame3" ID="{332B18B8-67EF-461D-B392-8D506442B564}" ShortID="805729048">
+										<Sound Name="Ball_Impact_Low_3" ID="{332B18B8-67EF-461D-B392-8D506442B564}" ShortID="805729048">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1275,7 +1283,7 @@
 												<ActiveSource Name="Flame3" ID="{3E63CCD2-1403-4E10-9B1C-7F809171C518}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Flame4" ID="{3C7F74AC-8974-41E8-A3F8-A77C2AD99396}" ShortID="369777733">
+										<Sound Name="Ball_Impact_Low_4" ID="{3C7F74AC-8974-41E8-A3F8-A77C2AD99396}" ShortID="369777733">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1303,7 +1311,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Notes" ID="{2422CBC9-8A9C-4A98-8126-85B31E913B48}" ShortID="707093374">
+								<RandomSequenceContainer Name="High A" ID="{2422CBC9-8A9C-4A98-8126-85B31E913B48}" ShortID="707093374">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -1320,7 +1328,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Note1" ID="{AC62923A-4585-4EE4-8659-8DE079478AC6}" ShortID="395561699">
+										<Sound Name="Ball_Impact_High_A_2" ID="{AC62923A-4585-4EE4-8659-8DE079478AC6}" ShortID="395561699">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1339,7 +1347,7 @@
 												<ActiveSource Name="Note1" ID="{71236F23-9753-482E-9EDC-CA06FA6355C8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Note2" ID="{98D17047-2A2E-472F-98DF-410F822BAD63}" ShortID="1046172222">
+										<Sound Name="Ball_Impact_High_A_1" ID="{98D17047-2A2E-472F-98DF-410F822BAD63}" ShortID="1046172222">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1358,7 +1366,7 @@
 												<ActiveSource Name="Note2" ID="{5BDED0C3-16AD-440B-BF02-65D05BE6F079}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Note3" ID="{F4139F91-7F0B-4E6B-9317-F09CBD30F829}" ShortID="325862320">
+										<Sound Name="Ball_Impact_High_A_3" ID="{F4139F91-7F0B-4E6B-9317-F09CBD30F829}" ShortID="325862320">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1377,7 +1385,7 @@
 												<ActiveSource Name="Note3" ID="{CFCE8A90-86B8-4267-B1A3-F809130F456A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Note4" ID="{B3F91AAE-19D4-4875-B1ED-FC00D7E52202}" ShortID="325064430">
+										<Sound Name="Ball_Impact_High_A_4" ID="{B3F91AAE-19D4-4875-B1ED-FC00D7E52202}" ShortID="325064430">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1408,6 +1416,11 @@
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-150</Value>
 							</ValueList>
 						</Property>
 						<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -1474,7 +1487,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Death_Hpy_1" ID="{E8CFB323-0F2F-4D76-AA58-7103BD53BCFF}" ShortID="80754019">
+										<Sound Name="Nar_Death_Hpy_1" ID="{E8CFB323-0F2F-4D76-AA58-7103BD53BCFF}" ShortID="80754019">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1498,7 +1518,14 @@
 												<ActiveSource Name="Hmm" ID="{EBB409A8-4E69-45C8-AC22-D105F053FDEC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Hpy_2" ID="{3023E3DA-0F84-4EB0-8DBA-F815EC3615D4}" ShortID="428444676">
+										<Sound Name="Nar_Death_Hpy_2" ID="{3023E3DA-0F84-4EB0-8DBA-F815EC3615D4}" ShortID="428444676">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1522,7 +1549,14 @@
 												<ActiveSource Name="Oh_Dear2" ID="{74C74E8D-88A5-4F4D-8A23-3F1E90C21B94}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Hpy_3" ID="{4E58295A-6350-4511-AA0D-A37EE5FAC0E0}" ShortID="174009825">
+										<Sound Name="Nar_Death_Hpy_3" ID="{4E58295A-6350-4511-AA0D-A37EE5FAC0E0}" ShortID="174009825">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1546,7 +1580,14 @@
 												<ActiveSource Name="Sing2" ID="{F0F9FD2B-CFE2-4A49-95C1-9DC8CAB6D62A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Hpy_4" ID="{1BF0F3DC-2ABB-4002-844B-419F67D727BF}" ShortID="556807275">
+										<Sound Name="Nar_Death_Hpy_4" ID="{1BF0F3DC-2ABB-4002-844B-419F67D727BF}" ShortID="556807275">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1565,11 +1606,11 @@
 												<ActiveSource Name="Death_H_4" ID="{859B5049-4BA0-4451-B1C1-39152F29ECFC}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Hpy_5" ID="{211B7C40-A062-4054-BBA0-4BB4063F2407}" ShortID="695532976">
+										<Sound Name="Nar_Death_Hpy_5" ID="{211B7C40-A062-4054-BBA0-4BB4063F2407}" ShortID="695532976">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1591,7 +1632,14 @@
 												<ActiveSource Name="Death_H_5" ID="{B7AC03D6-6A8F-4F4C-AC17-C82301D1C52F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Hpy_6" ID="{A94F8A74-C0E8-40A3-B02C-4270B53A767D}" ShortID="324383768">
+										<Sound Name="Nar_Death_Hpy_6" ID="{A94F8A74-C0E8-40A3-B02C-4270B53A767D}" ShortID="324383768">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1625,7 +1673,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Death_Neu_1" ID="{73358F66-1333-4281-AD2D-9CB0CFB9DF39}" ShortID="390209419">
+										<Sound Name="Nar_Death_Neu_1" ID="{73358F66-1333-4281-AD2D-9CB0CFB9DF39}" ShortID="390209419">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1656,7 +1704,7 @@
 												<ActiveSource Name="C'mon" ID="{0C776AC0-759A-4CC8-BB1C-571A757CA5E8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Neu_3" ID="{3020A8E2-C4D5-4633-8506-19665675ACC4}" ShortID="551164201">
+										<Sound Name="Nar_Death_Neu_3" ID="{3020A8E2-C4D5-4633-8506-19665675ACC4}" ShortID="551164201">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1680,7 +1728,7 @@
 												<ActiveSource Name="Really_2" ID="{FDC9E267-0C96-40F4-A408-E2634550B42C}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Neu_2" ID="{78F3C078-8FF5-4B70-AA78-5B0AF1C99EDB}" ShortID="892344529">
+										<Sound Name="Nar_Death_Neu_2" ID="{78F3C078-8FF5-4B70-AA78-5B0AF1C99EDB}" ShortID="892344529">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1699,8 +1747,9 @@
 											<ChildrenList>
 												<AudioFileSource Name="Interesting2" ID="{1E02512D-E58E-4DFB-95C0-A494A2727F56}" ShortID="708777935">
 													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.28015350877193"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.510416666666667"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.52905701754386"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.88815789473684"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Interesting2.wav</AudioFile>
@@ -1710,7 +1759,7 @@
 												<ActiveSource Name="Interesting2" ID="{1E02512D-E58E-4DFB-95C0-A494A2727F56}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Neu_4" ID="{26034F1E-FA2C-4636-963D-116AB920BEE8}" ShortID="636099304">
+										<Sound Name="Nar_Death_Neu_4" ID="{26034F1E-FA2C-4636-963D-116AB920BEE8}" ShortID="636099304">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1741,7 +1790,14 @@
 												<ActiveSource Name="Death_Neu_4" ID="{D401934E-CB5C-4F4B-A33D-CECF15809264}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Neu_5" ID="{EAC1D154-F44B-4351-BD5C-1BCFAAB0EC5E}" ShortID="701435781">
+										<Sound Name="Nar_Death_Neu_5" ID="{EAC1D154-F44B-4351-BD5C-1BCFAAB0EC5E}" ShortID="701435781">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1766,7 +1822,7 @@
 												<ActiveSource Name="Death_Neu_5" ID="{86DC33FD-8E42-4447-80E2-D222F2A231E3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Neu_6" ID="{5C6ADD1D-1F85-4966-B028-ED2E30F8D927}" ShortID="357381254">
+										<Sound Name="Nar_Death_Neu_6" ID="{5C6ADD1D-1F85-4966-B028-ED2E30F8D927}" ShortID="357381254">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1810,11 +1866,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Death_Dis_1" ID="{D0E5709C-7BCB-4126-B274-A3CF81C53B8E}" ShortID="236636188">
+										<Sound Name="Nar_Death_Dis_1" ID="{D0E5709C-7BCB-4126-B274-A3CF81C53B8E}" ShortID="236636188">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1840,7 +1896,14 @@
 												<ActiveSource Name="Admire" ID="{BF10219F-3B8E-4D7B-8E8C-6C7FA353765A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Dis_2" ID="{A2C11FE6-AEEA-499E-9AF5-330ADC4B2484}" ShortID="1007245562">
+										<Sound Name="Nar_Death_Dis_2" ID="{A2C11FE6-AEEA-499E-9AF5-330ADC4B2484}" ShortID="1007245562">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1864,7 +1927,7 @@
 												<ActiveSource Name="Asked_Too_Much2" ID="{62611C33-D6EA-4B24-AE25-D6E502BA5977}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Dis_3" ID="{7245C6AA-ED45-476B-A66A-10DEE6F5C86C}" ShortID="135040541">
+										<Sound Name="Nar_Death_Dis_3" ID="{7245C6AA-ED45-476B-A66A-10DEE6F5C86C}" ShortID="135040541">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -1893,7 +1956,14 @@
 												<ActiveSource Name="I'm_Sure" ID="{2C978C49-039E-4752-B818-97FEE139CCE7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Dis_4" ID="{6C54BCC6-F960-4C9C-9435-F0A864E1A277}" ShortID="33026771">
+										<Sound Name="Nar_Death_Dis_4" ID="{6C54BCC6-F960-4C9C-9435-F0A864E1A277}" ShortID="33026771">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1916,7 +1986,14 @@
 												<ActiveSource Name="Death_Dis_4" ID="{4506D7A6-2599-4BE9-9B55-BC66F486927C}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_Dis_5" ID="{514ADE05-13D4-478D-A01B-3713CF0F622C}" ShortID="252286317">
+										<Sound Name="Nar_Death_Dis_5" ID="{514ADE05-13D4-478D-A01B-3713CF0F622C}" ShortID="252286317">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1954,7 +2031,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Death_VD_1" ID="{8EBEB155-E097-4E5C-9C93-212DA8C164E8}" ShortID="318092193">
+										<Sound Name="Nar_Death_VD_1" ID="{8EBEB155-E097-4E5C-9C93-212DA8C164E8}" ShortID="318092193">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1976,7 +2060,7 @@
 												<ActiveSource Name="Death_VD_1" ID="{525265F9-202E-4300-B4C2-BC12CB9C014E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_2" ID="{B9C073B9-0829-41BC-96A5-5B2C0F41ADD7}" ShortID="986438824">
+										<Sound Name="Nar_Death_VD_2" ID="{B9C073B9-0829-41BC-96A5-5B2C0F41ADD7}" ShortID="986438824">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -1999,7 +2083,14 @@
 												<ActiveSource Name="Death_VD_2" ID="{2BA9BC41-C077-4EE7-9ED9-D1CADE55E59E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_3" ID="{5EF0227A-F496-441B-8199-04AD22809D60}" ShortID="531856540">
+										<Sound Name="Nar_Death_VD_3" ID="{5EF0227A-F496-441B-8199-04AD22809D60}" ShortID="531856540">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2018,7 +2109,7 @@
 												<ActiveSource Name="Death_VD_3" ID="{6B43B4E3-53E9-4754-B8B3-BBC28C2424C6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_5" ID="{3581ABFD-99C0-4A05-B6CC-FDF6A67D5C22}" ShortID="833486921">
+										<Sound Name="Nar_Death_VD_5" ID="{3581ABFD-99C0-4A05-B6CC-FDF6A67D5C22}" ShortID="833486921">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2041,7 +2132,7 @@
 												<ActiveSource Name="Death_VD_5" ID="{DF5D3987-DC0A-4BD2-8F1A-5486083A9036}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_6" ID="{2DC7B309-088C-4D16-805E-785A7772D72C}" ShortID="304255483">
+										<Sound Name="Nar_Death_VD_6" ID="{2DC7B309-088C-4D16-805E-785A7772D72C}" ShortID="304255483">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2066,7 +2157,14 @@
 												<ActiveSource Name="Death_VD_6" ID="{7E312A5C-893E-4724-8061-91F6EADC9928}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VD_4(Bleeped)" ID="{C320A40D-A6F4-4C17-BC21-A17C562F5B6C}" ShortID="246250799">
+										<Sound Name="Nar_Death_VD_4(Bleeped)" ID="{C320A40D-A6F4-4C17-BC21-A17C562F5B6C}" ShortID="246250799">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2100,7 +2198,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Death_VH_1" ID="{EDE68E87-C5CD-4727-9DF8-FC1AFB18ECC2}" ShortID="184800441">
+										<Sound Name="Nar_Death_VH_1" ID="{EDE68E87-C5CD-4727-9DF8-FC1AFB18ECC2}" ShortID="184800441">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2125,7 +2230,7 @@
 												<ActiveSource Name="Death_VH_1" ID="{9B25CFCA-E5E8-437A-96C2-7C8983FD4393}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VH_2" ID="{FDBFCFBE-5B8F-4008-9B43-C86C26076DF0}" ShortID="333129300">
+										<Sound Name="Nar_Death_VH_2" ID="{FDBFCFBE-5B8F-4008-9B43-C86C26076DF0}" ShortID="333129300">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2147,7 +2252,7 @@
 												<ActiveSource Name="Death_VH_2" ID="{9184D759-9753-4CFC-A25D-F2D4CF2BE0A6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VH_3" ID="{D5B3278A-ADD1-4AE6-AB01-9532822F9765}" ShortID="348184591">
+										<Sound Name="Nar_Death_VH_3" ID="{D5B3278A-ADD1-4AE6-AB01-9532822F9765}" ShortID="348184591">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2170,7 +2275,14 @@
 												<ActiveSource Name="Death_VH_3" ID="{593AE953-AED6-4679-A6AF-F4962EA2E9B1}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VH_4" ID="{82387581-BF51-4E9F-ADC5-05F837AAA9AA}" ShortID="448361943">
+										<Sound Name="Nar_Death_VH_4" ID="{82387581-BF51-4E9F-ADC5-05F837AAA9AA}" ShortID="448361943">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2193,7 +2305,14 @@
 												<ActiveSource Name="Death_VH_4" ID="{A75A22FD-44CE-447B-860A-36BBD48723ED}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Death_VH_5" ID="{25C86BF1-F8BD-49D3-8AF2-E3E9AAE24634}" ShortID="749236059">
+										<Sound Name="Nar_Death_VH_5" ID="{25C86BF1-F8BD-49D3-8AF2-E3E9AAE24634}" ShortID="749236059">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2338,14 +2457,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Greet_Dis_1" ID="{29FB4291-7D1E-41E8-BCA8-AC36619C641C}" ShortID="604388717">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="Nar_Greet_Dis_1" ID="{29FB4291-7D1E-41E8-BCA8-AC36619C641C}" ShortID="604388717">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2368,11 +2480,11 @@
 												<ActiveSource Name="Greet_Dis_1" ID="{9E61D773-F7CA-4E62-A3C8-9D0C7B355688}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Dis_2" ID="{6B64DAC9-EAD4-46AC-9A0B-23D6304D9421}" ShortID="1065084827">
+										<Sound Name="Nar_Greet_Dis_2" ID="{6B64DAC9-EAD4-46AC-9A0B-23D6304D9421}" ShortID="1065084827">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>6</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2399,7 +2511,14 @@
 												<ActiveSource Name="Greet_Dis_2" ID="{4032240D-D09E-4AA0-8889-FF7CAD58B772}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Dis_3" ID="{6BD1BBFD-6950-499A-97B3-81E7F6A708E0}" ShortID="272894660">
+										<Sound Name="Nar_Greet_Dis_3" ID="{6BD1BBFD-6950-499A-97B3-81E7F6A708E0}" ShortID="272894660">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2434,11 +2553,6 @@
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-100</Value>
-											</ValueList>
-										</Property>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -2462,7 +2576,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Greet_Hpy_1" ID="{85C3D9D0-30FA-419B-8B2C-726BB97614FC}" ShortID="93805704">
+										<Sound Name="Nar_Greet_Hpy_1" ID="{85C3D9D0-30FA-419B-8B2C-726BB97614FC}" ShortID="93805704">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2486,7 +2600,14 @@
 												<ActiveSource Name="Greet_Hpy_1" ID="{F18038D4-43ED-4ACA-983B-BA8AD9D30C63}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Hpy_3" ID="{38ECA0B8-7831-47FA-9B5E-7F3283B7E536}" ShortID="16330645">
+										<Sound Name="Nar_Greet_Hpy_3" ID="{38ECA0B8-7831-47FA-9B5E-7F3283B7E536}" ShortID="16330645">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2509,7 +2630,7 @@
 												<ActiveSource Name="Greet_Hpy_3" ID="{85B5B698-C00C-408B-9E10-8CE747D5A090}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Hpy_2" ID="{49B33D34-62C6-452D-A64E-696D42834709}" ShortID="647742400">
+										<Sound Name="Nar_Greet_Hpy_2" ID="{49B33D34-62C6-452D-A64E-696D42834709}" ShortID="647742400">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2543,11 +2664,6 @@
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-100</Value>
-											</ValueList>
-										</Property>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
@@ -2556,6 +2672,11 @@
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2571,7 +2692,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Greet_Nu_1" ID="{1055C866-8D01-4B5C-90AA-07EA70FC1CE0}" ShortID="409727871">
+										<Sound Name="Nar_Greet_Nu_1" ID="{1055C866-8D01-4B5C-90AA-07EA70FC1CE0}" ShortID="409727871">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2595,7 +2716,14 @@
 												<ActiveSource Name="Greet_Nu_1" ID="{6D976076-756B-4E62-95A2-9B1D0CD24C37}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Nu_3" ID="{4E4A887F-013E-40F1-BA9C-98DE66AC72D7}" ShortID="924859313">
+										<Sound Name="Nar_Greet_Nu_3" ID="{4E4A887F-013E-40F1-BA9C-98DE66AC72D7}" ShortID="924859313">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2620,7 +2748,7 @@
 												<ActiveSource Name="Greet_Nu_3" ID="{9222D138-4D58-4677-A84B-2E18A4CFA6F9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greet_Nu_2" ID="{7DF433D9-5707-4616-92F2-774F6A50CAB3}" ShortID="149590966">
+										<Sound Name="Nar_Greet_Nu_2" ID="{7DF433D9-5707-4616-92F2-774F6A50CAB3}" ShortID="149590966">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2659,7 +2787,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Greetings_VH_1" ID="{E75675CD-A560-457C-BF16-522BF86F8FB2}" ShortID="657589766">
+										<Sound Name="Nar_Greetings_VH_1" ID="{E75675CD-A560-457C-BF16-522BF86F8FB2}" ShortID="657589766">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2682,7 +2817,14 @@
 												<ActiveSource Name="Greetings_VH_1" ID="{D9CF81C9-1C76-4526-BFC6-B3AA248D7DA0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greetings_VH_2" ID="{7151C126-5D55-4544-B438-50787E56FAA9}" ShortID="677908225">
+										<Sound Name="Nar_Greetings_VH_2" ID="{7151C126-5D55-4544-B438-50787E56FAA9}" ShortID="677908225">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2706,11 +2848,11 @@
 												<ActiveSource Name="Greetings_VH_2" ID="{BBD0C052-0AD7-425C-95E4-F9A1997CC486}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greetings_VH_3" ID="{7BAA6A3A-7BF5-4E34-BA1B-73E6F3FA4455}" ShortID="967615071">
+										<Sound Name="Nar_Greetings_VH_3" ID="{7BAA6A3A-7BF5-4E34-BA1B-73E6F3FA4455}" ShortID="967615071">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2752,7 +2894,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Greetings_VD_1" ID="{3CD4C33C-43A9-4099-B66A-C2C09A5E9AF4}" ShortID="660533815">
+										<Sound Name="Nar_Greetings_VD_1" ID="{3CD4C33C-43A9-4099-B66A-C2C09A5E9AF4}" ShortID="660533815">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2774,7 +2916,7 @@
 												<ActiveSource Name="Greetings_VD_1" ID="{F73B250A-14A4-4D6C-9A1E-0CA467A52A05}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greetings_VD_2" ID="{24F448E4-8D7E-4101-8C32-B1B66FDF097D}" ShortID="428705668">
+										<Sound Name="Nar_Greetings_VD_2" ID="{24F448E4-8D7E-4101-8C32-B1B66FDF097D}" ShortID="428705668">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2797,7 +2939,7 @@
 												<ActiveSource Name="Greetings_VD_2" ID="{201A569F-CF5E-46F8-BAB3-4E1C34121C78}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Greetings_VD_3" ID="{D4B75FE9-3E4F-4BA0-AD73-B2F6EBB289A1}" ShortID="549210306">
+										<Sound Name="Nar_Greetings_VD_3" ID="{D4B75FE9-3E4F-4BA0-AD73-B2F6EBB289A1}" ShortID="549210306">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2918,7 +3060,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_Dis_1" ID="{61DB5473-F00A-4C40-8C70-D29262F6D961}" ShortID="43879612">
+										<Sound Name="Nar_Imp_Dis_1" ID="{61DB5473-F00A-4C40-8C70-D29262F6D961}" ShortID="43879612">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -2949,7 +3091,7 @@
 												<ActiveSource Name="Imp_Dis_1" ID="{2148BFDD-CE10-427B-B72C-96A812B02A92}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Dis_2" ID="{84626A19-413B-4864-A602-CF1E11A7490C}" ShortID="225520325">
+										<Sound Name="Nar_Imp_Dis_2" ID="{84626A19-413B-4864-A602-CF1E11A7490C}" ShortID="225520325">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -2973,7 +3115,7 @@
 												<ActiveSource Name="Imp_Dis_2" ID="{CB52DB75-C125-401E-A2B0-6CBB59DD2468}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Dis_3" ID="{C2835546-C4E6-4220-9633-1DCB45D03374}" ShortID="121803062">
+										<Sound Name="Nar_Imp_Dis_3" ID="{C2835546-C4E6-4220-9633-1DCB45D03374}" ShortID="121803062">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3003,11 +3145,11 @@
 												<ActiveSource Name="Imp_Dis_3" ID="{5C77374A-B0C4-402E-93F0-DE2BABEA1D2D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Dis_4" ID="{7CAC806A-42B5-4457-9B2B-1EBEB57BE6F4}" ShortID="1025378560">
+										<Sound Name="Nar_Imp_Dis_4" ID="{7CAC806A-42B5-4457-9B2B-1EBEB57BE6F4}" ShortID="1025378560">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3057,7 +3199,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_Hpy_1" ID="{0304B48D-FF86-4BA6-94B8-180E7AAE7B73}" ShortID="195774340">
+										<Sound Name="Nar_Imp_Hpy_1" ID="{0304B48D-FF86-4BA6-94B8-180E7AAE7B73}" ShortID="195774340">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3081,7 +3230,7 @@
 												<ActiveSource Name="Imp_Hpy_1" ID="{2243BA48-2CAF-41B4-A903-3B6EE92F7642}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_3" ID="{0718B209-B5C8-4AC6-AFB4-B9FE31F56B53}" ShortID="984964449">
+										<Sound Name="Nar_Imp_Hpy_3" ID="{0718B209-B5C8-4AC6-AFB4-B9FE31F56B53}" ShortID="984964449">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3105,7 +3254,7 @@
 												<ActiveSource Name="Imp_Hpy_3" ID="{FFB6E452-CCFF-4ABF-91A1-EC36A7902B31}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_2" ID="{8439C503-6933-4C53-A993-DA943A314D90}" ShortID="539835409">
+										<Sound Name="Nar_Imp_Hpy_2" ID="{8439C503-6933-4C53-A993-DA943A314D90}" ShortID="539835409">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3130,7 +3279,14 @@
 												<ActiveSource Name="Imp_Hpy_5" ID="{4FE8A8F9-702C-49EC-8A98-18A93021C06D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Hpy_4" ID="{764C4C66-8C32-454A-95F1-0CA871BD3F9A}" ShortID="482394945">
+										<Sound Name="Nar_Imp_Hpy_4" ID="{764C4C66-8C32-454A-95F1-0CA871BD3F9A}" ShortID="482394945">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3183,11 +3339,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_Nu_1" ID="{AEB3E2DD-BA7C-443A-998C-EB5681AE541B}" ShortID="553980472">
+										<Sound Name="Nar_Imp_Neu_1" ID="{AEB3E2DD-BA7C-443A-998C-EB5681AE541B}" ShortID="553980472">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>-4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3214,7 +3370,7 @@
 												<ActiveSource Name="Imp_Nu_2" ID="{DACADAB7-AC9B-4888-B169-6EEF7DC57D30}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Nu_2" ID="{56B41E73-D2E6-47DB-A591-E48A44C7EF21}" ShortID="596776172">
+										<Sound Name="Nar_Imp_Neu_2" ID="{56B41E73-D2E6-47DB-A591-E48A44C7EF21}" ShortID="596776172">
 											<PropertyList>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
@@ -3246,7 +3402,7 @@
 												<ActiveSource Name="Imp_Nu_3" ID="{D97A920E-85AA-4082-B581-0ADA2CAAD42B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Nu_3" ID="{9B859E2C-AD11-4D31-BEF3-AAC2F5DCF2C8}" ShortID="85332328">
+										<Sound Name="Nar_Imp_Neu_3" ID="{9B859E2C-AD11-4D31-BEF3-AAC2F5DCF2C8}" ShortID="85332328">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3277,7 +3433,7 @@
 												<ActiveSource Name="Imp_Nu_4" ID="{C79925CC-C103-418E-A3FE-3240B8796E7D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_Neu_4" ID="{F7EEE990-FD17-407C-8162-99832CBEC77E}" ShortID="562573020">
+										<Sound Name="Nar_Imp_Neu_4" ID="{F7EEE990-FD17-407C-8162-99832CBEC77E}" ShortID="562573020">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3323,7 +3479,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_VH_1" ID="{269510EB-9A81-4427-95C7-E6DEA7D59F5C}" ShortID="903615142">
+										<Sound Name="Nar_Imp_VH_1" ID="{269510EB-9A81-4427-95C7-E6DEA7D59F5C}" ShortID="903615142">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3348,7 +3504,14 @@
 												<ActiveSource Name="Imp_VH_1" ID="{28B9B445-B483-4A7D-BABD-32851C3B5CED}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VH_2" ID="{2088AF67-F6F9-48E6-992A-3644C369D641}" ShortID="924686602">
+										<Sound Name="Nar_Imp_VH_2" ID="{2088AF67-F6F9-48E6-992A-3644C369D641}" ShortID="924686602">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3372,7 +3535,14 @@
 												<ActiveSource Name="Imp_VH_2" ID="{1D907E09-9540-4FA2-8591-AADF09C9ED6A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VH_3" ID="{B8F8AD90-FA3E-440F-81A2-F0D1283E2475}" ShortID="657825570">
+										<Sound Name="Nar_Imp_VH_3" ID="{B8F8AD90-FA3E-440F-81A2-F0D1283E2475}" ShortID="657825570">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3396,7 +3566,7 @@
 												<ActiveSource Name="Imp_VH_3" ID="{1763D102-40E3-43B0-AFC9-41E9AAC64C3B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VH_4" ID="{19408F8E-59B5-456A-A0FB-625029633906}" ShortID="745946127">
+										<Sound Name="Nar_Imp_VH_4" ID="{19408F8E-59B5-456A-A0FB-625029633906}" ShortID="745946127">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3442,7 +3612,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Imp_VD_1" ID="{B9FE473C-F7F8-4306-ABBB-D688B784D5C5}" ShortID="1064850369">
+										<Sound Name="Nar_Imp_VD_1" ID="{B9FE473C-F7F8-4306-ABBB-D688B784D5C5}" ShortID="1064850369">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3467,7 +3644,7 @@
 												<ActiveSource Name="Imp_VD_1(2)" ID="{9CD4DB25-9BDC-4832-AA80-6FBF39E3EC48}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VD_3" ID="{1848D25B-00F1-4030-AEC2-26E70B9F6EFB}" ShortID="37232697">
+										<Sound Name="Nar_Imp_VD_3" ID="{1848D25B-00F1-4030-AEC2-26E70B9F6EFB}" ShortID="37232697">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3499,7 +3676,7 @@
 												<ActiveSource Name="Imp_VD_3" ID="{574B5F93-528C-4AFD-A47D-9B21CDAF5895}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VD_4" ID="{079B76FA-66C6-47B0-8BAA-7933903C70E9}" ShortID="181038333">
+										<Sound Name="Nar_Imp_VD_4" ID="{079B76FA-66C6-47B0-8BAA-7933903C70E9}" ShortID="181038333">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3524,7 +3701,7 @@
 												<ActiveSource Name="Imp_VD_4" ID="{EB55FE2C-8812-4F56-96B3-5B7B6DF833D9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VD_5" ID="{91B5643D-2A76-4315-B875-32EE0C72A665}" ShortID="525805273">
+										<Sound Name="Nar_Imp_VD_5" ID="{91B5643D-2A76-4315-B875-32EE0C72A665}" ShortID="525805273">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3554,16 +3731,11 @@
 												<ActiveSource Name="Imp_VD_5" ID="{BE4F9B47-CA56-4A0A-8825-ECD13AEABA87}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Imp_VD_2" ID="{135D1A7B-BB93-4DFC-8992-408663CE551F}" ShortID="1046585582">
+										<Sound Name="Nar_Imp_VD_2" ID="{135D1A7B-BB93-4DFC-8992-408663CE551F}" ShortID="1046585582">
 											<PropertyList>
 												<Property Name="UserAuxSendVolume0" Type="Real64">
 													<ValueList>
 														<Value>3</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3690,11 +3862,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Congratz_VH_1" ID="{7781C23F-4385-4173-8F7E-678C497C955C}" ShortID="443205269">
+										<Sound Name="Nar_Congratz_VH_1" ID="{7781C23F-4385-4173-8F7E-678C497C955C}" ShortID="443205269">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3722,7 +3894,14 @@
 												<ActiveSource Name="Congratz_VH_1" ID="{5ACD04B4-58ED-4B27-A56F-490F2AE89687}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VH_2" ID="{3273A351-9686-4098-B541-3EFDEFE4DA14}" ShortID="708620644">
+										<Sound Name="Nar_Congratz_VH_2" ID="{3273A351-9686-4098-B541-3EFDEFE4DA14}" ShortID="708620644">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3747,7 +3926,14 @@
 												<ActiveSource Name="Congratz_VH_2" ID="{660EEDFA-658D-4538-9A8E-FE1E2FBF4321}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VH_3" ID="{DC352486-83E4-43D4-8590-AA3B26F6E561}" ShortID="696461575">
+										<Sound Name="Nar_Congratz_VH_3" ID="{DC352486-83E4-43D4-8590-AA3B26F6E561}" ShortID="696461575">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3770,7 +3956,14 @@
 												<ActiveSource Name="Congratz_VH_3" ID="{B751222D-F5DA-4EC7-A5C9-1A381984E3C3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VH_4" ID="{B6AFF361-F92E-4F42-9950-FA634843A3F4}" ShortID="405848008">
+										<Sound Name="Nar_Congratz_VH_4" ID="{B6AFF361-F92E-4F42-9950-FA634843A3F4}" ShortID="405848008">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3793,7 +3986,7 @@
 												<ActiveSource Name="Congratz_VH_4" ID="{F011316D-6D26-4055-8DFA-4451EAD85200}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VH_5" ID="{6C8AE849-D32A-4206-BA27-AC70339A5798}" ShortID="1030631416">
+										<Sound Name="Nar_Congratz_VH_5" ID="{6C8AE849-D32A-4206-BA27-AC70339A5798}" ShortID="1030631416">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3832,7 +4025,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Congratz_H_1" ID="{4F20FF6C-BD45-4D82-AB61-EB1197D3D179}" ShortID="868065626">
+										<Sound Name="Nar_Congratz_Hpy_1" ID="{4F20FF6C-BD45-4D82-AB61-EB1197D3D179}" ShortID="868065626">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3861,7 +4054,7 @@
 												<ActiveSource Name="Congratz_H_1" ID="{098E71A2-10DC-4C97-B10F-30504B72FF15}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_H_2" ID="{ACE5B32B-8C91-4B25-9120-617CDD2DF4CE}" ShortID="55656456">
+										<Sound Name="Nar_Congratz_Hpy_2" ID="{ACE5B32B-8C91-4B25-9120-617CDD2DF4CE}" ShortID="55656456">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -3892,11 +4085,11 @@
 												<ActiveSource Name="Congratz_H_2" ID="{4925D67E-F948-4C4B-8ECC-ACF229C3A07A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_H_3" ID="{70D3B8EE-0B97-41BA-B5E7-DA94A9DEF3DE}" ShortID="768622531">
+										<Sound Name="Nar_Congratz_Hpy_3" ID="{70D3B8EE-0B97-41BA-B5E7-DA94A9DEF3DE}" ShortID="768622531">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>6</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3923,7 +4116,14 @@
 												<ActiveSource Name="Congratz_H_3" ID="{78B00AEB-5890-410D-B123-51016E481752}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_H_4" ID="{ED05BCF0-BD2D-4C4B-ABDC-1EE6B3D2F035}" ShortID="703493009">
+										<Sound Name="Nar_Congratz_Hpy_4" ID="{ED05BCF0-BD2D-4C4B-ABDC-1EE6B3D2F035}" ShortID="703493009">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3948,7 +4148,14 @@
 												<ActiveSource Name="Congratz_H_4" ID="{8A9B24C9-5CE4-4C62-A712-28D0C7FB13B2}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_H_5" ID="{9287675A-B044-4AAC-B369-43B8190F6E2C}" ShortID="122167406">
+										<Sound Name="Nar_Congratz_Hpy_5" ID="{9287675A-B044-4AAC-B369-43B8190F6E2C}" ShortID="122167406">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -3988,8 +4195,13 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Congratz_Neu_1" ID="{684626A3-1A76-4D2A-9AE4-A1E0051FEFAB}" ShortID="370497836">
+										<Sound Name="Nar_Congratz_Neu_1" ID="{684626A3-1A76-4D2A-9AE4-A1E0051FEFAB}" ShortID="370497836">
 											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Weight" Type="Real64">
 													<ValueList>
 														<Value>30</Value>
@@ -4019,7 +4231,14 @@
 												<ActiveSource Name="Congratz_Neu_1" ID="{4DF09A9C-0CDA-4A48-8328-E23F51F71620}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Neu_2" ID="{BFE752D2-D65B-4855-8AF5-A5AD77BE9031}" ShortID="772985960">
+										<Sound Name="Nar_Congratz_Neu_2" ID="{BFE752D2-D65B-4855-8AF5-A5AD77BE9031}" ShortID="772985960">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4043,7 +4262,7 @@
 												<ActiveSource Name="Congratz_Neu_2" ID="{44921809-35F4-4461-88B1-60EFE7086039}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Neu_3" ID="{C4DE4EA8-E923-4B20-BD28-2F64BFDA4EED}" ShortID="714770692">
+										<Sound Name="Nar_Congratz_Neu_3" ID="{C4DE4EA8-E923-4B20-BD28-2F64BFDA4EED}" ShortID="714770692">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4066,7 +4285,14 @@
 												<ActiveSource Name="Congratz_Neu_3" ID="{C4A69F29-F5F4-4123-A88F-4764D9705EDA}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Neu_4" ID="{940D8076-89B7-4750-B490-84E4A2B24C3E}" ShortID="941071420">
+										<Sound Name="Nar_Congratz_Neu_4" ID="{940D8076-89B7-4750-B490-84E4A2B24C3E}" ShortID="941071420">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4091,7 +4317,7 @@
 												<ActiveSource Name="Congratz_Neu_4" ID="{8676FBB7-88B7-484A-9526-07B1409F5123}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Neu_5" ID="{E5B1FE88-BB76-470C-BB26-8A55E23AF461}" ShortID="198660246">
+										<Sound Name="Nar_Congratz_Neu_5" ID="{E5B1FE88-BB76-470C-BB26-8A55E23AF461}" ShortID="198660246">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4130,7 +4356,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Congratz_Dis_1" ID="{FC6438CD-9794-437B-BB74-BC0A3DD57D0B}" ShortID="249551176">
+										<Sound Name="Nar_Congratz_Dis_1" ID="{FC6438CD-9794-437B-BB74-BC0A3DD57D0B}" ShortID="249551176">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4152,7 +4378,7 @@
 												<ActiveSource Name="Congratz_Dis_1" ID="{9EE4A40A-BAE5-40E5-85FB-DE9119CD41E7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Dis_2" ID="{24CA39B6-12D4-47A9-808B-990AD36C5791}" ShortID="303764259">
+										<Sound Name="Nar_Congratz_Dis_2" ID="{24CA39B6-12D4-47A9-808B-990AD36C5791}" ShortID="303764259">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4174,7 +4400,7 @@
 												<ActiveSource Name="Congratz_Dis_2" ID="{1B57BDA4-6943-4BC5-848F-BDEC6E923127}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Dis_3" ID="{C149B95A-2170-4908-8C49-7BD17B746196}" ShortID="1056215879">
+										<Sound Name="Nar_Congratz_Dis_3" ID="{C149B95A-2170-4908-8C49-7BD17B746196}" ShortID="1056215879">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4206,7 +4432,7 @@
 												<ActiveSource Name="Congratz_Dis_3" ID="{31553013-955B-4158-893B-D25D9A98E4E0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_Dis_4" ID="{D2B72459-7107-4668-B9CE-94EB70F0025D}" ShortID="1025186882">
+										<Sound Name="Nar_Congratz_Dis_4" ID="{D2B72459-7107-4668-B9CE-94EB70F0025D}" ShortID="1025186882">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4247,7 +4473,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Congratz_VD_1" ID="{A12CE523-0B2C-4D0B-96DA-D152BBAFD6B7}" ShortID="334919562">
+										<Sound Name="Nar_Congratz_VD_1" ID="{A12CE523-0B2C-4D0B-96DA-D152BBAFD6B7}" ShortID="334919562">
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
 													<ValueList>
@@ -4278,7 +4504,14 @@
 												<ActiveSource Name="Congratz_VD_1" ID="{9E6593FE-97BB-4FA1-AD77-609EAB65C6F8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VD_2" ID="{D939F86D-8AC2-4A23-B8C6-6FC36387CADC}" ShortID="729612234">
+										<Sound Name="Nar_Congratz_VD_2" ID="{D939F86D-8AC2-4A23-B8C6-6FC36387CADC}" ShortID="729612234">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4302,7 +4535,14 @@
 												<ActiveSource Name="Congratz_VD_2" ID="{78A01420-4C08-4F6F-90B2-CB9D9FEB29B4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VD_3" ID="{77687413-4838-43A6-AC0C-4D906D0F1FA1}" ShortID="764493241">
+										<Sound Name="Nar_Congratz_VD_3" ID="{77687413-4838-43A6-AC0C-4D906D0F1FA1}" ShortID="764493241">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4324,7 +4564,14 @@
 												<ActiveSource Name="Congratz_VD_3" ID="{7B074DEA-A943-4B8F-AB3D-CD12F915DA31}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VD_5" ID="{0BE694CD-4DC1-48D2-8435-1996B84F9B2C}" ShortID="82099542">
+										<Sound Name="Nar_Congratz_VD_5" ID="{0BE694CD-4DC1-48D2-8435-1996B84F9B2C}" ShortID="82099542">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -4347,11 +4594,11 @@
 												<ActiveSource Name="Congratz_VD_5" ID="{42C44FAF-2CAC-4988-A85D-DFF9C1137207}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Congratz_VD_4(2)" ID="{8158C7A6-75DC-49F4-A322-15BECD78F93D}" ShortID="998104941">
+										<Sound Name="Nar_Congratz_VD_4" ID="{8158C7A6-75DC-49F4-A322-15BECD78F93D}" ShortID="998104941">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-4</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4435,7 +4682,7 @@
 						</SwitchContainer>
 						<Folder Name="Tutorials" ID="{745EC880-5B02-48AB-BD80-F50E1F7B0225}" ShortID="194829516">
 							<ChildrenList>
-								<ActorMixer Name="Tutorial_4" ID="{241F2FD8-7459-4807-9DE8-D5371890C692}" ShortID="862562312">
+								<ActorMixer Name="Nar_Tutorial_4" ID="{241F2FD8-7459-4807-9DE8-D5371890C692}" ShortID="862562312">
 									<PropertyList>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -4455,7 +4702,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Tut_Greet_3" ID="{3CAAE179-2D8D-4648-8ED0-EEFDD6266CB8}" ShortID="785186088">
+										<Sound Name="Nar_Tut_4" ID="{3CAAE179-2D8D-4648-8ED0-EEFDD6266CB8}" ShortID="785186088">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4489,7 +4736,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="Tutorial_5" ID="{CE3DB6CC-E670-4501-887B-A8CFC5B7A1BB}" ShortID="715417304">
+								<ActorMixer Name="Nar_Tutorial_5" ID="{CE3DB6CC-E670-4501-887B-A8CFC5B7A1BB}" ShortID="715417304">
 									<PropertyList>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -4509,7 +4756,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Tut_Greet_4" ID="{78507E4E-9E63-40D5-8F05-E0FA4A19950E}" ShortID="754283467">
+										<Sound Name="Nar_Tut_5" ID="{78507E4E-9E63-40D5-8F05-E0FA4A19950E}" ShortID="754283467">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4542,7 +4789,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="Tutorial_3" ID="{BC9E9B75-B72F-4B8F-8F6F-239C26F048B4}" ShortID="107823698">
+								<ActorMixer Name="Nar_Tutorial_3" ID="{BC9E9B75-B72F-4B8F-8F6F-239C26F048B4}" ShortID="107823698">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -4567,7 +4814,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="New_Ooh_Portals" ID="{2193D739-FA0F-41E3-8769-5627C83E8A97}" ShortID="757704026">
+										<Sound Name="Nar_Tut_3" ID="{2193D739-FA0F-41E3-8769-5627C83E8A97}" ShortID="757704026">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4600,7 +4847,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="Tutorial_2" ID="{F7399659-D39D-4A90-A529-B9F2AC74BF5C}" ShortID="963413110">
+								<ActorMixer Name="Nar_Tutorial_2" ID="{F7399659-D39D-4A90-A529-B9F2AC74BF5C}" ShortID="963413110">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -4625,7 +4872,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="New_Moving_Obj" ID="{84497FC5-F820-4F67-A25F-CF9D77485744}" ShortID="835431346">
+										<Sound Name="Nar_Tut_2" ID="{84497FC5-F820-4F67-A25F-CF9D77485744}" ShortID="835431346">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4658,7 +4905,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="Tutorial_1" ID="{1346676D-7808-451D-84D6-674AEEE459E7}" ShortID="392103050">
+								<ActorMixer Name="Nar_Tutorial_1" ID="{1346676D-7808-451D-84D6-674AEEE459E7}" ShortID="392103050">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
@@ -4683,7 +4930,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Tut_1_2" ID="{12AA4059-8103-44F9-98C3-F4B071A19B6C}" ShortID="126360845">
+										<Sound Name="Nar_Tut_1_2" ID="{12AA4059-8103-44F9-98C3-F4B071A19B6C}" ShortID="126360845">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4714,7 +4961,7 @@
 												<ActiveSource Name="BOunce_2" ID="{CFC47626-B8D5-4201-80FB-A6B2B0CEE0CB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_6" ID="{20BDE8E6-62CD-4F96-9FF9-FFB89320F718}" ShortID="406544567">
+										<Sound Name="Nar_Tut_1_6" ID="{20BDE8E6-62CD-4F96-9FF9-FFB89320F718}" ShortID="406544567">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4745,7 +4992,7 @@
 												<ActiveSource Name="To_Shoot2" ID="{502FDB13-0CCF-48E6-92A2-02DC3B583555}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_1" ID="{04BE8D23-9C61-4594-8A18-A25722A2ECD5}" ShortID="332384676">
+										<Sound Name="Nar_Tut_1_1" ID="{04BE8D23-9C61-4594-8A18-A25722A2ECD5}" ShortID="332384676">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4777,7 +5024,7 @@
 												<ActiveSource Name="Welcome_2" ID="{C521B375-1EA3-4DCE-AF41-143D2741C949}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_7" ID="{D58750DA-3A32-429D-95F3-38F0CB5CB67B}" ShortID="882593875">
+										<Sound Name="Nar_Tut_1_7" ID="{D58750DA-3A32-429D-95F3-38F0CB5CB67B}" ShortID="882593875">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4803,7 +5050,7 @@
 												<ActiveSource Name="Drag" ID="{C14EBD9E-C089-46CF-9AD4-75DCE85120D4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_8" ID="{3135F04E-CB3F-437B-971E-90C408D435F0}" ShortID="577561924">
+										<Sound Name="Nar_Tut_1_8" ID="{3135F04E-CB3F-437B-971E-90C408D435F0}" ShortID="577561924">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4829,7 +5076,7 @@
 												<ActiveSource Name="Lets_Start" ID="{5A78872D-B423-4F7C-8BD2-831D68E3FD62}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_4" ID="{FA3DFD50-D696-4578-BA72-8E70F651AF83}" ShortID="95702576">
+										<Sound Name="Nar_Tut_1_4" ID="{FA3DFD50-D696-4578-BA72-8E70F651AF83}" ShortID="95702576">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4855,7 +5102,7 @@
 												<ActiveSource Name="Pause" ID="{F931FDA0-E81D-49D5-9BA3-95FBD622AC4B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_5" ID="{182C6682-A56F-4D80-A8A5-37DEAC18C300}" ShortID="211645061">
+										<Sound Name="Nar_Tut_1_5" ID="{182C6682-A56F-4D80-A8A5-37DEAC18C300}" ShortID="211645061">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -4884,7 +5131,7 @@
 												<ActiveSource Name="Retry" ID="{79212ED4-A0B4-4862-B5D2-7AAEE7BF71E4}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Tut_1_3" ID="{9131CF61-D105-4498-8B58-430CF721249E}" ShortID="529077961">
+										<Sound Name="Nar_Tut_1_3" ID="{9131CF61-D105-4498-8B58-430CF721249E}" ShortID="529077961">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -5038,7 +5285,7 @@
 								<ActiveSource Name="UI_hover" ID="{BFEA38BC-45BC-4464-B44F-308C50113C8C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{928A009B-4AB1-4A41-B2EF-B50247352FCF}" ShortID="643226230">
+						<Sound Name="UI_Menu_2_Game" ID="{928A009B-4AB1-4A41-B2EF-B50247352FCF}" ShortID="643226230">
 							<PropertyList>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
@@ -5082,7 +5329,7 @@
 								<ActiveSource Name="Fall_Menu1_Sting_BitCrushed_Faded" ID="{02AE88C4-565E-4A84-A2BE-58661FD588FF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Fall_Sting_1" ID="{30561DA6-EAE3-4ED0-AE31-79EC1094BBE1}" ShortID="367132081">
+						<Sound Name="UI_Fall_Sting_1" ID="{30561DA6-EAE3-4ED0-AE31-79EC1094BBE1}" ShortID="367132081">
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -5129,47 +5376,6 @@
 								<ActiveSource Name="FallMainSting2-03" ID="{1858C250-CDCA-4E75-8E40-76E2CC08E6D2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="The_Fall_Music_Menu(Compressed)" ID="{2C443113-E949-41AD-A6F6-27F363AA9718}" ShortID="42762130">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{FBEA5112-0EAE-474D-9691-00ACD9F1B3D0}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="The_Fall_Music_Menu(Compressed)" ID="{9AF3F10D-AB19-4E2C-AFAC-81F64B41A0D1}" ShortID="352323340">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.28853556947798E-03"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.8963116242201E-03"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>The_Fall_Music_Menu(Compressed).wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="The_Fall_Music_Menu(Compressed)" ID="{9AF3F10D-AB19-4E2C-AFAC-81F64B41A0D1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Level_Elements" ID="{83BAD0CF-DCA6-4B65-83B8-93D22EF86076}" ShortID="940490562">
@@ -5182,7 +5388,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Trigger" ID="{4D74C091-7F80-4FB7-A5CF-1C808F9962A7}" ShortID="653153557">
+						<Sound Name="LE_Trigger" ID="{4D74C091-7F80-4FB7-A5CF-1C808F9962A7}" ShortID="653153557">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
@@ -5226,7 +5432,7 @@
 								<ActiveSource Name="Trigger" ID="{CCD0D137-9CB4-4822-ABA4-6FDAB463A9B2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="PortalStatic1" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" ShortID="128572403">
+						<Sound Name="LE_Portal_Static_Loop" ID="{887A6E3B-809A-487B-A732-DD964A1BA9EC}" ShortID="128572403">
 							<PropertyList>
 								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -5234,6 +5440,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -5251,6 +5458,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-9</Value>
@@ -5264,14 +5476,17 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="PortalStatic1" ID="{CA94EEDA-31C6-455A-BB5C-5DE9B6FBEDF5}" ShortID="1057195292">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.137948830409357"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.163814236111111"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.21554504751462"/>
-										<Property Name="TrimEnd" Type="Real64" Value="4.28503554459064"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.21567406798246"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.1554504751462"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.33676635599415"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>PortalStatic1.wav</AudioFile>
@@ -5281,7 +5496,7 @@
 								<ActiveSource Name="PortalStatic1" ID="{CA94EEDA-31C6-455A-BB5C-5DE9B6FBEDF5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="GoalStatic" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" ShortID="764354558">
+						<Sound Name="LE_Goal_Static_Loop" ID="{78D02A1F-3B71-4A6F-A249-A059C5C3BEDB}" ShortID="764354558">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
@@ -5299,6 +5514,7 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-230</Value>
@@ -5310,9 +5526,14 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -5323,13 +5544,16 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
 								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="GoalStatic" ID="{F021A860-C331-4A88-A426-5E7A09C40F80}" ShortID="1063548857">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.228800986842105"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.51681085526316"/>
-										<Property Name="TrimEnd" Type="Real64" Value="4.18378947368421"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.373040213702982"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.67168645765648"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.22263815789473"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>GoalStatic.wav</AudioFile>
@@ -5347,7 +5571,7 @@
 								<ActiveSource Name="GoalStatic" ID="{F021A860-C331-4A88-A426-5E7A09C40F80}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Complete2-02" ID="{CF851CF9-1415-4541-91C5-3D1D23830892}" ShortID="567702968">
+						<Sound Name="LE_Goal_Hit" ID="{CF851CF9-1415-4541-91C5-3D1D23830892}" ShortID="567702968">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -5426,7 +5650,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="High_ap_1" ID="{EB780443-9FB9-402D-925A-CC6C3DEA99E8}" ShortID="610447868">
+										<Sound Name="LE_WA_High_1" ID="{EB780443-9FB9-402D-925A-CC6C3DEA99E8}" ShortID="610447868">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5450,7 +5674,7 @@
 												<ActiveSource Name="High_ap_1" ID="{CCB342C4-E87C-445E-B664-767ADA4EA717}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High_ap_2" ID="{DF025266-D199-4C0F-AFAD-A8A6F2DADBE8}" ShortID="799923490">
+										<Sound Name="LE_WA_High_2" ID="{DF025266-D199-4C0F-AFAD-A8A6F2DADBE8}" ShortID="799923490">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5474,7 +5698,7 @@
 												<ActiveSource Name="High_ap_2" ID="{9DC07ECE-46AD-4D3D-9678-BC2AEDF95050}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High_ap_3" ID="{C01F530E-F8E5-488C-AF38-FBA248FEC43E}" ShortID="88205665">
+										<Sound Name="LE_WA_High_3" ID="{C01F530E-F8E5-488C-AF38-FBA248FEC43E}" ShortID="88205665">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5498,7 +5722,7 @@
 												<ActiveSource Name="High_ap_3" ID="{A1399C53-20D6-4927-A0E2-FCB83594C554}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High_ap_4" ID="{9FE54B09-3E39-41F2-A83B-991981FE1D7A}" ShortID="180595141">
+										<Sound Name="LE_WA_High_4" ID="{9FE54B09-3E39-41F2-A83B-991981FE1D7A}" ShortID="180595141">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5580,7 +5804,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="High1" ID="{747E1D66-5FBA-4B06-A71C-295A2FE993F0}" ShortID="147197518">
+										<Sound Name="LE_WD_High_1" ID="{747E1D66-5FBA-4B06-A71C-295A2FE993F0}" ShortID="147197518">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5599,7 +5823,7 @@
 												<ActiveSource Name="High1" ID="{6C57B394-C2D3-48AB-8FCA-756A12E3F2B1}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High2" ID="{E729A449-2076-472D-BDA0-027FE8141B57}" ShortID="236495768">
+										<Sound Name="LE_WD_High_2" ID="{E729A449-2076-472D-BDA0-027FE8141B57}" ShortID="236495768">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5618,7 +5842,7 @@
 												<ActiveSource Name="High2" ID="{5F5FEAB2-1CEB-41F1-8AEF-5FE29A02F612}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High3" ID="{7E8B31F3-B5B8-4CE2-8698-90B2E9975296}" ShortID="66347641">
+										<Sound Name="LE_WD_High_3" ID="{7E8B31F3-B5B8-4CE2-8698-90B2E9975296}" ShortID="66347641">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5637,7 +5861,7 @@
 												<ActiveSource Name="High3" ID="{7BE3AE70-21B6-4442-BFFC-B84C2DFC7254}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="High4" ID="{44DA79B8-776D-4389-BE14-2AF966C4E518}" ShortID="286484085">
+										<Sound Name="LE_WD_High_4" ID="{44DA79B8-776D-4389-BE14-2AF966C4E518}" ShortID="286484085">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5681,7 +5905,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Low1" ID="{AF34B2ED-0BB7-49DD-96FE-180C7C73236F}" ShortID="255916129">
+										<Sound Name="LE_WD_Low_1" ID="{AF34B2ED-0BB7-49DD-96FE-180C7C73236F}" ShortID="255916129">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5705,7 +5929,7 @@
 												<ActiveSource Name="Low1" ID="{F9BA3BE8-D207-42BF-B3C5-8E0D70D666D5}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Low2" ID="{75AC8C85-CE01-4B2A-833A-F26D7956D530}" ShortID="632911235">
+										<Sound Name="LE_WD_Low_2" ID="{75AC8C85-CE01-4B2A-833A-F26D7956D530}" ShortID="632911235">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5728,7 +5952,7 @@
 												<ActiveSource Name="Low2" ID="{E416419C-341B-4229-B1B9-599DEE50E3AD}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Low3" ID="{B791C092-7040-42DC-B87B-325F884B955C}" ShortID="6642662">
+										<Sound Name="LE_WD_Low_3" ID="{B791C092-7040-42DC-B87B-325F884B955C}" ShortID="6642662">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5751,7 +5975,7 @@
 												<ActiveSource Name="Low3" ID="{EBAB7484-D7F7-4ADA-9F37-260E000DE1F9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Low4" ID="{E5DF54B6-A8AA-46E3-9A0D-4DC6F6E4BCB2}" ShortID="876289243">
+										<Sound Name="LE_WD_Low_4" ID="{E5DF54B6-A8AA-46E3-9A0D-4DC6F6E4BCB2}" ShortID="876289243">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
@@ -5778,6 +6002,71 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</BlendContainer>
+						<Sound Name="LE_Portal_Opening" ID="{050EA65E-C537-46A8-9632-42D231DF6420}" ShortID="1015081152">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-100</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E605C411-9AC6-49CA-ABBC-F923CCCC8918}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3439241A-D2CF-4BFA-9EA4-D5E366F39E4B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{5E12D373-ABFC-4190-AF60-30FA44B51403}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Level_Reverb" ID="{5668205A-DB73-4EB9-BFE4-0265865BF96F}" WorkUnitID="{BD6A52E5-ECDE-4B86-872B-A3465B0433F2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="PortalConcept6" ID="{ECC3AA3D-C1D9-49A8-AF67-D3511FD47855}" ShortID="157507196">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.90149853801169E-03"/>
+										<Property Name="TrimBegin" Type="Real64" Value="9.66209795321637E-03"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>SFX\PortalConcept6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="PortalConcept6" ID="{ECC3AA3D-C1D9-49A8-AF67-D3511FD47855}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

@@ -34,7 +34,6 @@ public class camerashake : MonoBehaviour {
 
     public void Shake()
     {
-        print(Camera.transform.position);
         if (!shaking)
             orgPosition = Camera.transform.position;  //摄像机震动前的位置
         StartCoroutine(ShakeCamera());

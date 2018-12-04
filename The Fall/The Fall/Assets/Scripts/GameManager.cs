@@ -72,7 +72,8 @@ public  class GameManager : MonoSingleton<GameManager> {
 
                 GetComponent<TutorialManager>().enabled = false;
             }
-            PlayerPrefs.SetInt("currentLevelTries", PlayerPrefs.GetInt("currentLevelTries",0)+1);
+            PlayerPrefs.SetInt("currentLevelTries", PlayerPrefs.GetInt("currentLevelTries", 0) + 1 );
+
 
             // //foreach (Animator anima in objectToDisable)
             // {
@@ -126,31 +127,9 @@ public  class GameManager : MonoSingleton<GameManager> {
 	// Update is called once per frame
 	void Update () {
 
-        if (Time.timeScale == 0)
-        {
-            pau = 1;
-        }
+       
 
-        if (Time.timeScale == 1)
-        {
-            pau = 0;
-        }
-
-
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            Cursor.visible = true;
-
-        }
-
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-            
-            Time.timeScale = pau;
-               /// paused = true;
-
-            }
+        
 
 
 
@@ -166,21 +145,6 @@ public  class GameManager : MonoSingleton<GameManager> {
 
 
 
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-
-            SceneManager.LoadScene(0);
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-
-            SceneManager.LoadScene(1);
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-
-            SceneManager.LoadScene(2);
-        }
         if (Input.GetMouseButtonDown(1))
             {
                 doRestart();
@@ -267,7 +231,7 @@ public  class GameManager : MonoSingleton<GameManager> {
                 break;
         }
    
-        print("nextt");
+
       //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 

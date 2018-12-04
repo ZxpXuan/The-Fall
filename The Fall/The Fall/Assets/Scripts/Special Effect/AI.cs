@@ -61,9 +61,7 @@ public class AI : MonoBehaviour
 
     public bool enableTimeTracking;
 
-
-    [SerializeField]
-    public Text printer;
+   
     // Use this for initialization
     void Start()
     {
@@ -147,11 +145,9 @@ public class AI : MonoBehaviour
 
             if (ds.stateType == currentGameState)
             {
-                int random = Random.Range(0, ds.dialogue.Count);
-                print(ds.dialogue[random]);
                 AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
                 AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
-             //   printer.text = "Speaking-" + ds.dialogue[0] + " \nMood- " + mood;
+             
 
                 break;
             }

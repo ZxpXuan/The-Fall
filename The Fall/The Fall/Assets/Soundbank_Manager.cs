@@ -75,7 +75,7 @@ public class Soundbank_Manager : MonoBehaviour
 
         ChangeMusic();
 
-        Debug.Log("level" + getCurrentLevel);
+
     }
 
 
@@ -102,7 +102,7 @@ public class Soundbank_Manager : MonoBehaviour
         getCurrentLevel = level;
         ChangeMusic();
         AkSoundEngine.PostEvent("Start_Music", gameObject);
-        print(level);
+     //   print(level);
 
 
     }
@@ -134,37 +134,37 @@ public class Soundbank_Manager : MonoBehaviour
         if (getCurrentLevel == 2)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
-            print("Easy_Switch");
+        //    print("Easy_Switch");
         }
          
         if (getCurrentLevel == 4 || getCurrentLevel == 5)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Medium", gameObject);
-            print("Med_Switch");
+        //    print("Med_Switch");
         }
 
         if (getCurrentLevel == 6 || getCurrentLevel == 7)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Hard", gameObject);
-            print("hardswitch");
+        //    print("hardswitch");
         }
 
         if (getCurrentLevel == 8 || getCurrentLevel == 9 || getCurrentLevel == 10)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
-               print("secondeasyswitch");
+         //      print("secondeasyswitch");
         }
 
         if (getCurrentLevel == 11 || getCurrentLevel == 12 || getCurrentLevel == 13)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject); //secondmed
-               print("secondmedswitch");
+        //       print("secondmedswitch");
         }
 
         if (getCurrentLevel == 14 || getCurrentLevel == 15 || getCurrentLevel == 16 || getCurrentLevel > 16)
         {
             AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
-            print("secondHardSwitch");
+       //     print("secondHardSwitch");
         }
 
         if (getCurrentLevel > 16)

@@ -34,10 +34,15 @@ public  class GameManager : MonoSingleton<GameManager> {
     public bool hasBallBeenShot;
 
     public List<Vector3> contactPoints;
+
+    public AI ai;
     // Use this for initialization
     
     private void Awake()
     {
+
+        ai = GetComponent<AI>();
+
 
         levelmanager[] lm = FindObjectsOfType<levelmanager>();
 
@@ -51,6 +56,7 @@ public  class GameManager : MonoSingleton<GameManager> {
         lim = FindObjectOfType<limitation>();
         currentWorldTries = 0;
         hasBallBeenShot = false;
+
         if (PlayerPrefs.GetInt("start_type", 99) == 0)
         {
             Animator[] anim= FindObjectsOfType<Animator>();
@@ -61,12 +67,18 @@ public  class GameManager : MonoSingleton<GameManager> {
 
                 i++;
             }
+            if (GetComponent<TutorialManager>() != null)
+            {
 
-           // //foreach (Animator anima in objectToDisable)
-           // {
-               // anima.enabled = false;
+                GetComponent<TutorialManager>().enabled = false;
+            }
+            PlayerPrefs.SetInt("currentLevelTries", PlayerPrefs.GetInt("currentLevelTries",0)+1);
 
-          //  }
+            // //foreach (Animator anima in objectToDisable)
+            // {
+            // anima.enabled = false;
+
+            //  }
             if (PlayerPrefs.GetInt("hasBallBeenShot", 0) == 1)
             {
                 LineRenderer lr = GetComponent<LineRenderer>();
@@ -88,9 +100,9 @@ public  class GameManager : MonoSingleton<GameManager> {
         }
         else
         {
-     //       GetComponent<AI>().justSetState(Brain.GameState.Start);
+            //       GetComponent<AI>().justSetState(Brain.GameState.Start);
 
-
+            PlayerPrefs.SetInt("currentLevelTries", 0);
         }
     }
     void Start () {
@@ -235,10 +247,29 @@ public  class GameManager : MonoSingleton<GameManager> {
         getScene();
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("hasBallBeenShot", 0);
+        switch (ai.currentMood)
+        {
+            case Brain.MoodTypes.VDisappointed:
+                PlayerPrefs.SetInt("AIMood",0);
+                break;
+            case Brain.MoodTypes.Disappointed:
+                PlayerPrefs.SetInt("AIMood", 1);
+                break;
+            case Brain.MoodTypes.Neutral:
+                PlayerPrefs.SetInt("AIMood", 2);
+                break;
+            case Brain.MoodTypes.Happy:
+                PlayerPrefs.SetInt("AIMood", 3);
+                break;
+
+            case Brain.MoodTypes.VHappy:
+                PlayerPrefs.SetInt("AIMood", 4);
+                break;
+        }
+   
         print("nextt");
       //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
-
 
     }
 

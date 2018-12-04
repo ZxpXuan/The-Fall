@@ -19,8 +19,8 @@ public class AI : MonoBehaviour
     [System.Serializable]
     public class TriesCategoriser
     {
-        public Brain.MoodTypes moodTypes;
-
+       // public Brain.MoodTypes moodTypes;
+        public int changeMoodBy;
         public float fromRange;
         public float toRange;
 
@@ -69,10 +69,30 @@ public class AI : MonoBehaviour
     {
         enableTimeTracking = true;
         //switch(PlayerPrefs.GetInt("brainMood", 0))
-        currentLevelTries = PlayerPrefs.GetInt("currentWorldTries", 0);
+        currentLevelTries = PlayerPrefs.GetInt("currentLevelTries", 0);
         totalWorldTries = PlayerPrefs.GetInt("totalWorldTries", 0);
         levelStartTime = Time.time;
 
+        switch (PlayerPrefs.GetInt("AIMood", 2))
+        {
+            case 0:
+                currentMood = Brain.MoodTypes.VDisappointed;
+                break;
+            case 1:
+                currentMood = Brain.MoodTypes.Disappointed;
+                break;
+            case 2:
+                currentMood = Brain.MoodTypes.Neutral;
+                break;
+            case 3:
+                currentMood = Brain.MoodTypes.Happy;
+                break;
+
+            case 4:
+                currentMood = Brain.MoodTypes.VHappy;
+                break;
+        }
+    
 
         calculateCurrentMood();
     }
@@ -146,7 +166,7 @@ public class AI : MonoBehaviour
 
             if (cat.fromRange <= currentLevelTries && cat.toRange >= currentLevelTries)
             {
-                currentMood = cat.moodTypes;
+                currentMood += cat.changeMoodBy;
                 break;
             }
 

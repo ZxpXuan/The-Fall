@@ -57,7 +57,8 @@ public class levelmanager : MonoBehaviour {
         if (collision.collider.gameObject.tag == "ball" && gameWinID != nextLevelid)
         {
             uIManager.GetComponent<AI>().setGameState(Brain.GameState.Winner);
-            StartCoroutine(coroutine);
+            GameManager.Instance.ai.calculateCurrentMood();
+           StartCoroutine(coroutine);
        
         }
 

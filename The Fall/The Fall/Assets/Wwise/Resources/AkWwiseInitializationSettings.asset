@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,12 +13,15 @@ MonoBehaviour:
   m_Name: AkWwiseInitializationSettings
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
+  - Android
   - Mac
   - Windows
   PlatformSettingsList:
+  - {fileID: 11400000, guid: e185a26050dae3a409caaac4272a6111, type: 2}
   - {fileID: 11400000, guid: 9b8b9c2d40e9c41499f03461a935c8dd, type: 2}
   - {fileID: 11400000, guid: e5ad1e832a477e54ba89cd8dd7f0e09e, type: 2}
-  InvalidReferencePlatforms: []
+  InvalidReferencePlatforms:
+  - Android
   UserSettings:
     m_BasePath: Audio\GeneratedSoundBanks
     m_StartupLanguage: English(US)
@@ -48,6 +52,7 @@ MonoBehaviour:
       m_PoolSize: 4194304
       m_MaxSoundPropagationDepth: 8
       m_DiffractionFlags: -1
+      m_MovementThreshold: 1
   AdvancedSettings:
     m_IOMemorySize: 2097152
     m_TargetAutoStreamBufferLengthMs: 380
@@ -60,8 +65,8 @@ MonoBehaviour:
     m_MonitorQueuePoolSize: 65536
     m_MaximumHardwareTimeoutMs: 1000
     m_SpatialAudioSettings:
-      m_DiffractionShadowAttenuationFactor: 0
-      m_DiffractionShadowDegrees: 0
+      m_DiffractionShadowAttenuationFactor: 2
+      m_DiffractionShadowDegrees: 30
   CommsSettings:
     m_PoolSize: 262144
     m_DiscoveryBroadcastPort: 24024

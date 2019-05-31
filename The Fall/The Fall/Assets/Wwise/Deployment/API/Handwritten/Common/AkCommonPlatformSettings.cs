@@ -198,8 +198,13 @@ public class AkCommonOutputSettings
 	}
 }
 
+public class AkSettingsValidationHandler
+{
+	public virtual void Validate() { }
+}
+
 [System.Serializable]
-public class AkCommonUserSettings
+public class AkCommonUserSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Path for the soundbanks. This must contain one sub folder per platform, with the same as in the Wwise project.")]
 	public string m_BasePath = AkBasePathGetter.DefaultBasePath;
@@ -207,7 +212,7 @@ public class AkCommonUserSettings
 	[UnityEngine.Tooltip("Language sub-folder used at startup.")]
 	public string m_StartupLanguage = "English(US)";
 
-	[UnityEngine.Tooltip("Prepare Pool size. This contains the banks loaded using PrepareBank (Banks decoded on load use this). Default size is 0 MB, but you should adjust for your needs.")]
+	[UnityEngine.Tooltip("Prepare Pool size. This contains the banks loaded using PrepareBank (Banks decoded on load use this). Default size is 0 MB (will not allocate a Prepare Pool), and minimal size if 8096 bytes. This should be adjusted for your needs.")]
 	public uint m_PreparePoolSize = 0;
 
 	[UnityEngine.Tooltip("CallbackManager buffer size. The size of the buffer used per-frame to transfer callback data. Default size is 4 KB, but you should increase this, if required.")]
@@ -243,6 +248,20 @@ public class AkCommonUserSettings
 	[UnityEngine.Tooltip("Main output device settings.")]
 	public AkCommonOutputSettings m_MainOutputSettings;
 
+	protected static string GetPluginPath()
+	{
+#if UNITY_EDITOR || UNITY_ANDROID || UNITY_WSA
+		return null;
+#elif PLATFORM_LUMIN
+		var dataPath = UnityEngine.Application.dataPath;
+		var find = "Data";
+		var index = dataPath.LastIndexOf(find);
+		return index == -1 ? dataPath : dataPath.Remove(index, find.Length).Insert(index, "bin");
+#else
+		return System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);
+#endif
+	}
+
 	public virtual void CopyTo(AkInitSettings settings)
 	{
 		settings.uMaxNumPaths = m_MaximumNumberOfPositioningPaths;
@@ -251,13 +270,7 @@ public class AkCommonUserSettings
 		settings.uCommandQueueSize = m_CommandQueueSize;
 		settings.uNumSamplesPerFrame = m_SamplesPerFrame;
 		m_MainOutputSettings.CopyTo(settings.settingsMainOutput);
-#if PLATFORM_LUMIN && !UNITY_EDITOR
-		settings.szPluginDLLPath = UnityEngine.Application.dataPath.Replace("Data", "bin") + System.IO.Path.DirectorySeparatorChar;
-#elif (!UNITY_ANDROID && !UNITY_WSA) || UNITY_EDITOR
-		settings.szPluginDLLPath = System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);
-#else
-		settings.szPluginDLLPath = null;
-#endif
+		settings.szPluginDLLPath = GetPluginPath();
 	}
 
 	[UnityEngine.Tooltip("Multiplication factor for all streaming look-ahead heuristic values.")]
@@ -324,6 +337,9 @@ public class AkCommonUserSettings
 		[UnityEngine.Tooltip("Determines whether diffraction values for sound passing through portals will be calculated, and how to apply those calculations to Wwise parameters.")]
 		[AkEnumFlag(typeof(DiffractionFlags))]
 		public DiffractionFlags m_DiffractionFlags = (DiffractionFlags)~0;
+
+		[UnityEngine.Tooltip("Distance (in game units) that an emitter or listener has to move to trigger a recalculation of reflections/diffraction. Larger values can reduce the CPU load at the cost of reduced accuracy.")]
+		public float m_MovementThreshold = 1.0f;
 	}
 
 	[UnityEngine.Tooltip("Spatial audio common settings.")]
@@ -334,11 +350,24 @@ public class AkCommonUserSettings
 		settings.uPoolSize = m_SpatialAudioSettings.m_PoolSize;
 		settings.uMaxSoundPropagationDepth = m_SpatialAudioSettings.m_MaxSoundPropagationDepth;
 		settings.uDiffractionFlags = (uint)m_SpatialAudioSettings.m_DiffractionFlags;
+		settings.fMovementThreshold = m_SpatialAudioSettings.m_MovementThreshold;
+	}
+
+	public virtual void CopyTo(AkUnityPlatformSpecificSettings settings)
+	{
+	}
+
+	public override void Validate()
+	{
+		if (m_PreparePoolSize > 0 && m_PreparePoolSize < 8096)
+		{
+			m_PreparePoolSize = 8096;
+		}
 	}
 }
 
 [System.Serializable]
-public class AkCommonAdvancedSettings
+public class AkCommonAdvancedSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Size of memory pool for I/O (for automatic streams). It is passed directly to AK::MemoryMgr::CreatePool(), after having been rounded down to a multiple of uGranularity.")]
 	public uint m_IOMemorySize = 2 * 1024 * 1024;
@@ -388,14 +417,20 @@ public class AkCommonAdvancedSettings
 		settings.uMaxHardwareTimeoutMs = m_MaximumHardwareTimeoutMs;
 	}
 
+	public virtual void CopyTo(AkPlatformInitSettings settings)
+	{
+	}
+
 	[System.Serializable]
 	public class SpatialAudioSettings
 	{
-		[UnityEngine.Tooltip("Multiplier that is applied to the distance attenuation of diffracted sounds (sounds that are in the 'shadow region') to simulate the phenomenon where by diffracted sound waves decay faster than incident sound waves.")]
-		public float m_DiffractionShadowAttenuationFactor;
+        [UnityEngine.Tooltip("Multiplier that is applied to the distance attenuation of diffracted sounds (sounds that are in the 'shadow region') to simulate the phenomenon where by diffracted sound waves decay faster than incident sound waves.")]
+        [UnityEngine.Range(1.0f, 3.0f)]
+        public float m_DiffractionShadowAttenuationFactor = 2.0f;
 
 		[UnityEngine.Tooltip("Interpolation angle, in degrees, over which the \"Diffraction Shadow Attenuation Factor\" is applied.")]
-		public float m_DiffractionShadowDegrees;
+        [UnityEngine.Range(0.1f, 90.0f)]
+        public float m_DiffractionShadowDegrees = 30.0f;
 	}
 
 	[UnityEngine.Tooltip("Spatial audio advanced settings.")]
@@ -403,13 +438,32 @@ public class AkCommonAdvancedSettings
 
 	public virtual void CopyTo(AkSpatialAudioInitSettings settings)
 	{
-		settings.fDiffractionShadowAttenFactor = m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor;
+        settings.fDiffractionShadowAttenFactor = m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor;
 		settings.fDiffractionShadowDegrees = m_SpatialAudioSettings.m_DiffractionShadowDegrees;
 	}
+
+	public virtual void CopyTo(AkUnityPlatformSpecificSettings settings)
+	{
+	}
+
+    public override void Validate()
+    {
+        if (m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor <= 0.0f)
+        {
+            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor must be greater than zero. Value was reset to the default (2.0)");
+            m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor = 2.0f;
+        }
+
+        if (m_SpatialAudioSettings.m_DiffractionShadowDegrees <= 0.0f)
+        {
+            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowDegrees must be greater than zero. Value was reset to the default (30.0)");
+            m_SpatialAudioSettings.m_DiffractionShadowDegrees = 30.0f;
+        }
+    }
 }
 
 [System.Serializable]
-public class AkCommonCommSettings
+public class AkCommonCommSettings : AkSettingsValidationHandler
 {
 	[UnityEngine.Tooltip("Size of the communication pool.")]
 	public uint m_PoolSize = 256 * 1024;
@@ -464,7 +518,6 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 		get
 		{
 			var settings = base.AkInitializationSettings;
-
 			var userSettings = GetUserSettings();
 			userSettings.CopyTo(settings.memSettings);
 			userSettings.CopyTo(settings.deviceSettings);
@@ -472,12 +525,14 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 			userSettings.CopyTo(settings.initSettings);
 			userSettings.CopyTo(settings.platformSettings);
 			userSettings.CopyTo(settings.musicSettings);
+			userSettings.CopyTo(settings.unityPlatformSpecificSettings);
 			settings.preparePoolSize = userSettings.m_PreparePoolSize;
 
 			var advancedSettings = GetAdvancedSettings();
 			advancedSettings.CopyTo(settings.deviceSettings);
 			advancedSettings.CopyTo(settings.initSettings);
-
+			advancedSettings.CopyTo(settings.platformSettings);
+			advancedSettings.CopyTo(settings.unityPlatformSpecificSettings);
 			return settings;
 		}
 	}
@@ -527,5 +582,16 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 			return settings;
 		}
 	}
+
+	#region parameter validation
+#if UNITY_EDITOR
+	void OnValidate()
+	{
+		GetUserSettings().Validate();
+		GetAdvancedSettings().Validate();
+		GetCommsSettings().Validate();
+	}
+#endif
+	#endregion
 }
 

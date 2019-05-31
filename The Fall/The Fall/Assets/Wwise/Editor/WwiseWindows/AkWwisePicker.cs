@@ -14,17 +14,11 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 	{
 		GetWindow<AkWwisePicker>("Wwise Picker", true,
 			typeof(UnityEditor.EditorWindow).Assembly.GetType("UnityEditor.ConsoleWindow"));
-		PopulateTreeview();
 	}
 
-	private void OnEnable()
+	public void OnEnable()
 	{
-		if (string.IsNullOrEmpty(WwiseSettings.LoadSettings().WwiseProjectPath))
-			return;
-
-		treeView.SaveExpansionStatus();
-		if (AkWwiseWWUBuilder.Populate())
-			PopulateTreeview();
+		PopulateTreeview();
 	}
 
 	public void OnGUI()
@@ -49,7 +43,9 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 			if (UnityEngine.GUILayout.Button("Generate SoundBanks", UnityEngine.GUILayout.Width(200)))
 			{
 				if (AkUtilities.IsSoundbankGenerationAvailable())
+				{
 					AkUtilities.GenerateSoundbanks();
+				}
 				else
 				{
 					string errorMessage;

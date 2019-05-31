@@ -45,24 +45,6 @@ public class AkExternalSourceInfo : global::System.IDisposable {
     }
   }
 
-  public uint iExternalSrcCookie { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_iExternalSrcCookie_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_iExternalSrcCookie_get(swigCPtr); } 
-  }
-
-  public uint idCodec { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idCodec_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idCodec_get(swigCPtr); } 
-  }
-
-  public string szFile {	set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_szFile_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_szFile_get(swigCPtr); } 
-  }
-
-  public global::System.IntPtr pInMemory { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_pInMemory_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_pInMemory_get(swigCPtr); }
-  }
-
-  public uint uiMemorySize { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_uiMemorySize_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_uiMemorySize_get(swigCPtr); } 
-  }
-
-  public uint idFile { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idFile_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idFile_get(swigCPtr); } 
-  }
-
   public AkExternalSourceInfo() : this(AkSoundEnginePINVOKE.CSharp_new_AkExternalSourceInfo__SWIG_0(), true) {
   }
 
@@ -73,6 +55,30 @@ public class AkExternalSourceInfo : global::System.IDisposable {
   }
 
   public AkExternalSourceInfo(uint in_idFile, uint in_iExternalSrcCookie, uint in_idCodec) : this(AkSoundEnginePINVOKE.CSharp_new_AkExternalSourceInfo__SWIG_3(in_idFile, in_iExternalSrcCookie, in_idCodec), true) {
+  }
+
+  public void Clear() { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_Clear(swigCPtr); }
+
+  public void Clone(AkExternalSourceInfo other) { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_Clone(swigCPtr, AkExternalSourceInfo.getCPtr(other)); }
+
+  public static int GetSizeOf() { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_GetSizeOf(); }
+
+  public uint iExternalSrcCookie { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_iExternalSrcCookie_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_iExternalSrcCookie_get(swigCPtr); } 
+  }
+
+  public uint idCodec { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idCodec_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idCodec_get(swigCPtr); } 
+  }
+
+  public string szFile { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_szFile_set(swigCPtr, value); }  get { return AkSoundEngine.StringFromIntPtrOSString(AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_szFile_get(swigCPtr)); } 
+  }
+
+  public global::System.IntPtr pInMemory { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_pInMemory_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_pInMemory_get(swigCPtr); }
+  }
+
+  public uint uiMemorySize { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_uiMemorySize_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_uiMemorySize_get(swigCPtr); } 
+  }
+
+  public uint idFile { set { AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idFile_set(swigCPtr, value); }  get { return AkSoundEnginePINVOKE.CSharp_AkExternalSourceInfo_idFile_get(swigCPtr); } 
   }
 
 }

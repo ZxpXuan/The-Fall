@@ -332,11 +332,10 @@ public static class AkCallbackManager
 								msg += " (Instance ID: " + AkMonitoringCallbackInfo.gameObjID + ")";
 							}
 
-                            if (AkMonitoringCallbackInfo.errorLevel == AkMonitorErrorLevel.ErrorLevel_Error)
-
-                                UnityEngine.Debug.LogError(msg);
-                            else
-                                UnityEngine.Debug.Log(msg);
+							if (AkMonitoringCallbackInfo.errorLevel == AkMonitorErrorLevel.ErrorLevel_Error)
+								UnityEngine.Debug.LogError(msg);
+							else
+								UnityEngine.Debug.Log(msg);
 						}
 #endif
 						break;

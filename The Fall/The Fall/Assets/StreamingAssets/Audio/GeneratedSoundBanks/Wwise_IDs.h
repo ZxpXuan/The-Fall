@@ -24,6 +24,11 @@ namespace AK
         static const AkUniqueID NARRATOR_TUT1_1 = 3847834209U;
         static const AkUniqueID NARRATOR_TUT1_2 = 3847834210U;
         static const AkUniqueID NARRATOR_TUT1_3 = 3847834211U;
+        static const AkUniqueID NARRATOR_TUT1_4 = 3847834212U;
+        static const AkUniqueID NARRATOR_TUT1_5 = 3847834213U;
+        static const AkUniqueID NARRATOR_TUT1_6 = 3847834214U;
+        static const AkUniqueID NARRATOR_TUT1_7 = 3847834215U;
+        static const AkUniqueID NARRATOR_TUT1_8 = 3847834216U;
         static const AkUniqueID PLAY_AIMING = 1286977679U;
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_ENTER_PORTAL = 3691806113U;
@@ -103,7 +108,6 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID FALLNARRATOR = 3496721321U;
-        static const AkUniqueID NEWNARRATOR = 3582165986U;
         static const AkUniqueID THEFALLMUSIC = 456359398U;
         static const AkUniqueID THEFALLSFX = 787924302U;
     } // namespace BANKS
@@ -113,7 +117,8 @@ namespace AK
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
-        static const AkUniqueID VOICE = 3170124113U;
+        static const AkUniqueID VOICE_CONGRATZ = 1113116098U;
+        static const AkUniqueID VOICE_GENERIC = 249330851U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

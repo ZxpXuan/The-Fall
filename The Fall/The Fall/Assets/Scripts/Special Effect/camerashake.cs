@@ -76,6 +76,7 @@ public class camerashake : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
         var go = new GameObject().AddComponent<camerashake>();
+        Handheld.Vibrate();
         go.Shake();
 	}
     

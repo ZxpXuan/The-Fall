@@ -15,16 +15,16 @@ MonoBehaviour:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: 4eb472a4b687e04b95e4c66b6214950d
     GuidInternal: 
-    m_lastTime: -8586423082516615911
+    m_lastTime: -8586423014678815520
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: e5526abddeec864b872ba3465b0433f2
     GuidInternal: 
-    m_lastTime: -8586423082548978206
+    m_lastTime: -8586423014678137334
     List:
     - name: Level_Reverb
       guid: 5a20685673dbb94ebfe40265865bf96f
@@ -51,9 +51,9 @@ MonoBehaviour:
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: aa87d7330e082242a39aec4238b653a6
     GuidInternal: 
-    m_lastTime: -8586423082516685729
+    m_lastTime: -8586423014678247056
     List:
     - name: FallNarrator
       guid: 927f83262b268f41a8060a2b709a09b5
@@ -85,9 +85,9 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: d2ec8e6196ee97458c692fefdf6ba80e
     GuidInternal: 
-    m_lastTime: -8586423082567727595
+    m_lastTime: -8586423014678017657
     List:
     - name: Aim_Error
       guid: d03a8dd06bdf2849b41362ddcc70cdeb
@@ -103,8 +103,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Aim_Error
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.32998
+      minDuration: 0.29791
     - name: Menu_Button
       guid: 2f1768ccfb5f0a488638af18926830b2
       id: 938529747
@@ -119,8 +119,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\UI\Menu_Button
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.047341
+      minDuration: 0.047341
     - name: Narrator_Compliment
       guid: c2b3c06491126743bfc5dcc173cb5c3e
       id: 2187083841
@@ -133,8 +133,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Compliment
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.186463
+      minDuration: 0.894385
     - name: Narrator_Death
       guid: 401086d9cadf1144a30cb64cd00dc7bc
       id: 1035940725
@@ -147,8 +147,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Death
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.775166
+      minDuration: 0
     - name: Narrator_Greeting_Generic
       guid: b6735230417ec546929f0cf004875468
       id: 4022731410
@@ -161,8 +161,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Greeting_Generic
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.716891
+      minDuration: 0
     - name: Narrator_Impatience
       guid: 56139c2f77994a4991481705b6ce7e99
       id: 1028928662
@@ -175,8 +175,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Impatience
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.319904
+      minDuration: 1.48853
     - name: Narrator_Tut_2
       guid: 58d570f97ac5f04aa0cb0b55080c2350
       id: 327987379
@@ -189,8 +189,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut_2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.601475
+      minDuration: 3.601475
     - name: Narrator_Tut_3
       guid: 3e2f9584e23d5f4d84d94144f1f8d941
       id: 327987378
@@ -203,8 +203,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut_3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.651484
+      minDuration: 4.651484
     - name: Narrator_Tut1_1
       guid: bffee27c7d4886428e0b9b275521b54a
       id: 3847834209
@@ -217,8 +217,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.555045
+      minDuration: 2.555045
     - name: Narrator_Tut1_2
       guid: 4630915087d66346aead49176daefdc7
       id: 3847834210
@@ -231,8 +231,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.079371
+      minDuration: 5.079371
     - name: Narrator_Tut1_3
       guid: e4a63e4a2c83424a841ba792fd106818
       id: 3847834211
@@ -245,8 +245,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.952546
+      minDuration: 1.952546
     - name: Narrator_Tut1_4
       guid: 41446ebb31c73647b2325412420487dd
       id: 3847834212
@@ -259,8 +259,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_4
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.445702
+      minDuration: 3.445702
     - name: Narrator_Tut1_5
       guid: 2d50972faa5bfd45b660703646e8c727
       id: 3847834213
@@ -273,8 +273,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_5
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.808737
+      minDuration: 3.808737
     - name: Narrator_Tut1_6
       guid: b3c5ecea0aaa014d8ecbeb6789296d6f
       id: 3847834214
@@ -287,8 +287,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_6
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.832972
+      minDuration: 4.832972
     - name: Narrator_Tut1_7
       guid: 5975fce6fda05042808b7800e68be7a8
       id: 3847834215
@@ -301,8 +301,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_7
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.466058
+      minDuration: 3.466058
     - name: Narrator_Tut1_8
       guid: 41c08e4ae97fcd42b16c65fe483febee
       id: 3847834216
@@ -315,8 +315,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Narrator\Narrator_Tut1_8
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.733029
+      minDuration: 1.733029
     - name: Play_Aiming
       guid: 120b2e5aaef92842968f097df036e563
       id: 1286977679
@@ -347,8 +347,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Play_Death
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.681793
+      minDuration: 1.449042
     - name: Play_Enter_Portal
       guid: 794c5ebdc3b8c14abbf36888aa14f64d
       id: 3691806113
@@ -363,8 +363,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Play_Enter_Portal
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.258833
+      minDuration: 1.18818
     - name: Play_Goal_Reached
       guid: 6710fe639705f74dab9e7a3df1955134
       id: 2773446032
@@ -379,8 +379,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Play_Goal_Reached
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.644938
+      minDuration: 1.644938
     - name: Play_Impact
       guid: ab91b2d0b0c77d448c52aedfa3df8c32
       id: 2764105556
@@ -395,8 +395,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Play_Impact
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.580383
+      minDuration: 0.493713
     - name: Play_Menu_Click
       guid: 297796576eec0b4ebb3665dbda9bb767
       id: 1357778998
@@ -411,8 +411,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\UI\Play_Menu_Click
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.415476
+      minDuration: 0.415476
     - name: Play_Menu_Sting
       guid: 664ea91ba5ee2c47a2d0ceefc3411215
       id: 3771381609
@@ -427,8 +427,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\UI\Play_Menu_Sting
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.589356
+      minDuration: 5.589356
     - name: Play_Restart
       guid: 0d93b92dad6cc041b883ad39e7ca5807
       id: 3483232275
@@ -443,8 +443,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\UI\Play_Restart
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.047341
+      minDuration: 0.047341
     - name: Play_Shoot
       guid: 10601d2e1343584881d424f1a89a9b50
       id: 2641650631
@@ -459,8 +459,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Play_Shoot
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.623929
+      minDuration: 0.588911
     - name: Play_Trigger_Hit
       guid: 59a61f05a1bbc7418be7da7736e8937f
       id: 1240630412
@@ -475,8 +475,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.491809
+      minDuration: 0.491809
     - name: Start_Game
       guid: 0fba08bad680d6428460457cbc96b8cb
       id: 1114964412
@@ -491,8 +491,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\UI\Start_Game
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.329401
+      minDuration: 5.329401
     - name: Start_Goal_Static
       guid: 391b80bded515d43aff9a893bb6c8687
       id: 3155875016
@@ -507,8 +507,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Start_Goal_Static
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.538436
+      minDuration: 2.538436
     - name: Start_Menu_Music
       guid: b9b9e75220da5748bee60b95596fc58f
       id: 1003497107
@@ -551,8 +551,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Start_Opening_Anim
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.623451
+      minDuration: 2.549171
     - name: Start_Portal_Static
       guid: ff7108a4c132494680ec8f14911748a6
       id: 3237166277
@@ -567,8 +567,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Start_Portal_Static
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Aiming
       guid: 5c7ac5e89edf0e4f82e783c47b5dcadd
       id: 3525056021
@@ -583,8 +583,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Ball\Stop_Aiming
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Goal_Static
       guid: 74b2f2b20710b642823fffd15d46ffb5
       id: 951397446
@@ -599,8 +599,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Stop_Goal_Static
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Menu_Music
       guid: 7ebf9939ef4d984086fdfc285f78da9d
       id: 3945748993
@@ -613,8 +613,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Music\Stop_Menu_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Music
       guid: eff2256ba9417244a7f74ed2ae4df55c
       id: 2837384057
@@ -627,8 +627,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Music\Stop_Music
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Portal_Static
       guid: 9de3898cc7c14a4c8859383bed04477e
       id: 1797269043
@@ -643,8 +643,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Stop_Portal_Static
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Wall_Appear
       guid: 7e51c9a8c92f5748939a8a5aeb339b36
       id: 1230525119
@@ -659,8 +659,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Wall_Appear
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.432018
+      minDuration: 1.108163
     - name: Wall_Destroy
       guid: c02da7ff8b3efb47bd6b296c476a8d34
       id: 2274397818
@@ -675,14 +675,14 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Level_Elements\Wall_Destroy
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.102994
+      minDuration: 1.587401
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: 14bdc89cf9c30d4a9b44ea2c0a7bc227
     GuidInternal: 
-    m_lastTime: -8586423082567727595
+    m_lastTime: -8586423014678675895
     List:
     - name: Aim_Velocity
       guid: bbe032956aa102458b420b4b1a5e07ae
@@ -714,16 +714,16 @@ MonoBehaviour:
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: e8cbe9693cb55544ade9c6096b3961da
     GuidInternal: 
-    m_lastTime: -8586423082516665783
+    m_lastTime: -8586423014677957813
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: 83e704debd41fd4bb0cb0b020ab68cc8
     GuidInternal: 
-    m_lastTime: -8586423082516655808
+    m_lastTime: -8586423014677987733
     List:
     - name: In_Menu
       guid: 062f1113041be8409510a64ef777fda9
@@ -839,10 +839,11 @@ MonoBehaviour:
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 00000000000000000000000000000000
+    guid: 629d4f3f10fb9c4c9a862d0254c5978f
     GuidInternal: 
-    m_lastTime: -8586423082516625880
+    m_lastTime: -8586423014678596108
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /The Fall_WwiseProject
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

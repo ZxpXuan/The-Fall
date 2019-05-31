@@ -4,13 +4,23 @@ Event	ID	Name			Wwise Object Path	Notes
 	2837384057	Stop_Music			\Default Work Unit\Music\Stop_Music	
 	3945748993	Stop_Menu_Music			\Default Work Unit\Music\Stop_Menu_Music	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	907080827	Level_Difficulty			\Default Work Unit\Level_Difficulty	
+
+Switch	ID	Name	Switch Group			Notes
+	529018163	Easy	Level_Difficulty			
+	1546301258	Second_Med	Level_Difficulty			
+	2849147824	Medium	Level_Difficulty			
+	3268631962	Second_Easy	Level_Difficulty			
+	3599861390	Hard	Level_Difficulty			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	47316527	The_Fall_Music_A(Compressed)	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_A(Compressed)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\A\The_Fall_Music_A(Compressed)\The_Fall_Music_A(Compressed)		665896
-	308222834	The_Fall_Music_B_To_C	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_B_To_C_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\The_Fall_Music_B_To_C\The_Fall_Music_B_To_C		90152
-	391436893	The_Fall_Music_E_Compressed	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_E_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\E\The_Fall_Music_E_Compressed\The_Fall_Music_E_Compressed		770186
-	605108431	The_Fall_Music_D(new)_Compressed	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_D(new)_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\D\The_Fall_Music_D(new)_Compressed\The_Fall_Music_D(new)_Compressed		720107
-	739456777	The_Fall_Music_F_Compressed	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_F_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\E\The_Fall_Music_F_Compressed\The_Fall_Music_F_Compressed		457772
-	743589583	The_Fall_Menu_(withTail)	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Menu_(withTail)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\Menu\Menu_Music\The_Fall_Menu_(withTail)\The_Fall_Menu_(withTail)		197414
-	968211500	The_Fall_Music_C(new)4_Compressed	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_C(new)4_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\C\The_Fall_Music_C(new)4_Compressed\The_Fall_Music_C(new)4_Compressed		787913
-	1027916952	The_Fall_Music_B(Compressed)	M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_B(Compressed)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\B\The_Fall_Music_B(Compressed)\The_Fall_Music_B(Compressed)		716589
+	47316527	The_Fall_Music_A(Compressed)	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_A(Compressed)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\A\The_Fall_Music_A(Compressed)\The_Fall_Music_A(Compressed)		665896
+	308222834	The_Fall_Music_B_To_C	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_B_To_C_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\The_Fall_Music_B_To_C\The_Fall_Music_B_To_C		90152
+	391436893	The_Fall_Music_E_Compressed	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_E_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\E\The_Fall_Music_E_Compressed\The_Fall_Music_E_Compressed		770186
+	605108431	The_Fall_Music_D(new)_Compressed	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_D(new)_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\D\The_Fall_Music_D(new)_Compressed\The_Fall_Music_D(new)_Compressed		720107
+	739456777	The_Fall_Music_F_Compressed	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_F_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\E\The_Fall_Music_F_Compressed\The_Fall_Music_F_Compressed		457772
+	743589583	The_Fall_Menu	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Menu_(withTail)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\Menu\Menu_Music\The_Fall_Menu\The_Fall_Menu		197414
+	968211500	The_Fall_Music_C(new)4_Compressed	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_C(new)4_Compressed_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\C\The_Fall_Music_C(new)4_Compressed\The_Fall_Music_C(new)4_Compressed		787913
+	1027916952	The_Fall_Music_B(Compressed)	C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\SFX\The_Fall_Music_B(Compressed)_CB1F3167.wem		\Interactive Music Hierarchy\Default Work Unit\In-Game\Music\B\The_Fall_Music_B(Compressed)\The_Fall_Music_B(Compressed)		716589
 

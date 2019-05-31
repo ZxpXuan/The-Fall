@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>M:\The_Fall_New\The Fall\The Fall\The Fall_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\1804182\Downloads\The-Fall\The Fall\The Fall\The Fall_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,10 +16,10 @@
 			<ShortName>TheFallMusic</ShortName>
 			<Path>TheFallMusic.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1003497107" Name="Start_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Menu_Music"/>
-				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Music"/>
-				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Menu_Music"/>
-				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music"/>
+				<Event Id="1003497107" Name="Start_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Menu_Music" DurationType="Infinite"/>
+				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Music\Start_Music" DurationType="Infinite"/>
+				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Menu_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Music\Stop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="47316527" Language="SFX">
@@ -61,27 +61,27 @@
 			<ShortName>TheFallSFX</ShortName>
 			<Path>TheFallSFX.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1571488543" Name="Aim_Error" ObjectPath="\Events\Default Work Unit\SFX\Ball\Aim_Error"/>
-				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Button"/>
-				<Event Id="1286977679" Name="Play_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Aiming"/>
-				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Death"/>
-				<Event Id="3691806113" Name="Play_Enter_Portal" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Enter_Portal"/>
-				<Event Id="2773446032" Name="Play_Goal_Reached" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Goal_Reached"/>
-				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Impact"/>
-				<Event Id="1357778998" Name="Play_Menu_Click" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Menu_Click"/>
-				<Event Id="3771381609" Name="Play_Menu_Sting" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Menu_Sting"/>
-				<Event Id="3483232275" Name="Play_Restart" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Restart"/>
-				<Event Id="2641650631" Name="Play_Shoot" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Shoot"/>
-				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit"/>
-				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game"/>
-				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static"/>
-				<Event Id="1967504570" Name="Start_Opening_Anim" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Opening_Anim"/>
-				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static"/>
-				<Event Id="3525056021" Name="Stop_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Stop_Aiming"/>
-				<Event Id="951397446" Name="Stop_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static"/>
-				<Event Id="1797269043" Name="Stop_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static"/>
-				<Event Id="1230525119" Name="Wall_Appear" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Appear"/>
-				<Event Id="2274397818" Name="Wall_Destroy" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Destroy"/>
+				<Event Id="1571488543" Name="Aim_Error" ObjectPath="\Events\Default Work Unit\SFX\Ball\Aim_Error" DurationType="OneShot" DurationMin="0.297910" DurationMax="0.329980"/>
+				<Event Id="938529747" Name="Menu_Button" ObjectPath="\Events\Default Work Unit\SFX\UI\Menu_Button" DurationType="OneShot" DurationMin="0.047341" DurationMax="0.047341"/>
+				<Event Id="1286977679" Name="Play_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Aiming" DurationType="Infinite"/>
+				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Death" DurationType="OneShot" DurationMin="1.449042" DurationMax="1.681793"/>
+				<Event Id="3691806113" Name="Play_Enter_Portal" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Enter_Portal" DurationType="OneShot" DurationMin="1.188180" DurationMax="1.258833"/>
+				<Event Id="2773446032" Name="Play_Goal_Reached" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Goal_Reached" DurationType="OneShot" DurationMin="1.644938" DurationMax="1.644938"/>
+				<Event Id="2764105556" Name="Play_Impact" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Impact" DurationType="OneShot" DurationMin="0.493713" DurationMax="0.580383"/>
+				<Event Id="1357778998" Name="Play_Menu_Click" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Menu_Click" DurationType="OneShot" DurationMin="0.415476" DurationMax="0.415476"/>
+				<Event Id="3771381609" Name="Play_Menu_Sting" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Menu_Sting" DurationType="OneShot" DurationMin="5.589356" DurationMax="5.589356"/>
+				<Event Id="3483232275" Name="Play_Restart" ObjectPath="\Events\Default Work Unit\SFX\UI\Play_Restart" DurationType="OneShot" DurationMin="0.047341" DurationMax="0.047341"/>
+				<Event Id="2641650631" Name="Play_Shoot" ObjectPath="\Events\Default Work Unit\SFX\Ball\Play_Shoot" DurationType="OneShot" DurationMin="0.588911" DurationMax="0.623929"/>
+				<Event Id="1240630412" Name="Play_Trigger_Hit" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Play_Trigger_Hit" DurationType="OneShot" DurationMin="0.491809" DurationMax="0.491809"/>
+				<Event Id="1114964412" Name="Start_Game" ObjectPath="\Events\Default Work Unit\SFX\UI\Start_Game" DurationType="OneShot" DurationMin="5.329401" DurationMax="5.329401"/>
+				<Event Id="3155875016" Name="Start_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Goal_Static" DurationType="OneShot" DurationMin="2.538436" DurationMax="2.538436"/>
+				<Event Id="1967504570" Name="Start_Opening_Anim" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Opening_Anim" DurationType="OneShot" DurationMin="2.549171" DurationMax="2.623451"/>
+				<Event Id="3237166277" Name="Start_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Start_Portal_Static" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3525056021" Name="Stop_Aiming" ObjectPath="\Events\Default Work Unit\SFX\Ball\Stop_Aiming" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="951397446" Name="Stop_Goal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Goal_Static" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1797269043" Name="Stop_Portal_Static" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Stop_Portal_Static" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1230525119" Name="Wall_Appear" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Appear" DurationType="OneShot" DurationMin="1.108163" DurationMax="1.432018"/>
+				<Event Id="2274397818" Name="Wall_Destroy" ObjectPath="\Events\Default Work Unit\SFX\Level_Elements\Wall_Destroy" DurationType="OneShot" DurationMin="1.587401" DurationMax="2.102994"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="17111417" Language="SFX">
@@ -130,7 +130,7 @@
 				</File>
 				<File Id="157507196" Language="SFX">
 					<ShortName>SFX\PortalConcept6.wav</ShortName>
-					<Path>SFX\SFX\PortalConcept6_8A2CB1AA.wem</Path>
+					<Path>SFX\SFX\PortalConcept6_AB1D0A71.wem</Path>
 				</File>
 				<File Id="161584208" Language="SFX">
 					<ShortName>FallMainSting2-03.wav</ShortName>
@@ -318,11 +318,11 @@
 				</File>
 				<File Id="1057195292" Language="SFX">
 					<ShortName>PortalStatic1.wav</ShortName>
-					<Path>SFX\PortalStatic1_112CA0E5.wem</Path>
+					<Path>SFX\PortalStatic1_82EBE1DE.wem</Path>
 				</File>
 				<File Id="1063548857" Language="SFX">
 					<ShortName>GoalStatic.wav</ShortName>
-					<Path>SFX\GoalStatic_C75A19BD.wem</Path>
+					<Path>SFX\GoalStatic_95B5450E.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -336,20 +336,20 @@
 			<ShortName>FallNarrator</ShortName>
 			<Path>FallNarrator.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2187083841" Name="Narrator_Compliment" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Compliment"/>
-				<Event Id="1035940725" Name="Narrator_Death" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Death"/>
-				<Event Id="4022731410" Name="Narrator_Greeting_Generic" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Greeting_Generic"/>
-				<Event Id="1028928662" Name="Narrator_Impatience" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Impatience"/>
-				<Event Id="3847834209" Name="Narrator_Tut1_1" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_1"/>
-				<Event Id="3847834210" Name="Narrator_Tut1_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_2"/>
-				<Event Id="3847834211" Name="Narrator_Tut1_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_3"/>
-				<Event Id="3847834212" Name="Narrator_Tut1_4" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_4"/>
-				<Event Id="3847834213" Name="Narrator_Tut1_5" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_5"/>
-				<Event Id="3847834214" Name="Narrator_Tut1_6" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_6"/>
-				<Event Id="3847834215" Name="Narrator_Tut1_7" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_7"/>
-				<Event Id="3847834216" Name="Narrator_Tut1_8" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_8"/>
-				<Event Id="327987379" Name="Narrator_Tut_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_2"/>
-				<Event Id="327987378" Name="Narrator_Tut_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_3"/>
+				<Event Id="2187083841" Name="Narrator_Compliment" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Compliment" DurationType="OneShot" DurationMin="0.894385" DurationMax="3.186463"/>
+				<Event Id="1035940725" Name="Narrator_Death" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Death" DurationType="OneShot" DurationMin="0.000000" DurationMax="3.775166"/>
+				<Event Id="4022731410" Name="Narrator_Greeting_Generic" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Greeting_Generic" DurationType="OneShot" DurationMin="0.000000" DurationMax="3.716891"/>
+				<Event Id="1028928662" Name="Narrator_Impatience" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Impatience" DurationType="OneShot" DurationMin="1.488530" DurationMax="4.319904"/>
+				<Event Id="3847834209" Name="Narrator_Tut1_1" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_1" DurationType="OneShot" DurationMin="2.555045" DurationMax="2.555045"/>
+				<Event Id="3847834210" Name="Narrator_Tut1_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_2" DurationType="OneShot" DurationMin="5.079371" DurationMax="5.079371"/>
+				<Event Id="3847834211" Name="Narrator_Tut1_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_3" DurationType="OneShot" DurationMin="1.952546" DurationMax="1.952546"/>
+				<Event Id="3847834212" Name="Narrator_Tut1_4" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_4" DurationType="OneShot" DurationMin="3.445702" DurationMax="3.445702"/>
+				<Event Id="3847834213" Name="Narrator_Tut1_5" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_5" DurationType="OneShot" DurationMin="3.808737" DurationMax="3.808737"/>
+				<Event Id="3847834214" Name="Narrator_Tut1_6" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_6" DurationType="OneShot" DurationMin="4.832972" DurationMax="4.832972"/>
+				<Event Id="3847834215" Name="Narrator_Tut1_7" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_7" DurationType="OneShot" DurationMin="3.466058" DurationMax="3.466058"/>
+				<Event Id="3847834216" Name="Narrator_Tut1_8" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut1_8" DurationType="OneShot" DurationMin="1.733029" DurationMax="1.733029"/>
+				<Event Id="327987379" Name="Narrator_Tut_2" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_2" DurationType="OneShot" DurationMin="3.601475" DurationMax="3.601475"/>
+				<Event Id="327987378" Name="Narrator_Tut_3" ObjectPath="\Events\Default Work Unit\Narrator\Narrator_Tut_3" DurationType="OneShot" DurationMin="4.651484" DurationMax="4.651484"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="27954089" Language="SFX">
@@ -638,7 +638,7 @@
 				</File>
 				<File Id="708777935" Language="SFX">
 					<ShortName>Interesting2.wav</ShortName>
-					<Path>SFX\Interesting2_8974E9DC.wem</Path>
+					<Path>SFX\Interesting2_238A72AB.wem</Path>
 				</File>
 				<File Id="724764249" Language="SFX">
 					<ShortName>Congratz_H_2.wav</ShortName>

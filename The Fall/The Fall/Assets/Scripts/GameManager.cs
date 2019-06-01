@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using GoogleMobileAds.Api;
+
 
 public  class GameManager : MonoSingleton<GameManager> {
    //private bool paused = false;
@@ -36,8 +38,30 @@ public  class GameManager : MonoSingleton<GameManager> {
     public List<Vector3> contactPoints;
 
     public AI ai;
+    private InterstitialAd interstitial;
+
     // Use this for initialization
-    
+    private void RequestInterstitial()
+    {
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-1149253882244477/4591085850";
+#elif UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+#else
+        string adUnitId = "unexpected_platform";
+#endif
+
+        // Initialize an InterstitialAd.
+        this.interstitial = new InterstitialAd(adUnitId);
+
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the interstitial with the request.
+        this.interstitial.LoadAd(request);
+
+     
+        
+    }
+
     private void Awake()
     {
 
@@ -107,6 +131,21 @@ public  class GameManager : MonoSingleton<GameManager> {
         }
     }
     void Start () {
+
+#if UNITY_ANDROID
+        string appId = "ca-app-pub-1149253882244477~8286788282";
+#elif UNITY_IPHONE
+            string appId = "ca-app-pub-3940256099942544~1458002511";
+#else
+            string appId = "unexpected_platform";
+#endif
+
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(appId);
+        // Create an empty ad request.
+        RequestInterstitial();
+
+
         sbm = FindObjectOfType<Soundbank_Manager>();
         isRestartInitiated = false;
        // Cursor.visible = false;
@@ -124,6 +163,7 @@ public  class GameManager : MonoSingleton<GameManager> {
 
         sbm.MenuSystem();
     }
+
 	// Update is called once per frame
 	void Update () {
 
@@ -168,6 +208,12 @@ public  class GameManager : MonoSingleton<GameManager> {
 
 
         }
+
+        if (Input.GetMouseButtonDown(0) && hasBallBeenShot)
+        {
+
+            doRestart();
+        }
     }
     public void doRestart()
     {
@@ -200,6 +246,10 @@ public  class GameManager : MonoSingleton<GameManager> {
         Time.timeScale = 0f;
         uIManager.displayPauseMenu();
 
+        if (this.interstitial.IsLoaded())
+        {
+            this.interstitial.Show();
+        }
     }
 
     public void unPauseGame(){
@@ -230,9 +280,11 @@ public  class GameManager : MonoSingleton<GameManager> {
                 PlayerPrefs.SetInt("AIMood", 4);
                 break;
         }
-   
 
-      //  PlayerPrefs.SetInt("start_type", 1);
+       
+
+        interstitial.Destroy();
+        //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 
     }

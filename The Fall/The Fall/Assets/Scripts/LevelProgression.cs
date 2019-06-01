@@ -27,16 +27,26 @@ public class LevelProgression : MonoBehaviour {
             levelButtons[i].interactable = true;
             i++;
         }
-        if(unlockAllLevels){
+        if(unlockAllLevels || PlayerPrefs.GetString("levelsUnlockedTrue","False")=="True"){
             foreach(Button bt in levelButtons){
                 bt.interactable = true;
 
             }
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
+	public void UnlockAllLevels()
+    {
+        
+       
+        PlayerPrefs.SetString("levelsUnlockedTrue", "True");
+        foreach (Button bt in levelButtons)
+        {
+            bt.interactable = true;
+
+        }
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

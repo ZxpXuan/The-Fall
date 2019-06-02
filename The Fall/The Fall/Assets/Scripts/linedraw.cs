@@ -18,7 +18,7 @@ public class linedraw : MonoBehaviour {
     public bool lockDistance;
     public float maxDistance=3;
     public Vector3 firstPos;
-  
+    Vector3 finalPos , prevPos;
     void Start()
     {
         AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
@@ -50,7 +50,7 @@ public class linedraw : MonoBehaviour {
 
 
             firstPos = targPos;
-
+            finalPos = firstPos;
         }
         if (able == true && !GameManager.Instance.hasBallBeenShot)
         {
@@ -60,9 +60,20 @@ public class linedraw : MonoBehaviour {
 			targPos.z = 0;
             Vector3 newVec = firstPos - p1.position;
 			var toTarget = (targPos - p1.position);
-			var dist = toTarget.sqrMagnitude;           
+			var dist = toTarget.sqrMagnitude;
+            finalPos = targPos;
+            if (Vector3.Distance(finalPos, firstPos) < maxDistance)
+            {
+                //finalPos = aimRayStartPos;
+                //finalPos = targPos;
 
-			RaycastHit hit;
+            }
+            if (Vector3.Distance(targPos, firstPos) < maxDistance)
+            {
+                //finalPos = targPos;
+            }
+
+            RaycastHit hit;
 			var aimRayStartPos = p1.position + toTarget.normalized * maxDistance;
 			var aimRayEndPos = aimRayStartPos;
 			if (Physics.SphereCast(p1.position, 0.5f, toTarget, out hit))
@@ -74,8 +85,12 @@ public class linedraw : MonoBehaviour {
 			{
 				targPos = aimRayStartPos;
 			}
-			
-            launchRay.SetPosition(0,targPos);
+
+
+         
+
+            print(Vector3.Distance(finalPos, firstPos) );
+            launchRay.SetPosition(0,p1.position+ ( finalPos-firstPos));
             launchRay.SetPosition(1, p1.position);
 
 			aimingRay.SetPosition(0, aimRayStartPos);

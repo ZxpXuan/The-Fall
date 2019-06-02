@@ -48,36 +48,26 @@ public class tragball : MonoBehaviour
             {
                 if (isDrage == false)
                 {
-                    if (Physics.Raycast(ray, out hitInfo))
-                    {
-                        //划出射线，只有在scene视图中才能看到
-                        Debug.DrawLine(ray.origin, hitInfo.point);
-                        go = hitInfo.collider.gameObject;
+                    
+                    
+                        offset = Vector3.zero;
 
-                        screenSpace = cam.WorldToScreenPoint(go.transform.position);
-                        offset = go.transform.position - cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
-                        //物体的名字  
-                        btnName = go.name;
-                        //组件的名字
-                    }
-                    else
-                    {
-                        btnName = null;
-                    }
+                    
+                  
                 }
 
                 if (Input.GetMouseButtonDown(0))
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y,0);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                    InputFirstPos = ding.transform.position;
+                    InputFirstPos = currentPosition;
                 }
 
                 if (Input.GetMouseButton(0) )
                 {
-                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-                    print(currentPosition);
+                  
                     
                     if (true)
                     {
@@ -112,9 +102,9 @@ public class tragball : MonoBehaviour
 
 				if (Input.GetMouseButtonUp(0))
                 {
-                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-					mousePos = cam.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * screenSpace.z);
+					mousePos = cam.ScreenToWorldPoint(Input.mousePosition + Vector3.forward *0);
                     Vector3 dir = new Vector3(mousePos.x - InputFirstPos.x, mousePos.y - InputFirstPos.y, 0).normalized;
 					
                     float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, InputFirstPos);

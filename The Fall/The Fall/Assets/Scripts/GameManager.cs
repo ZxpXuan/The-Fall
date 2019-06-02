@@ -64,6 +64,18 @@ public  class GameManager : MonoSingleton<GameManager> {
 
     private void Awake()
     {
+#if UNITY_ANDROID
+        string appId = "ca-app-pub-1149253882244477~8286788282";
+#elif UNITY_IPHONE
+            string appId = "ca-app-pub-3940256099942544~1458002511";
+#else
+            string appId = "unexpected_platform";
+#endif
+
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(appId);
+        // Create an empty ad request.
+        RequestInterstitial();
 
         ai = GetComponent<AI>();
 
@@ -97,7 +109,14 @@ public  class GameManager : MonoSingleton<GameManager> {
                 GetComponent<TutorialManager>().enabled = false;
             }
             PlayerPrefs.SetInt("currentLevelTries", PlayerPrefs.GetInt("currentLevelTries", 0) + 1 );
+            if(PlayerPrefs.GetInt("currentLevelTries",0) % 5 ==0 && PlayerPrefs.GetInt("currentLevelTries", 0) != 0)
+            {
 
+                if (this.interstitial.IsLoaded())
+                {
+                    this.interstitial.Show();
+                }
+            }
 
             // //foreach (Animator anima in objectToDisable)
             // {
@@ -132,18 +151,6 @@ public  class GameManager : MonoSingleton<GameManager> {
     }
     void Start () {
 
-#if UNITY_ANDROID
-        string appId = "ca-app-pub-1149253882244477~8286788282";
-#elif UNITY_IPHONE
-            string appId = "ca-app-pub-3940256099942544~1458002511";
-#else
-            string appId = "unexpected_platform";
-#endif
-
-        // Initialize the Google Mobile Ads SDK.
-        MobileAds.Initialize(appId);
-        // Create an empty ad request.
-        RequestInterstitial();
 
 
         sbm = FindObjectOfType<Soundbank_Manager>();
@@ -246,10 +253,6 @@ public  class GameManager : MonoSingleton<GameManager> {
         Time.timeScale = 0f;
         uIManager.displayPauseMenu();
 
-        if (this.interstitial.IsLoaded())
-        {
-            this.interstitial.Show();
-        }
     }
 
     public void unPauseGame(){

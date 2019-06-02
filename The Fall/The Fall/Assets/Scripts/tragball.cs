@@ -23,6 +23,9 @@ public class tragball : MonoBehaviour
 	
     [SerializeField] float maxForceDistance=3;
 
+
+    public Vector3 InputFirstPos;
+    private Vector3 InputSecondPos;
     void Start()
     {
         cam = Camera.main;
@@ -63,24 +66,33 @@ public class tragball : MonoBehaviour
                     }
                 }
 
-                if (Input.GetMouseButton(0) && btnName == "emputy")
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y,0);
+                    Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
+                    InputFirstPos = ding.transform.position;
+                }
+
+                if (Input.GetMouseButton(0) )
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-
-                    if (btnName != null && btnName == "emputy")
+                    print(currentPosition);
+                    
+                    if (true)
                     {
-                        if (Vector3.Distance(currentPosition, ding.transform.position) > 0.4)
+                        Debug.DrawLine(currentPosition, InputFirstPos);
+                        if (Vector3.Distance(currentPosition, InputFirstPos) > 0.4)
                         {
-                            var maxPosition = (currentPosition - ding.transform.position).normalized * 3.0f + ding.transform.position;
+                            var maxPosition = (currentPosition - InputFirstPos).normalized * 3.0f + InputFirstPos;
                             mousePos = maxPosition;
                         }
                         else
                         {
                             mousePos = currentPosition;
                         }
-                        float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
-                        Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0);
+                        float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset,InputFirstPos);
+                        Vector3 dir = new Vector3(mousePos.x - InputFirstPos.x, mousePos.y -InputFirstPos.y, 0);
 
                         force = dir.magnitude;
                         //print(mult);
@@ -96,16 +108,16 @@ public class tragball : MonoBehaviour
                 {
                     isDrage = false;
 				}
-				Debug.DrawLine(mousePos, ding.transform.position, Color.blue);
+				Debug.DrawLine(mousePos, InputFirstPos, Color.blue);
 
-				if (Input.GetMouseButtonUp(0) && btnName == "emputy")
+				if (Input.GetMouseButtonUp(0))
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
 					mousePos = cam.ScreenToWorldPoint(Input.mousePosition + Vector3.forward * screenSpace.z);
-                    Vector3 dir = new Vector3(mousePos.x - ding.transform.position.x, mousePos.y - ding.transform.position.y, 0).normalized;
+                    Vector3 dir = new Vector3(mousePos.x - InputFirstPos.x, mousePos.y - InputFirstPos.y, 0).normalized;
 					
-                    float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, ding.transform.position);
+                    float mult = Vector3.Distance(cam.ScreenToWorldPoint(currentScreenSpace) + offset, InputFirstPos);
 
                     if (force > minDistance)
                     {
@@ -133,59 +145,7 @@ public class tragball : MonoBehaviour
                 }
             }
 
-            if (abale == 2)
-            {
-
-                if (isDrage == false)
-                {
-                    if (Physics.Raycast(ray, out hitInfo))
-                    {
-                        //划出射线，只有在scene视图中才能看到
-                        Debug.DrawLine(ray.origin, hitInfo.point);
-                        go = hitInfo.collider.gameObject;
-
-                        screenSpace = cam.WorldToScreenPoint(go.transform.position);
-                        offset = go.transform.position - cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
-                        //物体的名字  
-                        btnName = go.name;
-                        //组件的名字
-                    }
-                    else
-                    {
-                        btnName = null;
-                    }
-                }
-                if (Input.GetMouseButton(0) && btnName == "emputy2")
-                {
-                    Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
-                    Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
-
-                    if (btnName != null && btnName == "emputy2")
-                    {
-                        if (Vector3.Distance(currentPosition, ding2.transform.position) > 3)
-                        {
-                            var maxPosition = (currentPosition - ding2.transform.position).normalized * 3.0f + ding2.transform.position;
-                            go.transform.position = maxPosition;
-                        }
-                        else
-                        {
-                            go.transform.position = currentPosition;
-                        }
-                    }
-
-                    isDrage = true;
-                }
-                else
-                {
-                    isDrage = false;
-                }
-                if (Input.GetMouseButtonUp(0) && btnName == "emputy2")
-                {
-                    Vector3 dir2 = new Vector3(go.transform.position.x - ding2.transform.position.x, go.transform.position.y - ding2.transform.position.y, 0);
-                    ding2.AddForce(dir2, ForceMode.Impulse);
-                    abale = abale + 1;
-                }
-            }
+           
         }
     }
 }

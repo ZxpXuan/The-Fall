@@ -13,10 +13,11 @@ public class linedraw : MonoBehaviour {
 
     public int layerOrder = 0;
 
-    private bool able = true;
+    public bool able = true;
 
     public bool lockDistance;
     public float maxDistance=3;
+    public Vector3 firstPos;
   
     void Start()
     {
@@ -38,18 +39,26 @@ public class linedraw : MonoBehaviour {
     public void AimingLine()
     {
         if (p0 == null || p1 == null) return;
+        if (Input.GetMouseButtonDown(0))
+        {
+            launchRay.enabled = true;
+            aimingRay.gameObject.SetActive(true);
+            able = true;
+            AkSoundEngine.PostEvent("Play_Aiming", gameObject);
+            Vector3 targPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+            targPos.z = 0;
 
+
+            firstPos = targPos;
+
+        }
         if (able == true && !GameManager.Instance.hasBallBeenShot)
         {
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                launchRay.enabled = true;
-				aimingRay.gameObject.SetActive(true);
-			}
+           
             Vector3 targPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 			targPos.z = 0;
-			
+            Vector3 newVec = firstPos - p1.position;
 			var toTarget = (targPos - p1.position);
 			var dist = toTarget.sqrMagnitude;           
 
@@ -66,8 +75,9 @@ public class linedraw : MonoBehaviour {
 				targPos = aimRayStartPos;
 			}
 			
-            launchRay.SetPosition(0, targPos);
+            launchRay.SetPosition(0,targPos);
             launchRay.SetPosition(1, p1.position);
+
 			aimingRay.SetPosition(0, aimRayStartPos);
 			aimingRay.SetPosition(1, aimRayEndPos);
 
@@ -94,8 +104,7 @@ public class linedraw : MonoBehaviour {
 
     void OnMouseDown()
     {
-        able = true;
-        AkSoundEngine.PostEvent("Play_Aiming", gameObject);
+       
 
     }
 

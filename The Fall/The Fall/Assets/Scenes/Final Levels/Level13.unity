@@ -2018,6 +2018,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1993959159568590, guid: af7a5045956fb8641b95662f6eac222a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4131710459899182, guid: af7a5045956fb8641b95662f6eac222a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 323.18124
@@ -14821,7 +14825,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318122325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfc1df6c63bf34246aa910149524092b, type: 3}
   m_Name: 
@@ -14949,7 +14953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anul Argawal
+  m_Text: Anul Agarwal
 --- !u!222 &1346923440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18176,6 +18180,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114791478973009252, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 262d1e6669307794f97f588d118d3a6a,
+        type: 3}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: lim
+      value: 
+      objectReference: {fileID: 1459026015}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 567602644}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 1646222848}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[2]
+      value: 
+      objectReference: {fileID: 2065325363}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[3]
+      value: 
+      objectReference: {fileID: 1502984666}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[4]
+      value: 
+      objectReference: {fileID: 1507842067}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[5]
+      value: 
+      objectReference: {fileID: 694050164}
+    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
+        type: 3}
+      propertyPath: objectToDisable.Array.data[6]
+      value: 
+      objectReference: {fileID: 938893965}
     - target: {fileID: 4572783089046702, guid: 07f16e6b63a754d15b4ead4abad5cab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18224,63 +18279,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: lim
-      value: 
-      objectReference: {fileID: 1459026015}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[0]
-      value: 
-      objectReference: {fileID: 567602644}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[1]
-      value: 
-      objectReference: {fileID: 1646222848}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[2]
-      value: 
-      objectReference: {fileID: 2065325363}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[3]
-      value: 
-      objectReference: {fileID: 1502984666}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[4]
-      value: 
-      objectReference: {fileID: 1507842067}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[5]
-      value: 
-      objectReference: {fileID: 694050164}
-    - target: {fileID: 114170217762457598, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: objectToDisable.Array.data[6]
-      value: 
-      objectReference: {fileID: 938893965}
     - target: {fileID: 114941506760668086, guid: 07f16e6b63a754d15b4ead4abad5cab9,
         type: 3}
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 1692869045}
     - target: {fileID: 114279159433195666, guid: 07f16e6b63a754d15b4ead4abad5cab9,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 262d1e6669307794f97f588d118d3a6a,
-        type: 3}
-    - target: {fileID: 114791478973009252, guid: 07f16e6b63a754d15b4ead4abad5cab9,
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 

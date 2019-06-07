@@ -7,6 +7,6 @@ public class StartGoalSound : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
+       // AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
     }
 }

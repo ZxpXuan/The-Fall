@@ -15,16 +15,10 @@ public class laser : MonoBehaviour
 
     void Start()
     {
-        // set our laser on its merry way. no need to update transform manually
-       // this.rigidbody.velocity = Vector3.forward * fireSpeed;
-
-        // freeze the rotation so it doesnt go spinning after a collision
         Ball.freezeRotation = true;
-
     }
 
-    // we want to store the laser's velocity every frame
-    // so we can use this data during collisions to reflect
+
     [SerializeField]
     private Vector3 oldVelocity;
     [SerializeField]
@@ -38,22 +32,15 @@ public class laser : MonoBehaviour
     // when a collision happens
     void OnCollisionEnter(Collision collision)
     {
-        // get the point of contact (mike)
+
         ContactPoint contact = collision.contacts[0];
 
-        AkSoundEngine.PostEvent("Play_Impact", gameObject);
+        //AkSoundEngine.PostEvent("Play_Impact", gameObject);
         
-
-        
-      
         float speed = oldVelocity.magnitude;
-
-
-
-        // reflect our old velocity off the contact point's normal vector
+        
         Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
-
-        // assign the reflected velocity back to the rigidbody
+        
         Ball.velocity = reflectedVelocity.normalized * speed;
 
     }

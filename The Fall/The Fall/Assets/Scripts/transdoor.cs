@@ -43,7 +43,7 @@ public class transdoor : MonoBehaviour {
         if (activated || other.tag != "ball") return;
 
         other.transform.position = otherportal.transform.position;
-        AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
+      //  AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
         otherportal.GetComponent<transdoor>().activated = true;
 
 
@@ -114,7 +114,7 @@ public class transdoor : MonoBehaviour {
             //{
             //    otherportal.GetComponent<Collider>().enabled = true;
             //}
-            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
+           // AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x + 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "rightportal" )
@@ -124,17 +124,17 @@ public class transdoor : MonoBehaviour {
             //{
             //    otherportal.GetComponent<Collider>().enabled = true;
             //}
-            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
+          //  AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x - 1, otherportal.transform.position.y, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horidown")
         {
-            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
+           // AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y + 1, otherportal.transform.position.z);
         }
         if (other.tag == "ball" && otherportal.tag == "horiup")
         {
-            AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
+           // AkSoundEngine.PostEvent("Play_Enter_Portal", gameObject);
             other.transform.position = new Vector3(otherportal.transform.position.x, otherportal.transform.position.y - 1, otherportal.transform.position.z);
         }
 

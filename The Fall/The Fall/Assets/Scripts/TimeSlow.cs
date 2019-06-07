@@ -18,7 +18,7 @@ public class TimeSlow : MonoBehaviour {
 	void Start () {
         isCamZooming = false;
         Time.timeScale = 1;
-        AkSoundEngine.SetRTPCValue("Time_Slow", 0);
+   //     AkSoundEngine.SetRTPCValue("Time_Slow", 0);
 
 
     }
@@ -42,8 +42,8 @@ public class TimeSlow : MonoBehaviour {
             
             
             Time.timeScale = timeSlow;
-            AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
-            AkSoundEngine.SetRTPCValue("Time_Slow", 1);
+        //    AkSoundEngine.PostEvent("Start_Goal_Static", gameObject);
+        //    AkSoundEngine.SetRTPCValue("Time_Slow", 1);
 
             Camera.main.GetComponent<Camera>().fieldOfView = Camera.main.GetComponent<Camera>().fieldOfView - 0.7f;
             // Camera.main.transform.LookAt(end.transform);
@@ -67,8 +67,8 @@ public class TimeSlow : MonoBehaviour {
             Camera.main.transform.rotation = Quaternion.Euler(0,0,0);
             Time.timeScale = 1;
 
-            AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
-            AkSoundEngine.SetRTPCValue("Time_Slow", 0);
+          //  AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+          //  AkSoundEngine.SetRTPCValue("Time_Slow", 0);
         }
 
 	}

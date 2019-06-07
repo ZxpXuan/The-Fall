@@ -57,7 +57,7 @@ public class doorup : MonoBehaviour
         {
             //speedz = speed * Time.deltaTime;
 
-            AkSoundEngine.PostEvent("Play_Trigger_Hit", gameObject);
+            //AkSoundEngine.PostEvent("Play_Trigger_Hit", gameObject);
             able = false;
             movable = true;
 

@@ -145,8 +145,8 @@ public class AI : MonoBehaviour
 
             if (ds.stateType == currentGameState)
             {
-                AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
-                AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
+              //  AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
+              //  AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
              
 
                 break;

@@ -28,7 +28,7 @@ public  class GameManager : MonoSingleton<GameManager> {
     //List<Animator> objectToDisable;
 
 
-    Soundbank_Manager sbm;
+   // Soundbank_Manager sbm;
 
     [SerializeField]
     public int currentWorldTries;
@@ -40,6 +40,9 @@ public  class GameManager : MonoSingleton<GameManager> {
     public AI ai;
     private InterstitialAd interstitial;
 
+    public LineRenderer lr;
+
+    public Transform HintEndPoint;
     // Use this for initialization
     private void RequestInterstitial()
     {
@@ -64,6 +67,7 @@ public  class GameManager : MonoSingleton<GameManager> {
 
     private void Awake()
     {
+        /*
 #if UNITY_ANDROID
         string appId = "ca-app-pub-1149253882244477~8286788282";
 #elif UNITY_IPHONE
@@ -75,7 +79,7 @@ public  class GameManager : MonoSingleton<GameManager> {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(appId);
         // Create an empty ad request.
-        RequestInterstitial();
+        RequestInterstitial(); */
 
         ai = GetComponent<AI>();
 
@@ -109,14 +113,6 @@ public  class GameManager : MonoSingleton<GameManager> {
                 GetComponent<TutorialManager>().enabled = false;
             }
             PlayerPrefs.SetInt("currentLevelTries", PlayerPrefs.GetInt("currentLevelTries", 0) + 1 );
-            if(PlayerPrefs.GetInt("currentLevelTries",0) % 5 ==0 && PlayerPrefs.GetInt("currentLevelTries", 0) != 0)
-            {
-
-                if (this.interstitial.IsLoaded())
-                {
-                    this.interstitial.Show();
-                }
-            }
 
             // //foreach (Animator anima in objectToDisable)
             // {
@@ -132,7 +128,9 @@ public  class GameManager : MonoSingleton<GameManager> {
 
                 lr.SetPosition(0, new Vector3(x1, y1, 0));
                 lr.SetPosition(1, lim.transform.position);
-
+                //lr.SetColors(Color.gray, Color.blue);
+                lr.startColor = Color.green;
+                lr.endColor = Color.blue;
                 lr.startWidth = 0.1f;
                 lr.endWidth = 0.2f;
              //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
@@ -151,9 +149,14 @@ public  class GameManager : MonoSingleton<GameManager> {
     }
     void Start () {
 
+        sceneName = SceneManager.GetActiveScene().name;
 
+        if (PlayerPrefs.GetInt("HintShown" + sceneName, 0) == 1)
+        {
 
-        sbm = FindObjectOfType<Soundbank_Manager>();
+           // ShowHint();
+        }
+     //   sbm = FindObjectOfType<Soundbank_Manager>();
         isRestartInitiated = false;
        // Cursor.visible = false;
         isPaused = false;
@@ -165,10 +168,21 @@ public  class GameManager : MonoSingleton<GameManager> {
     }
     public void soundBankManagerFunction()
     {
-        sbm = FindObjectOfType<Soundbank_Manager>();
+      //  sbm = FindObjectOfType<Soundbank_Manager>();
 
 
-        sbm.MenuSystem();
+      //  sbm.MenuSystem();
+    }
+
+    public void HideHint()
+    {
+       // PlayerPrefs.SetInt("HintShown" + sceneName, 1);
+
+        LineRenderer lr = transform.GetChild(3).GetComponent<LineRenderer>();
+        lr.gameObject.SetActive(false);
+
+
+
     }
 
 	// Update is called once per frame
@@ -227,10 +241,10 @@ public  class GameManager : MonoSingleton<GameManager> {
 
 
         PlayerPrefs.SetInt("start_type", 0);
-        AkSoundEngine.PostEvent("Play_Restart", gameObject);
-        AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+      //  AkSoundEngine.PostEvent("Play_Restart", gameObject);
+       // AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
-        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+      //  AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
         
         PlayerPrefs.SetInt("currentWorldTries", currentWorldTries + 1);
         PlayerPrefs.SetInt("totalWorldTries", PlayerPrefs.GetInt("totalWorldTries", 0) + 1);
@@ -260,7 +274,22 @@ public  class GameManager : MonoSingleton<GameManager> {
         uIManager.removePauseMenu();
 
     }
-	public void nextScene(){
+
+    public void ShowHint()
+    {
+
+        PlayerPrefs.SetInt("HintShown" + sceneName, 1);
+
+        LineRenderer lr =  transform.GetChild(3).GetComponent<LineRenderer>();
+       lr.gameObject.SetActive(true);
+
+        lr.startWidth = 0.1f;
+        lr.endWidth = 0.2f;
+        lr.SetPosition(0, HintEndPoint.position);
+        lr.SetPosition(1, lim.transform.position);
+
+    }
+    public void nextScene(){
         getScene();
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("hasBallBeenShot", 0);
@@ -286,14 +315,14 @@ public  class GameManager : MonoSingleton<GameManager> {
 
        
 
-        interstitial.Destroy();
+       // interstitial.Destroy();
         //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 
     }
 
     public void loadScene(string name){
-        sbm = FindObjectOfType<Soundbank_Manager>();
+      //d  sbm = FindObjectOfType<Soundbank_Manager>();
 
         //sbm.MenuSystem();
         Time.timeScale = 1f;
@@ -305,10 +334,10 @@ public  class GameManager : MonoSingleton<GameManager> {
     }
     public void startSoundBankMusic(int level)
     {
-        sbm = FindObjectOfType<Soundbank_Manager>();
+     //   sbm = FindObjectOfType<Soundbank_Manager>();
 
 
-        sbm.startMusic(level);
+     //   sbm.startMusic(level);
     }
 
   

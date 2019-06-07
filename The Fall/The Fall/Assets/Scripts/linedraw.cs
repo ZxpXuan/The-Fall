@@ -19,9 +19,11 @@ public class linedraw : MonoBehaviour {
     public float maxDistance=3;
     public Vector3 firstPos;
     Vector3 finalPos , prevPos;
+
+    Vector3 finalPos2;
     void Start()
     {
-        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+     //   AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
         maxDistance = 3;
         launchRay.positionCount = 2;
 		aimingRay.positionCount = 2;
@@ -42,12 +44,11 @@ public class linedraw : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             launchRay.enabled = true;
-            aimingRay.gameObject.SetActive(true);
+          //  aimingRay.gameObject.SetActive(true);
             able = true;
-            AkSoundEngine.PostEvent("Play_Aiming", gameObject);
+      //      AkSoundEngine.PostEvent("Play_Aiming", gameObject);
             Vector3 targPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
             targPos.z = 0;
-
 
             firstPos = targPos;
             finalPos = firstPos;
@@ -74,29 +75,39 @@ public class linedraw : MonoBehaviour {
             }
 
             RaycastHit hit;
-			var aimRayStartPos = p1.position + toTarget.normalized * maxDistance;
+			var aimRayStartPos = p1.position +  (finalPos - firstPos).normalized * maxDistance;
 			var aimRayEndPos = aimRayStartPos;
-			if (Physics.SphereCast(p1.position, 0.5f, toTarget, out hit))
+			if (Physics.SphereCast(p1.position, 0.2f,(finalPos-firstPos) *maxDistance, out hit))
 			{
-				aimRayEndPos = aimRayStartPos + toTarget.normalized * (hit.distance - maxDistance);
+				aimRayEndPos = aimRayStartPos+ (finalPos - firstPos ).normalized * (hit.distance );
 			}
 
-			if (dist > maxDistance * maxDistance)
+           
+			if (Vector3.Distance(firstPos,finalPos)>maxDistance)
 			{
 				targPos = aimRayStartPos;
-			}
+                finalPos2 = targPos;
+
+            }
+            else
+            {
+                finalPos2 = p1.position + (finalPos - firstPos);
 
 
-         
 
-            print(Vector3.Distance(finalPos, firstPos) );
-            launchRay.SetPosition(0,p1.position+ ( finalPos-firstPos));
+            }
+
+
+            launchRay.SetPosition(0, finalPos2);
+
+
             launchRay.SetPosition(1, p1.position);
 
 			aimingRay.SetPosition(0, aimRayStartPos);
-			aimingRay.SetPosition(1, aimRayEndPos);
+			aimingRay.SetPosition(1,aimRayEndPos);
 
-			aimingRay.transform.position = aimRayEndPos;
+
+            aimingRay.transform.position = aimRayEndPos;
 			aimingRay.material.mainTextureOffset = new Vector2(-Time.time % 1, 0);
 			aimingRay.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, (Mathf.Sin(Time.time * 5) + 1) * 0.5f);
 			
@@ -107,6 +118,10 @@ public class linedraw : MonoBehaviour {
                 launchRay.enabled = false;
 				aimingRay.gameObject.SetActive(false);
 				able = false;
+
+                PlayerPrefs.SetFloat("xShot", finalPos2.x);
+                PlayerPrefs.SetFloat("yShot", finalPos2.y);
+
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -114,6 +129,9 @@ public class linedraw : MonoBehaviour {
             launchRay.enabled = false;
             aimingRay.gameObject.SetActive(false);
             able = false;
+
+            PlayerPrefs.SetFloat("xShot", finalPos2.x);
+            PlayerPrefs.SetFloat("yShot", finalPos2.y);
         }
     }
 
@@ -125,7 +143,7 @@ public class linedraw : MonoBehaviour {
 
     private void OnMouseUp()
     {
-        AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
-        AkSoundEngine.PostEvent("Play_Shoot", gameObject);      
+       // AkSoundEngine.PostEvent("Stop_Aiming", gameObject);
+       // AkSoundEngine.PostEvent("Play_Shoot", gameObject);      
     }
 }

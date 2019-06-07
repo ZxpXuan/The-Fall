@@ -61,7 +61,7 @@ public class TutorialManager : MonoBehaviour {
         }
         if (tutorialAudioOrder.Count == tutorialOrder.Count && tutorialOrder.Count != 0)
         {
-            AkSoundEngine.PostEvent(tutorialAudioOrder[index], gameObject);
+          //  AkSoundEngine.PostEvent(tutorialAudioOrder[index], gameObject);
             
             tutorialOrder[index].SetActive(true);
            // audioSource.clip = tutorialAudio[index];
@@ -70,7 +70,7 @@ public class TutorialManager : MonoBehaviour {
     }
 
     public void startTutorial(){
-            AkSoundEngine.PostEvent(tutorialAudioOrder[0], gameObject);
+            //AkSoundEngine.PostEvent(tutorialAudioOrder[0], gameObject);
 
         tutorialPanel.SetActive(true);
         updateTutorial(currentTutorial);

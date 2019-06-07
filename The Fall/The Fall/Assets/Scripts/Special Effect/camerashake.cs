@@ -19,8 +19,8 @@ public class camerashake : MonoBehaviour {
         }
     }
 
-    static bool shaking;
-    static Vector3 orgPosition;
+     bool shaking;
+     Vector3 orgPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -63,20 +63,20 @@ public class camerashake : MonoBehaviour {
         {
             if (_camera == null) yield break;
             t += Time.deltaTime * speed;
-            Camera.transform.position = orgPosition + new Vector3(Mathf.Sin(rate * t), Mathf.Cos(rate * t), 0) * Mathf.Lerp(shakeStrength, 0, t);
+            Camera.main.transform.position = orgPosition + new Vector3(Mathf.Sin(rate * t), Mathf.Cos(rate * t), 0) * Mathf.Lerp(shakeStrength, 0, t);
             yield return null;
         }
         cancelShake = false;
-        Camera.transform.position = orgPosition;      //还原摄像机位置
+        Camera.main.transform.position = orgPosition;      //还原摄像机位置
         shaking = false ;
 
         Destroy(this.gameObject);
     }
 
-	private void OnCollisionEnter(Collision collision)
+	 void OnCollisionEnter(Collision collision)
 	{
         var go = new GameObject().AddComponent<camerashake>();
-        Handheld.Vibrate();
+      //  Handheld.Vibrate();
         go.Shake();
 	}
     

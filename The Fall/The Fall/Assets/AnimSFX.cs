@@ -8,6 +8,6 @@ public class AnimSFX : MonoBehaviour {
 
     void OpeningAnimSfX()
     {
-        AkSoundEngine.PostEvent("Start_Opening_Anim", gameObject);
+      //  AkSoundEngine.PostEvent("Start_Opening_Anim", gameObject);
     }
 }

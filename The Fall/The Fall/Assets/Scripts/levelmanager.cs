@@ -23,11 +23,11 @@ public class levelmanager : MonoBehaviour {
 	// Use this for initialization
 
     void Start () {
-        waitTime = 2;
+        waitTime = 1;
 
         coroutine = WaitAndWin(waitTime);
 
-
+        uIManager = GameObject.Find("GameManager").GetComponent<UIManager>();
 
     }
 	
@@ -47,8 +47,8 @@ public class levelmanager : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
        
-        AkSoundEngine.PostEvent("Play_Goal_Reached", gameObject);
-        AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+       // AkSoundEngine.PostEvent("Play_Goal_Reached", gameObject);
+       // AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
         foreach (ParticleSystem part in ps){
             part.Play();

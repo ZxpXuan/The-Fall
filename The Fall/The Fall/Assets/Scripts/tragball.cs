@@ -86,7 +86,7 @@ public class tragball : MonoBehaviour
 
                         force = dir.magnitude;
                         //print(mult);
-                        AkSoundEngine.SetRTPCValue("Aim_Velocity", mult);
+                       // AkSoundEngine.SetRTPCValue("Aim_Velocity", mult);
                     }
 
                     isDrage = true;
@@ -115,9 +115,10 @@ public class tragball : MonoBehaviour
                        GameManager.Instance.GetComponent<LineRenderer>().enabled = false;
 
                         abale = abale + 1;
-                        PlayerPrefs.SetFloat("xShot", currentPosition.x);
-                        PlayerPrefs.SetFloat("yShot", currentPosition.y);
+                     
                         PlayerPrefs.SetInt("hasBallBeenShot", 1);
+                        GameManager.Instance.HideHint();
+
                         ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
                         GameManager.Instance.hasBallBeenShot = true;
                         ding.GetComponentInChildren<BallAngle>().startFadeOut();
@@ -128,7 +129,7 @@ public class tragball : MonoBehaviour
                     }
                     else
                     {
-                        AkSoundEngine.PostEvent("Aim_Error", gameObject);
+                      //  AkSoundEngine.PostEvent("Aim_Error", gameObject);
                         ding.GetComponentInChildren<BallAngle>().startFadeIn();
                     }
                     FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;

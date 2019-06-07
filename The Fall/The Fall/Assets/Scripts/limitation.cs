@@ -63,7 +63,7 @@ public class limitation : MonoBehaviour {
     void Update () {
         getscene();
 
-        AkSoundEngine.SetRTPCValue("Bounce_Count", i);
+      //  AkSoundEngine.SetRTPCValue("Bounce_Count", i);
 	}
     void getscene()
     {
@@ -81,7 +81,7 @@ public class limitation : MonoBehaviour {
             // get the point of contact (mike)
             ContactPoint contact = collision.contacts[0];
 
-            AkSoundEngine.PostEvent("Play_Impact", gameObject);
+         //   AkSoundEngine.PostEvent("Play_Impact", gameObject);
 
 
 
@@ -124,8 +124,8 @@ public class limitation : MonoBehaviour {
             Destroy(gameObject);
             Instantiate(particleOnDestroy, transform.position,Quaternion.identity);
 
-            AkSoundEngine.PostEvent("Play_Death", gameObject);
-            AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+         //   AkSoundEngine.PostEvent("Play_Death", gameObject);
+         //   AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
            if(! gm.GetComponent<UIManager>().isWinInProgress)
                 FindObjectOfType<AI>().setGameState(Brain.GameState.Death);

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A6556AD1-1964-4881-B986-8CEE283D06EE}" SchemaVersion="94">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{A6556AD1-1964-4881-B986-8CEE283D06EE}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Menu" ID="{384A2F5D-FED5-459D-9B2B-F3D6F0E74DF5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Menu_Sting" ID="{1BA94E66-EEA5-472C-A2D0-CEEFC3411215}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Menu_Music" ID="{52E7B9B9-DA20-4857-BEE6-0B95596FC58F}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Menu_Music" ID="{3999BF7E-4DEF-4098-86FD-FC285F78DA9D}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>0.223069590085796</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="True" ID="{5318CBC9-534C-4416-8DC2-C3280746AA13}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Music" ID="{CD64F68C-CCD9-4A76-807B-DFCE5CDFAC1E}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Music" ID="{6B25F2EF-41A9-4472-A7F7-4ED2AE4DF55C}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Game2menu" ID="{CD134146-8A34-4CA9-9770-DBD22874BDAC}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Menu_Sting" ID="{1BA94E66-EEA5-472C-A2D0-CEEFC3411215}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Game" ID="{BA08BA0F-80D6-42D6-8460-457CBC96B8CB}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Music" ID="{6B25F2EF-41A9-4472-A7F7-4ED2AE4DF55C}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>6.58307210031347E-02</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>7.84557907845579E-02</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="SFX" ID="{E30F9429-656E-4209-ABBF-9F9D308EA04C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Stop_Goal_Static" ID="{B2F2B274-1007-42B6-823F-FFD15D46FFB5}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Goal_Static" ID="{BD801B39-51ED-435D-AFF9-A893BB6C8687}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Impact" ID="{D0B291AB-C7B0-447D-8C52-AEDFA3DF8C32}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>5.7</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>3</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
+						<CurrentSwitchRef Name="Medium" ID="{C7FE2636-8B2E-473E-B367-6C4FBBABE618}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Narrator_Ducking" ID="{81AC4122-3006-4F19-8EC3-1C902C922872}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Start_Music" ID="{03022B8B-55F8-48DC-A1C1-B2803E30BB1E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Narrator_Death" ID="{D9861040-DFCA-4411-A30C-B64CD00DC7BC}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Narrator_Compliment" ID="{64C0B3C2-1291-4367-BFC5-DCC173CB5C3E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Narrator_Greeting_Generic" ID="{305273B6-7E41-46C5-929F-0CF004875468}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Narrator_Impatience" ID="{2F9C1356-9977-494A-9148-1705B6CE7E99}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Narrator_Compliment" ID="{64C0B3C2-1291-4367-BFC5-DCC173CB5C3E}" WorkUnitID="{618EECD2-EE96-4597-8C69-2FEFDF6BA80E}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Bounce_Count" ID="{1D00AF69-2A21-44DE-AF58-1CCC1D25C117}"/>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Aim_Velocity" ID="{9532E0BB-A16A-4502-8B42-0B4B1A5E07AE}"/>
+							<Value>3</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Time_Slow" ID="{C1EF25EC-E7E8-4B40-9E81-0724B0899034}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="False" ID="{1D0EE8C4-63E5-4449-9355-7A300B777661}"/>
+						<CurrentSwitchRef Name="Easy" ID="{D1DD9A6C-F29D-4F99-B45A-C46D48C69B48}"/>
+						<CurrentSwitchRef Name="Disappointed" ID="{10AE7328-98E4-4C3C-872E-0198E85A51EB}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

@@ -7,7 +7,7 @@ public class Soundbank_Manager : MonoBehaviour
 
     public static Soundbank_Manager instance;
 
-    int getCurrentLevel;
+   public  int getCurrentLevel;
     levelmanager lm;
 
     private static bool created = false;
@@ -20,7 +20,6 @@ public class Soundbank_Manager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
             created = true;
             Debug.Log("Awake: " + this.gameObject);
-
         }
 
         if (instance == null)
@@ -89,7 +88,9 @@ public class Soundbank_Manager : MonoBehaviour
 
     public void MenuClick()
     {
+
         //AkSoundEngine.PostEvent("Menu_Button", gameObject);
+
     }
 
     public void AnimationSFX()
@@ -102,7 +103,7 @@ public class Soundbank_Manager : MonoBehaviour
         getCurrentLevel = level;
         ChangeMusic();
        // AkSoundEngine.PostEvent("Start_Music", gameObject);
-     //   print(level);
+        print(level);
 
 
     }
@@ -129,54 +130,27 @@ public class Soundbank_Manager : MonoBehaviour
         {
            // AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);          
           //  print("stop_menu_music");
+
         }
 
-        if (getCurrentLevel == 2)
+        if (getCurrentLevel == 1 ||getCurrentLevel == 2 || getCurrentLevel == 3 || getCurrentLevel == 4 || getCurrentLevel == 5)
         {
-           // AkSoundEngine.SetSwitch("Level_Difficulty", "Easy", gameObject);
-        //    print("Easy_Switch");
-        }
          
-        if (getCurrentLevel == 4 || getCurrentLevel == 5)
-        {
-           // AkSoundEngine.SetSwitch("Level_Difficulty", "Medium", gameObject);
-        //    print("Med_Switch");
+            SoundBank.instance.PlayLevelSound("Easy");
+
         }
 
-        if (getCurrentLevel == 6 || getCurrentLevel == 7)
+        if ( getCurrentLevel == 6 || getCurrentLevel == 7 || getCurrentLevel == 8|| getCurrentLevel == 9)
         {
-           // AkSoundEngine.SetSwitch("Level_Difficulty", "Hard", gameObject);
-        //    print("hardswitch");
+            SoundBank.instance.PlayLevelSound("Medium");
+         
         }
 
-        if (getCurrentLevel == 8 || getCurrentLevel == 9 || getCurrentLevel == 10)
+        if ( getCurrentLevel == 10 || getCurrentLevel == 11 || getCurrentLevel == 12 || getCurrentLevel == 13)
         {
-          //  AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
-         //      print("secondeasyswitch");
-        }
+    
+            SoundBank.instance.PlayLevelSound("Hard");
 
-        if (getCurrentLevel == 11 || getCurrentLevel == 12 || getCurrentLevel == 13)
-        {
-          //  AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject); //secondmed
-        //       print("secondmedswitch");
-        }
-
-        if (getCurrentLevel == 14 || getCurrentLevel == 15 || getCurrentLevel == 16 || getCurrentLevel > 16)
-        {
-           // AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //secondeasy
-       //     print("secondHardSwitch");
-        }
-
-        if (getCurrentLevel > 16)
-        {
-            //AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Med", gameObject); //secondMed
-            //   print("hardswitch");
-        }
-
-        if (getCurrentLevel == 20)
-        {
-           // AkSoundEngine.SetSwitch("Level_Difficulty", "Second_Easy", gameObject); //Seconeasy
-            //   print("hardswitch");
         }
 
 

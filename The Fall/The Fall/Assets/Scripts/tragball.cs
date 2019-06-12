@@ -38,22 +38,13 @@ public class tragball : MonoBehaviour
     {
 
         if (GameManager.Instance.hasBallBeenShot != true) { 
-            //整体初始位置 
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            //从摄像机发出到点击坐标的射线
-            RaycastHit hitInfo;
-
-            //ball1 control
+           
             if (abale == 1)
             {
                 if (isDrage == false)
                 {
-                    
-                    
-                        offset = Vector3.zero;
-
-                    
                   
+                        offset = Vector3.zero;               
                 }
 
                 if (Input.GetMouseButtonDown(0))
@@ -71,7 +62,7 @@ public class tragball : MonoBehaviour
                     
                     if (true)
                     {
-                        Debug.DrawLine(currentPosition, InputFirstPos);
+                      
                         if (Vector3.Distance(currentPosition, InputFirstPos) > 0.4)
                         {
                             var maxPosition = (currentPosition - InputFirstPos).normalized * 3.0f + InputFirstPos;
@@ -92,13 +83,14 @@ public class tragball : MonoBehaviour
                     isDrage = true;
 
                     ding.GetComponentInChildren<BallAngle>().startFadeOut();
-                    FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = true;
+                    
+                   
                 }
                 else
                 {
                     isDrage = false;
 				}
-				Debug.DrawLine(mousePos, InputFirstPos, Color.blue);
+				
 
 				if (Input.GetMouseButtonUp(0))
                 {
@@ -121,8 +113,10 @@ public class tragball : MonoBehaviour
 
                         ding.GetComponentInChildren<TextMesh>().gameObject.SetActive(false);
                         GameManager.Instance.hasBallBeenShot = true;
+
+                        SoundBank.instance.PlayShootSound();
                         ding.GetComponentInChildren<BallAngle>().startFadeOut();
-                        if (cam.GetComponent<Animator>() != null)
+                        if (cam.GetComponent<Animator>() != null && GameManager.Instance.hasBallBeenShot)
                         {
                             cam.GetComponent<Animator>().enabled = false;
                         }
@@ -132,7 +126,7 @@ public class tragball : MonoBehaviour
                       //  AkSoundEngine.PostEvent("Aim_Error", gameObject);
                         ding.GetComponentInChildren<BallAngle>().startFadeIn();
                     }
-                    FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
+                   // FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
                 }
             }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
 
 public class linedraw : MonoBehaviour {
 
@@ -41,7 +42,7 @@ public class linedraw : MonoBehaviour {
     public void AimingLine()
     {
         if (p0 == null || p1 == null) return;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GameManager.Instance.hasBallBeenShot)
         {
             launchRay.enabled = true;
           //  aimingRay.gameObject.SetActive(true);
@@ -121,7 +122,6 @@ public class linedraw : MonoBehaviour {
 
                 PlayerPrefs.SetFloat("xShot", finalPos2.x);
                 PlayerPrefs.SetFloat("yShot", finalPos2.y);
-
             }
         }
         if (Input.GetMouseButtonUp(0))

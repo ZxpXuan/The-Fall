@@ -20,22 +20,31 @@ public class levelmanager : MonoBehaviour {
 
     [SerializeField]
     public int gameWinID;
-	// Use this for initialization
 
+
+    [SerializeField]
+    public bool hasCollided;
+    // Use this for initialization
+
+
+   
     void Start () {
-        waitTime = 1;
+        waitTime = 3.5f;
 
         coroutine = WaitAndWin(waitTime);
-
-        uIManager = GameObject.Find("GameManager").GetComponent<UIManager>();
-
+      //  if (GameObject.Find("GameManager").GetComponent<UIManager>()!=null)
+        uIManager = GameManager.Instance.GetComponent<UIManager>();
+        GameManager.Instance.hasCollided = false ;
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(Firebase.Analytics.FirebaseAnalytics.EventLevelStart,Firebase.Analytics.FirebaseAnalytics.ParameterLevel,"Level" + (nextLevelid-1));
     }
-	
+
     IEnumerator WaitAndWin(float waitTime){
 
         yield return new WaitForSeconds(waitTime);
         //uIManager.displayWin();
         //uIManager.GetComponent<GameManager>().nextScene();
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(Firebase.Analytics.FirebaseAnalytics.EventLevelEnd, Firebase.Analytics.FirebaseAnalytics.ParameterLevel, "Level" + (nextLevelid - 1));
+
         GameManager.Instance.nextScene();
         PlayerPrefs.SetInt("levelsUnlocked", nextLevelid);
     }
@@ -58,14 +67,19 @@ public class levelmanager : MonoBehaviour {
         {
             uIManager.GetComponent<AI>().setGameState(Brain.GameState.Winner);
             GameManager.Instance.ai.calculateCurrentMood();
-           StartCoroutine(coroutine);
-       
+            GameManager.Instance.ai.SetBrainState();
+           GameManager.Instance.hasCollided = true;
+
+            StartCoroutine(coroutine);
+            hasCollided = true;
         }
 
       else  if(gameWinID == nextLevelid)
         {
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Winnder","Level 13 complete", 0.5f);
 
             GameManager.Instance.winGame();
+
         }
 
     }

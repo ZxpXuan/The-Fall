@@ -33,8 +33,8 @@ public class TutorialManager : MonoBehaviour {
             startTutorial();
             currentTutorial = 0;
             isTutorialActive = true;
-            GetComponent<AI>().justSetState(Brain.GameState.Tutorial);
-            GetComponent<AI>().enableTimeTracking = false;
+          //  GetComponent<AI>().justSetState(Brain.GameState.Tutorial);
+            //GetComponent<AI>().enableTimeTracking = false;
         }
 
     }

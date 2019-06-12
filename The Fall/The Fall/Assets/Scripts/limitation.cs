@@ -62,9 +62,13 @@ public class limitation : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         getscene();
+        if(Input.GetMouseButton(0))
+        maxRing.GetComponent<Renderer>().enabled = true;
+        else
+         maxRing.GetComponent<Renderer>().enabled = false;
 
-      //  AkSoundEngine.SetRTPCValue("Bounce_Count", i);
-	}
+        //  AkSoundEngine.SetRTPCValue("Bounce_Count", i);
+    }
     void getscene()
     {
         //sceneName = SceneManager.GetActiveScene().name;
@@ -83,22 +87,13 @@ public class limitation : MonoBehaviour {
 
          //   AkSoundEngine.PostEvent("Play_Impact", gameObject);
 
-
-
-
             float speed = oldVelocity.magnitude;
-
-
 
             // reflect our old velocity off the contact point's normal vector
             Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
 
             // assign the reflected velocity back to the rigidbody
             Ball.velocity = reflectedVelocity.normalized * speed;
-
-
-
-
 
             i = i + 1;
             Instantiate(partSystem.gameObject, transform.position, Quaternion.identity);
@@ -124,13 +119,15 @@ public class limitation : MonoBehaviour {
             Destroy(gameObject);
             Instantiate(particleOnDestroy, transform.position,Quaternion.identity);
 
-         //   AkSoundEngine.PostEvent("Play_Death", gameObject);
-         //   AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
+            //   AkSoundEngine.PostEvent("Play_Death", gameObject);
+            //   AkSoundEngine.PostEvent("Stop_Goal_Static", gameObject);
 
-           if(! gm.GetComponent<UIManager>().isWinInProgress)
+            if (!gm.GetComponent<UIManager>().isWinInProgress && !gm.hasCollided)
+            {
                 FindObjectOfType<AI>().setGameState(Brain.GameState.Death);
 
-            gm.restartLevel();
+                gm.restartLevel();
+            }
         }
 
 

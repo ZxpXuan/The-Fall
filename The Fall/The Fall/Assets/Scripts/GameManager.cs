@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using GoogleMobileAds.Api;
 
+using System;
 
 public  class GameManager : MonoSingleton<GameManager> {
    //private bool paused = false;
@@ -38,38 +39,54 @@ public  class GameManager : MonoSingleton<GameManager> {
     public List<Vector3> contactPoints;
 
     public AI ai;
-    private InterstitialAd interstitial;
+    private RewardedAd rewardBasedVideo;
 
     public LineRenderer lr;
 
     public Transform HintEndPoint;
+
+    public bool hasCollided;
+    public bool isAdOpened;
+    private BannerView bannerView;
+    public InterstitialAd interstital;
     // Use this for initialization
-    private void RequestInterstitial()
-    {
-#if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-1149253882244477/4591085850";
-#elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
-#else
-        string adUnitId = "unexpected_platform";
-#endif
-
-        // Initialize an InterstitialAd.
-        this.interstitial = new InterstitialAd(adUnitId);
-
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the interstitial with the request.
-        this.interstitial.LoadAd(request);
-
-     
+    public GameObject InGameUI;
         
+    
+    public void HandleOnAdEarned(object sender, EventArgs args)
+    {
+        ShowHint();
+        isAdOpened = false;
+
+    }
+
+    public void HandleOnAdOpened(object sender, EventArgs args)
+    {
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Ad ", "Ad Opened", "Level" +sceneName);
+        
+    }
+
+    public void HandleOnAdClosed(object sender, EventArgs args)
+    {
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Ad ", "Ad Closed", "Level" +sceneName);
+
+        isAdOpened = false;
+
+
+    }
+    public void OnBannerAdLoaded(object sender, EventArgs args)
+    {
+        bannerView.Show();
+
+
     }
 
     private void Awake()
     {
-        /*
+        
 #if UNITY_ANDROID
-        string appId = "ca-app-pub-1149253882244477~8286788282";
+        string appId = "ca-app-pub-1149253882244477~7771421578";
 #elif UNITY_IPHONE
             string appId = "ca-app-pub-3940256099942544~1458002511";
 #else
@@ -78,9 +95,12 @@ public  class GameManager : MonoSingleton<GameManager> {
 
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(appId);
-        // Create an empty ad request.
-        RequestInterstitial(); */
 
+        // Create an empty ad request.
+      //  RequestInterstital();
+      //  RequestBanner();
+      //  this.bannerView.OnAdLoaded += OnBannerAdLoaded;
+      //  bannerView.Show();
         ai = GetComponent<AI>();
 
 
@@ -146,15 +166,21 @@ public  class GameManager : MonoSingleton<GameManager> {
 
             PlayerPrefs.SetInt("currentLevelTries", 0);
         }
+
+        if (PlayerPrefs.GetInt("currentLevelTries", 0) % 5 == 0 && PlayerPrefs.GetInt("currentLevelTries", 0) >1)
+        {
+
+            RequestInterstital();
+        }
     }
     void Start () {
-
+        //this.animation.Play();
         sceneName = SceneManager.GetActiveScene().name;
-
+        lim = FindObjectOfType<limitation>();
         if (PlayerPrefs.GetInt("HintShown" + sceneName, 0) == 1)
         {
 
-           // ShowHint();
+            ShowHint();
         }
      //   sbm = FindObjectOfType<Soundbank_Manager>();
         isRestartInitiated = false;
@@ -185,56 +211,23 @@ public  class GameManager : MonoSingleton<GameManager> {
 
     }
 
-	// Update is called once per frame
-	void Update () {
-
-       
-
-        
-
-
-
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //{
-            
-            //    Time.timeScale = 1;
-            //   // paused = false;
-
-            //}
-        //}
-       
-
-
-
-        if (Input.GetMouseButtonDown(1))
-            {
-                doRestart();
-            }
-        
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(isPaused){
-                isPaused = false;
-                unPauseGame();
-            }
-            else{
-
-                isPaused = true;
-                PauseGame();
-            }
+    public void ShowHintAd()
+    {
+        if (this.rewardBasedVideo.IsLoaded())
+        {
+            isAdOpened = true;
+            this.rewardBasedVideo.Show();
         }
         
+    }
+
+	// Update is called once per frame
+	void Update () {    
+
         if(isRestartInitiated&& restartStartTime + restartDelay <Time.time && !uIManager.isWinInProgress){
             doRestart();
-
-
         }
 
-        if (Input.GetMouseButtonDown(0) && hasBallBeenShot)
-        {
-
-            doRestart();
-        }
     }
     public void doRestart()
     {
@@ -260,7 +253,6 @@ public  class GameManager : MonoSingleton<GameManager> {
         isRestartInitiated = true;
         restartStartTime = Time.time;
 
-
     }
 
     public void PauseGame(){
@@ -274,19 +266,64 @@ public  class GameManager : MonoSingleton<GameManager> {
         uIManager.removePauseMenu();
 
     }
+    public void ToggleGame()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+            unPauseGame();
+        }
+        else
+        {
 
+            isPaused = true;
+            PauseGame();
+        }
+
+    }
+
+    public void RateGame()
+    {
+
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.thefall.team7anulagarwalp");
+    }
     public void ShowHint()
     {
 
         PlayerPrefs.SetInt("HintShown" + sceneName, 1);
 
+
+        Vector3 redPos = lim.transform.position;
+        Vector3 bluePos = HintEndPoint.position;
+        Vector3 dir = bluePos - redPos;
+        float distance = Vector3.Distance(redPos, bluePos);
+        float maxDistance = 3;
+        float variableDistance = 3 / distance;
+        //  Vector3 oneThird = redPos + dir * (distance *varible);
+
+        float radius = 3; //radius of *black circle*
+        Vector3 centerPosition = lim.transform.position; //center of *black circle*
+        float distancea = Vector3.Distance(HintEndPoint.position, centerPosition); //distance from ~green object~ to *black circle*
+
+        if (distance > radius) //If the distance is less than the radius, it is already within the circle.
+        {
+            Vector3 fromOriginToObject = HintEndPoint.position - centerPosition; //~GreenPosition~ - *BlackCenter*
+            fromOriginToObject *= radius / distance; //Multiply by radius //Divide by Distance
+            HintEndPoint.position = centerPosition + fromOriginToObject; //*BlackCenter* + all that Math
+        }
+
+
+
+        Vector3.Angle(lim.transform.position, HintEndPoint.position) ;
         LineRenderer lr =  transform.GetChild(3).GetComponent<LineRenderer>();
        lr.gameObject.SetActive(true);
 
         lr.startWidth = 0.1f;
         lr.endWidth = 0.2f;
+        //lr.SetPosition(0, HintEndPoint.position);
         lr.SetPosition(0, HintEndPoint.position);
         lr.SetPosition(1, lim.transform.position);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Hint ", "Hint Shown", "Level" + sceneName);
 
     }
     public void nextScene(){
@@ -357,7 +394,78 @@ public  class GameManager : MonoSingleton<GameManager> {
 
     public void winGame()
     {
-
+        InGameUI.SetActive(false);
         uIManager.displayWin();
     }
+
+
+
+
+    private void RequestRewareded()
+    {
+
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-1149253882244477/7085025864";
+#elif UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+#else
+        string adUnitId = "unexpected_platform";
+#endif
+        // Initialize an InterstitialAd.
+        this.rewardBasedVideo = new RewardedAd(adUnitId);
+        AdRequest request = new AdRequest.Builder().Build();
+
+        // Load the interstitial with the request.
+        this.rewardBasedVideo.LoadAd(request);
+
+
+        this.rewardBasedVideo.OnAdOpening += HandleOnAdOpened;
+        this.rewardBasedVideo.OnAdClosed += HandleOnAdClosed;
+        this.rewardBasedVideo.OnUserEarnedReward += HandleOnAdEarned;
+    }
+    private void RequestInterstital()
+    {
+
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-1149253882244477/8526578976";
+#elif UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+#else
+        string adUnitId = "unexpected_platform";
+#endif
+
+        // Initialize an InterstitialAd.
+        this.interstital = new InterstitialAd(adUnitId);
+
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the interstitial with the request.
+        this.interstital.LoadAd(request);
+        if (this.interstital.IsLoaded())
+        {
+
+            this.interstital.Show();
+        }
+
+    }
+
+    private void RequestBanner()
+    {
+
+
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-1149253882244477/4519831455";
+#elif UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+#else
+        string adUnitId = "unexpected_platform";
+#endif
+
+        // Initialize an InterstitialAd.
+        this.bannerView = new BannerView(adUnitId, AdSize.SmartBanner, AdPosition.Bottom);
+
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the interstitial with the request.
+        this.bannerView.LoadAd(request);
+    }
+
 }

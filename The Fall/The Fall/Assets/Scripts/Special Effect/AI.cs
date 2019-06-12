@@ -44,7 +44,8 @@ public class AI : MonoBehaviour
     [SerializeField]
     public List<TriesCategoriser> moodSet;
 
-
+    [SerializeField]
+    public List<TriesCategoriser> saveSet;
 
     [SerializeField]
     public List<TimeCategoriser> timeCategoriser;
@@ -88,10 +89,12 @@ public class AI : MonoBehaviour
 
             case 4:
                 currentMood = Brain.MoodTypes.VHappy;
+                print("4");
                 break;
         }
-    
 
+        print(PlayerPrefs.GetInt("AIMood", 2));
+        Brain.GameState currentGameState = Brain.GameState.Start;
         calculateCurrentMood();
     }
 
@@ -138,21 +141,10 @@ public class AI : MonoBehaviour
                 mood = "VHappy";
                 break;
         }
+        SoundBank.instance.PlaySound(currentMood, currentGameState);
 
 
-        foreach (DialogueSet ds in dialogueSet)
-        {
-
-            if (ds.stateType == currentGameState)
-            {
-              //  AkSoundEngine.SetSwitch("Narrator_Mood", mood, gameObject);
-              //  AkSoundEngine.PostEvent(ds.dialogue[0], gameObject);
-             
-
-                break;
-            }
-
-        }
+        
 
     }
     public void calculateCurrentMood()
@@ -161,8 +153,11 @@ public class AI : MonoBehaviour
         {
 
             if (cat.fromRange <= currentLevelTries && cat.toRange >= currentLevelTries)
-            {
+            { if(cat.changeMoodBy>0 && currentMood != Brain.MoodTypes.VHappy)
                 currentMood += cat.changeMoodBy;
+            else if (cat.changeMoodBy <0 && currentMood!= Brain.MoodTypes.VDisappointed)
+                    currentMood += cat.changeMoodBy;
+
                 break;
             }
 
@@ -172,7 +167,7 @@ public class AI : MonoBehaviour
 
 
         }
-
+        print("Mood set");
         playMoodSound();
 
     }
@@ -235,5 +230,58 @@ public class AI : MonoBehaviour
 
     }
 
+    public void SetBrainState()
+    {
 
+        //  PlayerPrefs.GetInt("AIMood", 2);
+
+
+        switch (saveSet.Find(x => x.fromRange <= currentLevelTries && x.toRange >= currentLevelTries).changeMoodBy)
+        {
+            case 0:
+                currentMood = Brain.MoodTypes.VDisappointed;
+                break;
+            case 1:
+                currentMood = Brain.MoodTypes.Disappointed;
+                break;
+            case 2:
+                currentMood = Brain.MoodTypes.Neutral;
+                break;
+            case 3:
+                currentMood = Brain.MoodTypes.Happy;
+                break;
+
+            case 4:
+                currentMood = Brain.MoodTypes.VHappy;
+                break;
+        }
+        
+       
+
+
+
+
+
+        
+
+        switch (currentMood)
+        {
+            case Brain.MoodTypes.VDisappointed:
+                PlayerPrefs.SetInt("AIMood", 0) ;
+                break;
+            case Brain.MoodTypes.Disappointed:
+                PlayerPrefs.SetInt("AIMood", 1);
+                break;
+            case Brain.MoodTypes.Neutral:
+                PlayerPrefs.SetInt("AIMood", 2);
+                break;
+            case Brain.MoodTypes.Happy:
+                PlayerPrefs.SetInt("AIMood", 3);
+                break;
+
+            case Brain.MoodTypes.VHappy:
+                PlayerPrefs.SetInt("AIMood", 4);
+                break;
+        }
+    }
 }

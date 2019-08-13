@@ -45,7 +45,7 @@ public  class GameManager : MonoSingleton<GameManager> {
 
     public Transform HintEndPoint;
 
-    public bool hasCollided;
+    public bool hasCollided = false;
     public bool isAdOpened;
     private BannerView bannerView;
     public InterstitialAd interstital;
@@ -224,8 +224,13 @@ public  class GameManager : MonoSingleton<GameManager> {
 	// Update is called once per frame
 	void Update () {    
 
-        if(isRestartInitiated&& restartStartTime + restartDelay <Time.time && !uIManager.isWinInProgress){
+        if(isRestartInitiated&& restartStartTime + restartDelay <Time.time  && !hasCollided){
             doRestart();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            ToggleGame();
         }
 
     }
@@ -241,8 +246,8 @@ public  class GameManager : MonoSingleton<GameManager> {
         
         PlayerPrefs.SetInt("currentWorldTries", currentWorldTries + 1);
         PlayerPrefs.SetInt("totalWorldTries", PlayerPrefs.GetInt("totalWorldTries", 0) + 1);
-     //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
-
+        //   PlayerPrefs.SetInt("hasBallBeenShot", 0);
+        GameObject.Find("AdManager").GetComponent<AdManager>().DestroyAd();
         getScene();
         SceneManager.LoadScene(buildIndex);
 
@@ -270,11 +275,13 @@ public  class GameManager : MonoSingleton<GameManager> {
     {
         if (isPaused)
         {
+            GameObject.Find("AdManager").GetComponent<AdManager>().ShowAd();
             isPaused = false;
             unPauseGame();
         }
         else
         {
+            GameObject.Find("AdManager").GetComponent<AdManager>().DestroyAd();
 
             isPaused = true;
             PauseGame();
@@ -350,16 +357,18 @@ public  class GameManager : MonoSingleton<GameManager> {
                 break;
         }
 
-       
 
-       // interstitial.Destroy();
+        GameObject.Find("AdManager").GetComponent<AdManager>().DestroyAd();
+
+        // interstitial.Destroy();
         //  PlayerPrefs.SetInt("start_type", 1);
         SceneManager.LoadScene(buildIndex + 1);
 
     }
 
     public void loadScene(string name){
-      //d  sbm = FindObjectOfType<Soundbank_Manager>();
+        //d  sbm = FindObjectOfType<Soundbank_Manager>();
+      //  GameObject.Find("AdManager").GetComponent<AdManager>().DestroyAd();
 
         //sbm.MenuSystem();
         Time.timeScale = 1f;

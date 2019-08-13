@@ -25,18 +25,59 @@ public class tragball : MonoBehaviour
 
 
     public Vector3 InputFirstPos;
+    Animator anim;
     private Vector3 InputSecondPos;
+
+    public Vector3 OrigCam;
+    Transform Top, Right, Left, Bottom;
+
+    public void Awake()
+    {
+        OrigCam = Camera.main.transform.position;
+    }
     void Start()
     {
+
         cam = Camera.main;
         FindObjectOfType<limitation>().maxRing.GetComponent<Renderer>().enabled = false;
         ding = FindObjectOfType<limitation>().GetComponent<Rigidbody>();
         gm = GameManager.Instance;
         speedMultiplier = 3f;
+
+        Top = GameObject.Find("Boundry").transform.GetChild(2);
+        Right = GameObject.Find("Boundry").transform.GetChild(0);
+        Bottom = GameObject.Find("Boundry").transform.GetChild(3);
+        Left = GameObject.Find("Boundry").transform.GetChild(1);
+
+
+    }
+
+    public bool CheckInBounds(Vector3 top, Vector3 bottom, Vector3 left, Vector3 right, Vector3 sample)
+    {
+
+        if (sample.x < right.x && sample.x > left.x && sample.y < top.y && sample.y > bottom.y)
+
+        {
+            return true;
+        }
+        else
+        {
+
+            return false;
+        }
     }
     void Update()
     {
 
+        Vector3 v3 = Input.mousePosition;
+        if (Input.GetMouseButton(0))
+        {
+
+
+            v3.z = 10.0f;
+            v3 = Camera.main.ScreenToWorldPoint(v3);
+        }
+        
         if (GameManager.Instance.hasBallBeenShot != true) { 
            
             if (abale == 1)
@@ -47,14 +88,14 @@ public class tragball : MonoBehaviour
                         offset = Vector3.zero;               
                 }
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && (Camera.main.transform.position.y <= OrigCam.y + 0.6f && Camera.main.transform.position.y >= OrigCam.y - 0.6f))
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y,0);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;
                     InputFirstPos = currentPosition;
                 }
 
-                if (Input.GetMouseButton(0) )
+                if (Input.GetMouseButton(0) && (Camera.main.transform.position.y <= OrigCam.y+0.6f && Camera.main.transform.position.y >= OrigCam.y - 0.6f))
                 {
                     Vector3 currentScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
                     Vector3 currentPosition = cam.ScreenToWorldPoint(currentScreenSpace) + offset;

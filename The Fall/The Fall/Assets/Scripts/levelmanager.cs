@@ -63,7 +63,7 @@ public class levelmanager : MonoBehaviour {
             part.Play();
 
         }
-        if (collision.collider.gameObject.tag == "ball" && gameWinID != nextLevelid)
+        if (collision.collider.gameObject.tag == "ball" && gameWinID != nextLevelid && !GameManager.Instance.hasCollided)
         {
             uIManager.GetComponent<AI>().setGameState(Brain.GameState.Winner);
             GameManager.Instance.ai.calculateCurrentMood();
